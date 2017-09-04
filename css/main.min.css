@@ -10066,6 +10066,10 @@ body {
   height: auto;
   border-top: 5px #05be70 solid;
   background-color: #111520; }
+  .map__iframe {
+    border: 0;
+    width: 100%;
+    height: 300px; }
 
 .s-footer {
   padding: 70px 0 90px 0;
