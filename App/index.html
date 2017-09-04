@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style type="text/css">
+		body { opacity: 0; overflow-x: hidden; }
+		html { background-color: #fff; }
+		.header__container {
+			position: relative;
+			bottom: 0%;
+			left: 0%;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			background: #05be70;
+		}
+	</style>
+	<script type="text/javascript">
+		$(window).on('load', function(){
+			$('.preloader').delay(1000).fadeOut('slow');
+			scaleVideoContainer();
+			initBannerVideoSize('.hero-video__container .poster img');
+			initBannerVideoSize('.hero-video__container video');
+		});
+		$(window).on('resize', function(){
+			scaleVideoContainer();
+			scaleBannerVideoSize('.hero-video__container .poster img');
+			scaleBannerVideoSize('.hero-video__container video');
+		});
+		function scaleVideoContainer() {
+
+				var height = $(window).height();
+				var unitHeight = parseInt(height) + 'px';
+				$('.hero-video').css('height',unitHeight);
+
+		}
+		function initBannerVideoSize(element){
+
+				$(element).each(function(){
+						$(this).data('height', $(this).height());
+						$(this).data('width', $(this).width());
+				});
+
+				scaleBannerVideoSize(element);
+
+		}
+		function scaleBannerVideoSize(element){
+
+				var windowWidth = $(window).width(),
+						windowHeight = $(window).height(),
+						videoWidth,
+						videoHeight;
+
+				console.log(windowHeight);
+
+				$(element).each(function(){
+						var videoAspectRatio = $(this).data('height')/$(this).data('width'),
+								windowAspectRatio = windowHeight/windowWidth;
+
+						if (videoAspectRatio > windowAspectRatio) {
+								videoWidth = windowWidth;
+								videoHeight = videoWidth * videoAspectRatio;
+								$(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
+						} else {
+								videoHeight = windowHeight;
+								videoWidth = videoHeight / videoAspectRatio;
+								$(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+						}
+
+						$(this).width(videoWidth).height(videoHeight);
+
+						$('.hero-video .hero-video__container').addClass('fadeIn animated');
+
+
+				});
+		}
+	</script>
+	
+</head>
+
+<body>
+	<div id="answer-plan" style="display:none">
+		<p>Thanks for clicking!<br>This link leads to the confirmation page.</p>
+	</div>
+	<div id="answer-submit" style="display:none">
+		<p>Thanks!<br>Your order has been submitted.</p>
+	</div>
+	<div id="answer-update" style="display:none">
+		<p>Thanks!<br>You will be informed about new updates.</p>
+	</div>
+	
+	<div class="preloader">
+		<div class="preloader__sk-folding-cube">
+			<div class="preloader__sk-cube preloader__sk-cube--sk-cube1"></div>
+			<div class="preloader__sk-cube preloader__sk-cube--sk-cube2"></div>
+			<div class="preloader__sk-cube preloader__sk-cube--sk-cube4"></div>
+			<div class="preloader__sk-cube preloader__sk-cube--sk-cube3"></div>
+		</div>
+	</div>
+<!--Header-->
+	<header class="header"  data-scroll-index="0">
+		<div class="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-xs-6">
+						<div class="navigation__logo">
+									<a class="navigation__logo-link" href="#"><img class="navigation__logo-img" src="img/logo.png" alt="Flourens"></a>
+						</div>
+					</div>
+						<button class="hamburger hamburger--collapse" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					<div class="col-lg-9 col-md-9 col-xs-6">
+						<nav class="navigation__menu main-menu">
+								<ul class="main-menu__ul">
+									<li class="main-menu__li"><a href="#" class="main-menu__a main-menu__a--active" data-scroll-nav="0">Home</a></li>
+									<li class="main-menu__li"><a href="#" class="main-menu__a" data-scroll-nav="2">Features</a></li>
+									<li class="main-menu__li"><a href="#" class="main-menu__a" data-scroll-nav="3">Video</a></li>
+									<li class="main-menu__li"><a href="#" class="main-menu__a" data-scroll-nav="4">ScreenShots</a></li>
+									<li class="main-menu__li"><a href="#" class="main-menu__a" data-scroll-nav="5">App Version</a></li>
+									<li class="main-menu__li"><a href="#" class="main-menu__a" data-scroll-nav="6">Pricing Plan</a></li>
+									<li class="main-menu__li"><a href="#" class="main-menu__a" data-scroll-nav="7">Contact Us</a></li>
+								</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero-video">
+			<div class="hero-video__container">
+				<div class="site-header">
+					<h1 class="site-header__title site-header__title--accent">	<strong>awesome </strong> mobile app</h1>
+					<div class="site-header__subtitle">Extremely useful and beautiful !</div>
+				</div>
+				<video autoplay loop class="fillWidth">
+					<source src="img/615240599.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				</video>
+				<div class="poster hidden">
+					<img src="img/poster.jpg" alt="">
+				</div>
+			</div>
+		</div>	
+			<span class="scroll-btn">
+				<a class="scroll-btn__link" data-scroll-goto="2"><span></span></a>
+			</span>
+	</header>
+	
+	<section class="s-avaliable" data-scroll-index="1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="avaliable">
+						<h5 class="avaliable__subtitle">avaliable ON THE APP STORE AND PLAY STORE :</h5>
+						<ul class="avaliable__stores">
+							<li class="avaliable__iphone"><a href="#" data-scroll-goto="0"><img src="img/iphone.png" alt="iphone"></a></li>
+							<li class="avaliable__android"><a href="#" data-scroll-goto="0"><img src="img/android.png" alt="android"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="avaliable">
+						<h5 class="avaliable__subtitle">featured ON THE LEADING NEWS MAGAZINES :</h5>
+						<ul class="avaliable__stores">
+							<li class="avaliable__magazine-1"><a href="#" data-scroll-goto="0"><img src="img/eagle-head-logo.svg" alt="iphone"></a></li>
+							<li class="avaliable__magazine-2"><a href="#" data-scroll-goto="0"><img src="img/s-logo-design.svg" alt="android"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</section>
+	<section class="s-features" data-scroll-index="2">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-headline section-headline--accent">
+						<h2 class="section-headline__title section-headline__title--accent"><strong>main </strong>features</h2>
+						<h5 class="section-headline__subtitle">Provide the main advantages of your application</h5>
+					</div>
+				</div>
+			</div>
+			<div class="features">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-users"></i></div>
+							<h3 class="features__title">User Friendly Interface</h3>
+							<p class="features__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit mauris. Integer sollicitudin tempus.Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-thumbs-o-up"></i></div>
+							<h3 class="features__title">Optimum Performance</h3>
+							<p class="features__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit mauris. Integer sollicitudin tempus.Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="flaticon-share"></i></div>
+							<h3 class="features__title">Social Media Integration</h3>
+							<p class="features__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit mauris. Integer sollicitudin tempus.Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+				
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-map-o"></i></div>
+							<h3 class="features__title">Responsive Layout</h3>
+							<p class="features__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit mauris. Integer sollicitudin tempus.Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-television"></i></div>
+							<h3 class="features__title">Unique Design Approach</h3>
+							<p class="features__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit mauris. Integer sollicitudin tempus.Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-cogs"></i></div>
+							<h3 class="features__title">Best Support and Updates</h3>
+							<p class="features__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit mauris. Integer sollicitudin tempus.Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<section class="s-intro" data-scroll-index="3">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-headline section-headline--invert">
+						<h2 class="section-headline__title section-headline__title--invert"><strong>How </strong> it works</h2>
+						<h5 class="section-headline__subtitle section-headline__subtitle--invert">increasingly easy to target the key users.</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="intro">
+					<p class="intro__content">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+			</div>
+				<div class="video">
+					<img src="img/video.png" alt="video" class="video__background">
+						<div class= "video__button">
+							<a class="video__link venobox" data-vbtype="video" href="https://vimeo.com/204747362">
+								<i class="fa fa-play"></i>
+							</a>
+						</div>
+				</div>
+	</section>
+	<section class="s-presentation" data-scroll-index="4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-headline section-headline--accent">
+						<h2 class="section-headline__title section-headline__title--accent"><strong>screen shots</strong> of freshapp</h2>
+						<h5 class="section-headline__subtitle">Absolutely amazing mobile application.</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="owl-carousel pres-carousel">
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-0.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-1.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-2.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-3.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-0.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-1.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-2.png" alt="app screen"></div>
+						<div class="pres-carousel__screen"><img class="pres-carousel__img" src="img/screenshot-3.png" alt="app screen"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<section class="s-versions" data-scroll-index="5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 bt-no-padding">
+					<div class="version version--left">
+						<div class="version__wrap-headline">
+							<h2 class="version__headline-h">free</h2>
+							<p class="version__headline-p">version.</p>
+						</div>
+						<ul class="version__futures">
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">freshapp goodies.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-cancel"></i>
+								<h4 class="version__title">direct messaging.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">white label.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">digital payments.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-cancel"></i>
+								<h4 class="version__title">push notifications.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">customer support.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 hidden-md hidden-sm hidden-xs">
+					<div class="middle-phone">
+						<img src="img/mobile2.png" alt="app screen" class="middle-phone__screen">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 bt-no-padding">
+						<div class="version version--right">
+						<div class="version__wrap-headline">
+							<h2 class="version__headline-h">premium</h2>
+							<p class="version__headline-p">version.</p>
+						</div>
+						<ul class="version__futures clearfix">
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">freshapp goodies.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-cancel"></i>
+								<h4 class="version__title">direct messaging.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">white label.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">digital payments.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-cancel"></i>
+								<h4 class="version__title">push notifications.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+							<li class="version__future">
+								<i class="version__icon flaticon-interface"></i>
+								<h4 class="version__title">customer support.</h4>
+								<p class="version__text">Lorem ipsum dolor sit amet consectetur.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="s-feedback">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="owl-carousel feedback-carousel">
+						<div class="feedback-carousel__item">
+							<img class="feedback-carousel__image" src="img/Fotolia_78982068_X-small.jpg" alt="app screen">
+							<p class="feedback-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex consequat.</p>
+							<h4 class="feedback-carousel__name">John Doe</h4>
+							<p class="feedback-carousel__position">Developer - Do-More inc.</p>
+						</div>
+						<div class="feedback-carousel__item">
+							<img class="feedback-carousel__image" src="img/MAN-SMILING.png" alt="app screen">
+							<p class="feedback-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex consequat.</p>
+							<h4 class="feedback-carousel__name">Mike Doe</h4>
+							<p class="feedback-carousel__position">CEO - Do-More inc.</p>
+						</div>
+						<div class="feedback-carousel__item">
+							<img class="feedback-carousel__image" src="img/Woman.png" alt="app screen">
+							<p class="feedback-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex consequat.</p>
+							<h4 class="feedback-carousel__name">Jane Doe</h4>
+							<p class="feedback-carousel__position">Designer - Do-More inc.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="s-plans" data-scroll-index="6">
+	<div class="section-headline section-headline--accent">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="section-headline__title section-headline__title--accent">Our Pricing<strong> Plans</strong></h2>
+					<h5 class="section-headline__subtitle">choose a plan which suites you best.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="plan plan--orange-bg plan--sr-animation-left">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 plan__wrap">
+					<h3 class="plan__title">Basic</h3>
+					<h4 class="plan__subtitle">Single Package</h4>
+					<div class="plan__price">
+						<span> 49</span>
+						<small>/month</small>
+					</div>
+					<ul class="plan__options">
+						<li class="plan__option">Hotel Booking<span>Yes</span></li>
+						<li class="plan__option">Unlimited Fun<span>Yes</span></li>
+						<li class="plan__option">Random Locations<span>Yes</span></li>
+						<li class="plan__option">Trip Advisor<span>No</span></li>
+						<li class="plan__option">Virtual Tour<span>No</span></li>
+						<li class="plan__option">24/7 Customer Service<span>No</span></li>
+					</ul>
+					<a class="plan__btn" href="#answer-plan" rel="modal:open">Choos Plan
+						<i class="plan__img fa fa-chevron-right"></i>
+					</a>
+				
+				</div>
+			</div>
+			<div class="plan plan--dark-bg plan--sr-animation-center">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 plan__wrap">
+					<h3 class="plan__title">Recommended</h3>
+					<h4 class="plan__subtitle">Couple Pacckage</h4>
+					<div class="plan__price">
+						<span> 129</span>
+						<small>/month</small>
+					</div>
+					<ul class="plan__options">
+						<li class="plan__option">Hotel Booking<span>Yes</span></li>
+						<li class="plan__option">Unlimited Fun<span>Yes</span></li>
+						<li class="plan__option">Random Locations<span>Yes</span></li>
+						<li class="plan__option">Trip Advisor<span>Yes</span></li>
+						<li class="plan__option">Virtual Tour<span>Yes</span></li>
+						<li class="plan__option">24/7 Customer Service<span>Yes</span></li>
+					</ul>
+					<a class="plan__btn" href="#answer-plan" rel="modal:open">Choos Plan
+						<i class="plan__img fa fa-chevron-right"></i>
+					</a>
+				
+				</div>
+			</div>
+			<div class="plan plan--orange-bg plan--sr-animation-right">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 plan__wrap">
+					<h3 class="plan__title">Advanced</h3>
+					<h4 class="plan__subtitle">Family Package</h4>
+					<div class="plan__price">
+						<span> 449</span>
+						<small>/month</small>
+					</div>
+					<ul class="plan__options">
+						<li class="plan__option">Hotel Booking<span>Yes</span></li>
+						<li class="plan__option">Unlimited Fun<span>Yes</span></li>
+						<li class="plan__option">Random Locations<span>Yes</span></li>
+						<li class="plan__option">Trip Advisor<span>No</span></li>
+						<li class="plan__option">Virtual Tour<span>yes</span></li>
+						<li class="plan__option">24/7 Customer Service<span>yes</span></li>
+					</ul>
+					<a class="plan__btn" href="#answer-plan" rel="modal:open">Choos Plan
+						<i class="plan__img fa fa-chevron-right"></i>
+					</a>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	
+	<section class="s-contacts" data-scroll-index="7">
+		<div class="section-headline section-headline--accent">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="section-headline__title section-headline__title--accent">contact us<strong> for any query</strong></h2>
+						<h5 class="section-headline__subtitle">Absolutely amazing mobile application.</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12 hidden-xs">
+						<div class="contact-us clearfix">
+							<div class="contact-us__unit">
+								<i class="contact-us__image fa fa-map-marker"></i>
+								<h4 class="contact-us__title">addres</h4>
+								<p class="contact-us__data">Nieuw Slotenr<br>46 Kort St Amsterdam</p>
+							</div>
+							<div class="contact-us__unit">
+								<i class="contact-us__image fa fa-volume-control-phone"></i>
+								<h4 class="contact-us__title">phone</h4>
+								<p class="contact-us__data">990 1111 4444</p>
+							</div>
+							<div class="contact-us__unit">
+								<i class="contact-us__image fa fa-envelope"></i>
+								<h4 class="contact-us__title">email</h4>
+								<p class="contact-us__data">support@web.com</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12">
+						<form class="form-submit">
+						
+							<!-- Hidden Required Fields -->
+							<input class="form-submit__stroke" type="hidden" name="project_name" value="Site Name">
+							<input class="form-submit__stroke" type="hidden" name="admin_email" value="admin@gmail.com">
+							<input class="form-submit__stroke" type="hidden" name="form_subject" value="Form Subject">
+							<!-- END Hidden Required Fields -->
+							
+							<input class="form-submit__stroke form-submit__stroke--name" type="text" name="Name" placeholder="Name" required>
+							<input class="form-submit__stroke form-submit__stroke--id" type="text" name="Email ID" placeholder="Email" required><br>
+							<input class="form-submit__stroke form-submit__stroke--subject" type="text" name="subject" placeholder="Phone"><br>
+							<textarea class="form-submit__stroke form-submit__stroke--message" name="Message" placeholder="Message"></textarea><br>
+							<button class="form-submit__button">Submit</button>
+							
+						</form>
+						
+						
+					</div>
+				
+			</div>
+			
+		</div>
+		
+		
+	</section>
+	
+	<section class="s-map">
+		<div class="map">
+			<iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5629.183952196084!2d4.958434033741429!3d52.36802206913087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1503771761441" allowfullscreen></iframe>
+		</div>
+	</section>
+	<footer class="s-footer">
+		<div class="update-form">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-12">
+						<h4 class="form-update__title">
+							get upcoming updates
+						</h4>
+					</div>
+					<form class="form-update">
+						<div class="col-lg-6 col-lg-offset-0 col-md-7 col-md-offset-1 col-sm-8 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<input class="form-update__area" type="text" name="Email" placeholder="Email address" required>
+						</div>
+						<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					
+						<div class="form-update__btn">
+							<button class="form-update__button" rel="modal:open">Submit</button>
+						</div>
+						</div>	
+					</form>
+				</div>
+			</div>
+		</div>		
+		<div class="footer-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="footer-menu__list">
+							<li class="footer-menu__unit">
+								<a href="#" class="footer-menu__link">Privacy Policy</a>
+							</li>
+							<li class="footer-menu__unit">
+								<a href="#" class="footer-menu__link">Company</a>
+							</li>
+							<li class="footer-menu__unit">
+								<a href="#" class="footer-menu__link">About</a>
+							</li>
+							<li class="footer-menu__unit">
+								<a href="#" class="footer-menu__link">Contact</a>
+							</li>
+							<li class="footer-menu__unit">
+								<a href="#" class="footer-menu__link">blog</a>
+							</li>
+							<li class="footer-menu__unit footer-menu__unit--social">
+								<a href="http://facebook.com" target="_blank" class="footer-menu__link"><i class="footer-menu__icon fa fa-facebook"></i></a>
+							</li>
+							<li class="footer-menu__unit footer-menu__unit--social">
+								<a href="https://twitter.com" class="footer-menu__link" target="_blank"><i class="footer-menu__icon fa fa-twitter"></i></a>
+							</li>
+							<li class="footer-menu__unit footer-menu__unit--social">
+								<a href="https://www.instagram.com" class="footer-menu__link" target="_blank"><i class="footer-menu__icon fa fa-instagram"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="credits">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p>© 2017 All rights reserved. <a class="credits__link">Flourens.</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(window).on('load', function(){
+			$('.preloader').delay(1000).fadeOut('slow');
+			scaleVideoContainer();
+			initBannerVideoSize('.hero-video__container .poster img');
+			initBannerVideoSize('.hero-video__container video');
+		});
+		$(window).on('resize', function(){
+			scaleVideoContainer();
+			scaleBannerVideoSize('.hero-video__container .poster img');
+			scaleBannerVideoSize('.hero-video__container video');
+		});
+		function scaleVideoContainer() {
+
+				var height = $(window).height();
+				var unitHeight = parseInt(height) + 'px';
+				$('.hero-video').css('height',unitHeight);
+
+		}
+		function initBannerVideoSize(element){
+
+				$(element).each(function(){
+						$(this).data('height', $(this).height());
+						$(this).data('width', $(this).width());
+				});
+
+				scaleBannerVideoSize(element);
+
+		}
+		function scaleBannerVideoSize(element){
+
+				var windowWidth = $(window).width(),
+						windowHeight = $(window).height(),
+						videoWidth,
+						videoHeight;
+
+				console.log(windowHeight);
+
+				$(element).each(function(){
+						var videoAspectRatio = $(this).data('height')/$(this).data('width'),
+								windowAspectRatio = windowHeight/windowWidth;
+
+						if (videoAspectRatio > windowAspectRatio) {
+								videoWidth = windowWidth;
+								videoHeight = videoWidth * videoAspectRatio;
+								$(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
+						} else {
+								videoHeight = windowHeight;
+								videoWidth = videoHeight / videoAspectRatio;
+								$(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+						}
+
+						$(this).width(videoWidth).height(videoHeight);
+
+						$('.hero-video .hero-video__container').addClass('fadeIn animated');
+
+
+				});
+		}
+	</script>
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+	<script src="js/scripts.min.js"></script>
+	
+</body>
+</html>
