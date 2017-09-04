@@ -10150,10 +10150,10 @@ body {
   padding-top: 9px;
   z-index: 10;
   position: relative;
-  border: 1px #05be70 solid; }
+  border: 1px solid #05be70; }
   .footer-menu__icon:hover {
     background-color: #111520;
-    border: 1px #05be70 solid;
+    border: 1px solid #05be70;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease; }
