@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>OpenALPR On-Premises Agent</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automatically Recognize License Plates from Videos and Images">
+    <meta name="keywords" content="ALPR,ANPR,LPR,License Plate Recognition,Open Source,Free,License Plate, Number Plate">
+
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+    <link rel="stylesheet" href="assets/plugins/OwlCarousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/hamburgers/dist/hamburgers.min.css">
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css" media="screen" />
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    
+
+</head> 
+
+<body class="home-page">   
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header navbar-fixed-top">  
+        <div class="container">
+            <h1 class="logo">
+                <a href="/"><img class="svg logo-img" src="/assets/images/logo_new/logo_whiteonly.svg" alt="">
+                </a>
+            </h1><!--//logo-->
+            <nav class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="hamburger-box">
+    											<span class="hamburger-inner"></span>
+  											</span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class=" nav-item"><a href="/">Home</a></li>
+
+                        <li class="active nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Products<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="cloud-stream.html">Cloud Stream</a></li>
+                                <li class="active"><a href="on-premises.html">On-Premises ALPR</a></li> 
+                                <li class=""><a href="cloud-api.html">Cloud API</a></li>
+                            </ul>
+                        </li><!--//products dropdown-->   
+
+                        <li class=" nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Pages <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="">
+                                	<a href="/nvidia.html">NVIDIA Acceleration</a>
+                                </li>
+                                <li class="">
+                                	<a href="/benchmarks.html">Benchmarks</a>
+                                </li>
+                                <li class="">
+                                	<a href="https://github.com/openalpr/openalpr">OpenALPR Code</a>
+                                </li>
+                                <li class="">
+                                	<a href="https://groups.google.com/forum/#!forum/openalpr">Developer Forum</a
+                                </li>
+                                <li class="">
+                                	<a href="contact.html">Contact</a>
+                                </li>                    
+                            </ul>
+                        </li><!--//Pages dropdown-->
+
+                        <li class="nav-item ">
+                        	<a href="https://cloud.openalpr.com/">Log in</a>
+                        </li>
+                        <li class="nav-item nav-item-cta last">
+                        	<a class="btn btn-cta btn-cta-secondary" href="https://cloud.openalpr.com/account/register" target="_blank">Sign Up - It's Free</a>
+                        </li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->                     
+        </div><!--//container-->
+    </header><!--//header-->
+
+    
+active
+active
+	
+		<!--//headline-bg-->
+			<div class="page-top-bg page-top-bg--on-premises"></div>
+		<!--//headline-bg-->
+		<!-- ****** Headline ****** -->
+			<section class="page-head">
+				<div class="page-head__content">
+					<h2 class="page-head__title">OpenALPR <span class="page-head__title page-head__title--accent">On-Premises Agent</span></h2>
+					<p class="page-head__subtitle">On Your Network and With Your Applications.</p>
+				</div> 
+			</section>
+		<!--// ****** Headline ****** -->
+ 
+	<!-- ****** Section-1 ****** -->
+	<section class="section-1">
+		<div class="container"> 
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="section-1__inner section-1__inner--top">
+						<div class="section-1__about">
+							<p>
+							For those customers who would rather use OpenALPR on their own network and for software developers who would like to interface with OpenALPR via our API for custom applications, the On-Premises Agent is available for a one-time per camera license fee. An optional software support and maintenance plan is available which includes priority technical support as well as updates to the Agent.
+							</p>
+							<p>
+							The On-Premises Agent includes a database and web server.  Each On-Premises Agent can host its own web server, or a single web server can centralize data from hundreds of IP cameras. 
+							</p>
+							<p> 
+							The On-Premises Agent uses the same browser-based GUI as Cloud Stream; however, power users can choose to send the license plate data from the OpenALPR On-Premises Agent directly to other applications using our open API.   More information can be found in the OpenALPR Agent <a href="http://doc.openalpr.com/alprd.html#commercial-agent">Documentation</a> 
+							</p>
+							<p>
+							Requirements; Ubuntu Linux 16.04 Desktop or Server (64-bit), Minimum PC/Server (per camera at 720p resolution and 30 FPS, i5 CPU-6400 (6th Gen), 4 GB RAM, 500MB-1TB HDD (more or less depending on how long you choose to retain the plate images). 
+							</p>
+							<p>OpenALPR recommends that you try our software for a few weeks and determine overall CPU utilization based on number of camera streams processed in order to size your system appropriately.  <a href="mailto:info@openalpr.com">Contact us</a> for a free 14-day Evaluation License Key and to discuss licensing.
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//Section-1-->
+	<!-- Features section  -->
+	<section class="s-features">
+		<div class="container">
+			<div class="features">
+				<div class="row features__small-row">
+					<div class="col-md-12">
+						<div class="features__header">
+							<h2 class="title">On-Premises Agent Features</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row features__icons-row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-code-fork"></i></div> 
+<!--							<h3 class="features__title">User Friendly Interface</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">High-Accuracy ALPR</li>
+								<li class="features__inside">Any IP Camera</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-hdd-o"></i></div>
+<!--							<h3 class="features__title">Optimum Performance</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">User-defined Storage Quota (for license plate images)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa fa-users"></i></div>
+<!--							<h3 class="features__title">Optimum Performance</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">Unlimited Users &amp; Alerts</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-search"></i></div>
+<!--							<h3 class="features__title">Social Media Integration</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">Enhanced Search</li>
+								<li class="features__inside">API Access </li>
+							</ul>
+						</div>
+					</div>
+				
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-laptop"></i></div>
+<!--							<h3 class="features__title">Responsive Layout</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">Local Compute &amp; Storage Required</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-database"></i></div>
+<!--							<h3 class="features__title">Responsive Layout</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">Web Server &amp; MySQL Database Included</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-server"></i></div>
+<!--							<h3 class="features__title">Unique Design Approach</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">Ubuntu 16.04 Desktop and Server (64-bit)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-address-card-o"></i></div>
+<!--							<h3 class="features__title">Unique Design Approach</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">One-time, Perpetual Software License (per camera)</li> 
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent"><i class="fa fa-cogs"></i></div>
+<!--							<h3 class="features__title">Best Support and Updates</h3>-->
+							<ul class="features__content">
+								<li class="features__inside">Optional Support and</li>
+								<li class="features__inside">Software Updates</li>
+								<li class="features__inside">(annual fee)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--//container-->
+    </section>
+	<!-- //Features section -->
+	
+	<!-- Section-3 -->
+	<section class="section-1">
+		<div class="container section-1__inner">
+			<div class="row section-1__about">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h2 class="section-1__title">Forensic Plate Finder</h2>
+					<P class="section-1__item">OpenALR's Forensic Plate Finder utility enables license plates to be detected and recognized from video and still image files.</P>
+					<P class="section-1__item">This easy to use utility runs on Windows and writes the license plate results to a file where the data can be searched, sorted, and filtered using Excel.</P>
+					<P class="section-1__item">Use cases include analyzing recordings from battery powered cameras (e.g., trail cameras) and remote cameras where no internet connectivity is available such as: oil and gas fields, water treatment facilities, and temporary sting operations.</P>
+
+					<h4>Features</h4>
+						<ul>
+							<li>Easy to use, simple UI</li>
+							<li>Runs on Windows (64-bit)</li>
+							<li>Video &amp; image file supported: AVI, MKV, MOV, MPEG, MP4, MJPG, JPG</li>
+							<li>Output file format: CSV, TXT, and SQLite</li>
+							<li>Licensed per CPU thread </li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Section-3 -->
+
+	<!-- ******FAQ Section****** --> 
+	<section class="s-faq">
+		<div class="faq">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="title text-center faq__title">Frequently Asked Questions</h2>
+					</div>
+				</div>
+			<div class="row">
+			<div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 col-xs-offset-0">
+
+				<!--//panel-->
+				<div class="panel faq__panel">
+					<div class="panel-heading faq__panel-heading">
+						<h4 class="panel-title faq__panel-title">
+							<a data-parent="#accordion" data-toggle="collapse" class="panel-toggle faq__panel-toggle" href="#faq2">
+								<i class="fa fa-plus-square"></i>How many cameras can OpenALPR On-Premises support?
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse collapse faq__panel-collapse" id="faq2">
+						<div class="panel-body">
+							<p>A single web server can support thousands of On-Premises Agents.  Each On-Premises Agent can support up to 16 cameras each.</p>
+							<p>The CPU must be sized appropriately for the On-Premises Agent to ensure that it can properly process the stream.  We recommend no more than 2 cameras per CPU core.  Additional CPU will improve detection speed.</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion"
+						data-toggle="collapse" class="panel-toggle" href="#faq3"><i class="fa fa-plus-square"></i>How long is the plate data retained?</a></h4>
+					</div>
+					<div class="panel-collapse collapse" id="faq3">
+						<div class="panel-body">
+							<p>
+							The plate retention time is configurable and can be set to any value between 30 days and 2.5 years.
+							<p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion"
+							data-toggle="collapse" class="panel-toggle" href="#faq4"><i class="fa fa-plus-square"></i>Can I embed the OpenALPR library into my proprietary application?</a></h4>
+					</div>
+					<div class="panel-collapse collapse" id="faq4">
+						<div class="panel-body">
+							<p>Absolutely.  OpenALPR can integrate with other applications in a number of ways.  The OpenALPR Local Agent can be configured read data from a video stream and send all license plate data to another application via HTTP POSTs. </p>
+							<p>OpenALPR is also available  as a code library that can analyze still images or videos.  The OpenALPR library is directly compatible with C/C++, C#, Java, Node.js, Go, and Python code.  Applications written in other languages can also integrate with the software via web service.</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion"
+						data-toggle="collapse" class="panel-toggle" href="#faq8"><i class="fa fa-plus-square"></i>What countries do you support?</a></h4>
+					</div>
+					<div class="panel-collapse collapse" id="faq8">
+						<div class="panel-body">
+							<p>OpenALPR includes support for a number of countries.  The software includes trained data for North American style and European style plates.
+							These styles work well for a number of countries that use similar looking plates but may not necessarily be in that region.  For countries
+							with plates that look significantly different, OpenALPR can be trained to recognize them.  We offer training services as a paid consulting engagement.  You may also train the software yourself.</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq9"><i class="fa fa-plus-square"></i>What cameras work best with the software?</a></h4>
+                        </div>
+
+                        <div class="panel-collapse collapse" id="faq9">
+                            <div class="panel-body">
+                                <p>
+                                OpenALPR will work with any IP camera that supports H.264 and MJPEG streams.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq1"><i class="fa fa-plus-square"></i>What is the difference between the AGPL and Commercial license?</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq1">
+                            <div class="panel-body">
+                                <p>
+                                    OpenALPR provides its software under a dual license model to meet the development and distribution needs of both commercial customers as well as open source projects.
+                                    The GNU Affero General Public License v3 (AGPL) is an open source, copyleft software license.
+                                </p>
+                                <p>
+                                    For open-source projects, you may use the software under the terms of the AGPL.  One of the requirements of this license is that your software must also be released under the same AGPL open source license.
+                                </p>
+                                <p>
+                                    For commercial customers, we offer a commercial license that supersedes the AGPL and allows OpenALPR to be linked into closed-source, proprietary applications.
+                                    Additionally, commercial customers have access to a number of exciting enhancements that improve license plate recognition performance, efficiency and usability.
+                                    Please <a href="contact.html">contact us</a> for more information about our commercial licensing options.
+                                </p>
+
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+            
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq21"><i class="fa fa-plus-square"></i>What are the commercial enhancements?</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq21">
+                            <div class="panel-body">
+                                <p>
+                                The core library used to process license plates is the same in the open source and commercial versions.  However, the commercial version includes additional
+                                proprietary algorithms that enhance the efficiency when monitoring streaming video.  Specifically, the commercial version of OpenALPR is able to:
+                                </p>
+
+                                <ol>
+                                    <li>Analyze video more efficiently.  Rather than analyzing all pixels for each frame of the video, OpenALPR detects vehicles in the stream and only targets those for plate detection.</li>
+                                    <li>Utilize multiple CPU cores simultaneously.  You can configure the number of CPU cores that you wish to use for license plate analysis.  This provides a linear increase in the ALPR processing rate.</li>
+                                    <li>Process plates during quiet periods.  OpenALPR buffers images during busy periods to process when the activity level is lower.  This gives you more reads on each vehicle without having to increase CPU resources.</li>
+                                    <li>Group plate results together.  OpenALPR tracks a vehicle as it moves across the camera and combines all ALPR recognition events into a single entry for that vehicle.  The plate number for the group uses the individual result with the highest confidence.</li>  For more details see <a href="http://doc.openalpr.com/commercial.html">Commerical Enhancements</a>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+            
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq11"><i class="fa fa-plus-square"></i>What if I have technical questions?</a></h4>
+                        </div>
+
+                        <div class="panel-collapse collapse" id="faq11">
+                            <div class="panel-body">
+                                <p>
+                                    The answer to your question may be found on the <a href="https://groups.google.com/forum/#!forum/openalpr">developer forum</a>.  You can
+                                    also <a href="contact.html">contact us</a> directly with your questions.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+
+
+                </div>
+            </div><!--//row-->
+            <div class="contact-lead">
+                <h4 class="title">Ready to get started?</h4> 
+                <a class="lead-btn" href="contact.html">Request a Free 14-day Evaluation License Key</a>
+            </div>
+        </div><!--//container--> 
+      </div>       
+    </section>
+	<!--//FAQ Section-->
+    
+    <!-- ******CTA Section****** -->
+    <section id="cta-section" class="section cta-section text-center pricing-cta-section">
+        <div class="container">
+            <h2 class="title">Ready to start reading license plates?</h2>
+            <p class="intro">Try OpenALPR <span class="counting">for 14 days free of charge</span>.  No credit card required.</p>
+            <p><a class="btn btn-cta btn-cta-primary" href="https://cloud.openalpr.com/account/register" target="_blank">Try OpenALPR Now</a></p>
+        </div><!--//container-->
+    </section><!--//cta-section-->
+
+
+
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col links col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Product</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="cloud-stream.html"><i class="fa fa-caret-right"></i>Cloud Stream</a></li>
+                                <li><a href="on-premises.html"><i class="fa fa-caret-right"></i>On-Premises ALPR</a></li>
+                                <li><a href="cloud-api.html"><i class="fa fa-caret-right"></i>Cloud API</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->              
+                    <div class="footer-col links col-md-4 col-sm-4 col-xs-6 sm-break">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Support</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="https://groups.google.com/forum/#!forum/openalpr"><i class="fa fa-caret-right"></i>Support Forum</a></li>
+                                <li><a href="contact.html"><i class="fa fa-caret-right"></i>Contact Us</a></li>
+                                <li><a href="https://cloud.openalpr.com/account/terms"><i class="fa fa-caret-right"></i>Terms of services</a></li>
+                                <li><a href="https://cloud.openalpr.com/account/privacy"><i class="fa fa-caret-right"></i>Privacy</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->            
+                    </div><!--//foooter-col-->
+                    <div class="footer-col contact col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-col-inner">
+                                    <h3 class="title">Contact us</h3>
+                                    <ul class="social list-inline">
+                                        <li><a href="https://www.facebook.com/openalpr"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/openalpr" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li>
+                                            <a href="https://twitter.com/openalpr" class="twitter-follow-button" data-show-count="false">Follow @openalpr</a>
+                                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                        </li>
+                                    </ul>
+
+                                    <p class="tel clearfix"><i class="fa fa-phone"></i>1-800-935-1699</p>
+                                    <p class="email"><i class="fa fa-envelope-o"></i><a href="mailto:info@openalpr.com">info@openalpr.com</a></p>
+
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->
+                    <div class="clearfix"></div> 
+                </div><!--//row-->
+
+            </div><!--//container-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <small class="copyright">Copyright @ 2017 OpenALPR Technology, Inc.</small>
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+    
+    <!-- Video Modal -->
+    <div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 id="videoModalLabel" class="modal-title sr-only">Video Tour</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="video-container">
+                        <iframe id="vimeo-video" src="//player.vimeo.com/video/124471546?color=ffffff&amp;wmode=transparent" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div><!--//video-container-->
+                </div><!--//modal-body-->
+            </div><!--//modal-content-->
+        </div><!--//modal-dialog-->
+    </div><!--//modal-->
+    
+
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="assets/plugins/OwlCarousel2/dist/owl.carousel.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+    
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+    <!-- Vimeo video API -->
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script type="text/javascript" src="assets/js/vimeo.js"></script>
+
+    
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46999297-1', 'openalpr.com');
+      ga('send', 'pageview');
+
+    </script>
+
+            
+</body>
+</html> 
