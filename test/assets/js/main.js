@@ -515,6 +515,7 @@ $(document).ready(function() {
 			navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 			loop: true,
 			autoplay:true,
+			lazyLoad:false,
 		});
 	});
 	//photos carousel
@@ -529,6 +530,7 @@ $(document).ready(function() {
 			loop: true,
 			autoplay:true,
 			navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+			lazyLoad:false,
 		});
 	});
 	 
