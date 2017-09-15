@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>OpenALPR - Automatic License Plate Recognition</title>
+    <title>OpenALPR Cloud API</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,16 +31,106 @@
     
 
 active
+active
 
-<style>
-    .thickbordered
-    {
-        border: 8px solid #ddd;
-    }
-    .testimonials
-    {
-        display:none;
-    }
+	<link rel="stylesheet" type="text/css" href="assets/js/cloudapidemo/cloudapidemo.css" />
+
+	<style>
+		.plate_sample_images img{
+				margin-top: 15px;
+			}
+		.story-section div.story-container-inner{
+				max-width: 1000px;
+			}
+		hr{
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+		.api_pricing {
+			text-align: center;
+			border: 1px solid #c0c0c0;
+			color: #777;
+			font-size: 22px;
+			padding-left: 0;
+			margin-bottom: 30px;
+		}
+		.api_pricing img {
+			display: block;
+			margin: auto;
+			width: 32px;
+		}
+		.api_pricing li:first-child,
+		.api_pricing li:last-child {
+			padding: 20px 13px;
+		}
+		.api_pricing li {
+			list-style: none;
+			padding: 13px;
+		}
+		.api_pricing li + li {
+			border-top: 1px solid #f0f0f0;
+		}
+		.api_pricing big {
+			font-size: 32px;
+		}
+		.api_pricing h3 {
+			margin-bottom: 0;
+			font-size: 36px;
+		}
+		.api_pricing span {
+			font-size: 12px;
+			color: #999;
+			font-weight: normal;
+		}
+		.api_pricing li:nth-last-child(2) {
+			padding: 30px 13px;
+		}
+		.api_pricing button {
+			width: auto;
+			margin: auto;
+			font-size: 15px;
+			font-weight: bold;
+			border-radius: 50px;
+			color: #fff;
+			padding: 9px 24px;
+			background: #aaa;
+			opacity: 1;
+			transition: opacity .2s ease;
+			border: none;
+			outline: none;
+		}
+		.api_pricing button:hover {
+			opacity: .9;
+		}
+		.api_pricing button:active {
+			box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+		}
+		/* pricing color */
+		.p-green big,
+		.p-green h3 {
+			color: #4c7737;
+		}
+		.p-green button {
+			background: #4c7737;
+		}
+		.p-yel big, .p-yel h3 {
+			color: #ffbb42;
+		}
+		.p-yel button {
+			background: #ffbb42;
+		}
+		.p-red big, .p-red h3 {
+			color: #e13c4c;
+		}
+		.p-red button {
+			background: #e13c4c;
+		}
+		.p-blue big, .p-blue h3 {
+			color: #3f4bb8;
+		}
+		.p-blue button {
+			background: #3f4bb8;
+		}
 </style>
 
 
@@ -64,14 +154,14 @@ active
                 </div><!--//navbar-header-->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active nav-item"><a href="/">Home</a></li>
+                        <li class=" nav-item"><a href="/">Home</a></li>
 
-                        <li class=" nav-item dropdown">
+                        <li class="active nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Products<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class=""><a href="cloud-stream.html">Cloud Stream</a></li>
                                 <li class=""><a href="on-premises.html">On-Premises ALPR</a></li> 
-                                <li class=""><a href="cloud-api.html">Cloud API</a></li>
+                                <li class="active"><a href="cloud-api.html">Cloud API</a></li>
                             </ul>
                         </li><!--//products dropdown-->   
 
@@ -110,139 +200,163 @@ active
 
     
 
-    <div class="bg-slider-wrapper">
-        <div class="flexslider bg-slider">
-            <ul class="slides">
-                <li class="slide slide-1"></li>
-                <li class="slide slide-2"></li>
-                <li class="slide slide-3"></li>
-            </ul>
-        </div>
-    </div><!--//bg-slider-wrapper-->
+		<!--//headline-bg-->
+			<div class="page-top-bg page-top-bg--cloud-api"></div>
+		<!--//headline-bg-->
+		<!-- ****** Headline ****** -->
+			<section class="page-head">
+				<div class="page-head__content">
+					<h2 class="page-head__title">OpenALPR<span class="page-head__title page-head__title--accent"> Cloud API</span></h2>
+					<p class="page-head__subtitle"></p>
+				</div>
+			</section>
+		<!--// ****** Headline ****** -->
+		<!-- ****** Section-1 ****** -->
+	<section class="section-1">
+		<div class="container"> 
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="section-1__inner section-1__inner--top">
+						<div class="section-1__about">
+							<h2>OpenALPR Cloud API</h2>
+							<p>The <strong>OpenALPR Cloud API</strong> is a web service running in the cloud that analyizes images of vehicles and responds with 
+								license plate data, as well as vehicle color, make, model and body type.</p>
+							<h3>Take a Test Drive</h3>
+							<p>Upload your own images, or select an image below to see the results from previous image analysis using the OpenALPR Cloud API.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
 
-    <section class="promo section section-on-bg">
-        <div class="container text-center">
-            <h2 class="title">Open, Accurate and Affordable</h2>
-            <p class="intro">OpenALPR’s Cloud Stream service is now free. <br />Sign up now and start monitoring license plates.</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="https://cloud.openalpr.com/account/register">Try OpenALPR for Free</a></p>
-            <button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>
-        </div><!--//container-->
-    </section><!--//promo-->
+<section class="s-photos photos">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="photos__inner">
+							<div class="photos__sample">
+								<div class="owl-carousel photos__carousel">
+										<a class="photos__item" data-fancybox='group1' href="assets/images/demoscreenshots/large-0.jpg">
+										<img class="photos__image" src="assets/images/demoscreenshots/small-0.jpg" alt="Rear Audi"/></a>
+										<a class="photos__item"  data-fancybox='group1' href="assets/images/demoscreenshots/large-1.jpg">
+										<img class="photos__image" src="assets/images/demoscreenshots/small-1.jpg" alt="Front Nissan Truck"/></a>
+										<a class="photos__item"  data-fancybox='group1' href="assets/images/demoscreenshots/large-2.jpg">
+										<img class="photos__image" src="assets/images/demoscreenshots/small-2.jpg" alt="Front EU Mini Cooper"/></a>
+										<a class="photos__item"  data-fancybox='group1' href="assets/images/demoscreenshots/large-3.jpg">
+										<img class="photos__image" src="assets/images/demoscreenshots/small-3.jpg" alt="Side Prius"/></a>
+								</div>
+								<hr />
+							</div>
+						</div>
+				</div>
+			</div>
+			
+		</div>
+</section>
 
-    <div class="sections-wrapper">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="photos__inner">
+				<div class="photos__sample">
+					<div id="cloud_api_demo"></div>
+					<hr />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-        <!-- ******Why Section****** -->
-        <section id="why" class="section why">
-            <div class="container">
-                <h2 class="title text-center">Essential Security for Property Managers and HOAs</h2>
-                <p class="intro text-center">Monitor license plates 24X7 at all of your facilities</p>
-                <div class="row item">
-                    <div class="content col-md-5 col-sm-12 col-xs-12">
-                        <h3 class="title">Know when unauthorized vehicles are on your property</h3>
-                        <div class="desc">
-                            <p>The moment an unwelcome visitor drives past your security cameras OpenALPR will send you an alert.</p>
-                            <p>Use a more cost-effective and accurate approach to identify suspicious activity.  OpenALPR monitors your surveillance cameras 24 hours a day, seven days a week and captures license plates.</p>
-                        </div>
-                        <div class="quote">
-                            <div class="quote-profile">
-                                <img class="img-responsive img-circle" src="assets/images/people/testimonial3.png" alt="" />
-                            </div><!--//profile-->
-                            <div class="quote-content">
-                                <blockquote><p>OpenALPR alerted us when a thief came back to steal from one of our tenants.  We called the police, and they were waiting for him with handcuffs when he tried to leave.</p></blockquote>
-                                <p class="source">Lisa R.  Property Manager, Melville, NY</p>
-                            </div><!--//quote-content-->
-                        </div><!--//quote-->
-                    </div><!--//content-->
-                    <figure class="figure col-md-6 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-										<div class="fotorama" data-nav="thumbs" data-thumbwidth="100">
-											<a href="assets/images/figures/badguy-1.jpg"><img src="assets/images/figures/thumbs/badguy-1-thumb.jpg" alt="badguy OpenALPR protection"></a>
-											<a href="assets/images/figures/badguy-2.jpg"><img src="assets/images/figures/thumbs/badguy-2-thumb.jpg" alt="badguy OpenALPR protection"></a>
-											<a href="assets/images/figures/badguy-3.jpg"><img src="assets/images/figures/thumbs/badguy-3-thumb.jpg" alt="badguy OpenALPR protection"></a>
-											<a href="assets/images/figures/badguy-4.jpg"><img src="assets/images/figures/thumbs/badguy-4-thumb.jpg" alt="badguy OpenALPR protection"></a>
-											<a href="assets/images/figures/badguy-5.jpg"><img src="assets/images/figures/thumbs/badguy-5-thumb.jpg" alt="badguy OpenALPR protection"></a>
-											<a href="assets/images/figures/badguy-6.jpg"><img src="assets/images/figures/thumbs/badguy-6-thumb.jpg" alt="badguy OpenALPR protection"></a>
-											<a href="assets/images/figures/badguy-7.jpg"><img src="assets/images/figures/thumbs/badguy-7-thumb.jpg" alt="badguy OpenALPR protection"></a>
-												
-										</div>
-										<figcaption class="figure-caption">Suspicious vehicle entering the property</figcaption>
-                    </figure>
-                </div><!--//item-->
-
-                <div class="row item">
-                  
-                    <div class="content col-md-5 col-md-offset-1 col-md-push-6 col-sm-12">
-                        <h3 class="title">Monitor personnel coming and going</h3>
-                        <div class="desc">
-                            <p>Every time someone drives past one of your cameras, OpenALPR records it to a database.</p>
-                            <p>With a simple search, you can view the full history of a vehicle on your property.</p>
-                            <!-- <p><i class="fa fa-download"></i> <a href="download.html">Download mobile versions</a></p> -->
-                        </div>
-
-                        <div class="quote">
-                            <div class="quote-profile">
-                                <img class="img-responsive img-circle" src="assets/images/people/testimonial1.png" alt="" />
-                            </div><!--//profile-->
-                            <div class="quote-content">
-                                <blockquote><p>We had an employee show up hours late for work every day for months.  OpenALPR gave us the proof we needed to correct that behavior.</p></blockquote>
-                                <p class="source">Chris J.  Facilities Director, Kansas City, MO</p>
-                            </div><!--//quote-content-->
-                        </div><!--//quote-->
-                    </div><!--//content--> 
-                   <figure class="figure col-md-6 col-md-pull-6 col-sm-12">
-                      	<img class="img-mack img-responsive" src="assets/images/figures/macbook_slider.png" alt="OpenALPR"/>
-                       	<div class="owl-carousel alpr-carousel">
-													<div><img src="assets/images/features/screenshot-1.png" alt="OpenALPR"></div>
-													<div><img src="assets/images/features/screenshot-2.png" alt="OpenALPR"></div>
-													<div><img src="assets/images/features/screenshot-3.png" alt="OpenALPR"></div>
-													<div><img src="assets/images/features/screenshot-4.png" alt="OpenALPR"></div>
-												</div>
-												<figcaption class="figure-caption">OpenALPR Web Dashboard</figcaption>
-                    </figure>
-                    
-                </div><!--//item-->
-
-                <div class="row item last-item">
-                    <div class="content col-md-5 col-sm-12 col-xs-12">
-                        <h3 class="title">Powered by OpenALPR</h3>
-                        <div class="desc">
-                            <p>Use the OpenALPR API and directly integrate OpenALPR's leading license plate recognition technology into your applications.</p>
-                            <p>OpenALPR is cross-platform and can interoperate with a variety of programming language.</p>
-                        </div>
-                        <div class="quote">
-                            <div class="quote-profile">
-                                <img class="img-responsive img-circle" src="assets/images/people/testimonial2.png" alt="" />
-                            </div><!--//profile-->
-                            <div class="quote-content">
-                                <blockquote><p>We've opened up a new line of business that relies heavily on OpenALPR.  Sales of the product have boosted our revenue by 8% in the last six months.</p></blockquote>
-                                <p class="source"><a href="#">James C</a>.  Senior Product Manager, London, UK</p>
-                            </div><!--//quote-content-->
-                        </div><!--//quote-->
-                    </div><!--//content-->
-                    <figure class="figure col-lg-6 col-md-6 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        <img class="img-responsive" src="assets/images/figures/puzzle.png" alt="" />
-
-                    </figure>
-                </div><!--//item-->
-
-
-                <div class="feature-lead text-center">
-                    <h4 class="title">Curious About OpenALPR?</h4>
-                    <p><a class="btn btn-cta btn-cta-secondary" href="features.html">Take a Test Drive</a></p>
-                </div>
-
-
-            </div><!--//container-->
-        </section><!--//why-->
-        <!-- ******CTA Section****** -->
-        <section id="cta-section" class="section cta-section text-center home-cta-section">
-            <div class="container">
-               <h2 class="title">Ready to start reading license plates?</h2>
-               <p class="intro">Try OpenALPR<span class="counting"> for free.</span>  No credit card required.</p>
-               <p><a class="btn btn-cta btn-cta-primary" href="https://cloud.openalpr.com/account/register" target="_blank">Try OpenALPR Now</a></p>
-            </div><!--//container-->
-        </section><!--//cta-section-->
-    </div><!--//section-wrapper-->
-
+<!-- ****** Section-1 ****** -->
+	<section class="section-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="section-1__inner">
+						<div class="section-1__about">
+							<h3>Supported Countries</h3>
+								<p>OpenALPR contains specialized training data for many plate styles.  Currently, OpenALPR supports:</p>
+								<ul>
+									<li>North America</li>
+									<li>Europe</li>
+									<li>Brazil</li>
+									<li>Australia</li>
+									<li>UAE</li>
+									<li>Saudi Arabia</li>
+									<li>India</li>
+									<li>Thailand</li>
+									<li>Argentina</li>
+									<li>New Zealand</li>
+								</ul>
+								<p>If your country is not listed, you may still experience very high accuracy rates by using training data for a country that has plates that look similar to yours.  Upload your own images in the form above to see how well OpenALPR will work for you.  OpenALPR can be trained to accurately recognize license plates for any country.  <a href="/contact.html">Contact Us</a> to discuss custom training services.</p>
+								<hr />
+								<h3>Easy Integration</h3>
+								<p>Because the OpenALPR Cloud API is REST-based, it works with virtually any programming language on any operating system.  You can make API calls using whatever method you prefer.</p>
+								<p>To make integration easier, the OpenALPR Cloud API includes permissively licensed open source client libraries in a variety of languages. Head over to the <a href="https://github.com/openalpr/cloudapi">OpenALPR Cloud API GitHub repo</a> to find out more.</p>
+								<p>Check out the <a href="http://doc.openalpr.com/bindings.html#cloud-api-commercial">OpenALPR Cloud API Documentation</a> for more technical information.</p>
+								<hr />
+								<h3>Affordable</h3>
+								<p>OpenALPR Cloud API offers monthly plans with no long-term commitments.  Sign-up today and start analyzing your images for license plate and vehicle information.  The service is <strong>free</strong> for low monthly usage.  For higher volume usage, we offer the following plans:</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//Section-1-->
+	<!--Pricing Section-->
+		<section class='s-pricing'>
+			<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+								<div class="block"> 
+									<div class="photos__inner">
+									<div class="photos__sample">
+									<div class="col-xs-12 col-sm-6 col-md-3">
+										<ul class="api_pricing img-rounded p-green">
+											<li><img src="/assets/images/misc/settings_g.svg" alt="">
+												<big>Free</big>
+											</li>
+											<li><div>2,000</div><span>recognitions / month</span></li>
+											<li><h3>Free</h3><span>&nbsp;</span></li>
+											<li><a href="https://cloud.openalpr.com/account/register"><button>Join Now</button></a>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-3">
+											<ul class="api_pricing img-rounded p-blue">
+													<li><img src="/assets/images/misc/settings_b.svg" alt=""><big>Basic</big></li>
+													<li><div>50k</div><span>recognitions / month</span></li>
+													<li><h3>$49</h3><span>per month</span></li>
+													<li><a href="https://cloud.openalpr.com/account/register"><button>Join Now</button></a></li>
+											</ul>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-3">
+										<ul class="api_pricing img-rounded p-blue">
+											<li><img src="/assets/images/misc/settings_b.svg" alt=""><big>Pro</big></li>
+											<li><div>250k</div><span>recognitions / month</span></li>
+											<li><h3>$195</h3><span>per month</span></li>
+											<li><a href="https://cloud.openalpr.com/account/register"><button>Join Now</button></a>
+											</li>
+										</ul>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-3">
+										<ul class="api_pricing img-rounded p-red">
+											<li><img src="/assets/images/misc/settings_r.svg" alt=""> <big>Enterprise</big></li>
+											<li><div>2M</div><span>recognitions / month</span></li>
+											<li><h3>$995</h3><span>per month</span></li>
+											<li><a href="https://cloud.openalpr.com/account/register"><button>Join Now</button></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+	<!--//Pricing Section-->
 
 
     
@@ -329,6 +443,23 @@ active
 		<script type="text/javascript" src="assets/js/main.js"></script>
 		
 		
+<script>
+	var cloudapi_secret_key = 'sk_DEMODEMODEMODEMODEMODEMO';
+</script>
+<script type="text/javascript" src="assets/js/cloudapidemo/SimpleAjaxUploader.min.js"></script>
+<script type="text/javascript" src="assets/js/cloudapidemo/raphael-min.js"></script>
+<script type="text/javascript" src="assets/js/cloudapidemo/bootstrap-multiselect.js"></script>
+<script type="text/javascript" src="assets/js/cloudapidemo/cloudapidemo.js"></script>
+<script type="text/javascript" src="assets/js/jquery.imagesGrid.js"></script>
+<!-- Back to top -->
+<script>
+$(document).ready(function(){
+	$("#nav-features").addClass("current");
+	//$("a.plate_sample_images").fancybox();
+	$("a.plate_sample_images").fancybox();
+});
+</script>
+
 		
 		<!-- Google Analytics -->
 		<script>
