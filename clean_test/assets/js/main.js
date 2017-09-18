@@ -3808,13 +3808,13 @@ $(document).ready(function() {
 			current.$content.css({
 			overflow   : 'visible',
 			background : '#000'
-		});
+		}); 
 		},
   onUpdate : function( instance, current ) {
     var width,
         height,
         ratio = 16 / 9,
-        video = current.$content;
+        video = current.$content; 
     if ( video ) {
       video.hide();
       width  = current.$slide.width();
