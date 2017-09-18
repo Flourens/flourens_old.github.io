@@ -3793,14 +3793,43 @@ $(document).ready(function() {
 			autoWidth:true,
 			center:true, 
 			loop: true,
-			autoplay:true,
+			autoplay:true, 
 			navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 		});
 	 
-	//fancybox
+	//fancybox images
 	$("[data-fancybox]").fancybox({ 
 			// Options will go here
 	});
-
+	//fancybox video
+	$('[data-fancybox="video"]').fancybox({
+		afterLoad : function( instance, current ) {
+		// Remove scrollbars and change background
+			current.$content.css({
+			overflow   : 'visible',
+			background : '#000'
+		});
+		},
+  onUpdate : function( instance, current ) {
+    var width,
+        height,
+        ratio = 16 / 9,
+        video = current.$content;
+    if ( video ) {
+      video.hide();
+      width  = current.$slide.width();
+      height = current.$slide.height() - 100;
+      if ( height * ratio > width ) {
+        height = width / ratio;
+      } else {
+        width = height * ratio;
+      }
+      video.css({
+        width  : width,
+        height : height
+      }).show();
+    }
+  }
+})
 
 });
