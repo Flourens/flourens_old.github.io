@@ -3830,6 +3830,6 @@ $(document).ready(function() {
       }).show();
     }
   }
-})
+}); 
 
 });
