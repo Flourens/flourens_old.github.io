@@ -1,0 +1,392 @@
+
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
+  font-family: 'Montserrat', sans-serif;
+}
+@font-face{
+	font-family:'DIN';
+		src:url('../fonts/DIN-Bold.ttf'),
+		src:url('../fonts/DIN-Bold.eot'),
+		src:url('../fonts/DIN-Bold.woff');
+}
+@font-face{
+	font-family:'DINM';
+		src:url('../fonts/DIN-Medium.ttf'),
+		src:url('../fonts/DIN-Medium.eot'),
+		src:url('../fonts/DIN-Medium.woff');
+}
+@font-face{
+	font-family:'DINL';
+		src:url('../fonts/DIN-Light.ttf'),
+		src:url('../fonts/DIN-Light.eot'),
+		src:url('../fonts/DIN-Light.woff');
+}
+@font-face{
+	font-family:'DINR';
+		src:url('../fonts/DIN-Regular.ttf'),
+		src:url('../fonts/DIN-Regular.eot'),
+		src:url('../fonts/DIN-Regular.woff');
+}
+html{
+	
+}
+body{
+	background: url(../img/header-bg.jpg) no-repeat;
+	background-size:100%;
+	background-color:#131518;
+	color:#c1c0c1;
+	margin:0px;
+}
+p{
+	font-family: DINR, sans-serif;
+	font-size:11pt;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: -1px;
+  color: #c1c0c1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  etter-spacing: -0.5px;
+  color: #c1c0c1;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #c1c0c1;
+  font-weight: 700;
+}
+a {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+
+
+header {
+  max-width:1024px;
+  width: 100%;
+  margin:0 auto;
+  overflow: hidden;
+  text-align:center;
+ 
+  
+}
+.logo {	
+	margin-top: 35px;
+	padding-bottom: 100px;
+}
+.logo a img{
+	width:80px;
+}
+.row a img{
+	width:80px;
+}
+.underlogo{
+    margin-top: 10px;
+    color: #e75267;
+    font-size: 12pt;
+    font-family: DINR;
+    font-style: italic;
+
+}
+#container {
+    overflow: hidden; 
+	padding: 0 20px;
+
+}
+
+#sidebar {
+    float: right;
+	text-align:right;	
+	margin-top:50px;
+}
+
+#menu {
+    width: 50%;
+    float: left;
+	line-height:30px;
+
+}
+#menu p{
+	width:100px;
+	text-align:center;
+	font-size:10pt;
+}
+#sidebar p{
+	width:200px;
+	text-align:center;
+	font-size:10pt;
+
+}
+.red{
+	color:#e75267;
+	font-family:DIN;
+}
+span.tel{
+	font-size:11pt;
+	font-family:DINM;
+}
+footer { 
+	background-color:rgba(26, 30,35, 0.4);
+	padding-top: 10px;
+	margin-top:30px;
+}
+.middletext{
+	max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+	margin-top: -20px;
+
+}
+.bodytext{
+	font-size:25pt;
+	font-family:DINL;
+	margin-bottom:50px;
+	letter-spacing: -2px;
+}
+.text13{
+	font-size:13pt;
+}
+.gamme{
+    margin-top: -100px;
+    margin-bottom: -210px;
+}
+.gamme p.red{
+	font-family:DIN;
+	font-size:10pt;
+	line-height:15px;
+}
+ul.list-inline{
+	list-style: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+ul.list-inline li{
+    width: 32.3%;
+    padding: 0.5%;
+    float: left;
+}
+ul.list-inline li a img{
+	max-width:200px;
+	width:100%;
+}
+.row{
+	background-color:rgba(26, 30,35, 0.8);
+	padding-top:200px;
+	font-family:DIN;
+}
+.copyright{
+    text-align: right;
+    margin-top: -28px;
+    padding-right: 2%;
+    font-family: DINL;
+    float: right;
+}
+.copyright i{
+	font-family:DIN;
+}
+.fruits{
+	color:white;
+	margin: 0;
+	padding:10px;
+	
+}
+button{
+	display:none;
+}
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+ body{
+	background-size: 480px;
+	background-position-y: 40px;
+    background-position-x: center;
+ }
+.copyright{
+    float: none;
+}
+.row{
+  padding-bottom: 10px;
+}
+.logo {
+    margin-top: 15px;
+    padding-bottom: 0px;
+}
+.logo a img {
+	width: 60px;
+}
+button{
+
+    display: block;
+	background: 0;
+    border: 0;
+	outline: none;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+	padding-top: 4px;
+}
+
+button img{
+	width:30px;
+}
+#menu {
+    float: none;
+    line-height: 15px;
+	display:none;
+	margin-bottom:-70px;
+}
+
+ul.list-inline li {
+    width: 100%;
+    padding: 0;
+    float: none;
+}
+.gamme {	
+	margin-top: -30px;
+}
+
+footer{
+	padding: 10px;
+	margin-top: 20px;
+}
+#menu, #sidebar{
+	background-color:rgba(26, 30,35, 0.8);
+	padding:10px 0px;
+}
+#menu,
+#menu p {
+	width: 100%;
+}
+#sidebar{
+	float:none;
+	margin-top:100px;
+}
+#sidebar p {
+	width:100%;
+}
+.bodytext{
+	margin-bottom: 30px;
+}
+.row{
+	background:none;
+}
+.underlogo{
+	margin-top:5px;
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) { 
+
+body{
+	background-position-y: 25px;
+
+}
+.copyright{
+    float: none;
+}
+.row{
+  padding-bottom: 10px;
+}
+
+.logo {
+    margin-top: 15px;
+    padding-bottom: 0px;
+}
+.logo a img {
+	width: 60px;
+}
+#menu {
+    line-height: 15px;
+}
+footer{
+	padding: 10px;
+}
+#menu p {
+	text-align:left;
+}
+#sidebar {
+    margin-top: 40px;
+	background-color:rgba(26, 30,35, 0.8);
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#sidebar p {
+    text-align: right;
+	width: 100%;
+}
+.underlogo{
+	margin-top:0px;
+}
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+body{
+    background-position-y: 40px;
+}
+.copyright{
+    float: none;
+}
+.row{
+  padding-bottom: 10px;
+} 
+#sidebar {
+    margin-top: 40px;
+	background-color:rgba(26, 30,35, 0.8);
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#sidebar p {
+    text-align: right;
+	width: 100%;
+}
+
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+ body{
+	background-size: 1300px;
+    background-position: top;
+ }
+}
+     
+
+
+/* Large screens ----------- */
+@media (min-width: 1200px) and (max-width: 3000px) {
+ body{
+	background-size: 1300px;
+    background-position: top;
+ }
+}   
+
+
+
+
+
