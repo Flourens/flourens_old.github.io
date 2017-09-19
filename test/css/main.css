@@ -5,30 +5,46 @@
 h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
   font-family: 'Montserrat', sans-serif;
 }
-@font-face{
-	font-family:'DIN';
-		src:url('../fonts/DIN-Bold.ttf'),
-		src:url('../fonts/DIN-Bold.eot'),
-		src:url('../fonts/DIN-Bold.woff');
+@font-face {
+	font-family: 'DIN';
+	src: url('../fonts/DIN-Bold.eot');
+	src: url('../fonts/DIN-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DIN-Bold.woff') format('woff'),
+		url('../fonts/DIN-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
 }
-@font-face{
-	font-family:'DINM';
-		src:url('../fonts/DIN-Medium.ttf'),
-		src:url('../fonts/DIN-Medium.eot'),
-		src:url('../fonts/DIN-Medium.woff');
+
+@font-face {
+	font-family: 'DINM';
+	src: url('../fonts/DIN-Medium.eot');
+	src: url('../fonts/DIN-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DIN-Medium.woff') format('woff'),
+		url('../fonts/DIN-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
 }
-@font-face{
-	font-family:'DINL';
-		src:url('../fonts/DIN-Light.ttf'),
-		src:url('../fonts/DIN-Light.eot'),
-		src:url('../fonts/DIN-Light.woff');
+
+@font-face {
+	font-family: 'DINR';
+	src: url('../fonts/DIN-Regular.eot');
+	src: url('../fonts/DIN-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DIN-Regular.woff') format('woff'),
+		url('../fonts/DIN-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
-@font-face{
-	font-family:'DINR';
-		src:url('../fonts/DIN-Regular.ttf'),
-		src:url('../fonts/DIN-Regular.eot'),
-		src:url('../fonts/DIN-Regular.woff');
+
+@font-face {
+	font-family: 'DINL';
+	src: url('../fonts/DIN-Light.eot');
+	src: url('../fonts/DIN-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DIN-Light.woff') format('woff'),
+		url('../fonts/DIN-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
 }
+
 html{
 	
 }
