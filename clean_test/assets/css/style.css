@@ -929,6 +929,10 @@ select {
   /* for mobile safari */
   -webkit-appearance: none;
 }
+textarea.form-control {
+  max-width: 100%;
+  min-width: 100%;
+}
 #topcontrol {
   background: #5d80a1;
   color: #fff;
@@ -956,12 +960,6 @@ select {
   font-size: 30px;
 }
 /* ======= Header ======= */
-.header {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
 .header .hamburger {
   display: none;
   padding-top: 10px;
@@ -982,16 +980,13 @@ select {
 }
 .header .logo {
   float: left;
-  margin-top: 0;
 }
 .header .logo a {
   color: #fff;
   padding-top: 20px;
-  padding-bottom: 8px;
   display: inline-block;
   text-align: center;
   line-height: 1.4;
-  max-width: 155px;
   background: #497CB1;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 4px;
@@ -1019,7 +1014,7 @@ select {
 }
 .header .logo-img {
   width: 120px;
-  height: auto;
+  height: 50px;
 }
 .header.navbar-scrolled {
   border-bottom: 1px solid #e6e6e6;
@@ -2095,9 +2090,6 @@ select {
     margin: 0 auto;
     display: inline-block;
   }
-  .blog-page .header h1.logo {
-    margin: inherit;
-  }
   .promo {
     height: 520px;
     padding-top: 150px;
@@ -2146,11 +2138,7 @@ select {
   }
   .header.navbar-fixed-top .logo-img {
     width: 160px;
-    height: auto;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    height: 50px;
   }
   .header.navbar-fixed-top .main-nav {
     margin: 0;
@@ -2232,11 +2220,11 @@ select {
   #topcontrol {
     display: none !important;
   }
-  .header h1.logo {
+  .header .logo {
     float: none;
     text-align: center;
   }
-  .header h1.logo a {
+  .header .logo a {
     margin: 0 auto;
   }
   .header .main-nav .nav .dropdown-menu:before {
