@@ -3672,7 +3672,7 @@ $(document).ready(function() {
                 $svg = $svg.removeAttr('xmlns:a');
 
                 // Replace image with new SVG
-               // $img.replaceWith($svg);  
+                $img.replaceWith($svg);
 
             }, 'xml');
 
