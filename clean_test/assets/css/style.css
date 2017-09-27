@@ -1026,7 +1026,7 @@ textarea.form-control {
 }
 .header.navbar-scrolled .logo-img {
   width: 120px;
-  height: auto;
+  height: 55px;
 }
 .header.navbar-scrolled .logo-img path {
   fill: #497CB1 !important;
