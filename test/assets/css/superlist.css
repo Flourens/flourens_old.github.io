@@ -14538,6 +14538,9 @@ ol li {
 }
 
 /* Slider */
+.fade-carousel{
+	background-color: #1a1a1a;
+}
 .fade-carousel.main-inner{
 	padding-bottom: 0;
 }
