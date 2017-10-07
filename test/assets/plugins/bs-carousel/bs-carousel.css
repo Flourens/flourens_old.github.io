@@ -63,7 +63,7 @@ Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
 }
 
 .hero-slide .hero-h1 {
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 40px;
@@ -77,7 +77,8 @@ Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	line-height: 4;
+	line-height: 1.1;
+	padding-bottom: 20px;
 }
 
 .fade-carousel .carousel-inner .item .hero-slide {
@@ -155,8 +156,5 @@ Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
 		width: 980px;
 	}
 }
-@media screen and (max-width: 640px) {
-	.hero-slide h1 {
-		font-size: 4em;
-	}
-}
+
+
