@@ -14570,32 +14570,32 @@ ol li {
 	height: 200px;
 }
 .event-list-wrapper .list-1 .event-list__image{
-	background: url(../img/tmp/gallery-1.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-1.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .event-list-wrapper .list-2 .event-list__image{
-	background: url(../img/tmp/gallery-2.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-2.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .event-list-wrapper .list-3 .event-list__image{
-	background: url(../img/tmp/gallery-3.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-3.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .event-list-wrapper .list-4 .event-list__image{
-	background: url(../img/tmp/gallery-1.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-1.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .event-list-wrapper .list-5 .event-list__image{
-	background: url(../img/tmp/gallery-2.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-2.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .event-list-wrapper .list-6 .event-list__image{
-	background: url(../img/tmp/gallery-3.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-3.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -14744,37 +14744,32 @@ ol li {
 	transition: all 0.3s ease;
 }
 .category-wrapper .category-item-1{
-	background: url(../img/tmp/gallery-1.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-1.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .category-wrapper .category-item-2{
-	background: url(../img/tmp/gallery-2.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-2.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .category-wrapper .category-item-3{
-	background: url(../img/tmp/gallery-3.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-3.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .category-wrapper .category-item-4{
-	background: url(../img/tmp/gallery-4.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-3.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .category-wrapper .category-item-5{
-	background: url(../img/tmp/gallery-5.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-1.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 .category-wrapper .category-item-6{
-	background: url(../img/tmp/gallery-6.jpg) center no-repeat #002420;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-.category-wrapper .category-item-7{
-	background: url(../img/tmp/gallery-7.jpg) center no-repeat #002420;
+	background: url(../img/main-slide-2.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
