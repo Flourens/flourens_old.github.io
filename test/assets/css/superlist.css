@@ -14553,6 +14553,12 @@ ol li {
 .fade-carousel .slides .slide-3 {
 	background-image: url(../img/main-slide-3.jpg);
 }
+@media screen and (max-width: 980px) {
+	.hero-slide.hero-h1{
+		font-size: 60px;
+	}
+	
+}
 
 /* Home page Events list */
 .event-list-wrapper{
