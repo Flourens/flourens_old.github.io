@@ -14538,6 +14538,9 @@ ol li {
 }
 
 /* Slider */
+.fade-carousel.main-inner{
+	padding-bottom: 0;
+}
 .fade-carousel .slides .slide-1 {
 	background-image: url(../img/main-slide-1.jpg);
 }
@@ -14771,8 +14774,4 @@ ol li {
 	background: url(../img/tmp/gallery-7.jpg) center no-repeat #002420;
 	-webkit-background-size: cover;
 	background-size: cover;
-}
-@media (min-width: 768px){
-	.fade-carousel.maim-inner{
-	}
 }
