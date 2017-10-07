@@ -109,6 +109,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i {
 /*Purchase*/
 .purchase {
 	padding:30px 0 20px;
+	-webkit-box-shadow:inset 0 0 4px #eee;
 	box-shadow:inset 0 0 4px #eee;
 	background:url(../img/breadcrumbs.png) repeat;
 }
@@ -143,6 +144,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i {
 	color:#fff;
 	background:#68af28;
 	text-decoration:none;
+	-webkit-box-shadow:0 0 5px #c0c2c1;
 	box-shadow:0 0 5px #c0c2c1;
 } 
 
@@ -153,12 +155,14 @@ h1 i, h2 i, h3 i, h4 i, h5 i {
 }
 .service:hover {
 	border-radius:2px;
+	-webkit-box-shadow:0 0 8px #ddd;
 	box-shadow:0 0 8px #ddd;
 	background:#fcfcfc;
     -webkit-transition:box-shadow 0.2s ease-in-out;
-    -moz-transition:box-shadow 0.2s ease-in-out;
-    -o-transition:box-shadow 0.2s ease-in-out;
+    -webkit-transition:-webkit-box-shadow 0.2s ease-in-out;
+    transition:-webkit-box-shadow 0.2s ease-in-out;
     transition:box-shadow 0.2s ease-in-out;
+    transition:box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
 .service:hover i {
 	color:#656565;
@@ -170,8 +174,6 @@ h1 i, h2 i, h3 i, h4 i, h5 i {
 	font-size:45px;  
 	text-align:center;
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 .service i.icon-cogs {
@@ -194,8 +196,6 @@ h1 i, h2 i, h3 i, h4 i, h5 i {
 blockquote:hover {
 	border-left-color:#72c02c; 
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 .hero {
@@ -253,26 +253,19 @@ blockquote:hover {
 
 .recent-work a img {
    -webkit-transition: all 0.8s ease-in-out;
-   -moz-transition: all 0.8s ease-in-out;
-   -o-transition: all 0.8s ease-in-out;
-   -ms-transition: all 0.8s ease-in-out;
    transition: all 0.8s ease-in-out;
 }
 
 .recent-work a:hover img {
 	opacity:0.8;
    -webkit-transform: scale(1.2) rotate(3deg);
-   -moz-transform: scale(1.2) rotate(3deg);
-   -o-transform: scale(1.0) rotate(3deg);
-   -ms-transform: scale(1.2) rotate(3deg);
    transform: scale(1.2) rotate(3deg);
 }
 
 .recent-work a:hover span {
 	border-bottom:solid 2px #72c02c;
     -webkit-transition:all 0.2s ease-in-out;
-    -moz-transition:all 0.3s ease-in-out;
-    -o-transition:all 0.2s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
 }
 
@@ -356,6 +349,7 @@ blockquote:hover {
 
 /*Clients (Flexslider)*/
 .clients {
+	-webkit-box-shadow:none !important;
 	box-shadow:none !important;
 	margin-bottom:0 !important;    
 }
@@ -379,11 +373,13 @@ blockquote:hover {
 	display:block;
 }
 .clients li img {
+    -webkit-filter:gray;
     filter:gray; /* IE6-9 */
 	float:none !important;
 	margin:0 auto !important;
 }
 .clients li img:hover {
+    -webkit-filter:none;
     filter:none;
 }
 .clients, 
@@ -406,6 +402,7 @@ blockquote:hover {
 
 /*Pegination*/
 .pagination ul {
+	-webkit-box-shadow:none;
 	box-shadow:none;
 }
 .pagination li a {
@@ -445,8 +442,6 @@ blockquote:hover {
 .footer a:hover {
 	color:#a8f85f;
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 .footer h4, 
@@ -465,8 +460,6 @@ blockquote:hover {
 .redlink a:link {
 	color:#6ab3e6; 
 	-webkit-transition:all 0.5s linear;
-    -moz-transition:all 0.5s lineart;
-    -o-transition:all 0.5s linear;
     transition:all 0.5s linear;
 	text-decoration: none;
 	font-size: 12px !important;
@@ -478,8 +471,6 @@ blockquote:hover {
 .redlink a:hover {
 	color:#144c85 !important;
 	-webkit-transition:all 0.5s linear;
-    -moz-transition:all 0.5s lineart;
-    -o-transition:all 0.5s linear;
     transition:all 0.5s linear;
 	text-decoration: none;
 	}  /* mouse over link */
@@ -498,8 +489,6 @@ blockquote:hover {
 .biglink a:link {
 	color:#6ab3e6; 
 	-webkit-transition:all 0.5s linear;
-    -moz-transition:all 0.5s lineart;
-    -o-transition:all 0.5s linear;
     transition:all 0.5s linear;
 	text-decoration: none;
 	font-size: 22px !important;
@@ -513,8 +502,6 @@ blockquote:hover {
 .biglink a:hover {
 	color:#144c85 !important;
 	-webkit-transition:all 0.5s linear;
-    -moz-transition:all 0.5s lineart;
-    -o-transition:all 0.5s linear;
     transition:all 0.5s linear;
 	text-decoration: none;
 	}  /* mouse over link */
@@ -542,8 +529,6 @@ blockquote:hover {
 .bigboxlink a:link {
 	color:#6ab3e6; 
 	-webkit-transition:all 0.5s linear;
-    -moz-transition:all 0.5s lineart;
-    -o-transition:all 0.5s linear;
     transition:all 0.5s linear;
 	text-decoration: none;
 	font-size: 12px !important;
@@ -559,8 +544,6 @@ blockquote:hover {
 .bigboxlink a:hover {
 	color:#144c85 !important;
 	-webkit-transition:all 0.5s linear;
-    -moz-transition:all 0.5s lineart;
-    -o-transition:all 0.5s linear;
     transition:all 0.5s linear;
 	text-decoration: none;
 	}  /* mouse over link */
@@ -619,8 +602,6 @@ blockquote:hover {
 .copyright a:hover {
 	color:#a8f85f;
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 .copyright .span8 {
@@ -638,17 +619,20 @@ blockquote:hover {
 	padding:5px; 
 	border-radius:2px; 
     -webkit-transition:box-shadow 0.5s ease-in-out;
-    -moz-transition:box-shadow 0.5s ease-in-out;
-    -o-transition:box-shadow 0.5s ease-in-out;
+    -webkit-transition:-webkit-box-shadow 0.5s ease-in-out;
+    transition:-webkit-box-shadow 0.5s ease-in-out;
     transition:box-shadow 0.5s ease-in-out;
+    transition:box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
 }
 .thumbnail-style:hover { 
 	background: #fefefe;
+	-webkit-box-shadow:0 0 10px #acacac;
 	box-shadow:0 0 10px #acacac; 
     -webkit-transition:box-shadow 0.5s ease-in-out;
-    -moz-transition:box-shadow 0.5s ease-in-out;
-    -o-transition:box-shadow 0.5s ease-in-out;
+    -webkit-transition:-webkit-box-shadow 0.5s ease-in-out;
+    transition:-webkit-box-shadow 0.5s ease-in-out;
     transition:box-shadow 0.5s ease-in-out;
+    transition:box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
 }
 .thumbnail-style h3 {
 	margin:5px 0 0 0;
@@ -674,6 +658,7 @@ blockquote:hover {
 }
 .thumbnail-style a.btn-more:hover {
 	text-decoration:none;
+	-webkit-box-shadow:0 0 0 2px #377500;
 	box-shadow:0 0 0 2px #377500;
 }
 .thumbnail-style:hover a.btn-more {
@@ -685,16 +670,10 @@ blockquote:hover {
 	margin-left:-10px;
 	position:relative;
    -webkit-transition: all 0.8s ease-in-out;
-   -moz-transition: all 0.8s ease-in-out;
-   -o-transition: all 0.8s ease-in-out;
-   -ms-transition: all 0.8s ease-in-out;
    transition: all 0.8s ease-in-out;
 }
 .thumbnail-kenburn:hover img {
    -webkit-transition: all 0.8s ease-in-out;
-   -moz-transition: all 0.8s ease-in-out;
-   -o-transition: all 0.8s ease-in-out;
-   -ms-transition: all 0.8s ease-in-out;
    transition: all 0.8s ease-in-out;
 }
  
@@ -706,12 +685,11 @@ blockquote:hover {
 	background:#fafafa;
 	border-radius:2px;
     -webkit-transition:all 0.3s ease-in-out;
-    -moz-transition:all 0.3s ease-in-out;
-    -o-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
 }
 .servive-block .span4:hover {
 	border-radius:2px;
+	-webkit-box-shadow:0 0 8px #ddd;
 	box-shadow:0 0 8px #ddd;
 }
 .servive-block .span4 h4 a:hover {
@@ -727,8 +705,6 @@ blockquote:hover {
 	color:#565656;
 	font-size:40px;
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 .servive-block-in .span4 i {
@@ -741,6 +717,7 @@ blockquote:hover {
 /*Breadcrumbs*/
 .breadcrumbs {
 	padding:10px 0 0px;
+	-webkit-box-shadow:inset 0 0 4px #eee;
 	box-shadow:inset 0 0 4px #eee;
 	background: #00acee;
 }
@@ -814,8 +791,6 @@ blockquote:hover {
 .posts .dl-horizontal:hover { 
 	border-right:solid 2px #72c02c;
 	-webkit-transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
 	transition:all 0.4s ease-in-out;
 }
 .posts .dl-horizontal dt { 
@@ -846,8 +821,6 @@ blockquote:hover {
 	color:#72c02c;
 	border-color:#72c02c !important;
 	-webkit-transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
 	transition:all 0.4s ease-in-out;
 }
 
@@ -855,6 +828,7 @@ blockquote:hover {
 ------------------------------------*/
 /*Slider*/
 .slider-inner .da-slider {
+	-webkit-box-shadow:none;
 	box-shadow:none;
 	margin-top:2;
 	border-bottom:1px solid #ddd;
@@ -929,8 +903,6 @@ blockquote:hover {
 .service-alternative .service:hover { 
 	background:#76ca2c;
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 .service-alternative .service:hover i,
@@ -965,8 +937,6 @@ blockquote:hover {
 	color:#fff;
 	background:#72c02c;
 	-webkit-transition:all 0.2s ease-in-out;
-	-moz-transition:all 0.2s ease-in-out;
-	-o-transition:all 0.2s ease-in-out;
 	transition:all 0.2s ease-in-out;
 }
 .team .thumbnail-style {
@@ -1006,9 +976,11 @@ blockquote:hover {
 	position:relative;
 	border-radius:3px;
 	margin-bottom:15px;
+	-webkit-box-shadow:0 0 5px #eee;
 	box-shadow:0 0 5px #eee;
 }
 .pricing:hover {
+	-webkit-box-shadow:0 0 15px #b5b5b5;
 	box-shadow:0 0 15px #b5b5b5;
 }
 .pricing:hover h4 {
@@ -1041,6 +1013,7 @@ blockquote:hover {
 	border-radius:3px 3px 0 0;
 	text-shadow:0 1px 0 #32a20f;
 	border-bottom:solid 1px #41b91c;
+	-webkit-box-shadow:0 5px 15px #b5b5b5;
 	box-shadow:0 5px 15px #b5b5b5;
 }
 .pricing-head h4 {
@@ -1051,6 +1024,7 @@ blockquote:hover {
 	background:#fbfef2;
 	text-shadow:0 1px 0 #fff;
 	border-bottom:solid 2px #f5f9e7;
+	-webkit-box-shadow:0 5px 0px #b5b5b5;
 	box-shadow:0 5px 0px #b5b5b5;
 }
 .pricing-head h4 i {
@@ -1113,6 +1087,7 @@ blockquote:hover {
 	cursor:pointer;
 	background:#40ba1a;
 	text-decoration:none;
+	-webkit-box-shadow:0 0 3px #999;
 	box-shadow:0 0 3px #999;
 }
 
@@ -1121,6 +1096,7 @@ blockquote:hover {
 .pricing:hover {
 	z-index:9;
 	margin-top:-15px;
+	-webkit-box-shadow:0 0 15px #b5b5b5;
 	box-shadow:0 0 15px #b5b5b5;
 }
 .price-active h4 {
@@ -1129,9 +1105,10 @@ blockquote:hover {
 
 .no-space-pricing .pricing:hover {
 	-webkit-transition:box-shadow 0.3s ease-in-out;
-	-moz-transition:box-shadow 0.3s ease-in-out;
-	-o-transition:box-shadow 0.3s ease-in-out;
+	-webkit-transition:-webkit-box-shadow 0.2s ease-in-out;
+	transition:-webkit-box-shadow 0.2s ease-in-out;
 	transition:box-shadow 0.2s ease-in-out;
+	transition:box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
 .no-space-pricing .price-active .pricing-head h4,
 .no-space-pricing .pricing:hover .pricing-head h4 {
@@ -1139,8 +1116,6 @@ blockquote:hover {
 	padding:15px 0;
 	font-size:80px;
 	-webkit-transition:color 0.5s ease-in-out;
-	-moz-transition:color 0.5s ease-in-out;
-	-o-transition:color 0.5s ease-in-out;
 	transition:color 0.5s ease-in-out;
 }
 
@@ -1150,6 +1125,7 @@ blockquote:hover {
 .gallery .thumbnail:hover {
 	padding:0;
 	border:none;
+	-webkit-box-shadow:none;
 	box-shadow:none;
 }
 .gallery .thumbnails {
@@ -1164,6 +1140,7 @@ blockquote:hover {
 	margin:0 auto;
 	background:#fcfcfc;
 	border:solid 1px #eee;
+	-webkit-box-shadow:0 0 7px #eee;
 	box-shadow:0 0 7px #eee;
 }
 
@@ -1206,6 +1183,7 @@ blockquote:hover {
 	margin: 0 auto;
 	background:#fcfcfc;
 	border:solid 1px #eee;
+	-webkit-box-shadow:0 0 7px #eee;
 	box-shadow:0 0 7px #eee;
 }
 
@@ -1347,8 +1325,6 @@ ul.blog-tags a:hover i {
 	color:#72c02c;
 	text-decoration:none;
 	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
 	transition:all 0.3s ease-in-out;
 }
 ul.blog-tags a i {
@@ -1378,6 +1354,7 @@ ul.blog-tags a i {
 }
 .blog-ads li img:hover {
 	opacity:1;
+	-webkit-box-shadow:0 0 0 4px #72c02c;
 	box-shadow:0 0 0 4px #72c02c;
 }
 
@@ -1576,14 +1553,13 @@ ul.blog-tags a i {
 	margin-bottom: 25px;
 	background: #fafafa;
 	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
 	transition:all 0.3s ease-in-out;
 }
 
 .booking-blocks:hover {
 	border-radius:2px;
 	background: #fafafa;
+	-webkit-box-shadow:0 0 8px #ddd;
 	box-shadow:0 0 8px #ddd;
 }
 
@@ -1710,8 +1686,6 @@ a.read-more:hover {
 /*CSS3 Hover Effects*/
 .hover-effect {
 	-webkit-transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
-	-o-transition:all 0.4s ease-in-out;
 	transition:all 0.4s ease-in-out;
 }
 .hover-effect-kenburn {
@@ -1719,16 +1693,10 @@ a.read-more:hover {
 	margin-left:-10px;
 	position:relative;
    -webkit-transition: all 0.8s ease-in-out;
-   -moz-transition: all 0.8s ease-in-out;
-   -o-transition: all 0.8s ease-in-out;
-   -ms-transition: all 0.8s ease-in-out;
    transition: all 0.8s ease-in-out;
 }
 .hover-effect-kenburn:hover {
 	-webkit-transform: scale(2) rotate(5deg);
-	-moz-transform: scale(2) rotate(5deg);
-	-o-transform: scale(2) rotate(5deg);
-	-ms-transform: scale(2) rotate(5deg);
 	transform: scale(2) rotate(5deg);
 }
 
@@ -1774,6 +1742,7 @@ a.read-more:hover {
 
 /*Button Style*/
 .btn {
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 .btnx {
@@ -1796,8 +1765,6 @@ a.read-more:hover {
 	background:#5fb611;
 	text-decoration:none;
     -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
     transition:all 0.4s ease-in-out;
 }
 
