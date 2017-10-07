@@ -80,14 +80,14 @@ Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
 
 .fade-carousel .carousel-inner .item .hero-slide {
 	opacity: 0;
-	-webkit-transition: 2s all ease-in-out .1s;
-	transition: 2s all ease-in-out .1s;
+	-webkit-transition: 2s opacity ease-in-out .1s;
+	transition: 2s opacity ease-in-out .1s;
 }
 
 .fade-carousel .carousel-inner .item.active .hero-slide {
 	opacity: 1;
-	-webkit-transition: 2s all ease-in-out .1s;
-	transition: 2s all ease-in-out .1s;
+	-webkit-transition: 2s opacity ease-in-out .1s;
+	transition: 2s opacity ease-in-out .1s;
 }
 
 /********************************/
