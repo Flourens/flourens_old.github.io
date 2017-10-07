@@ -1013,8 +1013,8 @@ textarea.form-control {
   text-decoration: none;
 }
 .header .logo-img {
-  width: 120px;
-  height: 50px;
+  width: 120px !important;
+  height: 50px !important;
 }
 .header.navbar-scrolled {
   border-bottom: 1px solid #e6e6e6;
@@ -1025,8 +1025,8 @@ textarea.form-control {
   -o-transition: all 0.5s ease;
 }
 .header.navbar-scrolled .logo-img {
-  width: 120px;
-  height: 50px;
+  width: 120px !important;
+  height: 50px !important;
 }
 .header.navbar-scrolled .logo-img path {
   fill: #497CB1 !important;
