@@ -5225,7 +5225,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-toggle .icon-bar {
 	display: block;
-	width: 22px;
 	height: 2px;
 	border-radius: 1px;
 }
@@ -8550,7 +8549,7 @@ button {
 }
 
 .working-hours .day {
-	border-bottom: 1px solid #e9e9e9;
+	border-bottom: 1px dashed #e9e9e9;
 	line-height: 38px;
 }
 
@@ -10039,7 +10038,7 @@ h2.widgettitle {
 	border-bottom: 1px solid #e9e9e9;
 	color: rgba(54, 54, 54, 0.6);
 	font-weight: 300;
-	line-height: 60px;
+	line-height: 25px;
 	margin: 0px 0px 30px 0px;
 	padding: 0px;
 }
@@ -10146,10 +10145,6 @@ h2.widgettitle {
 /*------------------------------------------------------------------
 [ 11. Pagination ]
 */
-
-.pager {
-	margin: 60px 0px 0px 0px;
-}
 
 .pager ul {
 	margin: 0px;
@@ -11316,7 +11311,7 @@ h2.widgettitle {
 
 .card-row {
 	background-color: #fff;
-	margin: 0px 0px 30px 0px;
+	margin: 0px 0px 7px 0px;
 }
 
 .card-row:last-child {
@@ -11335,49 +11330,72 @@ h2.widgettitle {
 	vertical-align: top;
 }
 
-@media (max-width: 1199px) {
-	.card-row-image,
-	.card-row-body,
-	.card-row-properties {
-		display: block;
-	}
-}
-
 .card-row-image {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 200px;
+	height: auto;
 	position: relative;
 	width: 262px;
 }
 
-@media (max-width: 1199px) {
-	.card-row-image {
-		width: 100%;
-	}
-}
-
 .card-row-body {
-	padding: 30px;
+	padding: 15px 30px;
+	padding-right: 0;
 }
 
 .card-row-properties {
-	padding: 30px 30px 30px 30px;
+	padding: 7px 30px;
 	width: 260px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px){
+	.nop{
+		padding: 0;
+	}
+	.card-row{
+		margin: 0;
+	}
 	.card-row-properties {
-		padding: 0px 30px 30px 30px;
+	}
+	.card-row-image {
+		width: 200px;
+		height: auto;
+	}
+	.card-row-inner{
+		background-color: #fff;
+		margin-bottom: 7px;
+	}
+	.card-row-inner {
+	}
+	.card-row-body{
+		padding: 13px 15px;
+		padding-right: 0;
+	}
+}
+@media (max-width: 992px) {
+	
+.card-row-inner{
 		width: 100%;
+		float: none;
+		padding: 0;
+		background-color: #fff;
+		margin: 0;
+		margin-bottom: 15px;
+	}
+	.card-row-image {
+		width: 200px;
+		height: auto;
 	}
 }
 
 .card-row-title {
 	font-size: 18px;
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 10px 0px;
 	padding: 0px;
+	font-weight: bold;
+}
+.card-row-content{
 }
 
 .card-row-title a {
@@ -11536,8 +11554,7 @@ h2.widgettitle {
 
 .card-small {
 	background-color: #fff;
-	margin: 0px 0px 20px 0px;
-	padding: 10px;
+	padding: 15px 20px;
 }
 
 .card-small:before,
@@ -12215,6 +12232,9 @@ h2.widgettitle {
 /*------------------------------------------------------------------
 [ 25. Filter ]
 */
+.event-search-filter{
+	display: none;
+}
 
 .filter {
 	background-color: #fff;
@@ -12245,11 +12265,45 @@ h2.widgettitle {
 .filter button[type=submit] {
 	float: right;
 }
+@media (max-width: 992px) {
+	.widget.post-widget{
+		display: none;
+	}
+	.event-search-filter{
+		display: block;
+	}
+}
 
-@media (max-width: 767px) {
+
+
+@media (max-width: 768px) {
+	.card-row-image {
+			width: 100%;
+			vertical-align: top;
+			height: 200px;
+	}
+	.card-row-image, .card-row-body, .card-row-properties {
+    display: block;
+	}
+	.card-row-properties {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.filter .form-group {
+		margin-bottom: 10px;
+	}
+	.filter hr{
+		display: none;
+	}
+	.filter .filter-actions{
+		display: none;
+		margin: 0;
+	}
 	.filter button[type=submit] {
 		float: none;
-		margin: 30px 0px 0px 0px;
+		margin: 10px 0px 0px 0px;
+		width: 100%;
 	}
 }
 
@@ -14568,8 +14622,13 @@ ol li {
 }
 
 .ptop-150 {
-	padding-top: 150px;
+	padding-top: 134px;
 }
+.event-h3.ptop-50{
+	padding-top: 50px;
+	margin-bottom: 50px;
+}
+
 
 @media (max-width: 630px) {
 	.label-search {
@@ -14869,4 +14928,109 @@ ol li {
 .category-wrapper .category-item-6{
 	background: url(../img/main-slide-2.jpg) center no-repeat #002420;
 	background-size: cover;
+}
+
+/* Accordion menu*/
+.accordion {
+    width: auto;
+    margin: 0 auto;
+		margin-bottom: 30px;
+}
+.accord-menu input[type=checkbox] + label:before, input[type=radio] + label:after{
+	display: none;
+}
+.accord-menu input[type=checkbox] + label:after, input[type=radio] + label:after{
+	display: none;
+}
+.accordion label:hover {
+    background: #F3F3F3;
+}
+.accordion input + label {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+		margin: 0;
+		padding-left: 20px !important;
+}
+.accordion label {
+    padding: 7px 0;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    color: #363636;
+    line-height: 33px;
+    font-size: 16px;
+    background: #fff;
+}
+.accordion .accordion-item:last-child {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.accordion .accordion-item::after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 80%;
+	left: 10%;
+	right: 10%;
+	background-color: rgba(0, 0, 0, 0.05);
+	z-index: 2;
+}
+.accordion .accordion-item:last-child:after {
+	content: none;
+}
+
+.accordion input:checked + label,
+.accordion input:checked + label:hover {
+    background: #f96736;
+    color: #fff;
+}
+.accordion input {
+    display: none;
+}
+.accordion .article {
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.accordion .article p {
+    font-style: italic;
+    color: #777;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 20px;
+}
+.accordion input:checked ~ .article {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.accordion input:checked ~ .article.ac-small {
+		padding-top: 15px;
+    height: 295px;
+}
+.accordion input:checked ~ .article.ac-medium {
+    height: 312px;
+}
+.accordion input:checked ~ .article.ac-large {
+    height: 326px;
+}
+.accordion input:checked ~ .article.ac-archive {
+    height: 162px;
+}
+.accordion label .acc-carret{
+	float: right;
+	margin-right: 20px;
+	margin-top: 12px;
+	font-size: 13px;
+	
 }

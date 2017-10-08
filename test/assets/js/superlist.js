@@ -285,6 +285,7 @@ $(document).ready(function() {
         overwriteInitial: true,
         initialCaption: "Your Uploaded Images"
     });
-	
+		
 		$('.event-list').equalHeights();
+
 });
