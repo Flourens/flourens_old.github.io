@@ -12277,6 +12277,12 @@ h2.widgettitle {
 
 
 @media (max-width: 768px) {
+	.card-row{
+		width: 47%;
+		float: left;
+		margin: 5px;
+		margin-bottom: 10px;
+	}
 	.card-row-image {
 			width: 100%;
 			vertical-align: top;

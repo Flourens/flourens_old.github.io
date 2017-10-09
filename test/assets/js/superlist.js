@@ -286,6 +286,19 @@ $(document).ready(function() {
         initialCaption: "Your Uploaded Images"
     });
 		
-		$('.event-list').equalHeights();
+		$('.event-list, .card-row-inner').equalHeights();
+	
+
+		$(window).resize(function(){
+			if ($(window).width() < 768) {
+				$('.card-row-inner').equalHeights();
+			}
+			if ($(window).width() > 768) {
+				$('.card-row-inner').css('height','auto');
+			}
+			if ($(window).width() < 0) {
+				$('.card-row-inner').css('height','auto');
+			}
+		});
 
 });
