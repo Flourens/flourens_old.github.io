@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link href="assets/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel='stylesheet' type='text/css'>
+	<link href="assets/libraries/owl.carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+	<link href="assets/libraries/colorbox/example1/colorbox.css" rel="stylesheet" type="text/css">
+	<link href="assets/libraries/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/libraries/bootstrap-fileinput/fileinput.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/fotorama-4.6.4/fotorama.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/superlist.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/dw-focus-min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" id="dw-focus-fonts-css" href='//fonts.googleapis.com/css?family=Roboto+Slab' type='text/css' media='all' />
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+	<title>Listing Detail</title>
+</head>
+
+
+<body>
+	<div class="page-wrapper">
+		<header class="header">
+			<div class="header-wrapper">
+				<div class="container">
+					<div class="header-inner">
+						<div class="header-logo">
+							<a href="index.html">
+								<img src="assets/img/logo.png" alt="Logo">
+								<span>Superlist</span>
+							</a>
+						</div>
+						<!-- /.header-logo -->
+						<div class="header-content">
+							<div class="header-top">
+								<ul class="header-nav-secondary nav nav-pills">
+									<li><a href="login.html"><i class="fa fa-power-off"></i> Login</a></li>
+									<li><a href="register.html"><i class="fa fa-plus-square"></i> Register</a></li>
+									<li><a href="listing-submit.html" title="Add Listing" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-edit"></i>  Add Listing</a></li>
+								</ul>
+							</div>
+							<!-- /.header-top -->
+							<div class="header-bottom">
+								<ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
+									<li><a href="index.html">Home</a>
+										<ul class="sub-menu">
+											<li><a href="index-video.html">Video v1</a></li>
+											<li><a href="index-video-transparent-header.html">Video v2</a></li>
+											<li><a href="index-google-map.html">Google Map V1</a></li>
+											<li><a href="index-google-map-transparent-header.html">Google Map v2</a></li>
+											<li><a href="index-image.html">Image v1</a></li>
+											<li><a href="index.html">Image v2</a></li>
+											<li><a href="index-bootstrap-slider.html">Boxed Slider</a></li>
+										</ul>
+									</li>
+									<li class="active">
+										<a href="#">Listing</a>
+										<ul class="sub-menu">
+											<li><a href="listing-detail.html">Detail</a></li>
+											<li><a href="listing-map.html">Row + Map</a></li>
+											<li><a href="listing-grid.html">Grid</a></li>
+											<li><a href="listing-grid-sidebar.html">Grid Sidebar</a></li>
+											<li><a href="listing-row.html">Row</a></li>
+											<li><a href="listing-row-sidebar.html">Row Sidebar</a></li>
+										</ul>
+									</li>
+									<li class="has-mega-menu ">
+										<a href="#">Pages</a>
+										<ul class="mega-menu">
+											<li>
+												<a href="#">General</a>
+												<ul>
+													<li><a href="faq.html">FAQ</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="pricing.html">Pricing</a></li>
+													<li><a href="grid.html">Grid System</a></li>
+													<li><a href="testimonials.html">Testimonials</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">User Account</a>
+												<ul>
+													<li><a href="user-profile-edit.html">Profile Edit</a></li>
+													<li><a href="login.html">Login Form</a></li>
+													<li><a href="register.html">Register Form</a></li>
+													<li><a href="change-password.html">Change Password Form</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Miscellaneous</a>
+												<ul>
+													<li><a href="sticky-footer.html">Sticky Footer</a></li>
+													<li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+													<li><a href="error-403.html">403 - Forbidden</a></li>
+													<li><a href="error-404.html">404 - Not Found</a></li>
+													<li><a href="error-500.html">500 - Internal Error</a></li>
+												</ul>
+											</li>
+											<li class="hidden-xs">
+												<div class="special">
+													<a href="register.html">Sign Up Now</a>
+												</div>
+												<!-- /.special-->
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Blog</a>
+										<ul class="sub-menu">
+											<li><a href="blog-standard-right-sidebar.html">Standard Right Sidebar</a></li>
+											<li><a href="blog-standard-left-sidebar.html">Standard Left Sidebar</a></li>
+											<li><a href="blog-boxed.html">Boxed Style</a></li>
+											<li><a href="blog-condensed.html">Condensed Style</a></li>
+											<li><a href="blog-detail.html">Detail Fullwidth</a></li>
+											<li><a href="blog-detail-right-sidebar.html">Detail Right Sidebar</a></li>
+											<li><a href="blog-detail-left-sidebar.html">Detail Left Sidebar</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Admin</a>
+										<ul class="sub-menu">
+											<li><a href="admin-dashboard.html">Dashboard</a></li>
+											<li><a href="admin-grid.html">Grid System</a></li>
+											<li><a href="admin-tables.html">Tables</a></li>
+											<li><a href="admin-forms.html">Forms</a></li>
+											<li><a href="admin-notifications.html">Notifications</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Contact</a>
+										<ul class="sub-menu">
+											<li><a href="contact-1.html">Contact v1</a></li>
+											<li><a href="contact-2.html">Contact v2</a></li>
+											<li><a href="contact-3.html">Contact v3</a></li>
+										</ul>
+									</li>
+								</ul>
+								<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".header-nav-primary">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- /.header-bottom -->
+						</div>
+						<!-- /.header-content -->
+					</div>
+					<!-- /.header-inner -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.header-wrapper -->
+		</header>
+		<!-- /.header -->
+		<div class="header-search-bar">
+			<form action="#">
+				<div class="container">
+					<div class="search-value">
+						<div class="keywords input-box">
+							<input type="text" placeholder="Keywords" class="form-control label-search" autofocus="autofocus">
+							<span class="unit">FIND</span>
+						</div>
+						<div class="select-location input-box">
+							<input type="text" placeholder="Location" class="form-control label-search" autofocus="autofocus">
+							<span class="unit">NEAR</span>
+						</div>
+						<button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- /.header seearch -->
+		<div class="main">
+			<div class="main-inner">
+				<div class="content details-content">
+					<div class="container">
+						<div class="row detail-content">
+							<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 background-white padding-none">
+								<div class="detail-slider">
+									<div class="fotorama" data-width="100%" data-height="400" data-click="false" data-thumbwidth="95" data-thumbheight="auto">
+										<div data-thumb="assets/img/tmp/gallery-1.jpg"><a href="assets/img/tmp/gallery-1.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-1.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-2.jpg"><a href="assets/img/tmp/gallery-2.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-2.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-3.jpg"><a href="assets/img/tmp/gallery-3.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-3.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-4.jpg"><a href="assets/img/tmp/gallery-4.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-4.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-5.jpg"><a href="assets/img/tmp/gallery-5.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-5.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-6.jpg"><a href="assets/img/tmp/gallery-6.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-6.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-7.jpg"><a href="assets/img/tmp/gallery-7.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-7.jpg" alt="..."></a></div>
+										<div data-thumb="assets/img/tmp/gallery-8.jpg"><a href="assets/img/tmp/gallery-8.jpg" data-fancybox="group1"><img src="assets/img/tmp/gallery-8.jpg" alt="..."></a></div>
+									</div>
+								</div>
+								<div class="detail-description">
+									<h2>About <span class="text-secondary">Brazilian Coffe Taste</span></h2>
+									<p>Vestibulum a lectus ullamcorper, dapibus ante id, sagittis libero. In tincidunt nisi venenatis, ornare eros at, hendrerit sem. Nunc metus purus, porta a dignissim vel, vulputate sed odio. Aenean est nisi, pulvinar eget velit quis, placerat hendrerit arcu. Vestibulum non dictum nibh.</p>
+									<p>In congue mattis felis, non hendrerit orci dictum id. Etiam consequat nulla vitae tempus interdum.Nam gravida convallis lacus, at dignissim urna pulvinar sed.</p>
+									<p>Cras ac mi odio. Aliquam erat volutpat. Cras euismod facilisis ligula in tristique. Proin et eleifend lacus, vitae dictum orci</p>
+									<div class="detail-follow">
+										<h5>Follow Us:</h5>
+										<div class="follow-wrapper">
+											<a class="follow-btn facebook" href="#"><i class="fa fa-facebook"></i </a>
+											<a class="follow-btn youtube" href="#"><i class="fa fa-youtube"></i></a>
+											<a class="follow-btn twitter" href="#"><i class="fa fa-twitter"></i></a>
+											<a class="follow-btn tripadvisor" href="#"><i class="fa fa-tripadvisor"></i></a>
+											<a class="follow-btn google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+										</div>
+									</div>
+									<div class="fluid-width-video-wrapper" style="padding-top: 56%">
+										<iframe src="https://player.vimeo.com/video/36911719?color=009f8b&byline=0&portrait=0" width="653" height="366" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+								</div>
+
+									<div class="details-title">
+										<h2> <span class="text-secondary">We</span> Are Here</h2>
+									</div>
+									<!-- Nav tabs -->
+									<ul id="listing-detail-location" class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active">
+											<a href="#simple-map-panel" aria-controls="simple-map-panel" role="tab" data-toggle="tab">
+												<i class="fa fa-map"></i>Map
+											</a>
+										</li>
+										<li role="presentation">
+											<a href="#street-view-panel" aria-controls="street-view-panel" role="tab" data-toggle="tab">
+												<i class="fa fa-street-view"></i>Street View
+											</a>
+										</li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane fade in active" id="simple-map-panel">
+											<div class="detail-map">
+												<div class="map-position">
+													<div id="listing-detail-map" data-transparent-marker-image="assets/img/transparent-marker-image.png" data-styles='[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"labels.text.fill","stylers":[{"color":"#b43b3b"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"lightness":"8"},{"color":"#bcbec0"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5b5b5b"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7cb3c9"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#abb9c0"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"color":"#fff1f1"},{"visibility":"off"}]}]' data-zoom="15" data-latitude="40.779995" data-longitude="-73.969133" data-icon="fa fa-coffee">
+													</div>
+													<!-- /#map-property -->
+												</div>
+												<!-- /.map-property -->
+											</div>
+											<!-- /.detail-map -->
+										</div>
+										<div role="tabpanel" class="tab-pane fade" id="street-view-panel">
+											<div id="listing-detail-street-view" data-latitude="40.758896" data-longitude="-73.985135" data-heading="225" data-pitch="0" data-zoom="1">
+											</div>
+										</div>
+									</div>
+								</div>
+							<!-- /.col-sm-8 -->
+
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="detail-banner">
+											<!-- /.detail-banner-info -->
+											<h2 class="detail-title">
+												Brazilian Coffe Taste
+											</h2>
+											<div class="detail-banner-address">
+												<i class="fa fa-map-o"></i> 347/26 22nd Avenue, New York City, USA
+											</div>
+											<!-- /.detail-banner-address -->
+											<div class="detail-banner-rating">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star-half-o"></i>
+											</div>
+											<!-- /.detail-banner-rating -->
+											<div class="detail-banner-btn bookmark">
+												<i class="fa fa-bookmark-o"></i> <span data-toggle="Bookmarked">Bookmark</span>
+											</div>
+											<!-- /.detail-claim -->
+											<div class="detail-banner-btn heart">
+												<i class="fa fa-heart-o"></i> <span data-toggle="I Love It">Give Heart</span>
+											</div>
+											<!-- /.detail-claim -->
+								</div>
+								<!-- /.detail-banner -->
+							
+								<div class="widget">
+									<div class="p20 background-white">
+										<div class="working-hours">
+											<h2 class="widgettitle">Working Hours</h2>
+											<div class="day clearfix">
+												<span class="name">Mon</span><span class="hours">07:00 AM - 07:00 PM</span>
+											</div>
+											<!-- /.day -->
+											<div class="day clearfix">
+												<span class="name">Tue</span><span class="hours">07:00 AM - 07:00 PM</span>
+											</div>
+											<!-- /.day -->
+											<div class="day clearfix">
+												<span class="name">Wed</span><span class="hours">07:00 AM - 07:00 PM</span>
+											</div>
+											<!-- /.day -->
+											<div class="day clearfix">
+												<span class="name">Thu</span><span class="hours">07:00 AM - 07:00 PM</span>
+											</div>
+											<!-- /.day -->
+											<div class="day clearfix">
+												<span class="name">Fri</span><span class="hours">07:00 AM - 07:00 PM</span>
+											</div>
+											<!-- /.day -->
+											<div class="day clearfix">
+												<span class="name">Sat</span><span class="hours">07:00 AM - 02:00 PM</span>
+											</div>
+											<!-- /.day -->
+											<div class="day clearfix">
+												<span class="name">Sun</span><span class="hours">Closed</span>
+											</div>
+											<!-- /.day -->
+										</div>
+									</div>
+								</div>
+								<!-- /.widget -->
+								<div class="widget clearfix">
+								<div class="background-white p20 clearfix">
+									<h2 class="widgettitle">Amenities</h2>
+									<ul class="detail-amenities">
+										<li class="yes">WiFi</li>
+										<li class="yes">Parking</li>
+										<li class="no">Vine</li>
+										<li class="yes">Terrace</li>
+										<li class="no">Bar</li>
+										<li class="yes">Take Away Coffee</li>
+										<li class="no">Catering</li>
+										<li class="yes">Raw Food</li>
+										<li class="no">Delivery</li>
+										<li class="yes">No-smoking room</li>
+										<li class="no">Reservations</li>
+									</ul>
+								</div>
+								</div>
+								<!-- /.detail-amenities -->
+								<div class="widget">
+								<div class="detail-enquire-form background-white p20">
+									<h2 class="widgettitle">Enquire Form</h2>
+									<form method="post" action="?">
+										<div class="form-group">
+											<label for="">Name</label>
+											<input type="text" class="form-control" name="" id="">
+										</div>
+										<!-- /.form-group -->
+
+										<div class="form-group">
+											<label for="">Email <span class="required">*</span></label>
+											<input type="email" class="form-control" name="" id="" required>
+										</div>
+										<!-- /.form-group -->
+
+										<div class="form-group">
+											<label for="">Message <span class="required">*</span></label>
+											<textarea class="form-control" name="" id="" rows="5" required></textarea>
+										</div>
+										<!-- /.form-group -->
+
+										<p>Required fields are marked <span class="required">*</span></p>
+
+										<button class="btn btn-primary btn-block" type="submit"><i class="fa fa-paper-plane"></i>Send Message</button>
+									</form>
+								</div>
+								</div>
+								<!-- /.detail-enquire-form -->
+
+								<div class="background-white p20 reasons">
+									<h2 class="widgettitle">3 Reasons Why Choose Us</h2>
+									<div class="reason">
+										<div class="reason-icon">
+											<i class="fa fa-trophy"></i>
+										</div>
+										<!-- /.reason-icon -->
+										<div class="reason-content">
+											<h4>Coffee House of the Year 2015</h4>
+											<p>Fusce at venenatis lorem. Quisque volutpat aliquam leo, a pellentesque orci varius sit amet.</p>
+										</div>
+										<!-- /.reason-content -->
+									</div>
+									<!-- /.reason -->
+									<div class="reason">
+										<div class="reason-icon">
+											<i class="fa fa-coffee"></i>
+										</div>
+										<!-- /.reason-icon -->
+										<div class="reason-content">
+											<h4>High Quality Coffee Beans</h4>
+											<p>Fusce at venenatis lorem. Quisque volutpat aliquam leo, a pellentesque orci varius sit amet.</p>
+										</div>
+										<!-- /.reason-content -->
+									</div>
+									<!-- /.reason -->
+									<div class="reason">
+										<div class="reason-icon">
+											<i class="fa fa-cutlery"></i>
+										</div>
+										<!-- /.reason-icon -->
+										<div class="reason-content">
+											<h4>Snacks & Deserts</h4>
+											<p>Fusce at venenatis lorem. Quisque volutpat aliquam leo, a pellentesque orci varius sit amet.</p>
+										</div>
+										<!-- /.reason-content -->
+									</div>
+									<!-- /.reason -->
+								</div>
+								<div class="detail-payments">
+									<h3>Accepted Payments</h3>
+									<ul>
+										<li><a href="#"><i class="fa fa-paypal"></i></a></li>
+										<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+										<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+										<li><a href="#"><i class="fa fa-cc-stripe"></i></a></li>
+										<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- /.col-sm-5 -->
+
+			<div class="col-sm-12">
+				<div class="other-events">
+					<h2>Other <span class="text-secondary">Events</span></h2>
+					<div class="owl-carousel other-carousel">	
+						<div class="event-list-wrapper">
+							<a href="#">
+							<div class="event-list list-1">
+								<div class="event-list__price"><p>$20 - $30</p></div>
+								<div class="event-list__image"></div>
+								<div class="event-list__text">
+									<div class="event-list__date"><p>sat, oct 21 10:00AM</p></div>
+									<div class="event-list__title"><p>Lorem ipsum dolor.</p></div>
+									<div class="event-list__info"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+									<div class="event-list__tags">
+									<p>#Health</p>
+									<p>#Party</p>
+									<p>#fun</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+												<div class="event-list-wrapper">
+							<a href="#">
+							<div class="event-list list-2">
+								<div class="event-list__price"><p>$20 - $30</p></div>
+								<div class="event-list__image"></div>
+								<div class="event-list__text">
+									<div class="event-list__date"><p>sat, oct 21 10:00AM</p></div>
+									<div class="event-list__title"><p>Lorem ipsum dolor.</p></div>
+									<div class="event-list__info"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+									<div class="event-list__tags">
+									<p>#Health</p>
+									<p>#Party</p>
+									<p>#fun</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+												<div class="event-list-wrapper">
+							<a href="#">
+							<div class="event-list list-3">
+								<div class="event-list__price"><p>$20 - $30</p></div>
+								<div class="event-list__image"></div>
+								<div class="event-list__text">
+									<div class="event-list__date"><p>sat, oct 21 10:00AM</p></div>
+									<div class="event-list__title"><p>Lorem ipsum dolor.</p></div>
+									<div class="event-list__info"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+									<div class="event-list__tags">
+									<p>#Health</p>
+									<p>#Party</p>
+									<p>#fun</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="event-list-wrapper">
+							<a href="#">
+							<div class="event-list list-1">
+								<div class="event-list__price"><p>$20 - $30</p></div>
+								<div class="event-list__image"></div>
+								<div class="event-list__text">
+									<div class="event-list__date"><p>sat, oct 21 10:00AM</p></div>
+									<div class="event-list__title"><p>Lorem ipsum dolor.</p></div>
+									<div class="event-list__info"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+									<div class="event-list__tags">
+									<p>#Health</p>
+									<p>#Party</p>
+									<p>#fun</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.col-* -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.container -->
+				</div>
+				<!-- /.content -->
+			</div>
+			<!-- /.main-inner -->
+		</div>
+		<!-- /.main -->
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container width-wide">
+					<div class="row">
+						<div class="col-sm-3">
+							<h2>About Superlist</h2>
+
+							<p>Superlist is directory template built upon Bootstrap and SASS to bring great experience in creation of directory.</p>
+						</div>
+						<!-- /.col-* -->
+
+						<div class="col-sm-3">
+							<h2>Contact Information</h2>
+
+							<p>
+								Your Street 123, Melbourne, Australia
+								<br> +1-123-456-789, <a href="#">sample@example.com</a>
+							</p>
+						</div>
+						<!-- /.col-* -->
+
+						<div class="col-sm-3">
+							<h2>Stay Connected</h2>
+
+							<ul class="social-links nav nav-pills">
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+							</ul>
+							<!-- /.header-nav-social -->
+						</div>
+						<!-- /.col-* -->
+
+						<div class="col-sm-3">
+							<h2>New Column Here</h2>
+							<p>
+								Your Street 123, Melbourne, Australia
+								<br> +1-123-456-789, <a href="#">sample@example.com</a>
+							</p>
+						</div>
+						<!-- /.col-* -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.footer-top -->
+
+			<div class="footer-bottom">
+				<div class="container width-wide">
+					<div class="footer-bottom-left">
+						&copy; 2015 All rights reserved. Created by <a href="#">Aviators</a>.
+					</div>
+					<!-- /.footer-bottom-left -->
+
+					<div class="footer-bottom-right">
+						<ul class="nav nav-pills">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+							<li><a href="contact-1.html">Contact</a></li>
+						</ul>
+						<!-- /.nav -->
+					</div>
+					<!-- /.footer-bottom-right -->
+				</div>
+				<!-- /.container -->
+			</div>
+		</footer>
+		<!-- /.footer -->
+	</div>
+	<!-- /.page-wrapper -->
+
+	<script src="assets/js/jquery.js" type="text/javascript"></script>
+	<script src="assets/js/map.js" type="text/javascript"></script>
+
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/carousel.js" type="text/javascript"></script>
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/transition.js" type="text/javascript"></script>
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/tooltip.js" type="text/javascript"></script>
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/tab.js" type="text/javascript"></script>
+	<script src="assets/libraries/bootstrap-sass/javascripts/bootstrap/alert.js" type="text/javascript"></script>
+	<script src="assets/libraries/colorbox/jquery.colorbox-min.js" type="text/javascript"></script>
+
+	<script src="assets/libraries/flot/jquery.flot.min.js" type="text/javascript"></script>
+	<script src="assets/libraries/flot/jquery.flot.spline.js" type="text/javascript"></script>
+
+	<script src="assets/libraries/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing&amp;sensor=false" type="text/javascript"></script>
+
+	<script type="text/javascript" src="assets/libraries/jquery-google-map/infobox.js"></script>
+	<script type="text/javascript" src="assets/libraries/jquery-google-map/markerclusterer.js"></script>
+	<script type="text/javascript" src="assets/libraries/jquery-google-map/jquery-google-map.js"></script>
+
+	<script type="text/javascript" src="assets/libraries/owl.carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="assets/libraries/bootstrap-fileinput/fileinput.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/fotorama-4.6.4/fotorama.js"></script>
+	<script type="text/javascript" src="assets/plugins/fancybox/dist/jquery.fancybox.min.js"></script>
+	<script src="assets/js/jquery.equalheights.min.js" type="text/javascript"></script>
+
+	<script src="assets/js/superlist.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//Header Bar stay top when scroll
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > $('.main-inner').offset().top)
+					$('.header-search-bar').addClass('floating');
+				else
+					$('.header-search-bar').removeClass('floating');
+			});
+		});
+	</script>
+
+</body>
+
+</html>
