@@ -286,7 +286,7 @@ $(document).ready(function() {
         initialCaption: "Your Uploaded Images"
     });
 		
-		$('.event-list, .card-row-inner').equalHeights();
+		$('.event-list-equal, .card-row-inner').equalHeights();
 	
 
 		$(window).resize(function(){
@@ -300,5 +300,31 @@ $(document).ready(function() {
 				$('.card-row-inner').css('height','auto');
 			}
 		});
-
+	
+  	$('.other-carousel').owlCarousel({
+			navText: ["<i class='fa fa-chevron-left'>","<i class='fa fa-chevron-right'>"],
+			margin: 10,
+			loop: true,
+			autoplay:true,
+    	autoplayTimeout:4000,
+    	autoplayHoverPause:true,
+			nav: true,
+			responsive : {
+				0 : {
+					items: 1
+				},
+				470 : {
+					items: 2
+				},
+				768 : {
+					items: 3
+				},
+				992 : {
+					items: 4
+				},
+				1200 : {
+					items: 5
+				},
+			},
+		});
 });
