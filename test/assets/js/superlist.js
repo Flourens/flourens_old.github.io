@@ -286,21 +286,21 @@ $(document).ready(function() {
         initialCaption: "Your Uploaded Images"
     });
 		
-		$('.event-list-equal, .card-row-inner').equalHeights();
+		$('.event-list-equal').equalHeights();
 	
-
-		$(window).resize(function(){
-			if ($(window).width() < 768) {
-				$('.card-row-inner').equalHeights();
-			}
-			if ($(window).width() > 768) {
-				$('.card-row-inner').css('height','auto');
-			}
-			if ($(window).width() < 0) {
-				$('.card-row-inner').css('height','auto');
-			}
-		});
-	
+//
+//		$(window).resize(function(){
+//			if ($(window).width() < 540) {
+//				$('.card-row-inner').equalHeights();
+//			}
+//			if ($(window).width() > 541) {
+//				$('.card-row-inner').css('height','auto');
+//			}
+//			if ($(window).width() < 0) {
+//				$('.card-row-inner').css('height','auto');
+//			}
+//		});
+//	
   	$('.other-carousel').owlCarousel({
 			navText: ["<i class='fa fa-chevron-left'>","<i class='fa fa-chevron-right'>"],
 			margin: 10,

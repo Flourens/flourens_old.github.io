@@ -5806,36 +5806,29 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 	text-align: center;
 	list-style: none;
 }
-
 .pager li {
 	display: inline;
 }
-
 .pager li > a,
 .pager li > span {
 	display: inline-block;
 	padding: 5px 14px;
 	background-color: #fff;
 	border: 1px solid #ddd;
-	border-radius: 15px;
 }
-
 .pager li > a:hover,
 .pager li > a:focus {
 	text-decoration: none;
 	background-color: #eee;
 }
-
 .pager .next > a,
 .pager .next > span {
 	float: right;
 }
-
 .pager .previous > a,
 .pager .previous > span {
 	float: left;
 }
-
 .pager .disabled > a,
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
@@ -10159,26 +10152,27 @@ h2.widgettitle {
 }
 
 .pager li {
-	margin: 0px 4px;
+	margin: 0px 0px;
+	margin-right: -4.6px;
 }
 
 .pager li a {
-	border-color: #f7f8f9;
+	border-color: rgba(54, 54, 54, 0.3);
 	color: rgba(54, 54, 54, 0.6);
 	padding: 6px 15px;
 	-webkit-transition: all 0.15s linear;
 	transition: all 0.15s linear;
+	background-color: transparent;
 }
 
 .pager li a:hover {
-	background-color: #f96736;
+	background-color: rgba(54, 54, 54, 0.6);
 	color: #fff;
 }
 
 .pager li.active a {
-	background-color: #f96736;
-	border-color: #f96736;
-	color: #fff;
+	color: #f96736;
+	font-weight: bold;
 }
 
 
@@ -11320,40 +11314,87 @@ h2.widgettitle {
 	background-color: #fff;
 	margin: 0px 0px 7px 0px;
 }
-
 .card-row:last-child {
 	margin-bottom: 0px;
 }
-
 .card-row-inner {
 	display: table;
 	width: 100%;
 }
-
 .card-row-image,
 .card-row-body,
 .card-row-properties {
 	display: table-cell;
 	vertical-align: top;
 }
-
 .card-row-image {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: auto;
 	position: relative;
-	width: 262px;
+	width: 210px;
 }
-
 .card-row-body {
 	padding: 15px 30px;
 	padding-right: 0;
 }
-
 .card-row-properties {
 	padding: 7px 30px;
 	width: 260px;
+}
+
+.card-row-footer{
+	border-top: 1px solid #eaeaea;
+	margin-bottom: 10px;
+}
+.card-row-footer ul{
+	padding-left: 30px;
+	list-style-type: none;
+	margin: 0;
+}
+.card-row-footer ul li{
+	display: inline-block;
+	padding-right: 10px;
+}
+.card-footer-price {
+	display: inline-block;
+	width: 210px;
+	background-color: #eaeaea;
+	text-align: center;
+}
+.card-footer-price p{
+	margin: 0;
+	padding: 7px 0;
+}
+.card-footer-tags	{
+	display: inline-block;
+	padding-left: 30px;
+	word-spacing: 20px;
+}
+.card-footer-tags	ul li {
+	margin: 0;
+	padding: 7px 0;
+	padding-right: 20px;
+}
+.card-footer-actions {
+	float: right;
+}
+.card-footer-actions ul li{
+	display: inline-block;
+	padding: 10px 12px;
+	padding-bottom: 7px;
+	border-left: 1px solid #eaeaea;
+}
+.card-footer-actions ul li:first-child{
+	padding-right: 6px;
+	padding-left: 14px;
+}
+.card-footer-actions ul{
+	display: inline-block;
+}
+.card-footer-actions i{
+	font-size: 20px;
 }
 
 @media (max-width: 1200px){
@@ -11366,18 +11407,25 @@ h2.widgettitle {
 	.card-row-properties {
 	}
 	.card-row-image {
-		width: 200px;
+		width: 150px;
 		height: auto;
+	}
+	.card-footer-price {
+		width: 150px;
 	}
 	.card-row-inner{
 		background-color: #fff;
-		margin-bottom: 7px;
+		margin-bottom: 0px;
 	}
-	.card-row-inner {
+	.card-footer-tags{
+		padding-left: 10px;
 	}
 	.card-row-body{
 		padding: 13px 15px;
 		padding-right: 0;
+	}
+	.card-row-content p{
+		min-width: 120px;
 	}
 }
 @media (max-width: 992px) {
@@ -11387,12 +11435,13 @@ h2.widgettitle {
 		float: none;
 		padding: 0;
 		background-color: #fff;
-		margin: 0;
-		margin-bottom: 15px;
 	}
 	.card-row-image {
-		width: 200px;
+		width: 110px;
 		height: auto;
+	}
+	.card-footer-price {
+		width: 110px;
 	}
 }
 
@@ -11402,7 +11451,8 @@ h2.widgettitle {
 	padding: 0px;
 	font-weight: bold;
 }
-.card-row-content{
+.card-row-content p{
+	margin: 0;
 }
 
 .card-row-title a {
@@ -11416,12 +11466,11 @@ h2.widgettitle {
 
 .card-row-properties dd {
 	float: left;
-	line-height: 36px;
+	line-height: 28px;
 }
 
 .card-row-properties dt {
-	border-bottom: 1px dashed #e9e9e9;
-	line-height: 36px;
+	line-height: 28px;
 	text-align: right;
 }
 
@@ -12284,25 +12333,35 @@ h2.widgettitle {
 
 
 @media (max-width: 768px) {
-	.card-row{
-		width: 47%;
-		float: left;
-		margin: 5px;
-		margin-bottom: 10px;
+	.card-row .card-row-body {
+		height: 100px;
+	}
+	.card-row .card-row-content{
+	}
+	.card-row .card-footer-price{
+		display: block
+		width: 110px;
+	}
+	.card-row .card-footer-actions{
+	}
+	.card-row .card-footer-tags{
+	}
+	.card-row .card-footer-actions ul{
+		padding-left: 0;
+	}
+	.card-row .card-row-content p{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-height: 70px;
+	}
+
+	.card-row .card-row-inner{
+		overflow: hidden;
 	}
 	.card-row-image {
-			width: 100%;
-			vertical-align: top;
-			height: 200px;
+		width: 110px;
 	}
-	.card-row-image, .card-row-body, .card-row-properties {
-    display: block;
-	}
-	.card-row-properties {
-		width: 100%;
-		padding-right: 15px;
-		padding-left: 15px;
-	}
+	
 	.filter .form-group {
 		margin-bottom: 10px;
 	}
@@ -12317,6 +12376,45 @@ h2.widgettitle {
 		float: none;
 		margin: 10px 0px 0px 0px;
 		width: 100%;
+	}
+}
+@media (max-width: 540px) {
+	.card-row .card-row-image{
+		display: block;
+		width: 100%;
+		height: 200px;
+	}
+	.card-row-body{
+		display: block;
+		padding: 10px;
+		margin: 20px 0;
+	}
+	.card-row-properties{
+		display: block;
+		padding: 10px;
+		width: 100%;
+	}
+	.card-row-content p{
+		display: block;
+	}
+	.card-row-content p{
+		display: block;
+	}
+	.card-footer-price{
+		display: block;
+		width: 100%;
+	}
+	.card-footer-tags{
+		padding: 10px 10px;
+		line-height: 1.7;
+	}
+	.card-footer-actions{
+		border-top: 1px solid #eaeaea;
+		display: block;
+		float: none;
+	}
+	.card-footer-actions ul li{
+		border: none;
 	}
 }
 
@@ -14562,7 +14660,7 @@ ol li {
 		margin: 0px 0px 10px 3px;
 	}
 	.header-search-bar .select-location {
-		width: 85%;
+		width: 80%;
 		margin-bottom: 0;
 	}
 }
@@ -14667,7 +14765,7 @@ ol li {
 }
 .fade-carousel{
 	background-color: #1a1a1a;
-	margin-bottom: 40px;
+	margin-bottom: 0px;
 }
 .fade-carousel.main-inner{
 	padding-bottom: 0;
@@ -14836,6 +14934,7 @@ ol li {
 	text-transform: uppercase;
 	font-size: 30px;
 	margin-bottom: 40px;
+	margin-top: 60px;
 }
 .event-h3 span{
 	color: #f96736;
@@ -14943,7 +15042,7 @@ ol li {
 .accordion {
     width: auto;
     margin: 0 auto;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 }
 .accord-menu input[type=checkbox] + label:before, input[type=radio] + label:after{
 	display: none;
@@ -14981,9 +15080,9 @@ ol li {
 	content: '';
 	position: absolute;
 	height: 1px;
-	width: 80%;
-	left: 10%;
-	right: 10%;
+	width: 90%;
+	left: 5%;
+	right: 5%;
 	background-color: rgba(0, 0, 0, 0.05);
 	z-index: 2;
 }
