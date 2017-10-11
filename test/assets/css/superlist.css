@@ -9961,17 +9961,62 @@ ul.dropdown-menu li a:focus {
 .secondary-footer{
 	color: rgba(255, 255, 255, 0.5);
 	background-color: #009cda;
-	padding: 20px 0;
+	padding: 30px 0;
 }
 .footer-copyright {
-    color: #eaeaea;
-}
-.text-body-medium{
-	font-size: 15px;
+  color: #eaeaea;
+	font-size: 13px;
 	line-height: 22px;
 	font-weight: 400;
-	text-align: center;
+	text-align: left;
 }
+.secondary-footer .footer-terms{
+	padding: 0;
+	margin: 0;
+	float: none;
+}
+.secondary-footer .footer-terms p{
+	position: relative;
+	display: inline-block;
+	padding-right: 15px;
+}
+.secondary-footer .footer-terms p:after{
+	position: absolute;
+	content: '';
+	width: 3px;
+	height: 3px;
+	background-color: #fff;
+	border-radius: 50%;
+	top: 45%;
+	right: 0;
+}
+.secondary-footer .footer-terms p:last-child:after{
+	content: none;
+}
+.secondary-footer .footer-terms p:last-child{
+	padding-right: 0;
+	padding-left: 7px;
+}
+.secondary-footer .footer-terms a{
+	display: inline-block;
+  color: #eaeaea;
+	font-size: 13px;
+	line-height: 22px;
+	font-weight: 400;
+	text-align: left;
+}
+@media (max-width: 1200px) {
+.secondary-footer .footer-terms{
+	text-align: center;
+	}
+}
+@media (max-width: 768px) {
+.secondary-footer .footer-terms,
+.footer-copyright{
+		text-align: center;
+	}
+}
+
 
 /*------------------------------------------------------------------
 [ 10. Widgets ]
@@ -10085,7 +10130,9 @@ h2.widgettitle {
 .widget .menu-advanced li:last-child {
 	margin: 0px;
 }
-
+.widget.post-widget{
+	display: none;
+}
 
 /*------------------------------------------------------------------
 [ 11. Pagination ]
@@ -11391,7 +11438,7 @@ h2.widgettitle {
 }
 
 .card-row-title {
-	font-size: 18px;
+	font-size: 15px;
 	margin: 0px 0px 10px 0px;
 	padding: 0px;
 	font-weight: bold;
@@ -12696,9 +12743,8 @@ h2.widgettitle {
 }
 
 .detail-banner {
-	background-color: #fff;
-	padding: 20px;
-	height: 330px;
+	background-color: rgb(64, 51, 33);
+	height: 300px;
 }
 .detail-banner .height-100{
 	position: relative;
@@ -12708,9 +12754,7 @@ h2.widgettitle {
 	position: relative;
 }
 .detail-content .content-left{
-	padding: 40px;
-	padding-left: 0;
-	padding-bottom: 0;
+	padding: 0 40px 0 0;
 	margin-bottom: 60px;
 }
 .detail-content .content-left .detail-title{
@@ -12719,12 +12763,14 @@ h2.widgettitle {
 	font-size: 20px;
 }
 .detail-content .content-sidebar{
-	padding-top: 40px;
+	padding-top: 0px;
 }
-.detail-content .content-sidebar .detail-date,
-.detail-content .content-sidebar .detail-location
-{
-	margin-bottom: 60px;
+.detail-content .content-sidebar .detail-date{
+	margin-top: 70px;
+	margin-bottom: 30px;
+}
+.detail-content .content-sidebar .detail-location{
+	margin-bottom: 30px;
 }
 .detail-content .content-sidebar .detail-date p,
 .detail-content .content-sidebar .detail-location p
@@ -12743,7 +12789,8 @@ h2.widgettitle {
 	line-height: 24px;
 	font-size: 14px;
 	color: rgba(54, 54, 54, 0.9);
-	margin-bottom: 60px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 .detail-content .content-left .detail-block-2{
 	line-height: 24px;
@@ -12763,9 +12810,10 @@ h2.widgettitle {
 	padding: 20px 20px;
 	padding-bottom: 40px;
 	background-color: #fff;
+	border-left: 2px solid #f96736;
 }
 .detail-tabs .tab-text h4{
-	font-size: 30px;
+	font-size: 20px;
 }
 .detail-tabs .tab-text p{
 	font-size: 15px;
@@ -12801,8 +12849,9 @@ h2.widgettitle {
 .detail-tabs .nav-tabs .nav-item.active a{
 	margin: 0;
 	border: none;
-	background-color: #fff;
+	background-color: #f96736;
 	border-radius: 0;
+	color: #fff;
 }
 .badge {
 	display: inline-block;
@@ -12815,21 +12864,6 @@ h2.widgettitle {
 	border-radius: 0;
 	background-color: #f96736;
 	float: right;
-}
-.badge.badge-square {
-	font-size:13px;
-	width:25px;
-	height:25px;
-	line-height:25px;
-	text-align:center;
-	margin-right:10px;
-	padding:0;
-}
-.badge.badge-square.float-left {
-	margin-left:10px;
-}
-.badge.badge-square.float-right {
-	margin-right:10px;
 }
 
 
@@ -12848,11 +12882,13 @@ h2.widgettitle {
 		float: left;
 		margin-right: 20px;
 		margin-bottom: 40px;
+		margin-top: 0;
 	}	
 	.detail-content .content-sidebar .detail-location{
 		float: right;
 		margin-left: 0px;
 		margin-bottom: 40px;
+		margin-top: 0;
 	}
 }
 @media (max-width: 420px) {
@@ -14989,8 +15025,8 @@ ol li {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 30px;
-	margin-bottom: 40px;
-	margin-top: 60px;
+	margin-bottom: 35px;
+	margin-top: 35px;
 }
 .event-h3 span{
 	color: #f96736;
@@ -15206,7 +15242,10 @@ ol li {
   width: 100%;
   position: relative;
   padding: 0;
-	margin-top: 50px;
+	border: none;
+}
+.fluid-width-video-wrapper iframe{
+	border: none;
 }
 
 .fluid-width-video-wrapper iframe, 
@@ -15271,4 +15310,10 @@ ol li {
 }
 .event-list-wrapper .event-list .event-list__tags p{
 	font-size: 12px;
+}
+
+.ad-box{
+	height: 100%;
+	border: 1px solid #ffffff;
+	margin-bottom: 12px;	
 }
