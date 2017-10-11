@@ -3,6 +3,7 @@
 /*Import Google Fonts*/
 @import url(https://fonts.googleapis.com/css?family=Monda:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
 
 /*------------------------------------------------------------------
@@ -12408,6 +12409,9 @@ h2.widgettitle {
 		display: block;
 		width: 100%;
 	}
+	.card-row-footer{
+		margin-bottom: 20px;
+	}
 	.card-footer-tags{
 		padding: 10px 10px;
 		line-height: 1.7;
@@ -12891,21 +12895,40 @@ h2.widgettitle {
 		padding-top: 0;
 	}
 	.detail-content .content-sidebar .detail-date{
-		float: left;
+		display: inline-block;
 		margin-right: 20px;
 		margin-bottom: 40px;
 		margin-top: 0;
 	}	
 	.detail-content .content-sidebar .detail-location{
-		float: right;
+		display: inline-block;
 		margin-left: 0px;
 		margin-bottom: 40px;
 		margin-top: 0;
+	}	
+	.detail-content .content-sidebar .ad-box {
+		position: absolute;
+		top: 0;
+		right: 20px;
+		width: 250px;
 	}
+}
+@media (max-width: 676px) {
+	.detail-content .content-sidebar .ad-box {
+		margin-left: 20px;
+		margin-bottom: 40px;
+		position: relative;
+		width: 250px;
+	}
+	
 }
 @media (max-width: 420px) {
 	.detail-content .content-sidebar .detail-location{
-		float: left;
+		display: block;
+		margin-bottom: 15px;
+	}
+	.detail-content .content-sidebar .detail-date{
+		margin-bottom: 15px;
 	}
 }
 
