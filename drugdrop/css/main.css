@@ -301,11 +301,12 @@ nav.bottom .navigation li {
 	width: 521px;
 	margin: 0 auto;
 	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 	background-color: #fff;
 	text-align: center;
 	border-radius: 20px;
 	text-decoration: none;
+	
 }
 .main-content .upload-btn .drag-drop{
 	font-family: 'ITC Avant Garde Pro Md', Arial, sans-serif;
@@ -314,7 +315,7 @@ nav.bottom .navigation li {
 	font-size: 20px;
 	color: #3e3e3e;
 	margin: 0;
-	padding-top: 55px;
+	padding-top: 25px;
 }
 .main-content .upload-btn .upload{
 	font-family: 'ITC Avant Garde Pro Md', Arial, sans-serif;
@@ -377,6 +378,8 @@ nav.bottom .navigation li {
 	overflow-y: auto;
 	
 }
+
+
 .frame1 .frame-headline,
 .frame2 .frame-headline{
 	font-family: 'Mark', Arial, sans-serif;
@@ -491,7 +494,7 @@ html{
 .content,
 .container{
 	height: 100%;
-	min-height: 568px;
+	min-height: 738px;
 }
 .aboutright .container{
 }
@@ -567,6 +570,14 @@ html{
 		margin: 0;
 		margin-top: 15px;
 		padding-bottom: 20px;
+	}
+	.content-wrapper,
+	.aboutright,
+	.mainpage,
+	.content,
+	.container{
+		height: 100%;
+		min-height: 568px;
 	}
 }
 
