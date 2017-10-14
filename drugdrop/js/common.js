@@ -88,3 +88,11 @@ $(document).ready(function(){
 //		$('.mainpage, .aboutright').equalHeights();
 //	})
 });
+$(window).resize(function(){
+			if ($(window).width() > 1200) {
+			$('.aboutright').css('width', 985);
+		} else {
+			$('.aboutright').css('width', $(window).width());
+		}
+
+});
