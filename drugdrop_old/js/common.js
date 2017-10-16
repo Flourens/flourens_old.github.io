@@ -60,7 +60,7 @@ $(document).ready(function(){
 		$('#slide').addClass("slide");
 		$('.right').addClass("right-slide");
 		var winwidth = $(window).width() - 10;
-		if ($(window).width() > 968) {
+		if ($(window).width() > 1200) {
 			$('.aboutright').css('width', 985);
 			$('.mainpage').animate({
 				right: 968
@@ -89,10 +89,10 @@ $(document).ready(function(){
 //	})
 });
 $(window).resize(function(){
-			if ($(window).width() > 985) {
+			if ($(window).width() > 1200) {
 			$('.aboutright').css('width', 985);
 		} else {
 			$('.aboutright').css('width', $(window).width());
-		
-		} 
+		}
+
 });
