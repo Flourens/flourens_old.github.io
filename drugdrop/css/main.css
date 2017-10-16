@@ -174,7 +174,7 @@ a.close:hover { background: #4a6397; }
   padding: 0;
 	background: #9dc4a7 url('../img/MAIN.jpg') no-repeat;
 	background-attachment: fixed;
-	background-position: 50% 50%;
+	background-position: 10% 50%;
 	background-size: cover;
 }
 .content .container.slide{
