@@ -375,6 +375,7 @@ nav.bottom .navigation li {
 .frames-wrapper{
 	margin-bottom: 0px;
 	margin-top: 0px;
+	height: 80vh;
 	
 }
 
@@ -530,6 +531,12 @@ html{
 	}
 }
 	@media (max-width: 560px) {
+	.about-description-wrapper{
+		height: 50vh;
+	}
+	.aboutright .credits{
+		left: 35px;
+	}
 	.aboutright .about-description{
 		font-size: 20px;
 	}
