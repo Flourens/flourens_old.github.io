@@ -439,7 +439,7 @@ nav.bottom .navigation li {
 }
 .about-description-wrapper{
 	margin-top: 97px;
-	height: 70vh;
+	height: 65%;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -532,7 +532,7 @@ html{
 }
 	@media (max-width: 560px) {
 	.about-description-wrapper{
-		height: 53vh;
+		height: 53%;
 	}
 	.aboutright .credits{
 		left: 35px;
