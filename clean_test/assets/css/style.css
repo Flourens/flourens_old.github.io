@@ -2038,7 +2038,7 @@ textarea.form-control {
 .content-start {
   position: relative;
   text-align: center;
-  background-image: url('assets/images/banner.png');
+  background-image: url('../assets/images/banner.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   -webkit-background-size: cover;
