@@ -434,6 +434,12 @@
   .hero .video-container video {
     width: 700px;
   }
+  .section-1__title {
+    text-align: center;
+  }
+  .section-1__subtitle {
+    text-align: center;
+  }
   .header.navbar-fixed-top h1 {
     margin: 0;
   }
@@ -514,6 +520,21 @@
   }
   .config-wrapper {
     display: none;
+  }
+  .s-demo-acc .section-1__account {
+    width: 100%;
+  }
+  .s-demo-acc .section-1__acc-item {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+  }
+  .s-demo-acc .section-1__acc-item .bottom {
+    color: #000;
+    background-color: #fff;
+    padding: 5px 0;
   }
   #topcontrol {
     display: none !important;
@@ -777,6 +798,13 @@
 }
 /* Extra small devices (phones, less than 442px) */
 @media only screen and (max-width: 442px) {
+  .section-1__title {
+    font-size: 30px;
+    text-align: center;
+  }
+  .section-1__text {
+    font-size: 18px;
+  }
   .laptop .alpr-carousel .owl-stage-outer {
     width: 266px;
   }

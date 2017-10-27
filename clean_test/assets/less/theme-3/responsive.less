@@ -575,7 +575,12 @@
 			}
 		}
 	}
-	
+	.section-1__title{
+		text-align: center;
+	}
+	.section-1__subtitle{
+		text-align: center;
+	}
 
 	.header.navbar-fixed-top {
 		h1 {
@@ -669,10 +674,31 @@
 			padding-bottom: 0px;
 		}
 	}
-
+	
 	.config-wrapper {
 		display: none;
 	}
+	
+	.s-demo-acc{
+		.section-1{
+			&__account{
+				width: 100%;
+			}
+			&__acc-item{
+				display: block;
+				width: 100%;
+				border: none;
+				padding: 0;
+				font-size: 20px;
+				.bottom{
+					color: #000;
+					background-color: #fff;
+					padding: 5px 0;
+			}
+			}
+		}
+	}
+
 
 	#topcontrol {
 		display: none !important;
@@ -999,6 +1025,14 @@
 /* Extra small devices (phones, less than 442px) */
 
 @media only screen and (max-width: 442px) {
+	.section-1__title{
+		font-size: 30px;
+		text-align: center;
+	}
+	.section-1__text{
+		font-size: 18px;
+	}
+	
 		.laptop {
 		.alpr-carousel {
 			.owl-stage-outer {
