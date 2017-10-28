@@ -22,8 +22,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css" media="screen" />
 	<link id="theme-style" rel="stylesheet" href="assets/css/style.css" /> 
-
-	<link rel="stylesheet" type="text/css" href="assets/js/cloudapidemo/cloudapidemo.css" />
+	
+	
+		<link rel="stylesheet" type="text/css" href="assets/js/cloudapidemo/cloudapidemo.css" />
 	<style> 
 		.plate_sample_images img{
 				margin-top: 15px;
@@ -159,6 +160,7 @@
 								<li class=""><a href="cloud-stream.html">Cloud Stream</a></li>
 								<li class=""><a href="on-premises.html">On-Premises ALPR</a></li>
 								<li class=""><a href="cloud-api.html">Cloud API</a></li>
+								<li ><a href="forensic_plate_finder.html">Forensic Plate Finder</a></li>
 							</ul>
 						</li>
 						<!--//products dropdown-->
@@ -204,38 +206,96 @@
 
 
 	
+	
+	
+	
 
-		<!--//headline-bg-->
-			<div class="page-top-bg page-top-bg--cloud-api"></div>
-		<!--//headline-bg-->
-		<!-- ****** Headline ****** -->
+	<div class="page-top-bg page-top-bg--on-premises"></div>
+<!-- ******Main Video Section****** -->
+	<section id="hero-video" class="hero page-top-bg">
+		<div class="video-container">
+			<video autoplay >
+				<source type="video/mp4" src="assets/images/webpage_bgvideo.mp4">
+				<source type="video/webm" src="assets/images/webpage_bgvideo.webm">
+				<source type="video/ogg" src="assets/images/webpage_bgvideo.ogg">
+			</video>
+			<div class="overlay overlay-g"></div>
+		</div>
+	</section>
+	<!-- ****** // End Video Section****** -->
+		<!--//headline-bg--> 
+   	<!-- ****** Headline ****** -->
 			<section class="page-head">
 				<div class="page-head__content">
-					<h2 class="page-head__title">OpenALPR<span class="page-head__title page-head__title--accent"> Cloud API</span></h2>
-					<p class="page-head__subtitle"></p>
+					<img class="page-head__image" src="assets/images/icons/OPEN_ALPR_icon-3.svg" alt="OPEN ALPR">
+					<h2 class="page-head__title">Cloud API</h2>
+					<p class="page-head__subtitle">ENABLE AUTO PLATE RECOGNITION WITH ANY IP CAMERA</p>
 				</div>
-			</section>
+			</section> 
 		<!--// ****** Headline ****** -->
-		<!-- ****** Section-1 ****** -->
-	<section class="section-1">
-		<div class="container"> 
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="section-1__inner section-1__inner--contacts">
-						<div class="section-1__about">
-							<h2>OpenALPR Cloud API</h2>
-							<p>The <strong>OpenALPR Cloud API</strong> is a web service running in the cloud that analyizes images of vehicles and responds with 
-								license plate data, as well as vehicle color, make, model and body type.</p>
-							<h3>Take a Test Drive</h3>
-							<p>Upload your own images, or select an image below to see the results from previous image analysis using the OpenALPR Cloud API.</p>
+	
+	<!-- ****** Section-1 ****** -->
+	<section class="s-section-1">
+		<div class="container section-1">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="section-1__inner">
+						<!-- ****** Top Image****** -->
+						<div class="top-img">
+							<img class="top-img__image" src="assets/images/cloudAPI-Header.png" alt="On-Premises Agent & SDK">
+						</div> 
+						<!--// ******Top Image****** -->
+						<p class="section-1__text">The OpenALPR Cloud API is a web service running in the cloud that analyizes images of vehicles and responds with license plate data, as well as vehicle color, make, model and body type.</p>
+						
+						<h2 class="section-1__title">Product Features</h2>
+						<div class="features row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<div class="features__unit">
+									<div class="features__icon features__icon--accent-g"><i class="fa fa-server"></i></div>
+									<ul class="features__content">
+										<li class="features__inside">Ubuntu 16.04 Desktop and Server (64-bit)</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<div class="features__unit">
+									<div class="features__icon features__icon--accent-g"><i class="fa fa-address-card-o"></i></div>
+									<ul class="features__content">
+										<li class="features__inside">One-time, Perpetual Software License (per camera)</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<div class="features__unit">
+									<div class="features__icon features__icon--accent-g"><i class="fa fa-cogs"></i></div>
+									<ul class="features__content">
+										<li class="features__inside">Optional Support and</li>
+										<li class="features__inside">Software Updates</li>
+										<li class="features__inside">(annual fee)</li>
+									</ul>
+								</div>
+							</div> 
 						</div>
+						<h2 class="section-1__title">Take a Test Drive</h2>
+						<p class="section-1__text">Upload your own images, or select an image below to see the results from previous image analysis using the OpenALPR Cloud API.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="photos__inner">
+					<div class="photos__sample">
+						<div id="cloud_api_demo"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-</section>
-
-<section class="s-photos photos">
+	</div>
+	
+	<div class="s-photos photos">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
@@ -251,67 +311,84 @@
 										<a class="photos__item"  data-fancybox='group1' href="assets/images/demoscreenshots/large-3.jpg">
 										<img src="assets/images/demoscreenshots/small-3.jpg" alt="Side Prius"/></a>
 								</div>
-								<hr />
 							</div>
 						</div>
 				</div>
 			</div>
-			
 		</div>
-</section>
+	</div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 col-sm-12 col-xs-12">
-			<div class="photos__inner">
-				<div class="photos__sample">
-					<div id="cloud_api_demo"></div>
-					<hr />
+
+
+	<section class="s-section-1">
+		<div class="container section-1">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="section-1__inner">
+						<h2 class="section-1__title">Supported Countries</h2>
+						<p class="section-1__text">OpenALPR contains specialized training data for many plate styles. Currently, OpenALPR supports:</p>
+						<div class="section-1__c-table row">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<ul class="section-1__countries section-1__text">
+									<li>North America</li>
+									<li>Europe</li>
+									<li>Brazil</li>
+								</ul>
+							</div>
+							
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<ul class="section-1__countries section-1__text">
+									<li>China</li>
+									<li>Australia</li>
+									<li>UAE</li>
+								</ul>
+							</div>
+							
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<ul class="section-1__countries section-1__text">
+									<li>Saudi Arabia</li>
+									<li>India</li>
+									<li>Thailand</li>
+								</ul>
+							</div>
+							
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<ul class="section-1__countries section-1__text">
+									<li>Argentina</li>
+									<li>New Zealand</li>
+									<li>South Africa</li>
+								</ul>
+							</div>
+						</div>
+						
+						<p class="section-1__text">If your country is not listed, you may still experience very high accuracy rates by using training data for a country that has plates that look similar to yours. Upload your own images in the form above to see how well OpenALPR will work for you. OpenALPR can be trained to accurately recognize license plates for any country. Contact Us to discuss custom training services.</p>
+						
+						<h2 class="section-1__title">Easy Integration</h2>
+						<p class="section-1__text">Because the OpenALPR Cloud API is REST-based, it works with virtually any programming language on any operating system. You can make API calls using whatever method you prefer.</p>
+						<p class="section-1__text">To make integration easier, the OpenALPR Cloud API includes permissively licensed open source client libraries in a variety of languages. Head over to the OpenALPR Cloud API GitHub repo to find out more.</p>
+						<p class="section-1__text">Check out the OpenALPR Cloud API Documentation for more technical information.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-<!-- ****** Section-1 ****** -->
-	<section class="section-1">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="section-1__inner">
-						<div class="section-1__about">
-							<h3>Supported Countries</h3>
-								<p>OpenALPR contains specialized training data for many plate styles.  Currently, OpenALPR supports:</p>
-								<ul>
-									<li>North America</li>
-									<li>Europe</li>
-									<li>Brazil</li>
-									<li>Australia</li>
-									<li>UAE</li>
-									<li>Saudi Arabia</li>
-									<li>India</li>
-									<li>Thailand</li>
-									<li>Argentina</li>
-									<li>New Zealand</li>
-								</ul>
-								<p>If your country is not listed, you may still experience very high accuracy rates by using training data for a country that has plates that look similar to yours.  Upload your own images in the form above to see how well OpenALPR will work for you.  OpenALPR can be trained to accurately recognize license plates for any country.  <a href="/contact.html">Contact Us</a> to discuss custom training services.</p>
-								<hr />
-								<h3>Easy Integration</h3>
-								<p>Because the OpenALPR Cloud API is REST-based, it works with virtually any programming language on any operating system.  You can make API calls using whatever method you prefer.</p>
-								<p>To make integration easier, the OpenALPR Cloud API includes permissively licensed open source client libraries in a variety of languages. Head over to the <a href="https://github.com/openalpr/cloudapi">OpenALPR Cloud API GitHub repo</a> to find out more.</p>
-								<p>Check out the <a href="http://doc.openalpr.com/bindings.html#cloud-api-commercial">OpenALPR Cloud API Documentation</a> for more technical information.</p>
-								<hr />
-								<h3>Affordable</h3>
-								<p>OpenALPR Cloud API offers monthly plans with no long-term commitments.  Sign-up today and start analyzing your images for license plate and vehicle information.  The service is <strong>free</strong> for low monthly usage.  For higher volume usage, we offer the following plans:</p>
+	</section>
+	<!--//Section-1-->
+	
+	<section class="s-section-1">
+			<div class="container section-1">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-1__inner">
+									<h2 class="section-1__title">Affordable OpenALPR Cloud API Plans</h2>
+									<p class="section-1__text">OpenALPR Cloud API offers monthly plans with no long-term commitments. Sign-up today and start analyzing your images for license plate and vehicle information. The service is free for low monthly usage. For higher volume usage, we offer the following plans:</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!--//Section-1-->
-	<!--Pricing Section-->
-		<section class='s-pricing'>
+		</section>
+						
+		<!--Pricing Section-->
+	<section class='s-pricing'>
 			<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -358,6 +435,132 @@
 		</div>
 	</section>
 	<!--//Pricing Section-->
+	<!-- ******FAQ Section****** --> 
+   <section class="s-faq">
+        <div class="container faq">
+            <h2 class="title text-center">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 col-xs-offset-0">
+                   <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq5"><i class="fa fa-plus-square"></i>How is data secured in OpenALPR Cloud?</a></h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="faq5">
+                            <div class="panel-body">
+                                <p>
+                                    We use a variety of industry-standard security technologies and procedures to help protect your license plate data and personal data
+                                    from unauthorized access, use, or disclosure. When you enter sensitive information (such as a credit card number) we encrypt the transmission
+                                    of that information using secure socket layer technology (SSL). We do not store your credit card information.  Rather, we partner with a
+                                    certified PCI Service Provider Level 1 merchant gateway.  This is the most stringent level of credit card security certification available.
+                                </p>
+                                <p>
+                                    License plate data is similarly encrypted with SSL when sent to OpenALPR.  The license plate images are persisted on your OpenALPR Agent systems.
+                                    These images can be served within your network and do not need to be transferred over the internet to be displayed.  The license plate data is stored on
+                                    password-protected database systems that are kept isolated in a private network.
+                                </p>
+                                <p>
+                                    We also require you to enter a password to access your account information. Please do not disclose your account password to unauthorized people.
+                                    Despite these measures, you should know that OpenALPR cannot fully eliminate security risks associated with license plate data and personal data
+                                    and mistakes and security breaches may happen. If you have any questions or concerns about security, please <a href="contact.html">contact us</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq6"><i class="fa fa-plus-square"></i>How am I billed for the cloud service?</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq6">
+                            <div class="panel-body">
+                                <p>
+                                    Every new account is automatically setup with a two week trial. If you love OpenALPR Cloud Stream after your initial free trial period (which we know you will), just enter your credit card into the system and select either the "Basic" or "Professional" account plan. Billing will begin automatically. You may also prepay for an annual subscription by invoice if you prefer. <a href="contact.html">Contact us</a> to make those arrangements.
+                                </p>
+                                <p>
+                                    After two-weeks, if you do not choose a paid plan, your account will revert automatically to a "Free" account. You do not need to enter a credit card and you will not be billed. If you choose to delete your account you may do so at any time. Please let us know what we could have done better if you decide to hit the road.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                    
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq8"><i class="fa fa-plus-square"></i>What countries do you support?</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq8">
+                            <div class="panel-body">
+                                <p>
+                                    OpenALPR includes support for a number of countries including the USA, United Kingdom, Australia, Canada, Europe, Mexico, Korea, Singapore, and other countries with similar plate designs.
+                                    For countries with plates that look significantly different, OpenALPR can be trained to recognize them.  We offer training services as a paid consulting
+                                    engagement.  You may also train the software yourself. See our <a href="http://doc.openalpr.com">documentation</a> for more details.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                   <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq9"><i class="fa fa-plus-square"></i>What cameras work best with the software?</a></h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="faq9">
+                            <div class="panel-body">
+                                <p>
+                                OpenALPR will work with any IP camera that supports H.264 and MJPEG streams. You don't need to buy an expensive "LPR" camera. However, if you want to read license plates at night, you will need a camera that can "see" in the dark using infrared (IR) light. Consult your camera manufacturer for the streaming URL (e.g. http://username:password@IP Address/axis-cgi/mjpg/video.cgi)...you'll need to know this information to configure the OpenALPR Agent.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq10"><i class="fa fa-plus-square"></i>Once I enroll, what happens next?</a></h4>
+                        </div>
+
+                        <div class="panel-collapse collapse" id="faq10">
+                            <div class="panel-body">
+                                <p>
+                                    You will receive an email. Click on the link to verfy your email and activate your account. Login to the OpenALPR Cloud Stream portal and click on "Getting Started" which will walk you through the process of downloading and configuring the OpenALPR Agent.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq11"><i class="fa fa-plus-square"></i>What if I have technical questions?</a></h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="faq11">
+                            <div class="panel-body">
+                                <p>
+                                    For "Free" accounts, the answer to your question may be found on the <a href="https://groups.google.com/forum/#!forum/openalpr">developer forum</a>.  "Basic" and "Professional" account users can
+                                    <a href="contact.html">contact us</a> directly with your questions.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                </div>
+            </div><!--//row-->
+        </div><!--//container-->        
+    </section>
+	<!-- ****** //FAQ Section****** --> 
+	<div class="content-help content-stream__help">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<h2 class="help-title">Not Sure Which OpenALPR Product is right for you?</h2>
+						<p class="help-subtitle">Contact our experts at <strong>1-800-935-1699</strong>  for a free analysis.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
