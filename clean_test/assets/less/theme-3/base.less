@@ -1181,6 +1181,10 @@ textarea {
 			background: @accent-br;
 			.opacity(0.9);
 		}
+		&-gr{
+			background: @accent-gr;
+			.opacity(0.9);
+		}
 
 	}
 }
@@ -1562,6 +1566,11 @@ textarea {
 		width: 75px;
 		height: 75px;
 	}
+	&__nvidia{
+		width: 190px;
+		height: 37px;
+		margin-bottom: 20px;
+	}
 	&__title {
 		font-size: 45px;
 		font-weight: bold;
@@ -1729,6 +1738,32 @@ textarea {
 		margin-top: 50px;
 		margin-bottom: 0px;
 	}
+	
+	/*--- NVIDIDA page futures ---*/
+	&-nvidia{
+		.features{
+			&__unit{ 
+				text-align: left;
+			}
+			&__icon {
+				display: inline-block;
+				width: 13%;
+				vertical-align: middle;
+			}
+			&__content {
+				display: inline-block;
+				width: 85%;
+				vertical-align: middle;
+				padding-top: 45px;
+				padding-left: 20px;
+				text-align: left;
+			}
+			&__inside{
+				font-size: 26px;
+				font-weight: 200;
+			}
+		}
+	}
 }
 
 .get-started {
@@ -1879,4 +1914,18 @@ textarea {
 .section-1 .accented-br {
 	border: 1px solid @accent-br;
 	margin-top: 90px;
+}
+
+.nvidia-table	{
+	font-size: 21px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+}
+.nvidia-metropolis-banner{
+	width: 100%; 
+	.nvidia-banner-img{
+		width: 100%;
+		height: auto;
+	}
 }

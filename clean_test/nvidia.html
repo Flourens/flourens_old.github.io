@@ -53,10 +53,10 @@
 					<ul class="nav navbar-nav">
 						<li class=" nav-item"></li>
 
-						<li class=" nav-item dropdown">
+						<li class="active nav-item dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Products <i class="fa fa-angle-down"></i></a>
 							<ul class="dropdown-menu">
-								<li class=""><a href="cloud-stream.html">Cloud Stream</a></li>
+								<li class="active"><a href="cloud-stream.html">Cloud Stream</a></li>
 								<li class=""><a href="on-premises.html">On-Premises ALPR</a></li>
 								<li class=""><a href="cloud-api.html">Cloud API</a></li>
 								<li class=""><a href="forensic_plate_finder.html">Forensic Plate Finder</a></li>
@@ -64,10 +64,10 @@
 						</li>
 						<!--//products dropdown-->
 
-						<li class="active nav-item dropdown">
+						<li class=" nav-item dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Menu <i class="fa fa-angle-down"></i></a>
 							<ul class="dropdown-menu">
-								<li class="active">
+								<li class="">
 									<a href="nvidia.html">NVIDIA Acceleration</a>
 								</li>
 								<li class="">
@@ -104,110 +104,276 @@
 	<!--//header-->
 
 
-	
-active
-active
+	 active active
 
-	<!--//headline-bg-->
-		<div class="page-top-bg page-top-bg--nvidia"></div>
-	<!--//headline-bg-->
-	<!-- ****** Headline ****** -->
-		<section class="page-head">
-			<div class="page-head__content">
-				<h2 class="page-head__title"></h2>
-			</div>
-		</section>
-	<!--// ****** Headline ****** -->
-		<!-- ****** Section-1 ****** -->
-	<section class="section-1 section-1--top">
-		<div class="container">
+<div class="page-top-bg page-top-bg--on-premises"></div>
+<!-- ******Main Video Section****** -->
+<section id="hero-video" class="hero page-top-bg">
+	<div class="video-container">
+		<video autoplay>
+				<source type="video/mp4" src="assets/images/webpage_bgvideo.mp4">
+				<source type="video/webm" src="assets/images/webpage_bgvideo.webm">
+				<source type="video/ogg" src="assets/images/webpage_bgvideo.ogg">
+			</video>
+		<div class="overlay overlay-gr"></div>
+	</div>
+</section>
+<!-- ****** // End Video Section****** -->
+
+<!-- ****** Headline ****** -->
+<section class="page-head">
+	<div class="page-head__content">
+		<img class="page-head__nvidia" src="assets/images/logo_new/Nvidia_Logo_Horizontal.svg" alt="NVIDIA">
+		<h2 class="page-head__title">Acceleration</h2>
+		<p class="page-head__subtitle">DELIVER REAL-TIME PERFORMANCE AND STATE-OF-THE-ART ACCURACY</p>
+	</div>
+</section>
+
+<!-- ****** Video Section****** -->
+<section class="s-cloud-video">
+	<div class="container">
+		<div class="cloud-video">
+			<iframe class="cloud-video__frame" src="https://player.vimeo.com/video/232260311" width="720" height="405"></iframe>
+		</div>
+	</div>
+</section>
+<!-- ******//Video Section****** -->
+
+<!-- ****** Section-1 ****** -->
+<section class="s-section-1">
+	<div class="container section-1">
+		<div class="section-1__inner">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="section-1__inner section-1__inner--top">
-						<div class="section-1__about">
-							<div class="nvidia">
-								<div class="nvidia__box">
-									<img class="nvidia__logo" src="assets/images/Nvidia/nvidia.svg" alt="nvidia OpenALPR Acceleration">
-									<p class="nvidia_header">   acceleration</p>
-								</div>
-							</div> 
-							 <p>The OpenALPR commercial engine supports execution on NVIDIA hardware to enable <strong>high-speed</strong>, <strong>real-time</strong> License Plate Recognition.  If your application uses mobile cameras or captures vehicles moving in excess of 60 miles per hour, OpenALPR Nvidia GPU acceleration makes it possible to deliver real-time performance and state-of-the-art accuracy.</p>
-								<p><strong>More Headroom for your Application.</strong>  License Plate Recognition is a computationally intensive operation.  By moving the processing off of the CPU and onto the GPU, you have more resources available for your own services.  Keeping the CPU usage light ensures that your application runs smoothly and you deliver a seamless experience for your end-users.</p>
-								<p><strong>Highest Possible Accuracy.</strong>  OpenALPR measures license plates more confidently when it sees the same plate consecutively.  With Nvidia GPUs, OpenALPR is able to form highly confident results because it can analyze every frame of the input video stream.</p>
-								<p><strong>Power and Space Efficient.</strong> OpenALPR running on Nvidia hardware recognizes many more plates per watt of power compared to CPU processing.  A single Nvidia GPU processes many simultaneous video streams in the data center.  Similarly, the low-power Nvidia Jetson device performs real-time license plates recognition in the field.  OpenALPR supports the energy-efficient <a href="http://www.nvidia.com/object/embedded-systems-dev-kits-modules.html">Nvidia Jetson platform</a>, as well as desktop and server-class GPUs, such as the Tesla, Quadro, and GTX product lines.</p>
-								<p>OpenALPR Nvidia acceleration is available today on Ubuntu Linux.  <a href="contact.html">Contact us</a> for an evaluation.</p>
+
+
+					<p class="section-1__text">Watch OpenALPR recognize license plates from a high-resolution (1080p) video stream in real-time. This demo is running on a Nvidia Tesla P4 at greater than 50 frames per second processing speed. You may have to slow down the playback to read the plate numbers, the cars are moving so quickly that it’s hard for a human eye to keep up!</p>
+
+					<hr style="margin-bottom: 0; margin-top: 50px;">
+
+					<h2 class="section-1__title">Enable High-speed, Real-time <br>License Plate Recognition</h2>
+					<p class="section-1__text">The OpenALPR commercial engine supports execution on NVIDIA hardware to enable high-speed, real-time License Plate Recognition. If your application uses mobile cameras or captures vehicles moving in excess of 60 miles per hour, OpenALPR Nvidia GPU acceleration makes it possible to deliver real-time performance and state-of-the-art accuracy.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="features features-nvidia">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="features__unit features__unit">
+							<div class="features__icon features__icon--accent-b"><i class="fa fa-bullseye"></i></div>
+							<div class="features__content">
+								<p class="features__inside"><strong>Highest Possible Accuracy.</strong> OpenALPR measures license plates more confidently when it sees the same plate consecutively. With Nvidia GPUs? OpenALPR is able to form highly confident results because it can analyze every frame of the input video stream.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent-b"><i class="fa fa-database"></i></div>
+							<div class="features__content">
+								<p class="features__inside"><strong>Lower overall cost.</strong> Utilize fewer, high-resolution cameras and capture multiple lanes of traffic with a single system. Using Nvidia hardware, OpenALPR is able to monitor 4k video (3840x2160 pixals) across all 4 lanes of a highway with a single camera.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent-b"><i class="fa fa-hdd-o"></i></div>
+							<div class="features__content">
+								<p class="features__inside"><strong>More Headroom for your Application.</strong> License Plate Recognition is a computationally intensive operation. By moving the processing off of the CPU and onto the GPU, you have more resources available for your own services. Keeping the CPU usage light ensures that your application runs smoothly and you deliver a seamless experience for your end-users.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="features__unit">
+							<div class="features__icon features__icon--accent-b"><i class="fa fa-cogs"></i></div>
+							<div class="features__content">
+								<p class="features__inside"><strong>Power and Space Efficient.</strong> OpenALPR running on Nvidia hardware recognizes many more plates per watt of power compared to CPU processing. A single Nvidia GPU processes many simultaneous video streams in the data center. Similarly, the low-power Nvidia Jetson device performs real-time license plates recognition in the field. OpenALPR supports the energy-efficient Nvidia Jetson platform, as well as desktop and server-class GPUs, such as the Tesla, Quadro, and GTX product lines.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!--//Section-1-->
-	<!-- ****** Video Section****** -->
-	<section class="s-cloud-video">
-		<div class="container">
-			<div class="cloud-video">
-				<iframe class="cloud-video__frame" src="https://player.vimeo.com/video/232260311"  width="640" height="360"></iframe>
-			</div>
-		</div>
-	</section>
-	<!-- ******//Video Section****** -->
-		<!-- ****** Section-1 ****** -->
-	<section class="section-1 section-1--top">
-		<div class="container"> 
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="section-1__inner section-1__inner--top">
-						<div class="section-1__about">
-							<p>Watch OpenALPR recognize license plates from a high-resolution (1080p) video stream in real-time.  This demo is running on a Nvidia Tesla P4 at greater than 50 frames per second processing speed.  You may have to slow down the playback to read the plate numbers, the cars are moving so quickly that it's hard for a human eye to keep up!</p>
+					<h2 class="section-1__title">OpenALPR Nvidia acceleration is available today on Ubuntu Linux.</h2>
+					<h3 class="section-1__subtitle">Contact us for an evaluation.</h3>
+					<hr style="margin-bottom: 0; margin-top: 0px;">
+
+					<h2 class="section-1__title">Benchmarks</h2>
+					<p class="section-1__text">There are a variety of factors that influence how many frames per second are sufficient for ALPR. It is dependent on the angle of capture, resolution, speed of the vehicles, and other factors. A good rule of thumb is that 5fps of processing per camera stream will allow for low-speed vehicle capture, and 10fps or greater is sufficient for high speed.</p>
+
+					<p class="section-1__text">Performance benchmarks are detailed below. The Jetson platform is an ultra-low power, embedded device that is a great solution for in-vehicle or in-camera cap - ture. The Tesla P4 is installed in server-class hardware and is powerful enough to process multiple video streams simultaneously.</p>
+
+					<div class="nvidia-table table-responsive">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>System</th>
+									<th>FPS @ 1080p</th>
+									<th>FPS @ 720p</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Jetson TX-2 (Embedded)</td>
+									<td>5.5</td>
+									<td>10.5</td>
+								</tr>
+								<tr>
+									<td>Tesla P4 (Server)</td>
+									<td>50.5</td>
+									<td>92.5</td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<hr style="margin-bottom: 50px; margin-top: 0px;">
+					<div class="nvidia-metropolis-banner">
+						<img class="nvidia-banner-img" src="assets/images/nvidia-banner.jpg" alt="nvidia metropolis">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h2 class="section-1__title">Nvidia Metropolis™</h2>
+					<p class="section-1__text">OpenALPR is an official partner with Nvidia on the Metropolis intelligent video analytics platform.</p>
+
+					<p class="section-1__text">Nvidia Metropolis™ is bringing advanced AI to cities around the world. OpenALPR is proud to be selected as the license plate recognition engine to support this exciting initiative.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- ******FAQ Section****** -->
+<section class="s-faq">
+	<div class="container faq">
+		<h2 class="title text-center">Frequently Asked Questions</h2>
+		<div class="row">
+			<div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 col-xs-offset-0">
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq5"><i class="fa fa-plus-square"></i>How is data secured in OpenALPR Cloud?</a></h4>
+					</div>
+
+					<div class="panel-collapse collapse" id="faq5">
+						<div class="panel-body">
+							<p>
+								We use a variety of industry-standard security technologies and procedures to help protect your license plate data and personal data from unauthorized access, use, or disclosure. When you enter sensitive information (such as a credit card number) we encrypt the transmission of that information using secure socket layer technology (SSL). We do not store your credit card information. Rather, we partner with a certified PCI Service Provider Level 1 merchant gateway. This is the most stringent level of credit card security certification available.
+							</p>
+							<p>
+								License plate data is similarly encrypted with SSL when sent to OpenALPR. The license plate images are persisted on your OpenALPR Agent systems. These images can be served within your network and do not need to be transferred over the internet to be displayed. The license plate data is stored on password-protected database systems that are kept isolated in a private network.
+							</p>
+							<p>
+								We also require you to enter a password to access your account information. Please do not disclose your account password to unauthorized people. Despite these measures, you should know that OpenALPR cannot fully eliminate security risks associated with license plate data and personal data and mistakes and security breaches may happen. If you have any questions or concerns about security, please <a href="contact.html">contact us</a>.
+							</p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<!--//Section-1-->
-	<!-- ****** Section-1 ****** -->
-	<section class="section-1 section-1">
-		<div class="container"> 
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="section-1__inner section-1__inner">
-						<div class="section-1__about">
-							<hr style="margin-top:40px;margin-bottom:40px;" />
-								<h2 class="title">Benchmarks</h2>
-									<p>There are a variety of factors that influence how many frames per second are sufficient for ALPR.  It is dependent on the angle of capture, resolution, speed of the vehicles, and other factors.  A good rule of thumb is that 5fps of processing per camera stream will allow for low-speed vehicle capture, and 10fps or greater is sufficient for high speed.</p>
-									<p>Performance benchmarks are detailed below.  The Jetson platform is an ultra-low power, embedded device that is a great solution for in-vehicle or in-camera capture.  The Tesla P4 is installed in server-class hardware and is powerful enough to process multiple video streams simultaneously.</p>
-									<div class="table-responsive">
-										<table class="table table-bordered table-hover">
-											<thead>
-												<tr>
-													<th>System</th>
-													<th>FPS @ 1080p</th>
-													<th>FPS @ 720p</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Jetson TX-2 (Embedded)</td>
-													<td>5.5</td>
-													<td>10.5</td>
-												</tr>
-												<tr>
-													<td>Tesla P4 (Server)</td>
-													<td>50.5</td>
-													<td>92.5</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
+				<!--//panel-->
+
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq6"><i class="fa fa-plus-square"></i>How am I billed for the cloud service?</a></h4>
+					</div>
+
+					<div class="panel-collapse collapse" id="faq6">
+						<div class="panel-body">
+							<p>
+								Every new account is automatically setup with a two week trial. If you love OpenALPR Cloud Stream after your initial free trial period (which we know you will), just enter your credit card into the system and select either the "Basic" or "Professional" account plan. Billing will begin automatically. You may also prepay for an annual subscription by invoice if you prefer. <a href="contact.html">Contact us</a> to make those arrangements.
+							</p>
+							<p>
+								After two-weeks, if you do not choose a paid plan, your account will revert automatically to a "Free" account. You do not need to enter a credit card and you will not be billed. If you choose to delete your account you may do so at any time. Please let us know what we could have done better if you decide to hit the road.
+							</p>
+						</div>
 					</div>
 				</div>
+				<!--//panel-->
+
+
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq8"><i class="fa fa-plus-square"></i>What countries do you support?</a></h4>
+					</div>
+
+					<div class="panel-collapse collapse" id="faq8">
+						<div class="panel-body">
+							<p>
+								OpenALPR includes support for a number of countries including the USA, United Kingdom, Australia, Canada, Europe, Mexico, Korea, Singapore, and other countries with similar plate designs. For countries with plates that look significantly different, OpenALPR can be trained to recognize them. We offer training services as a paid consulting engagement. You may also train the software yourself. See our <a href="http://doc.openalpr.com">documentation</a> for more details.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq9"><i class="fa fa-plus-square"></i>What cameras work best with the software?</a></h4>
+					</div>
+					<div class="panel-collapse collapse" id="faq9">
+						<div class="panel-body">
+							<p>
+								OpenALPR will work with any IP camera that supports H.264 and MJPEG streams. You don't need to buy an expensive "LPR" camera. However, if you want to read license plates at night, you will need a camera that can "see" in the dark using infrared (IR) light. Consult your camera manufacturer for the streaming URL (e.g. http://username:password@IP Address/axis-cgi/mjpg/video.cgi)...you'll need to know this information to configure the OpenALPR Agent.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq10"><i class="fa fa-plus-square"></i>Once I enroll, what happens next?</a></h4>
+					</div>
+
+					<div class="panel-collapse collapse" id="faq10">
+						<div class="panel-body">
+							<p>
+								You will receive an email. Click on the link to verfy your email and activate your account. Login to the OpenALPR Cloud Stream portal and click on "Getting Started" which will walk you through the process of downloading and configuring the OpenALPR Agent.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
+
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq11"><i class="fa fa-plus-square"></i>What if I have technical questions?</a></h4>
+					</div>
+					<div class="panel-collapse collapse" id="faq11">
+						<div class="panel-body">
+							<p>
+								For "Free" accounts, the answer to your question may be found on the <a href="https://groups.google.com/forum/#!forum/openalpr">developer forum</a>. "Basic" and "Professional" account users can
+								<a href="contact.html">contact us</a> directly with your questions.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--//panel-->
 			</div>
 		</div>
-	</section>
-	<!--//Section-1-->
+		<!--//row-->
+	</div>
+	<!--//container-->
+</section>
+<!-- ****** //FAQ Section****** -->
+<div class="content-help content-stream__help">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h2 class="help-title">Not Sure Which OpenALPR Product is right for you?</h2>
+				<p class="help-subtitle">Contact our experts at <strong>1-800-935-1699</strong> for a free analysis.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 

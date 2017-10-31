@@ -335,6 +335,23 @@
     width: 242px;
     top: 66px;
   }
+  .features-nvidia .features__unit {
+    text-align: left;
+  }
+  .features-nvidia .features__icon {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+  }
+  .features-nvidia .features__icon i {
+    font-size: 100px;
+  }
+  .features-nvidia .features__content {
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding-top: 20px;
+  }
   .footer-col {
     margin-bottom: 30px;
   }

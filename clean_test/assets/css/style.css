@@ -1177,6 +1177,12 @@ textarea.form-control {
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
+.video-container .overlay-gr {
+  background: #6E7071;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
 .products-list {
   position: absolute;
   padding: 0;
@@ -1540,6 +1546,11 @@ textarea.form-control {
   width: 75px;
   height: 75px;
 }
+.page-head__nvidia {
+  width: 190px;
+  height: 37px;
+  margin-bottom: 20px;
+}
 .page-head__title {
   font-size: 45px;
   font-weight: bold;
@@ -1650,6 +1661,7 @@ textarea.form-control {
   margin: 0;
   margin: 10px 0;
   text-align: center;
+  /*--- NVIDIDA page futures ---*/
 }
 .features__unit {
   text-align: center;
@@ -1702,6 +1714,26 @@ textarea.form-control {
   margin-left: 160px;
   margin-top: 50px;
   margin-bottom: 0px;
+}
+.features-nvidia .features__unit {
+  text-align: left;
+}
+.features-nvidia .features__icon {
+  display: inline-block;
+  width: 13%;
+  vertical-align: middle;
+}
+.features-nvidia .features__content {
+  display: inline-block;
+  width: 85%;
+  vertical-align: middle;
+  padding-top: 45px;
+  padding-left: 20px;
+  text-align: left;
+}
+.features-nvidia .features__inside {
+  font-size: 26px;
+  font-weight: 200;
 }
 .get-started__item {
   text-align: center;
@@ -1844,6 +1876,18 @@ textarea.form-control {
 .section-1 .accented-br {
   border: 1px solid #985827;
   margin-top: 90px;
+}
+.nvidia-table {
+  font-size: 21px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.nvidia-metropolis-banner {
+  width: 100%;
+}
+.nvidia-metropolis-banner .nvidia-banner-img {
+  width: 100%;
+  height: auto;
 }
 
 /* Large devices (large desktops, less than 1200px) */
@@ -2182,6 +2226,23 @@ textarea.form-control {
   .apps-section .phone-holder .screenshot {
     width: 242px;
     top: 66px;
+  }
+  .features-nvidia .features__unit {
+    text-align: left;
+  }
+  .features-nvidia .features__icon {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+  }
+  .features-nvidia .features__icon i {
+    font-size: 100px;
+  }
+  .features-nvidia .features__content {
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding-top: 20px;
   }
   .footer-col {
     margin-bottom: 30px;
