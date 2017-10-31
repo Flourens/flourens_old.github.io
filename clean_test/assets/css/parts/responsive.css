@@ -132,22 +132,6 @@
   .laptop .alpr-carousel .owl-nav .owl-next {
     right: -13px;
   }
-  .why .figure .alpr-carousel .owl-nav {
-    left: 40px;
-    right: 45px;
-    font-size: 50px;
-  }
-  .why .figure .alpr-carousel .owl-stage-outer {
-    width: 400px;
-    margin: 0 auto;
-  }
-  .why .figure .alpr-carousel img {
-    display: block;
-    width: 400px;
-    height: auto;
-    margin-top: 3.2%;
-    margin-left: 2px;
-  }
   .config-wrapper {
     display: block;
   }
@@ -174,18 +158,6 @@
   }
   .promo .btn-link {
     margin-top: 15px;
-  }
-  .why .item .content {
-    margin-bottom: 60px;
-  }
-  .why .control {
-    top: 128px;
-    margin-left: -28px;
-  }
-  .modal.modal-video .modal-dialog {
-    width: 760px;
-    padding-left: 0;
-    padding-right: 0;
   }
   .access-page .navbar-collapse.collapse .navbar-nav {
     display: none;
@@ -222,23 +194,6 @@
   }
   .access-section .social-btns .note {
     text-align: left;
-  }
-  .blog-slider {
-    margin-top: 80px;
-  }
-  .why .item .title {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  .why .figure {
-    text-align: left;
-  }
-  .blog-page .blog-category,
-  .blog-page .blog-archive {
-    margin-top: 80px;
-  }
-  .blog-entry-wrapper {
-    margin-top: 80px;
   }
   /* Only show QR code for desktop */
   .download-area {
@@ -327,19 +282,6 @@
   .photos__inner {
     padding: 0;
   }
-  .why .figure .alpr-carousel .owl-nav {
-    left: 20px;
-    right: 25px;
-    font-size: 40px;
-  }
-  .why .figure .alpr-carousel img {
-    display: block;
-    width: 403px;
-    height: auto;
-    margin-top: 2.5%;
-    margin-left: 1px;
-    margin-right: auto;
-  }
   .nvidia {
     margin: 0;
     margin-bottom: 30px;
@@ -364,20 +306,11 @@
   .header {
     height: inherit;
   }
-  .blog-slider {
-    margin-top: 0;
-  }
-  .blog {
-    margin-top: 0;
-  }
   .header .main-nav .nav .nav-item {
     margin-right: 10px;
   }
   .main-nav.navbar-right {
     float: none !important;
-  }
-  .blog-page .main-nav.navbar-right {
-    float: right !important;
   }
   .navbar-collapse.collapse .navbar-nav {
     float: none;
@@ -394,17 +327,6 @@
   .promo .btn-link {
     margin-top: 15px;
   }
-  .why .item .content {
-    margin-bottom: 60px;
-  }
-  .why .control {
-    top: 128px;
-    margin-left: -45px;
-  }
-  .why .item .title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
   .apps-section .phone-holder {
     -webkit-background-size: 280px auto;
     background-size: 280px auto;
@@ -416,11 +338,6 @@
   .footer-col {
     margin-bottom: 30px;
   }
-  .modal.modal-video .modal-dialog {
-    width: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .access-page .navbar-collapse.collapse .navbar-nav {
     display: none;
   }
@@ -428,9 +345,6 @@
     width: 100%;
     margin-top: 0;
   }
-}
-/* Extra small devices (phones, less than <768px) */
-@media only screen and (max-width: 767px) {
   .hero .video-container video {
     width: 700px;
   }
@@ -507,7 +421,7 @@
     color: #fff;
   }
   .footer-col-inner {
-    padding-left: 30px;
+    padding-left: 25px;
     padding-bottom: 0px;
   }
   .contact {
@@ -553,9 +467,6 @@
   .navbar-fixed-bottom .navbar-collapse {
     max-height: inherit;
   }
-  .has-full-screen-bg.access-page .upper-wrapper {
-    background: #384d60;
-  }
   .access-section {
     padding-top: 15px;
   }
@@ -584,29 +495,6 @@
   }
   .section .intro {
     font-size: 26px;
-  }
-  .why .item .content {
-    margin-bottom: 60px;
-  }
-  .why .control {
-    top: 58px;
-    margin-left: -30px;
-  }
-  .why .item .title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .testimonials .item .profile {
-    position: static;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .testimonials .item .content {
-    padding-left: 60px;
-  }
-  .testimonials .item blockquote {
-    font-size: 18px;
   }
   .pricing .item.best-buy {
     position: static;
@@ -659,34 +547,6 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .blog-page .header h1.logo {
-    margin: inherit;
-  }
-  .blog-page .header .main-nav .navbar-toggle {
-    margin-bottom: 0;
-    top: 20px;
-  }
-  .blog-page .header .main-nav .navbar-toggle .icon-bar {
-    background-color: #384d60;
-  }
-  .blog-page .header .main-nav .navbar-toggle:hover .icon-bar {
-    background-color: #253340;
-  }
-  .blog-page .flexslider {
-    margin-top: 0;
-  }
-  .blog-category {
-    margin-top: 0;
-  }
-  .blog-page .navbar-collapse {
-    top: 80px;
-  }
-  .blog-page .main-nav .nav .nav-item a {
-    color: #fff;
-  }
-  .blog-slider .flex-caption .title {
-    font-size: 36px;
-  }
   .searchbox-container .searchbox .searchbox-input {
     position: static;
   }
@@ -706,16 +566,6 @@
   }
   .download-page .headline-bg {
     height: 1600px;
-  }
-  .story-section .about {
-    padding: 0;
-  }
-  .story-section .belife {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .story-section .team {
-    padding: 0;
   }
   .footer .footer-col .footer-col-nvidia {
     width: 100%;
@@ -742,6 +592,13 @@
   }
   .laptop .alpr-carousel .owl-nav .owl-next {
     right: -13px;
+  }
+  .section-1 .accented {
+    padding: 10px;
+    padding-bottom: 30px;
+  }
+  .section-1 .accented .btn-bottom {
+    font-size: 20px;
   }
   .section .title {
     font-size: 35px;
@@ -784,17 +641,6 @@
     width: 400px;
     height: auto;
   }
-  .why .figure .alpr-carousel .owl-stage-outer {
-    width: 303px;
-  }
-  .why .figure .alpr-carousel img {
-    display: block;
-    width: 303px;
-    height: auto;
-    margin-top: 2.5%;
-    margin-left: 1px;
-    margin-right: auto;
-  }
 }
 /* Extra small devices (phones, less than 442px) */
 @media only screen and (max-width: 442px) {
@@ -831,23 +677,6 @@
     width: 350px;
     height: auto;
   }
-  .why .figure .alpr-carousel .owl-stage-outer {
-    width: 270px;
-  }
-  .why .figure .alpr-carousel img {
-    display: block;
-    width: 270px;
-    height: auto;
-    margin-top: 2.5%;
-    margin-left: 1px;
-    margin-right: auto;
-  }
-  .nvidia__logo {
-    width: 170px;
-  }
-  .nvidia__box p {
-    font-size: 40px;
-  }
 }
 /* Extra small devices (phones, less than 404px) */
 @media only screen and (max-width: 404px) {
@@ -869,17 +698,6 @@
   .img-mack {
     width: 250px;
     height: auto;
-  }
-  .why .figure .alpr-carousel .owl-stage-outer {
-    width: 188px;
-  }
-  .why .figure .alpr-carousel img {
-    display: block;
-    width: 188px;
-    height: auto;
-    margin-top: 2.5%;
-    margin-left: 1px;
-    margin-right: auto;
   }
   .steps .btn-cta-primary {
     font-size: 15px;
