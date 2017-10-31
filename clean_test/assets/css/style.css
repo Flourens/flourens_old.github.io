@@ -1656,6 +1656,11 @@ textarea.form-control {
   padding-right: 50px;
   padding: 0;
 }
+.section-1__countries-flag {
+  width: 40px;
+  height: auto;
+  padding-right: 10px;
+}
 /*---Features---*/
 .features {
   margin: 0;
