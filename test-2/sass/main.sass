@@ -1,0 +1,748 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+/*--- Presets ---*/
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+button
+	border: none
+
+/*--- Bootstrap override ----*/
+.navbar-brand
+	height: auto
+.row
+	margin: 0
+
+/*--- Main styles ----*/
+html, body
+	height: 100%
+
+body
+	font-family: 'Open Sans', sans-serif
+	color: #000
+
+/*--- Top bar ----*/
+.menu
+	background-color: #fff
+	border: none
+	margin: 0
+	&__brand
+		padding-top: 36px
+		padding-bottom: 31px
+	&__logo
+		width: 100%
+		height: auto
+		padding-left: 37px
+	&__button
+		margin-right: 125px
+		a
+			text-transform: uppercase
+			font-family: 'Montserrat', sans-serif
+			font-size: 19px
+			font-weight: bold
+			color: #000
+			padding: 18px 28px 13px 28px !important
+			background-color: #fff
+			box-shadow: 1px 3px 13px -1px rgba(0,0,0,0.16)
+			margin:
+				top: 33px
+				bottom: 33px
+		&:first-child 
+			margin-right: 65px
+	
+	.navbar-toggle
+		margin-top: 40px
+		.icon-bar
+			background-color: #000
+			width: 35px
+			height: 3px
+	
+/*--- Hero area (image) ----*/
+.hero-area
+	padding-top: 127px
+	position: relative
+	overflow: hidden
+	min-height: 595px
+	background-color: #244C89
+	background:  url("../img/hero_bg-icons.png"), linear-gradient( rgba(36, 78, 137, 0.59), rgba(36, 78, 137, 0.59)), url("../img/hero_bg.png")
+	background-size: cover
+	background-position: center
+	text-align: center
+	text-transform: uppercase
+	color: #fff
+	font-family: 'Montserrat', sans-serif
+	&__h1
+		font-size: 60px
+		font-weight: bold
+		font-family: 'Montserrat', sans-serif
+		margin: 0
+		margin-top: 165px
+	&__h2
+		font-size: 50px
+		font-weight: normal
+		font-family: 'Montserrat', sans-serif
+		margin: 0
+		margin-top: 12px
+		
+	&__page-links
+		list-style-type: none
+		white-space: nowrap
+		padding-bottom: 166px
+		padding-left: 36%
+		&__item
+			a
+				display: block
+				width: 100%
+				height: 100%
+			width: 88px
+			height: 88px
+			background-color: #fff
+			border-radius: 50px
+			position: relative
+			padding: 0
+			display: inline-block
+			margin-top: 9px
+			margin-right: 26px
+			&:last-child
+				margin-right: 
+				
+			/*--- Active page link status----*/
+			&.active-page
+				&:after
+					content: ''
+					width: 43px
+					height: 36px
+					position: absolute
+					bottom: -64px
+					left: calc(50% - 21.5px)
+					background-image: url(../img/active-page-arrow.svg)
+					background-repeat: no-repeat
+					background-position: center
+					background-size: cover
+					
+		&__image
+			position: absolute
+			height: auto
+			top: 31px
+			left: 33px
+			&-one
+				width: 23px
+			&-two
+				width: 36px
+				top: 28px
+				left: 28px
+			&-three
+				width: 32px
+				top: 31px
+				left: 29px
+			&-four
+				width: 31px
+				top: 31px
+				left: 29px
+		
+		
+/*--- Step 1 section ----*/
+.s-stap-1, .s-stap-2, .s-stap-3, .s-stap-4
+	padding-top: 129px
+	padding-bottom: 240px
+	background-color: #fff
+.s-stap-1
+	background-image: url(../img/stap-1-bg.png)
+	background-position: center
+	background-size: cover
+.s-stap-2
+	background-image: url(../img/stap-2-bg.jpg)
+	background-position: center
+	background-size: cover
+.s-stap-3
+	background-image: url(../img/stap-3-bg.jpg)
+	background-position: center
+	background-size: cover
+.s-stap-4
+	background-image: url(../img/stap-4-bg.jpg)
+	background-position: center
+	background-size: cover
+	padding-bottom: 100px
+
+.stap
+	position: relative
+
+	div /* reset a col- paddings for the design purpose */
+		padding-left: 0
+		padding-right: 0
+	
+	.page-lable
+		position: absolute
+		top: -229px
+		left: calc(50% - 90px)
+		width: 194px
+		height: 194px
+		border-radius: 50%
+		box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16)
+		background-color: #fff
+		z-index: 1100
+		&__image
+			display: block
+			width: 50px
+			height: auto
+			margin: 63px auto
+			&-two
+				width: 81px
+
+	&__container-shadow
+		pt20
+		background-color: #fff
+		border-radius: 3px
+		box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16)
+	&__title
+		text-align: center
+		width: 320px
+		margin-left: 55%
+		position: relative
+		&-center
+			margin: 0 auto
+	&__h3, &__h5
+		color: #000
+		text-transform: uppercase
+	&__h3
+		margin-top: 36px
+		font-size: 52px
+		font-weight: bold
+		&-stap3
+			margin-top: 41px
+	&__h5
+		font-size: 24px
+		font-weight: normal
+		margin-bottom: 106px
+		&:after
+			position: absolute
+			content: ''
+			height: 5px
+			width: 171px
+			border: 1px solid #95989A
+			background-color: $color-accent
+			bottom: 0
+			left: calc(50% - 85.5px)
+			bottom: -23px
+		&-stap3
+			margin-bottom: 65px
+	&__full-width
+		background-color: #F4F4F4
+	&__right-side
+		padding: 0 21px !important
+		background-color: #F4F4F4
+		&__content
+			color: #000
+			&-top
+				font-size: 24px
+				font-weight: bold
+			&-bottom
+				font-size: 44px
+				font-weight: bold
+				padding-bottom: 0px
+		&__button
+			padding: 12px 56px 12px 28px
+			background-color: $color-accent
+			border-radius: 50px
+			color: #fff
+			font-weight: bold
+			font-size: 15px
+			position: relative
+			float: right
+			margin-bottom: 87px
+			&:hover, &:active, &:focus
+				text-decoration: none
+				color: #fff
+			&:after
+				content: ''
+				position: absolute
+				width: 13px
+				height: 15px
+				background-image: url(../img/arrow-white.svg)
+				background-position: center
+				background-size: 100%
+				right: 17px
+				top: calc(50% - 7.5px)
+		.main-form
+			&__line-3
+				padding-top: 235px
+	
+	&__editable-area
+		margin-top: 350px
+		min-height: 330px
+		outline: none
+	
+// The form area
+.preview-form
+	max-width: 100%
+	margin-left: 17px
+	margin-right: -17px
+	&__h4
+		margin-left: 13.5%
+		margin-top: 42px
+	.stap
+		overflow: hidden
+		&__editable-area
+			padding: 20px
+			text-align: center
+			margin-top: 96px
+			min-height: 255px
+		&__right-side
+			&__button
+				margin-top: 65px
+				margin-right: 50px
+	
+.main-form
+	margin-left: 183px
+	max-width: 310px
+	&__h4
+		font-size: 38px
+		font-weight: bold
+		position: relative
+		margin-bottom: 57px
+		&:before
+			content: '.......'
+			position: absolute
+			font-size: 45px
+			letter-spacing: 5px
+			bottom: 8px
+			left: -171px
+			border-radius: 20px
+			color: $color-accent
+		&:after
+			content: ''
+			position: absolute
+			width: 38px
+			height: 4px
+			background-color: $color-accent
+			left: 0
+			bottom: -14px
+	&__line-1
+		list-style-type: none
+		padding: 0
+		margin: 0
+		line-height: 2.5
+		li
+			display: inline-block
+			font-size: 16px
+			font-weight: bold
+			color: #000
+		.main-form
+			&__option-right
+				width: 32%
+				text-align: right
+			&__option-left
+				width: 32%
+				text-align: left
+				
+			&__switcher
+				width: 32%
+				margin: 0
+				vertical-align: middle
+				height: 37px
+				
+			
+	&__option-left
+		p
+			vertical-align: middle
+			margin: 0
+	&__switcher
+		margin-left: 10px
+		margin-right: 10px
+	
+
+	&__line-2
+		list-style-type: none
+		padding: 0
+		margin: 0
+		line-height: 1.5
+		padding-top: 60px
+		&-alt
+			padding-top: 0
+		li
+			display: inline-block
+			font-size: 26px
+			font-weight: bold
+			color: #000
+	&__line-1, &__line-2, &__line-3-alt
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			width: 83px
+			height: 4px
+			background-color: #C7C7C7
+			bottom: -25px
+	&__line-2
+		&:after
+			bottom: -44px
+	&__line-3
+		list-style-type: none
+		padding: 0
+		margin: 0
+		line-height: 1.5
+		padding-top: 70px
+		margin-bottom: 48px
+		li
+			display: inline-block
+			font-size: 26px
+			font-weight: bold
+			color: #000
+	&__button-item
+		float: right
+		&__option-left
+		p
+			vertical-align: middle
+			margin: 0
+			margin-right: 140px
+	
+	/* Dropdown styling */
+	&__dropdown
+		background-color: $color-accent
+		color: #fff
+		font-weight: bold
+		border-radius: 30px
+		padding-right: 38px
+		position: relative
+		font-size: 10px
+		line-height: 1.5
+		z-index: 20
+		.caret
+			position: absolute
+			right: 0px
+			bottom: calc(50% - 13.5px)
+			color: #000
+			border: none
+			background-color: #fff
+			width: 27px
+			height: 27px
+			border-radius: 30px
+			background-image: url(../img/dropdown-arrows.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 25%
+		&:hover, &:active, &:focus
+			color: #fff
+	.dropdown-menu
+		min-width: 141px
+		border-top: none
+		top: 45%
+		padding-top: 30px
+		z-index: 1
+		li
+			text-align: left
+			width: 100%
+			font-size: 10px
+			padding-bottom: 5px
+			a
+				font-weight: bold
+	/* end dropdown styling */		
+
+	&__description
+		padding-left: 0
+		padding-top: 10px
+		list-style-type: none
+		&-item
+			position: relative
+			padding-bottom: 18px
+			&:before
+				content: ''
+				position: absolute
+				width: 5px
+				height: 5px
+				background-color: $color-accent
+				border-radius: 50%
+				left: -10px
+				top: 11px
+			p
+				margin-bottom: 0
+		&-title
+			font-size: 18px
+			color: #969596
+			&.for-small-text
+				display: inline-block
+				float: left
+				padding-right: 5px
+		&-text
+			font-size: 16px
+			color: $color-dark-gray
+			font-weight: bold
+			&-small
+				font-size: 15px
+				color: $color-dark-gray
+				font-weight: bold
+				display: inline-block
+				max-width: 70%
+				padding-top: 3px
+
+	/* Input styling */
+	&__input
+		margin-top: 7px
+		width: 90px
+		height: 29px
+		border-radius: 30px
+		background-color: $color-accent
+		color: #fff
+		border: none
+		text-align: right
+		&::placeholder
+			color: #fff
+			font-size: 14px
+		&-gray
+			width: 164px
+			background-color: #BFBEBE
+			color: #656161
+			font-weight: normal
+			padding-top: 2px
+			&::placeholder
+				color: #656161
+				font-family: 'Arial', sans-serif
+				font-size: 10px
+				
+				
+		
+	/* end input styling */
+
+.price
+	padding-left: 0
+	list-style-type: none
+	text-align: right
+	color: $color-dark-gray
+	font-weight: bold
+	&__item
+		padding-bottom: 18px
+		&:last-child
+			padding-bottom: 13px
+	&__value
+		font-size: 27px
+		margin-bottom: 18px
+		&-big
+			font-size: 48px
+			padding-top: 48px
+			line-height: 1.2
+			margin-bottom: 0
+
+	&__text
+		font-size: 14px
+	&__button
+		float: right
+		font-size: 12px
+		color: #fff
+		font-weight: bold
+		padding: 15px 18px 12px 44px
+		border-radius: 50px
+		background-color: $color-accent
+		position: relative
+		margin-bottom: 172px
+		&:before
+			position: absolute
+			content: ''
+			width: 18px
+			height: 19px
+			left: 15px
+			top: calc(50% - 9px)
+			background-image: url(../img/cart-icon.svg)
+			background-position: center
+			background-size: 100%
+			
+	
+
+/* Switcher Styling */
+.onoffswitch
+	margin: 0 auto
+	position: relative
+	width: 57px
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+
+.onoffswitch-checkbox
+	display: none
+.onoffswitch-label
+	display: block
+	overflow: hidden
+	cursor: pointer
+	height: 31px
+	padding: 0
+	line-height: 29px
+	border: 2px solid $color-accent
+	border-radius: 29px
+	background-color: #F27E87
+	transition: background-color 0.3s ease-in
+	margin-bottom: -6px
+.onoffswitch-label:before
+	content: ""
+	display: block
+	width: 31px
+	margin: 0px
+	background: #FFFFFF
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 26px
+	border: 2px solid $color-accent
+	border-radius: 40px
+	transition: all 0.3s ease-in 0s
+.onoffswitch-checkbox:checked + .onoffswitch-label
+	background-color: $color-accent
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before
+	border-color: $color-accent
+.onoffswitch-checkbox:checked + .onoffswitch-label:before
+	right: 0px
+/* end switcher styling */
+
+/* Range slider styling */
+.ui-widget
+	&.new-slider
+		height: 12px
+		border-radius: 10px
+		background-image: url(../img/bg-line.svg)
+		background-position: center
+		background-size: cover
+		border: none
+		width: 95%
+		margin-left: 5px
+.ui-slider-horizontal
+	.new-handle
+		width: 26px
+		height: 26px
+		border-radius: 30px
+		top: -7px
+		background-color: $color-accent
+		border: none
+		outline: none
+	.new-range
+		border: none
+.range-value
+	list-style-type: none
+	padding-right: 4px
+	padding-left: 5px
+	padding-top: 6px
+	
+	&__min, &__max
+		color: #000
+		font-size: 16px
+		font-weight: bold
+		display: inline-block
+	&__min
+		float: left
+	&__max
+		float: right
+/* end range slider styling */
+
+/* Color selector */
+.color-selector
+	list-style-type: none
+	padding-left: 0
+	padding-top: 30px
+	&__row
+		padding-left: 0
+		margin-bottom: 26px
+		ul
+			padding-left: 0px
+	&__item
+		position: relative
+		width: 20px
+		height: 20px
+		background-color: #a0a0a0
+		border-radius: 50%
+		display: inline-block
+		margin-right: 10px
+		&:last-child
+			margin-right: 0px
+		&.color-active
+			&:after
+				position: absolute
+				left: -5px
+				top: -5px
+				content: ''
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 3px solid $color-accent
+		&-c1
+			background-color: #000
+		&-c2
+			background-color: #EFF4F3
+		&-c3
+			background-color: #C6C7C3
+		&-c4
+			background-color: #888C90
+		&-c5
+			background-color: #68757A
+		&-c6
+			background-color: #596062
+		&-c7
+			background-color: #4A4B4A
+		&-c8
+			background-color: #FEDF33
+		&-c9
+			background-color: #FDC42E
+		&-c10
+			background-color: #FDAC29
+		&-c11
+			background-color: #F96720
+		&-c12
+				background-color: #F1601E
+		&-c13
+				background-color: #F2531F
+		&-c14
+				background-color: #D10E1C
+		&-c15
+				background-color: #C20820
+		&-c16
+				background-color: #91041A
+		&-c17
+				background-color: #D85781
+		&-c18
+				background-color: #BC1F64
+		&-c19
+				background-color: #5F3268
+		&-c20
+				background-color: #603780
+		&-c21
+				background-color: #3AA9D5
+		&-c22
+				background-color: #03205A
+		&-c23
+				background-color: #7AC944
+		&-c24
+				background-color: #0F7F51
+		&-c25
+				background-color: #065316
+		&-c26
+				background-color: #E8C99E
+		&-c27
+				background-color: #B75327
+		&-c28
+				background-color: #3E251D
+			
+/* end color selector */
+.footer
+	height: 110px
+	background-color: $color-accent
+
+@import "media" // Всегда в конце

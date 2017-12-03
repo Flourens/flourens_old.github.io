@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="#" type="image/x-icon">
+	<link rel="apple-touch-icon" href="#">
+	<link rel="apple-touch-icon" sizes="72x72" href="#">
+	<link rel="apple-touch-icon" sizes="114x114" href="#">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="s-header">
+		<!-- Main navigation menu -->
+		<nav class="navbar menu navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand menu__brand" href="#">
+						<img class="menu__logo" alt="Brand" src="img/Group%20856.png">
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="menu__button">
+							<a href="#">contact</a>
+						</li>
+						<li class="menu__button">
+							<a href="#">voorbeelden</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Hero area -->
+		<div class="hero-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="hero-area__h1">ontwerp je eigen sticker</h1>
+						<h2 class="hero-area__h2">in 4 eenvoudige stappen</h2>
+							<ul class="hero-area__page-links">
+								<li class="hero-area__page-links__item active-page">
+									<a href="#stap-1">
+										<img class="hero-area__page-links__image hero-area__page-links__image-one" src="img/page-icon-1.svg" alt="">
+									</a>
+								</li>
+								<li class="hero-area__page-links__item">
+									<a href="#stap-2">
+										<img class="hero-area__page-links__image hero-area__page-links__image-two" src="img/page-icon-2.svg" alt="">
+									</a>
+								</li>
+								<li class="hero-area__page-links__item">
+									<a href="#stap-3">
+										<img class="hero-area__page-links__image hero-area__page-links__image-three" src="img/page-icon-3.svg" alt="">
+									</a>
+								</li>
+								<li class="hero-area__page-links__item">
+									<a href="#stap-4">
+										<img class="hero-area__page-links__image hero-area__page-links__image-four" src="img/page-icon-4.svg" alt="">
+									</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<section class="s-stap-1">
+		<div class="stap">
+			<div class="page-lable">
+				<img class="page-lable__image" src="img/page-icon-1.svg" alt="">
+			</div>
+			<div class="container stap__container-shadow">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="stap__left-side">
+							<div class="stap__title">
+								<h3 class="stap__h3">stap 1</h3>
+								<h5 class="stap__h5">ontwerp je sticker</h5>
+							</div>
+							<div class="main-form">
+								<h4 class="main-form__h4">Opmaak</h4>
+									<ul class="main-form__line-1">
+										<li class="main-form__option-left"><p>Normaal</p></li>
+										<li class="main-form__switcher">
+											<div class="onoffswitch">
+												<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+												<label class="onoffswitch-label" for="myonoffswitch"></label>
+											</div>
+										</li>
+										<li class="main-form__option-right">Gespiegeld</li>
+									</ul>
+									<ul class="main-form__line-2">
+										<li class="main-form__option-left"><p>Lettertype</p></li>
+										<li class="main-form__button-item">
+											<!-- Dropdown button -->
+											<div class="btn-group">
+												<button type="button" class="btn dropdown-toggle main-form__dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Open Sans ( Bold )
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu">
+													<li><a href="#">Open Sans ( Bold )</a></li>
+													<li><a href="#">Open Sans ( Bold )</a></li>
+													<li><a href="#">Open Sans ( Bold )</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<ul class="main-form__line-3">
+										<li class="main-form__option-left"><p>Grootte</p></li>
+										<li class="main-form__button-item">
+											<!-- Dropdown button -->
+											<input type="text" class="form-control main-form__input" placeholder="250 pt">
+										</li>
+									</ul>
+									<div class="range-slider">
+										<div id="slider-range"></div>
+										<p>
+											<input type="text" id="amount" readonly style="display:none;">
+										</p>
+										<ul class="range-value clearfix">
+											<li class="range-value__min target-value-min-1"></li>
+											<li class="range-value__max target-value-max-1"></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</div>
+						<div class="col-md-4">
+							<div class="stap__right-side clearfix" >
+								<div class="stap__editable-area" contenteditable="true">
+									<p class="stap__right-side__content stap__right-side__content-top">Voer uw tekst in</p>
+									<p class="stap__right-side__content stap__right-side__content-bottom">Uw tekst hier...</p>
+								</div>
+								<button class="stap__right-side__button">Volgende</button>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="s-stap-2">
+		<div class="stap">
+			<div class="page-lable">
+				<img class="page-lable__image page-lable__image-two" src="img/page-icon-2.svg" alt="">
+			</div>
+			<div class="container stap__container-shadow">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="stap__left-side">
+							<div class="stap__title">
+								<h3 class="stap__h3">stap 2</h3>
+								<h5 class="stap__h5">kies je vinyl soort</h5>
+							</div>
+							<div class="main-form">
+								<h4 class="main-form__h4">Materiaal</h4>
+								
+									<ul class="main-form__line-2 main-form__line-2-alt">
+										<li class="main-form__option-left"><p>Vinyl soort</p></li>
+										<li class="main-form__button-item">
+											<!-- Dropdown button -->
+											<div class="btn-group">
+												<button type="button" class="btn dropdown-toggle main-form__dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vinyl Glans
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu">
+													<li><a href="#">Vinyl Glans</a></li>
+													<li><a href="#">Vinyl Glans</a></li>
+													<li><a href="#">Vinyl Glans</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<ul class="main-form__line-3 main-form__line-3-alt">
+										<li class="main-form__option-left"><p>Kleur</p></li>
+										<li class="main-form__button-item">
+											<!-- Dropdown button -->
+											<input type="text" class="form-control main-form__input main-form__input-gray" placeholder="Zwart ( Black ,Avery 801) PC">
+										</li>
+									</ul>
+									<ul class="color-selector">
+										<li class="color-selector__row">
+											<ul>
+												<li class="color-selector__item color-selector__item-c1 color-active"></li>
+												<li class="color-selector__item color-selector__item-c2"></li>
+												<li class="color-selector__item color-selector__item-c3"></li>
+												<li class="color-selector__item color-selector__item-c4"></li>
+												<li class="color-selector__item color-selector__item-c5"></li>
+												<li class="color-selector__item color-selector__item-c6"></li>
+												<li class="color-selector__item color-selector__item-c7"></li>
+												<li class="color-selector__item color-selector__item-c8"></li>
+												<li class="color-selector__item color-selector__item-c9"></li>
+											</ul>
+										</li>
+										<li class="color-selector__row">
+											<ul>
+												<li class="color-selector__item color-selector__item-c10"></li>
+												<li class="color-selector__item color-selector__item-c11"></li>
+												<li class="color-selector__item color-selector__item-c12"></li>
+												<li class="color-selector__item color-selector__item-c13"></li>
+												<li class="color-selector__item color-selector__item-c14"></li>
+												<li class="color-selector__item color-selector__item-c15"></li>
+												<li class="color-selector__item color-selector__item-c16"></li>
+												<li class="color-selector__item color-selector__item-c17"></li>
+											</ul>
+										</li>
+										<li class="color-selector__row">
+											<ul>
+												<li class="color-selector__item color-selector__item-c18"></li>
+												<li class="color-selector__item color-selector__item-c19"></li>
+												<li class="color-selector__item color-selector__item-c20"></li>
+												<li class="color-selector__item color-selector__item-c21"></li>
+												<li class="color-selector__item color-selector__item-c22"></li>
+												<li class="color-selector__item color-selector__item-c23"></li>
+												<li class="color-selector__item color-selector__item-c24"></li>
+											</ul>
+										</li>
+										<li class="color-selector__row">
+											<ul>
+												<li class="color-selector__item color-selector__item-c25"></li>
+												<li class="color-selector__item color-selector__item-c26"></li>
+												<li class="color-selector__item color-selector__item-c27"></li>
+												<li class="color-selector__item color-selector__item-c28"></li>
+											</ul>
+										</li>
+									</ul>
+							</div>
+						</div>
+					</div>
+						<div class="col-md-4">
+							<div class="stap__right-side clearfix" >
+								<div class="stap__editable-area" contenteditable="true">
+									<p class="stap__right-side__content stap__right-side__content-top">Preview</p>
+									<p class="stap__right-side__content stap__right-side__content-bottom">Uw tekst hier...</p>
+								</div>
+								<button class="stap__right-side__button">Volgende</button>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="s-stap-3">
+		<div class="stap">
+			<div class="page-lable">
+				<img class="page-lable__image page-lable__image-two" src="img/page-icon-3.svg" alt="">
+			</div>
+			<div class="container stap__container-shadow">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="stap__title stap__title-center">
+							<h3 class="stap__h3 stap__h3-stap3">stap 3</h3>
+							<h5 class="stap__h5 stap__h5-stap3">controleer je design</h5>
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="col-md-12">
+						<div class="preview-form">
+									<div class="stap__full-width clearfix">
+										<h4 class="main-form__h4 preview-form__h4">Preview</h4>
+										<div class="stap__editable-area" contenteditable="true">
+											<p class="stap__right-side__content stap__right-side__content-bottom">Uw tekst hier...</p>
+										</div>
+									</div>
+									<button class="stap__right-side__button">Bevestigen en betalen</button>
+						</div>
+					</div>
+				</div>
+						
+						
+
+							
+							
+			</div>
+		</div>
+	</section>
+	
+	<section class="s-stap-4">
+		<div class="stap">
+			<div class="page-lable">
+				<img class="page-lable__image" src="img/page-icon-1.svg" alt="">
+			</div>
+			<div class="container stap__container-shadow">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="stap__left-side">
+							<div class="stap__title">
+								<h3 class="stap__h3">stap 4</h3>
+								<h5 class="stap__h5">betalen en verzenden</h5>
+							</div>
+							<div class="main-form">
+								<h4 class="main-form__h4">Omschrijving</h4>
+								<ul class="main-form__description">
+									<li class="main-form__description-item">
+										<p class="main-form__description-title">Omschrijving</p>
+										<p class="main-form__description-text">Plakletters gesneden uit Vinyl</p>
+									</li>
+									<li class="main-form__description-item">
+										<p class="main-form__description-title">Lettertype</p>
+										<p class="main-form__description-text">Bepaal lettertype</p>
+									</li>
+									<li class="main-form__description-item">
+										<p class="main-form__description-title">Totale hoogte tekst</p>
+										<p class="main-form__description-text">0 mm</p>
+									</li>
+									<li class="main-form__description-item">
+										<p class="main-form__description-title">Totale breedte tekst</p>
+										<p class="main-form__description-text">0 mm</p>
+									</li>
+									<li class="main-form__description-item">
+										<p class="main-form__description-title">Kleur</p>
+										<p class="main-form__description-text">Bepaal kleur</p>
+									</li>
+									<li class="main-form__description-item">
+										<p class="main-form__description-title">Materiaalsoort</p>
+										<p class="main-form__description-text">Vinyl Glans</p>
+									</li>
+									<li class="main-form__description-item">
+										<p class="main-form__description-title for-small-text">Let op:</p>
+										<p class="main-form__description-text-small">Levertijden gelden vanaf de huidige dag, als de bestelling compleet bij ons binnen is voor 12.00</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						<div class="col-md-4">
+							<div class="stap__right-side clearfix">
+								
+									<ul class="main-form__line-3">
+										<li class="main-form__option-left"><p>Aantal stuk (s)</p></li>
+										<li class="main-form__button-item">
+											<!-- Dropdown button -->
+											<input type="text" class="form-control main-form__input" placeholder="1 stuk (s)">
+										</li>
+									</ul>
+									<div class="range-slider">
+										<div id="slider-range-2"></div>
+										<p>
+											<input type="text" id="amount-2" readonly style="display:none;">
+										</p>
+										<ul class="range-value clearfix">
+											<li class="range-value__min target-value-min-2"></li>
+											<li class="range-value__max target-value-max-2"></li>
+										</ul>
+									</div>
+									<ul class="price">
+										<li class="price__item">
+											<p class="price__value price__value-big">€ 0.00</p>
+											<p class="price__text">Incl. BTW</p>
+										</li>
+										<li class="price__item">
+											<p class="price__value">€ 0.00</p>
+											<p class="price__text">Excl. BTW</p>
+										</li>
+										<li class="price__item">
+											<p class="price__value">Levertijd</p>
+											<p class="price__text">Normale levertijd ( 1-3 werkdagen )</p>
+										</li>
+									</ul>
+									<button class="price__button">In winkelwagen plaatsen</button>
+								
+								
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		
+	</footer>
+	
+	
+	
+	
+	
+	
+	
+	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- ALL GOOGLE FONTS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700">
+	<!-- CUSTOM STYLES -->
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
