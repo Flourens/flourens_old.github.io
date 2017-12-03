@@ -1,0 +1,35 @@
+<svg id="Group_857" data-name="Group 857" xmlns="http://www.w3.org/2000/svg" viewBox="948.824 454.745 22.534 26.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f37d88;
+      }
+
+      .cls-2 {
+        fill: #244c89;
+      }
+
+      .cls-3 {
+        fill: #3064af;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Path_19" data-name="Path 19" class="cls-1" d="M49.043,42.464H41.8V37.3H62.657v5.164L54.81,42.2l.4,22.064h-6.1v-21.8Z" transform="translate(907.963 417.445)"/>
+  <g id="Group_9" data-name="Group 9" transform="translate(957.073 454.812)">
+    <path id="Path_20" data-name="Path 20" class="cls-2" d="M56.3,37.4V64.293h3.621V42.564H68.17V37.4Z" transform="translate(-53.886 -37.4)"/>
+    <path id="Path_21" data-name="Path 21" class="cls-2" d="M52.7,45.1" transform="translate(-52.7 -39.936)"/>
+  </g>
+  <path id="Path_22" data-name="Path 22" class="cls-3" d="M40.534,37.4l-.134.067V39.68l2.481-2.28Z" transform="translate(908.424 417.412)"/>
+  <path id="Path_23" data-name="Path 23" class="cls-3" d="M47.532,37.4,42.1,42.5h2.28l5.432-5.1Z" transform="translate(907.864 417.412)"/>
+  <path id="Path_24" data-name="Path 24" class="cls-3" d="M55.557,39.4,51.6,43.156h.738v1.61l3.219-3.152Z" transform="translate(904.735 416.753)"/>
+  <path id="Path_25" data-name="Path 25" class="cls-3" d="M55.919,48.5,52.7,51.652v2.213l3.219-3.152Z" transform="translate(904.372 413.756)"/>
+  <path id="Path_26" data-name="Path 26" class="cls-3" d="M55.919,57.6,52.7,60.752v2.213l3.219-3.152Z" transform="translate(904.372 410.759)"/>
+  <path id="Path_27" data-name="Path 27" class="cls-3" d="M55.919,66.7,52.7,69.852v2.213l3.219-3.152Z" transform="translate(904.372 407.761)"/>
+  <path id="Path_28" data-name="Path 28" class="cls-3" d="M55.8,76.94h1.14V75.8Z" transform="translate(903.352 404.764)"/>
+  <path id="Path_29" data-name="Path 29" class="cls-2" d="M68.5,66.2v0Z" transform="translate(899.169 407.926)"/>
+  <path id="Path_30" data-name="Path 30" class="cls-4" d="M68.5,59.2Z" transform="translate(899.169 410.232)"/>
+</svg>
