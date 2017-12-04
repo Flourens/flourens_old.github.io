@@ -7795,6 +7795,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  position: relative; }
+
 button:focus {
   outline: 0 !important; }
 

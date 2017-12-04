@@ -2,6 +2,10 @@
 @import "libs";
 @import "vars";
 
+body{
+	position: relative;
+}
+
 button:focus {outline:0 !important; }
 
 .left-space{
