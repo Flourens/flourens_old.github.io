@@ -1,0 +1,726 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+
+body{
+	position: relative;
+}
+
+button:focus {outline:0 !important; }
+
+.left-space{
+	padding-left: 65px;
+}
+
+.h1{
+	color: $c-white;
+	text-align: center;
+	font-size: 46px;
+	font-family: $main-font;
+	font-weight: 300;
+	line-height: 55px;
+	margin: 0;
+	&-grey{
+		color: $c-grey;
+	}
+	&-left{
+		text-align: left;
+	}
+}
+.h2{
+	color: $c-white;
+	text-align: center;
+	font-size: 36px;
+	font-family: $main-font;
+	font-weight: 300;
+	line-height: 45px;
+	margin: 0;
+	&-grey{
+		color: $c-grey;
+	}
+	&-left{
+		text-align: left;
+	}
+}
+.h3{
+	color: $c-white;
+	text-align: center;
+	font-size: 24px;
+	font-family: $main-font;
+	font-weight: 300;
+	line-height: 30px;
+	margin: 0;
+	&-grey{
+		color: $c-grey;
+	}
+	&-left{
+		text-align: left;
+	}
+}
+.h4{
+	color: $c-blue;
+	text-align: left;
+	font-size: 16px;
+	font-family: $main-font;
+	font-weight: 300;
+	line-height: 22px;
+	margin: 0;
+	&-upper{
+		text-transform: uppercase;
+	}
+}
+.h5{
+	color: $c-blue;
+	text-align: center;
+	font-size: 15px;
+	font-family: $main-font;
+	font-weight: 600;
+	line-height: 20px;
+	margin: 0;
+	&-left{
+		text-align: left;	
+	}
+	&-grey{
+		color: $c-grey;
+		font-weight: 300;
+	}
+}
+.h6{
+	color: $c-blue;
+	text-align: left;
+	font-size: 14px;
+	font-family: $main-font;
+	font-weight: 300;
+	line-height: 20px;
+	margin: 0;
+	
+}
+.p{
+	color: $c-grey;
+	text-align: center;
+	font-size: 16px;
+	font-family: $main-font;
+	font-weight: 300;
+	line-height: 26px;
+	margin: 0;
+	&-white{
+		color: $c-white;
+	}
+	&-left{
+		text-align: left;
+	}
+}
+.button{
+	width: 250px;
+	height: 35px;
+	background-color: $c-blue;
+	color: $c-white;
+	text-align: center;
+	font-size: 14px;
+	font-family: $main-font;
+	font-weight: 400;	
+	line-height: 35px;
+	text-transform: uppercase;
+	border: none;
+	padding: 0;
+	border-radius: 12px;
+	position: relative;
+	&:hover{
+			color: #fff;
+	}
+	&-shadow{
+		&:after{
+			content: '';
+			background-image: url(../img/invoicemap-half-shadow-btn.png);
+			position: absolute;
+			height: 81px;
+			width: 318px;
+			left: -34px;
+			bottom: 1px;
+			top: -1px;
+		}
+	}
+	&-blue{
+		background-color: $c-blue;
+	}
+	&-green{
+		background-color: $c-green;
+	}
+}
+.button-white{
+	background-color: $c-transp;
+	color: $c-blue;
+	text-align: center;
+	font-size: 11px;
+	font-family: $main-font;
+	font-weight: 400;	
+	text-transform: uppercase;
+	border: solid 1px $c-blue;
+	padding: 5px 17px;
+	border-radius: 12px;
+}
+
+
+.header{
+	background-color: $c-grey;
+	padding-bottom: 70px;
+	.header-navbar{
+		background-color: $c-grey;
+		border: none;
+		padding-top: 85px;
+		transition: all 0.3s ease;
+		.header-navbar-logo{
+			padding-top: 7px;
+		}
+		.header-navbar-image{
+			margin-top: 4px;
+		}
+		.header-navbar-menu{
+			text-align: center;
+			margin-right: 0;
+		}
+		.header-navbar-link{
+			color: $c-white;
+			text-align: center;
+			font-size: 14px;
+			font-family: $main-font;
+			font-weight: 400;
+			text-transform: uppercase;
+			transition: color 0.5s;
+			margin-left: 7px;
+			padding: 10px 15px;
+			&:hover,  &:focus{
+				color: $c-blue;
+				transition: color 0.5s;
+				}
+			}
+		.active{
+			.header-navbar-link{
+			color: $c-blue;
+			background-color: $c-transp;
+			font-size: 14px;
+			&:hover, &:focus, &:active{
+				color: $c-blue;
+				background-color: $c-transp;
+				transition: color 0.5s;
+				font-size: 14px;
+				}
+			}
+		}
+		.header-navbar-btn{
+			color: $c-white;
+			text-align: center;
+			font-size: 14px;
+			color: $c-white;
+			font-family: $main-font;
+			font-weight: 400;
+			text-transform: uppercase;
+			border: solid 1px $c-blue;
+			background-color: $c-transp;
+			padding: 5px 15px;
+			border-radius: 12px;
+			margin-top: 6px;
+			margin-left: 14px;
+			transition: color 0.5s;
+			&:hover,  &:focus{
+				color: $c-blue;
+				transition: color 0.5s;
+			}
+		}
+		&__scrolled{
+			padding-top: 10px;
+			transition: all 0.3s ease;
+			background-color: $c-white;
+			color: $c-grey;
+			.header-navbar-link{
+				color: $c-grey;
+			}
+			.header-navbar-btn{
+				color: $c-grey;
+			}
+		}
+	}
+	
+	.h2{
+			padding-top: 255px;
+			padding-bottom: 80px;
+		}
+	
+	.header-image{
+		display: block;
+		margin: 0 auto;
+	}
+	.button{
+		display: block;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+}
+
+.benefit{
+	background-color: $c-white-dr;
+	&-singl{
+		margin: 50px 20px;
+		margin-bottom: 70px;
+		&__img{
+			width: 43px;
+			height: 43px;
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			&-icon3{
+				width: 45px;
+				height: auto;
+			}
+		}
+		&__title{
+			color: $c-grey-lt;
+			text-align: center;
+			font-size: 14px;
+			font-family: $main-font;
+			font-weight: 600;	
+			text-transform: uppercase;
+			position: relative;
+			margin-top: 25px;
+			margin-bottom: 0;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 2px;
+				background-color: $c-blue;
+				bottom: 6px;
+				left: 90px;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 2px;
+				background-color: $c-blue;
+				bottom: 6px;
+				right: 90px;
+			}
+		}
+		&__description{
+			color: $c-grey;
+			text-align: center;
+			font-size: 18px;
+			font-family: $main-font;
+			font-weight: 300;
+			line-height: 25px;
+			padding: 10px 10px;
+			margin: 0;
+		}
+	}
+	.button-white{
+		display: block;
+		margin: 5px auto;
+	}
+}
+
+.data{
+	background-color: $c-white-pure;
+	padding-bottom: 20px;
+	.h2{
+		margin-top: 85px;
+		margin-bottom: 20px;
+	}
+	.button-white{
+		margin: 0;
+		margin-top: 32px;
+	}
+	&-img{
+		width: 100%;
+		height: auto;
+		margin-top: 0px;
+		margin-right: 0px;
+	}
+}
+
+.call-to-action{
+	background-color: $c-grey;
+	padding-top: 55px;
+	padding-bottom: 45px;
+	.h3{
+		&-bold{
+			font-weight: 600;		
+		}
+	}
+	.p{
+		margin: 0;
+	}
+	.button-blue{
+		display: block;
+		margin: 0 auto;
+		margin-top: 15px;
+	}
+	&__variety{
+		padding-top: 45px;
+		padding-bottom: 45px;
+		.button-blue{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__blue{
+		background-color: $c-blue;
+		padding-top: 45px;
+		padding-bottom: 40px;
+		position: relative;
+		background-image: url(../img/invoicemap-pattern.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		.button-green{
+			display: block;
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+	}
+	
+}
+
+.profile{
+	&-info{
+		margin-right: 50px;
+		&:after{
+			content: '';
+			height: 2px;
+			width: 845px;
+			background-color: $c-blue;
+			position: absolute;
+			bottom: 0;
+			left: 80px;
+		}	
+	}
+	.p{
+		margin-top: 15px;
+	}
+	.h6{
+		margin-top: 30px;
+	}
+	.h4{
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	&-options{
+		padding-left: 15px;
+		margin: 0;
+		list-style-type: none;
+		margin-top: 10px;
+		position: relative;
+		padding-bottom: 15px;
+	}
+	&-option{
+		color: $c-grey-lt;
+		text-align: left;
+		font-size: 14px;
+		font-family: $main-font;
+		font-weight: 300;	
+		line-height: 20px;
+		position: relative;
+		margin-top: 3px;
+		&:before{
+			content: '';
+			height: 3px;
+			width: 3px;
+			background-color: $c-grey-lt;
+			border-radius: 50%;
+			position: absolute;
+			top: 9px;
+			left: -10px	
+		}
+	}
+	&-img{
+		margin-left: -105px;
+	}
+	&-improvement{
+		padding-top: 93px;
+		padding-bottom: 5px;
+		.h1{
+			margin-left: -10px;	
+		}
+	}
+}
+.achievement{
+	padding-bottom: 60px;
+	.h3{
+		padding-top: 8px;
+	}
+	&-img{
+		margin-right: -15px;
+		float: right;
+		width: 40px;
+		height: auto;
+		&-icon2{
+			width: 45px;
+		}
+		&-icon3{
+			width: 39px;
+		}
+		&-icon4{
+			padding-top: 10px;
+			width: 49px;
+		}
+	}
+}
+
+.client-profile{
+	overflow: hidden;
+	padding-top: 120px;
+	padding-bottom: 20px;
+	
+}
+.improvement{
+	overflow: hidden;
+	.achievement-img{
+		width: 45px;
+		height: auto;
+	}
+	.profile{
+		&-img{
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+.profit{
+	padding-top: 100px;
+	background-color: $c-white-pure;
+	&-list{
+		margin-bottom: 120px;
+		margin-top: 90px;
+	}
+	&-step{
+		width: 19.6%;
+		display: inline-block;
+		padding: 0px 40px;
+		box-sizing: border-box;
+		position: relative;
+		&:last-child{
+			padding-right: 0;
+		}
+		&:first-child{
+			padding-left: 0px;
+		}
+		&_plus{
+			&:after{
+				content: '';
+				background-image: url(../img/invoicemap-icon-plus.svg);
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				top: 45%;
+				right: 0;
+			}
+		}
+		&_equally{
+			&:after{
+				content: '';
+				background-image: url(../img/invoicemap-icon-equally.svg);
+				width: 16px;
+				height: 14px;
+				position: absolute;
+				top: 45%;
+				right: -20px;
+			}
+		}
+	}
+	&-img{
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		&-map{
+			width: 41px;
+		}
+		&-persons{
+			width: 44px;
+			
+		}
+		&-target{
+			width: 50px;
+			
+		}
+		&-box{
+			width: 42px;
+			
+		}
+		&-diagram{
+			width: 56px;
+			
+		}
+		
+	}
+	&-description{
+		color: $c-grey;
+		text-align: center;
+		font-size: 15px;
+		font-family: $main-font;
+		font-weight: 300;
+		line-height: 20px;
+		margin-top: 7px;
+		margin-bottom: 0;
+		line-height: 1.8;
+	}
+}
+
+.plan{
+	background-color: $c-white-dr;
+	padding-top: 90px;
+	&-footnote{
+		color: $c-grey-lt;
+		text-align: left;
+		font-size: 12px;
+		font-family: $main-font;
+		font-weight: 300;	
+		line-height: 15px;
+		margin-bottom: 35px;
+		margin-top: 10px;
+	}
+	.button-white{
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	.profile-options{
+		margin-top: 40px;
+		margin-bottom: 45px;
+	}
+	.h3{
+		span{
+			padding-left: 20px;
+		}
+	}
+	.h5{
+		padding-top: 26px;
+		padding-bottom: 3px;
+	}
+}
+
+.form{
+	background-color: $c-grey;
+	padding-top: 45px;
+	padding-bottom: 75px;
+	.h1{
+		padding-bottom: 10px;
+	}
+}
+.contact-form{
+	margin: 0 65px;
+	margin-top: 17px;
+	.p-left{
+		padding-left: 10px;
+		padding-bottom: 5px;
+	}
+	&_inpute{
+		width: 100%;
+		border: none;
+		border-radius: 15px;
+		padding: 8px 18px;
+		color: $c-grey;
+		margin-top: 0px;
+		margin-bottom: 15px;
+		&::placeholder{
+			color: $c-grey-lt;
+		}
+		&:focus{
+			outline: none;
+		}
+	}
+	.button-blue{
+		margin: 0;
+		margin-top: 15px;
+		width: 100%;
+	}
+	&_success{
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-transform: uppercase;
+		font-weight: bold ;  
+		z-index: 10;
+	}
+	span{
+		margin: auto;
+	}
+	& ~ *{
+		transition: all .5s ease;
+	}
+	&.active{
+		& ~ *{
+			opacity: .5;
+			filter: blur(3px);
+		}
+	}
+}
+
+
+.footer{
+	background-color: $c-white-pure;
+	padding-top: 55px;
+	padding-bottom: 50px;
+	&-logo{
+		width: 190px;
+		height: auto;
+	}
+	&__col{
+		margin: 0;
+		padding-left: 0px;
+		list-style-type: none;
+	}
+	&__menu{
+		padding-left: 53px;
+	}
+	&__contacts{
+		padding-left: 100px;
+	}
+	.h5{
+		margin-top: 0px;
+		margin-bottom: 30px;
+		text-align: left;
+	}
+	&-contact{
+		display: block;
+		margin-bottom: 10px;
+		color: $c-grey;
+		text-align: left;
+		font-size: 15px;
+		font-family: $main-font;
+		font-weight: 300;	
+		line-height: 18px;
+		padding-right: 0;
+		transition: color 0.5s;
+		&_color{
+			display: inline;
+			color: $c-grey-lt;
+			padding: 0;
+		}
+		&:hover{
+			color: $c-blue;
+			text-decoration: none;
+			transition: color 0.5s;
+			span{
+				color: $c-blue;
+			}
+		}
+	}
+	.p-copyright{
+		font-size: 14px;
+		text-align: right;
+		color: $c-grey-lt;
+		margin-top: -9px;
+		margin-bottom: 11px;
+	}
+}
+
+
+
+
+
+
+
+@import "media";// Всегда в конце
