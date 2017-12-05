@@ -7,6 +7,7 @@ body{
 }
 
 button:focus {outline:0 !important; }
+a{text-decoration: none !important;}
 
 .left-space{
 	padding-left: 65px;
@@ -315,6 +316,7 @@ button:focus {outline:0 !important; }
 	}
 	.button-white{
 		display: block;
+		max-width: 95px;
 		margin: 5px auto;
 	}
 }
