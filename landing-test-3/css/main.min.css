@@ -5921,7 +5921,6 @@ a {
     width: 845px;
     background-color: #216cd2;
     position: absolute;
-    bottom: 0;
     left: 80px; }
 
 .profile .p {
@@ -6313,10 +6312,12 @@ a {
   .footer__menu {
     padding-left: 15px; }
   .footer__col {
-    width: 200px;
+    width: 70%;
     margin: 0 auto; }
   .footer__contacts {
-    padding-left: 0; }
+    padding-left: 15px;
+    padding: 0;
+    margin-top: 50px; }
   .footer__copyright {
     margin-top: 50px; }
     .footer__copyright .p-copyright {
@@ -6334,8 +6335,7 @@ a {
   .benefit-singl {
     max-width: 250px; }
   .footer__col {
-    width: 150px;
-    margin: 0 auto; }
+    width: 150px; }
   .profit-list {
     margin-bottom: 60px; }
     .profit-list__item {

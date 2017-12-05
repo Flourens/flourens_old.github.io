@@ -177,11 +177,13 @@
 			padding-left: 15px;
 		}
 		&__col{
-			width: 200px;
+			width: 70%;
 			margin: 0 auto;
 		}
 		&__contacts{
-			padding-left: 0;
+			padding-left: 15px;
+			padding: 0;
+			margin-top: 50px;
 		}
 		&__copyright{
 			.p-copyright{
@@ -211,7 +213,6 @@
 	.footer{
 		&__col{
 			width: 150px;
-			margin: 0 auto;
 		}
 	}
 	.profit-list{
