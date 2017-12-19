@@ -115,7 +115,7 @@ body {
   background-color: #a7a7a7; }
 
 .rewiev-popup {
-  position: fixed;
+  position: absolute;
   margin: 5% auto;
   left: 0;
   right: 0;
