@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27">
+    <defs>
+        <path id="a" d="M927 135.063h15.067v1H927v15.066h-1v-15.066h-15v-1h15v-15h1v15z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke-linecap="square" opacity=".474" transform="rotate(45 617.3 -1027.492)">
+        <use fill="#FFF" xlink:href="#a"/>
+        <path stroke="#FFF" d="M927.5 134.563h15.067v2H927.5v15.066h-2v-15.066h-15v-2h15v-15h2v15z"/>
+    </g>
+</svg>
