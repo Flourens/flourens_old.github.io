@@ -115,7 +115,7 @@ body {
   background-color: #a7a7a7; }
 
 .rewiev-popup {
-  position: absolute;
+  position: fixed;
   margin: 5% auto;
   left: 0;
   right: 0;
@@ -126,8 +126,6 @@ body {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   padding-bottom: 30px; }
-  .rewiev-popup-disabled {
-    display: none; }
   .rewiev-popup .popup-head {
     background-color: #00233a;
     position: relative;
