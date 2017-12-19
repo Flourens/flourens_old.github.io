@@ -163,7 +163,8 @@ body {
     margin-left: 57px;
     margin-bottom: 10px; }
     .rewiev-popup .popup-content .img-wrap {
-      padding-right: 30px; }
+      padding-right: 30px;
+      padding-top: 43px; }
       .rewiev-popup .popup-content .img-wrap .image {
         width: 210px;
         height: auto; }
