@@ -9,7 +9,6 @@ $(document).ready(function () {
         event.stopPropagation();
         event.preventDefault();
         $('.overlay').css('display', 'block');
-
     }
 
     function dragleave(event) {
