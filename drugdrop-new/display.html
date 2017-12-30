@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dotter plotter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<input type="hidden" id="fname" value="{{data.fname}}"/>
+<input type="hidden" id="ftype" value="{{data.ftype}}"/>
+
+
+<button id="pen" style="float: right"><img src="img/002-pencil.svg" alt="Dotter plotter"></button>
+<button id="eraser" style="float: right"><img src="img/001-erase-text.svg" alt="Dotter plotter"></button>
+
+<canvas class="whiteboard" id="the-canvas"></canvas>
+<canvas class="whiteboard1" id="the-drawin-canvas" style="float: left; position: absolute; left: 0; top: 0"></canvas>
+
+<script type="text/javascript">
+    var canvas;
+    var ctx;
+    var lastX;
+    var lastY;
+    var strokeColor = "red";
+    var strokeWidth = 5;
+    var mouseX;
+    var mouseY;
+    var canvasOffset;
+    var offsetX;
+    var offsetY;
+    var isMouseDown = false;
+    var mode = "pen";
+    var color;
+    var drawn = false;
+
+    function init() {
+        if (drawn) return;
+        drawn = true;
+        originalcanvas = document.getElementById("the-canvas");
+        canvas = document.getElementById("the-drawin-canvas");
+        canvas.height = originalcanvas.height;
+        canvas.width = originalcanvas.width;
+
+        $("#the-drawin-canvas").offset({top: $("#the-canvas").offset().top, left: $("#the-canvas").offset().left});
+
+        ctx = canvas.getContext("2d");
+
+        strokeColor = "red";
+        strokeWidth = 5;
+        canvasOffset = $("#the-drawin-canvas").offset();
+        offsetX = canvasOffset.left;
+        offsetY = canvasOffset.top;
+        isMouseDown = false;
+
+        document.onmousedown = function (e) {
+            handleMouseDown(e);
+        }
+
+        $("#the-drawin-canvas").mousedown(function (e) {
+            setTimeout(function () {
+                handleMouseDown(e)
+            }, 0);
+        });
+
+        document.getElementById("the-drawin-canvas").addEventListener("mousemove", (function (e) {
+            //handleMouseMove(e);
+        }));
+
+        $("#the-drawin-canvas").mouseup(function (e) {
+            handleMouseUp(e);
+        });
+
+        document.onmouseup = function (e) {
+            handleMouseOut(e);
+        };
+
+        $("#pen").click(function () {
+            mode = "pen";
+        });
+        $("#eraser").click(function () {
+            mode = "eraser";
+        });
+    }
+
+    function handleMouseDown(e) {
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
+
+        // Put your mousedown stuff here
+        lastX = mouseX;
+        lastY = mouseY;
+        isMouseDown = true;
+    }
+
+    function handleMouseUp(e) {
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
+
+        // Put your mouseup stuff here
+        isMouseDown = false;
+    }
+
+    function handleMouseOut(e) {
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
+
+        // Put your mouseOut stuff here
+        isMouseDown = false;
+    }
+
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
+
+</body>
+</html>

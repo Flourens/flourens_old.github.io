@@ -1,0 +1,59 @@
+
+/**
+ * Fix user-agent
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/**
+ * Canvas
+ */
+#pen{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background-color: #fff;
+	border: 2px solid #93c8d1;
+	border-top: 0;
+	padding-right: 5px;
+	margin: 0px 5px;
+	opacity: 0.8;
+	
+}
+#pen:hover{
+	opacity: 1;
+}
+#eraser:hover{
+	opacity: 1;
+}
+
+#eraser{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background-color: #fff;
+	border: 2px solid #93c8d1;
+	border-top: 0;
+	margin: 0px 5px;
+	opacity: 0.8;
+}
+
+.whiteboard {
+}
+
+.client {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
