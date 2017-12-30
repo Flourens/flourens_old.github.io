@@ -499,7 +499,7 @@ html{
 .content,
 .container{
 	height: 100%;
-	min-height: 700px;
+	min-height: 670px;
 }
 .aboutright .container{
 }
@@ -624,7 +624,7 @@ html{
 		min-height: 568px;
 	}
 	.main-content .main-title{
-		font-size: 40px;
+		font-size: 39px;
 	}
 }
 
