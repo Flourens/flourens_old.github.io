@@ -49,6 +49,18 @@ $(document).ready(function () {
 			$(this).addClass("color-active");
 		});
 	});
+	$(function() {
+		$(".main-form__bank-item").click(function() {
+			$(".main-form__bank-item-active").removeClass("main-form__bank-item-active");
+			$(this).addClass("main-form__bank-item-active");
+		});
+	});
+	$(function() {
+		$(".info-item").click(function() {
+			$(".info-item-active").removeClass("info-item-active");
+			$(this).addClass("info-item-active");
+		});
+	});
 	
 	$(function() {
 		$(".link-to-page-1").click(function() {
