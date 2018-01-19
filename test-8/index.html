@@ -239,7 +239,8 @@ succinctly than me.  But hell, yes, that, too.
                                 </div>
                             </div>
                             <div class="price">
-                                <p>$5.1k</p>
+                                <!--<p>$5.1k</p> -->
+															<span class="dol">$</span><input onkeypress="this.style.width = ((this.value.length + 1) * 14) + 'px';" value="5.1" class="value-1 short-in" type="number" name=""  placeholder="5.1"><span class="k-value">k</span>
                             </div>
                             <div class="lists">
                                 <ul>
@@ -282,7 +283,7 @@ succinctly than me.  But hell, yes, that, too.
                             </div>
                             <div class="price">
                                 <!--<p>$7.7k</p> -->
-                                 <span class="dol">$</span><input type="number" name=""  placeholder="7.7k">
+                                 <span class="dol">$</span><input onkeypress="this.style.width = ((this.value.length + 1) * 14) + 'px';" value="7.7" class="value-2 short-in" type="number" name=""  placeholder="7.7"><span class="k-value">k</span>
                             </div>
                             <div class="lists">
                                 <ul>
@@ -333,7 +334,7 @@ succinctly than me.  But hell, yes, that, too.
                                 </div>
                                 <div class="price">
 																	<!--<p>$14.7k</p> -->
-																	 <span class="dol">$</span><input type="number" name=""  placeholder="14.7k">
+																	 <span class="dol">$</span><input onkeypress="this.style.width = ((this.value.length + 1) * 14) + 'px';" class="value-3" type="number" name="" value="14.7"  placeholder="14.7"><span class="k-value">k</span>
                             		</div>
                                 <div class="lists">
                                     <ul>
@@ -367,7 +368,7 @@ succinctly than me.  But hell, yes, that, too.
                                 </div>
                                 <div class="price">
 																	<!--<p>$14.7k</p> -->
-																	 <span class="dol">$</span><input type="number" name="" id="val2" placeholder="14.7k">
+																	 <span class="dol">$</span><input onkeypress="this.style.width = ((this.value.length + 1) * 14) + 'px';" class="value-3" type="number" value="14.7" name="" id="val2" placeholder="14.7"><span class="k-value">k</span>
                             		</div>
                                 <div class="lists list3text">
                                     <p>
@@ -397,7 +398,7 @@ succinctly than me.  But hell, yes, that, too.
                                 </div>
                                 <div class="price">
 																	<!--<p>$14.7k</p> -->
-																	 <span class="dol">$</span><input type="number" name=""  placeholder="14.7k">
+																	 <span class="dol">$</span><input onkeypress="this.style.width = ((this.value.length + 1) * 14) + 'px';" class="value-3" type="number" name="" value="14.7"  placeholder="14.7"><span class="k-value">k</span>
                             		</div>
                                 <div class="lists lists-3">
                                     <p>
@@ -469,8 +470,8 @@ succinctly than me.  But hell, yes, that, too.
 	
                 <div class="boxes clearfix">
 										<div class="box-item">
-											<div class="cbox">
-												<span>$</span><span class="val1">5.1</span><span>k</span>
+											<div  class="cbox">
+												<span>$</span><span id="cbox-1" class="val1">5.1</span><span>k</span>
 											</div>
                    		<div class="txbot tx1">
                         <p>Brand Engineering</p>
@@ -481,7 +482,7 @@ succinctly than me.  But hell, yes, that, too.
                     
 										<div class="box-item">
 											<div class="cbox">
-													<span>$</span><span class="val1">7.7</span><span>k</span>
+													<span>$</span><span id="cbox-2" class="value-total val1">7.7</span><span>k</span>
 											</div>
 											<div class="txbot tx1">
                         <p>IDENTITY <br class="no-br">DESIGN</p>
@@ -490,7 +491,7 @@ succinctly than me.  But hell, yes, that, too.
                     <div class="plus"><img src="img/plus.png" alt=""></div>
                     <div class="box-item">
 											<div class="cbox">
-													<span>$</span><span class="val1">14.7</span><span>k</span>
+													<span>$</span><span id="cbox-3" class="value-total val1">14.7</span><span>k</span>
 											</div>
 											<div class="txbot tx1">
                         <p>BRANDMARKETING ASSETS</p>
@@ -499,20 +500,21 @@ succinctly than me.  But hell, yes, that, too.
                         <div class="plus"><img src="img/egal.png" alt=""></div>
                     <div class="box-item">
 											<div class="cbox">
-													<span>$</span><span class="val1">22.7</span><span>k</span>
+													<span>$</span><span id="sum" class="value-total val1">22.7</span><span>k</span>
 											</div>
 											<div class="txbot tx4">
                         <p>TOTAL</p>
                     	</div>
 										</div>
                 </div>
-                <button>GET STARTED</button>
+                <button class="button">GET STARTED</button>
 
             </section>
 					</div>
         
     </div>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/scrollreveal.js"></script>
     <script src="js/main.js"></script>
 </body>

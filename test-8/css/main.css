@@ -770,6 +770,9 @@ header img{
 		padding-bottom: 13px;
 	
 }
+.col1 .get{
+	padding-bottom: 10px;
+}
 
 .col3box .get{
 	padding: 5px 0;
@@ -1078,7 +1081,7 @@ span.blue{
 	 background: #379dd7;
 }
 
-.calculator button{
+.calculator .button{
 		display: block;
     font-size: 30px;
     color: #fff;
@@ -1089,6 +1092,7 @@ span.blue{
 		margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 70px;
+		cursor: pointer;
 		
 }
 
@@ -1110,19 +1114,28 @@ span.blue{
 }
 
 /* inputs */
-.col2 .price input, .col3 .price input{
-    width: 43%;
+.k-value{
+	font-size: 25px;
+	font-family: "Decalotype-Bold";
+	padding: 0;
+}
+.col1 .price input, .col1 .price input, .col2 .price input, .col3 .price input{
+    width: 50px;
+		max-width: 120px;
     border: none;
-    color: #547d87;
     background: #f4f4f4;
 		font-family: "Decalotype-Bold";
     text-align: left;
     font-size: 25px;
-    padding-top: 10px;
+    padding-top: 8px;
     padding-bottom: 7px;
     padding-left: 0px;
     letter-spacing: 0;
 }
+.col1 .price .short-in, .col2 .price .short-in{
+	width: 35px;
+}
+.col1 .price span.dol,
 .col2 .price span.dol,
 .col3 .price span.dol {
 	font-size: 25px;
@@ -1131,8 +1144,14 @@ span.blue{
   padding-left: 16px;
 	letter-spacing: 0;
 }
+.col1 .price input{
+	color: #d46863;
+}
 .col2 .price input{
 	color: #547d87;
+}
+.col3 .price input{
+	color: #5c9ad1;
 }
 
 .col2 ul {
@@ -1145,9 +1164,15 @@ span.blue{
     font-size: 25px;
     color: #547d87;
 }
+.col1 .price span{
+    color: #d46863;
+}
 
 
 
+.col1 .price input::placeholder{
+    color: #d46863;
+}
 .col2 .price input::placeholder{
     color: #6c96a0;
 }
@@ -1158,7 +1183,6 @@ span.blue{
 }
 
 .col3 .price span {
-    font-size: 48px;
     color: #5c9ad1;
 }
 
