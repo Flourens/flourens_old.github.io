@@ -9,6 +9,10 @@
     src: url(../fonts/Decalotype-Bold.ttf);
 }
 @font-face {
+    font-family: "Decalotype-Black";
+    src: url(../fonts/Decalotype-Black.otf);
+}
+@font-face {
     font-family: "Decalotype-Regular";
     src: url(../fonts/Decalotype-Regular.ttf);
 }
@@ -19,6 +23,12 @@
 @font-face {
     font-family: "Decalotype-Light";
     src: url(../fonts/Decalotype-Light.otf);
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 p, a, li, span, button, input{
@@ -47,6 +57,7 @@ h1, h2, h3{
 	margin-bottom: 80px;
 	position: relative;
 }
+
 .branch-line{
 	position: absolute;
 	width: 3px;
@@ -295,6 +306,7 @@ header img{
 .slide2-wrap{
 	width: 100%;
 	background-color: #ebebeb;
+	position: relative;
 }
 
 .slide2 h2, .slide2 .smdesc, .name, .title, .title2{
@@ -312,22 +324,40 @@ header img{
 }
 
 .mids{
-    background: url("../img/crossbg.png");
-    background-repeat: no-repeat;
-    background-size: 2%;
     overflow: hidden;
-    background-position: 50% 0;
     padding-bottom: 50px;
-		
+    padding-bottom: 50px;
+}
+.mids-bg-line {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	max-height: 594px;
+	background-color: #379dd7;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.mids .mids-bg-line{
+	top: 210px;
+}
+.mids2 .mids-bg-line{
+	bottom: 70px;
+}
+.mids-bg-line:after{
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 20px;
+	background-color: #379dd7;
+	left: calc(50% - 10px);
+	bottom: 11px;
 }
 
 .mids2 {
-    background: url("../img/crossbg.png");
-    background-repeat: no-repeat;
-    background-size: 2.2%;
     overflow: hidden;
-    background-position: 50% 0;
-    padding-bottom: 150px;
+    padding-bottom: 58px;
 }
 .mids .half{
 	padding-top: 10px;
@@ -346,9 +376,14 @@ header img{
     font-size: 27px;
 		font-family: 'Decalotype-Medium';
 		line-height: 1.1;
-		
-		
-		
+}
+.name-other{
+	font-size: 24px;
+}
+.boxes{
+	width: 100%;
+	max-width: 852px;
+	margin: 0 auto;
 }
 
 .title{
@@ -377,8 +412,22 @@ header img{
 }
 
 .halfcont2{
-    width: 48%;
+    max-width: 65%;
     margin: 0 auto;
+		margin-bottom: 48px;
+		
+}
+.rightfl p, .leftfl p{
+	max-width: 340px;
+	line-height: 1.2;
+	font-family: "Decalotype-light";
+	font-size: 16px;
+	letter-spacing: 1.5px;
+}
+.leftfl p{
+	max-width: 322px;
+	text-align: right;
+	float: right;
 }
 
 .halfcont2 p{
@@ -387,11 +436,20 @@ header img{
 }
 
 .halfcont2 img{
-    width: 100%;
+		display: block;
+    width: 138px;
+		height: auto;
+		margin: 0 auto;
 }
 
 .slide3{
-    padding-top: 100px;
+    padding-top: 40px;
+}
+.slide3-wrap{
+	background-image: url(../img/bg-2.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .slide3 h2{
@@ -402,36 +460,120 @@ header img{
 .underTitle{
     text-align: center;
     font-size: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .titleRight {
     text-align: right;
     font-size: 32px;
+		position: relative;
 }
 
 .titleLeft {
     text-align: left;
     font-size: 32px;
+		max-width: 300px;
+		position: relative;
+}
+.titleLeft:after, .titleRight:after{
+		position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #379dd7;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.titleLeft:before, .titleRight:before{
+	  position: absolute;
+    content: '';
+    width: 110px;
+    height: 3px;
+    background-color: #379dd7;
+}
+.titleRight:after {
+		top: 32px;
+    right: -38px;
+}
+.titleRight:before {
+		width: 230px;
+		top: 41px;
+    right: -28px;
+}
+.titleLeft:after {
+		top: 35px;
+    left: -37px;
+}
+.titleLeft:before {
+		top: 43px;
+    left: -30px;
+}
+.titleLeft.title1:before{
+	width: 130px;
+}
+.titleRight.title4:before{
+	width: 215px;
 }
 
 .slide3 .branch{
-     background: url(../img/branchline.png);
-     background-repeat: no-repeat;
-     background-size: contain;
-     background-position: 46% 0;
-     padding-bottom: 150px;
-
+  padding-bottom: 115px;
 }
-
+.slide3-branch-bg{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 92%;
+	background-color: #379dd7;
+	top: 95px;
+	left: 50%;
+}
+.slide3-branch-bg:before, .slide3-branch-bg:after{
+		position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #379dd7;
+    background-color: #379dd7;
+    border-radius: 50%;
+}
+.slide3-branch-bg:before{
+	top: -15px;
+	left: calc(50% - 9px);
+}
+.slide3-branch-bg:after{
+	bottom: -7px;
+	left: calc(50% - 9px);
+}
 .rightfl, .leftfl{
     font-size: 14px;
 }
 
 .title1, .title2, .title3, .title4{
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+		font-family: "Decalotype-bold";
+		font-size: 28px;
+		 
 }
+.indicators{
+	width: 100%;
+	max-width: 852px;
+	margin: 0 auto;
+}
+	.title1{
+		margin-top: 5px;
+	}
+	.title2{
+		margin-top: -3px;
+	}
+	.title3{
+		margin-top: -10px;
+		margin-bottom: 28px;
+	}
+	.title4{
+		margin-top: 10px;
+		margin-bottom: 35px;
+	}
 
 .slide2 .title2{
     font-size: 17px;
@@ -444,14 +586,26 @@ header img{
 	width: 18%;
 	margin-bottom: 80px;
 }
+.slide2 .separator-mids2{
+	margin-bottom: 70px;
+}
+.slide3 .separator{
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.slide4 .separator{
+	margin-top: 5px;
+	margin-bottom: 77px;
+}
+
 
 .rightfl{
-    padding-left: 15px;
+    padding-left: 29px;
     box-sizing: border-box;
 }
 
 .leftfl {
-    padding-right: 15px;
+    padding-right: 26px;
     box-sizing: border-box;
 }
 
@@ -459,7 +613,7 @@ header img{
     width: 100%;
     height: 5px;
     background: #379dd7;
-    margin-bottom: 100px;
+    margin-bottom: 69px;
 }
 
 .slide4 {
@@ -469,14 +623,8 @@ header img{
 
 
 .slide4 h3{
-    font-family: "Decalotype-Bold";
-    font-size: 22px;
-    text-align: center;
-}
-
-.slide4 h3 {
-    font-family: "Decalotype-Bold";
-    font-size: 35px;
+    font-family: "Decalotype-Black";
+    font-size: 20px;
     text-align: center;
 }
 
@@ -514,11 +662,22 @@ header img{
     padding: 18px 0;
 		padding-bottom: 13px;
 }
+.colCont1 .colTitle p{
+	font-size: 12px;
+	padding-top: 6px;
+	padding-bottom: 7px;
+}
+.colCont1 .colTitle.colTitle2 p{
+	font-size: 12px;
+	padding-top: 5px;
+	line-height: 1.2;
+	padding-bottom: 4px;
+}
 
 .sidetitle{
     padding: 0 14px;
 		padding-top: 8px;
-    padding-bottom: 16px;
+    padding-bottom: 19px;
     box-sizing: border-box;
     overflow: hidden;
     border-bottom: solid 1px #d46863;
@@ -550,11 +709,12 @@ header img{
 .col .title2 p {
     text-align: right;
     font-size: 11px;
-		font-family: "Decalotype-Medium";
+		font-family: "Decalotype-Regular";
     color: #9a9b9b;
 		line-height: 1.4;
 		letter-spacing: 1px;
 }
+
 
 .col .price p{
 		font-family: "Decalotype-Bold";
@@ -579,12 +739,19 @@ header img{
     color: #565654;
 }
 
-.col1 li {
+.col1 li, .col2 li, .col3 li {
     margin-left: 26px;
     padding: 4.2px 0;
     font-size: 8px;
 		letter-spacing: 0;
     color: #565654;
+}
+.col3 li {
+   list-style-type: none;
+	 margin-left: 0;
+	 padding-top: 0;
+	 padding-bottom: 5px;
+	 
 }
 
 .col1 li{
@@ -602,6 +769,12 @@ header img{
 		padding-top: 9px;
 		padding-bottom: 13px;
 	
+}
+
+.col3box .get{
+	padding: 5px 0;
+	padding-left: 13px;
+	padding-bottom: 10px;
 }
 
 .col .get h3{
@@ -637,11 +810,10 @@ header img{
 .col2 .price {
     background: #f4f4f4;
     border-bottom: solid 1px #547d87;
-    border-left: solid 1px #547d87;
 }
 
 .col2 ul {
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: solid 1px #547d87;
 }
 
@@ -667,18 +839,38 @@ header img{
 
 .col3box{
     border: solid 1px #5c9ad1;
-    margin: 10px 0;
+    margin: 6px 0;
+}
+span.small{
+	color: #fff;
+	font-size: 10px;
+	letter-spacing: 0;
 }
 
 .col3 .titleB{
-    padding: 10px;
+    padding: 4px 16px;
     border-bottom: solid 1px #5c9ad1;
-    border-left: solid 1px #5c9ad1;
     background: white;
+		line-height: 1.2;
 }
 
 .col3 .titleB p{
     color: #5c9ad1;
+		font-size: 12px;
+		letter-spacing: 0;
+}
+.col3 .colCont .col3box .sidetitle .title2 p{
+	font-size: 11px;
+	letter-spacing: 0;
+	line-height: 1.1;
+}
+.col3 .colCont .col3box .sidetitle .title1{
+	padding-top: 0;
+}
+.col3 .colCont .col3box .sidetitle .title1 p{
+	
+	letter-spacing: 0;
+	line-height: 1.1;
 }
 
 .col3 .title1 p {
@@ -687,23 +879,18 @@ header img{
 
 .col3 .sidetitle {
     border-bottom: solid 1px #5c9ad1;
+		padding-top: 4px;
+		padding-bottom: 5px;
     
 }
 
 .col3 .price {
     background: #f4f4f4;
     border-bottom: solid 1px #5c9ad1;
-    border-left: solid 1px #5c9ad1;
-}
-
-.col3 li{
-    list-style-type: none;
-    margin-left: 0;
-    font-size: 14px;
 }
 
 .col3 ul{
-    padding: 10px;
+    padding: 0px;
 }
 
 .col3 .get{
@@ -711,134 +898,198 @@ header img{
 }
 
 .col3 .lists{
-    padding: 10px;
+    padding: 0 10px;
+		padding-top: 10px;
+		padding-bottom: 6px;
+}
+.col3 .lists.lists-3{
+    line-height: 1.5;
+		padding-left: 18px;
+}
+.col3 .lists.list3text{
+    padding: 5px 11px;
+		padding-bottom: 7px;
 }
 
-.col3 .lists p{
-    font-size: 14px;
+.col3 .lists p, .photobox p{
+	font-size: 8px;
+	letter-spacing: 0;
+  color: #565654;
 }
 
 .lastbox{
-    border-bottom-left-radius: 30px;
+    border-bottom-left-radius: 20px;
 }
 
 .col4 .colCont1 .colTitle:nth-child(1) {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .col4 .colTitle{
     background: #5c9ad1;
     border-radius: 0;
+    border: solid 2px #5c9ad1;
+}
+.photobox{
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-.photobox img{
-    width: 98%;
-    margin-left: 1%;
+.photobox1{
+	height: 110px;
+	background-image: url(../img/vid1.png);
+}
+.photobox2{
+	height: 115px;
+	background-image: url(../img/vid2.png);
+}
+.photobox3{
+	height: 107px;
+	background-image: url(../img/vid3.png);
+}
+.photobox4{
+	height: 118px;
+	background-image: url(../img/vid4.png);
 }
 
 .col4 .colCont1{
     overflow: hidden;
     border: solid 1px #5c9ad1;
-    margin-bottom: 20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    margin-bottom: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+		border-top: none;
 }
 
     .col4 .colCont2,
 .col4 .colCont3 {
     border: solid 1px #5c9ad1;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .photobox p{
-    padding: 10px;
-    font-size: 12px;
+	padding-left: 12px;
+	padding-top: 6px;
+	line-height: 1;
+	padding-bottom: 7px;
 }
-
+.photobox p span.blue{
+	line-height: 1;
+	font-size: 9px;
+}
 span.blue{
     color: #5c9ad1;
+		letter-spacing: 0;
+		font-weight: 600;
+		line-height: 2;
+		font-size: 10px;
 }
 
 .columns{
     background: url(../img/colbg.png);
     overflow: hidden;
     background-repeat: no-repeat;
-    background-size: 4%;
-    background-position: 76% 82px;
+    background-position: 76% 25px;
 }
 
 .colCont2 .colTitle p {
-    font-size: 16px;
+    font-size: 11px;
+		padding-top: 7px;
+		padding-bottom: 7px;
 }
 
 .colCont3 .colTitle p{
     font-size: 12px;
+		padding-top: 5px;
+		padding-bottom: 7px;
 }
 
 .col4 .colCont3{
-    border-bottom-right-radius: 30px !important;
+    border-bottom-right-radius: 20px;
 }
 
 .boxex{
     width: 100%;
     overflow: hidden;
 }
-
+.box-item{
+	float: left;
+	width: 21%;
+}
 .cbox{
-    width: 20%;
-    float: left;
+		height: 56px;
+    width: 100%;
     border: solid 2px white;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
-    border-radius: 15px;
-    margin-left: 1.5%;
-    margin-top: 50px;
+    border-radius: 10px;
+    margin-left: 0;
+    margin-top: 60px;
 }
 
 .cbox span{
     color: white;
-    font-size: 42px;
+    font-size: 31px;
+		font-family: "Decalotype-Black";
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
     .txbot {
-    width: 20%;
-    float: left;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-    margin-left: 1.5%;
-    margin-top: 10px;
-}
+			width: 184px;
+			float: left;
+			box-sizing: border-box;
+			padding-top: 10px;
+			text-align: center;
+			border-radius: 15px;
+			margin-left: 0;
+			margin-top: 0px;
+			margin-right: 4.5%;
+		}	
+		.txbot:last-child {
+			margin-right: 0px;
+		}
 
     .txbot p {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
+		font-family: "Decalotype-Medium";
 }
 
-
-
 .calculator{
-    background: #379dd7;
-    border-bottom: solid 10px #1e71b8;
-    margin-top: 100px;
+    margin-top: 45px;
+}
+.calculator-wrap{
+	 border-bottom: solid 10px #1e71b8;
+	 background: #379dd7;
 }
 
 .calculator button{
-    font-size: 36px;
-    color: white;
+		display: block;
+    font-size: 30px;
+    color: #fff;
     border-radius: 15px;
     border: none;
     background: #d46863;
-    padding: 21px 13px;
-    width: 25%;
-    margin-left: 40%;
-    margin-top: 40px;
-    margin-bottom: 100px;
+    padding: 18px 22px;
+		margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+		
 }
 
 .hidem {
@@ -850,33 +1101,48 @@ span.blue{
 }
 
 .plus{
-    width: 4%;
+    width: 4.5%;
     height: 10px;
     float: left;
     position: relative;
-    top: 86px;
-    left: 22px;
+    top: 76px;
+    left: 12px;
 }
 
 /* inputs */
-.col2 .price input {
+.col2 .price input, .col3 .price input{
     width: 43%;
     border: none;
-    font-size: 57px;
-    margin-bottom: 4px;
     color: #547d87;
     background: #f4f4f4;
-    padding: 10px 0 0 15px;
+		font-family: "Decalotype-Bold";
+    text-align: left;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+    letter-spacing: 0;
+}
+.col2 .price span.dol,
+.col3 .price span.dol {
+	font-size: 25px;
+	font-family: "Decalotype-Bold";
+  padding-bottom: 7px;
+  padding-left: 16px;
+	letter-spacing: 0;
+}
+.col2 .price input{
+	color: #547d87;
 }
 
 .col2 ul {
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: solid 1px #547d87;
-    padding-bottom: 42px;
+    padding-bottom: 8px;
 }
 
 .col2 .price span{
-    font-size: 48px;
+    font-size: 25px;
     color: #547d87;
 }
 
@@ -887,13 +1153,8 @@ span.blue{
 }
 
 .col3 .price input {
-    width: 43%;
-    border: none;
-    font-size: 57px;
-    margin-bottom: 15px;
-    color: #5c9ad1;
-    background: #f4f4f4;
-    padding: 10px 0 0 15px
+	padding-top: 5px;
+	padding-bottom: 1px;
 }
 
 .col3 .price span {
@@ -912,25 +1173,8 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0;
 }
-
-    .col2 .price span.dol,
-.col3 .price span.dol {
-    font-size: 52px;
-    position: relative;
-    left: 17px;
-}
-
-
-.tx2{
-    margin-left: 6%;
-}
-
-.tx3 {
-    margin-left: 5%;
-}
-
-.tx4 {
-    margin-left: 5%;
+.txbot.tx4 p{
+	font-size: 22px;
 }
 
 /* responsive  */
@@ -945,14 +1189,28 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 960px) {
-    .content {
-        padding: 0 0px !important;
-    }
+    
 }
 
 @media screen and (max-width: 768px) {
+	.txbot{
+		width: 100%;
+	}
+	.box-item{
+		width: 44%;
+	}	
+	.plus{
+		left: 0.5%;
+		width: 5%;
+	}
 		.mids{
 			background: rgba(0,0,0,0);
+		}
+		.mids-bg-line{
+			background: rgba(0,0,0,0);
+		}
+		.mids-bg-line:after{
+			display: none;
 		}
 		.mids .half{
 			width: 100%;
@@ -1001,15 +1259,14 @@ input[type=number]::-webkit-outer-spin-button {
     .halfcont2 {
         width: 70%;
         margin: 0 auto;
+				margin-bottom: 40px;
+				
     }
     .rightfl {
-        padding-left: 44px;
         box-sizing: border-box;
     }
     .leftfl {
-        padding-right: 0;
         box-sizing: border-box;
-        margin-left: 15px;
     }
     .title4 {
         position: relative;
@@ -1022,65 +1279,29 @@ input[type=number]::-webkit-outer-spin-button {
     .columns {
         background: none;
     }
-    .calculator button {
-        font-size: 36px;
-        color: white;
-        border-radius: 15px;
-        border: none;
-        background: #d46863;
-        padding: 10px;
-        width: 40%;
-        margin-left: 30%;
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-    .cbox {
-        width: 21%;
-        float: left;
-        border: solid 2px white;
-        box-sizing: border-box;
-        padding: 20px;
-        text-align: center;
-        border-radius: 15px;
-        margin-left: 3%;
-        margin-top: 50px;
-    }
-    .cbox {
-        width: 18%;
-    }
-
-    .cbox span {
-        color: white;
-        font-size: 30px;
-    }
-    .col1 li {
-        margin-left: 30px;
-        padding: 3px 0;
-        font-size: 14px;
-        color: #565654;
-    }
-    .calculator button {
-        font-size: 36px;
-        color: white;
-        border-radius: 15px;
-        border: none;
-        background: #d46863;
-        padding: 21px 13px;
-        width: 34%;
-        margin-left: 33%;
-        margin-top: 40px;
-        margin-bottom: 100px;
-    }
 }
 
 @media screen and (max-width: 425px){
-    .cbox span {
-        color: white;
-        font-size: 20px;
-    }
-    .cbox span {
-        font-size: 20px;
-    }
+	.calculator button{
+		width: 100%;
+	}
+		.box-item{
+			width: 100%;
+		}
+		.txbot{
+			width: 100%;
+		}
+	.plus {
+    width: 14.5%;
+    height: 20px;
+    float: none;
+    position: relative;
+    top: 16px;
+    left: calc(50% - 5px);
+	}
+	.no-br{
+		display: none; !important
+	}
     header h1,
     header p {
         text-align: center;
@@ -1097,8 +1318,10 @@ input[type=number]::-webkit-outer-spin-button {
     .branch{
         background: none;
     }
-    .half {
-        width: 100%;
+		.half {
+			width: 100%;
+		}
+    .branch .half {
 			margin-bottom: 150px;
     }
 	.reveal-4{
@@ -1134,6 +1357,21 @@ input[type=number]::-webkit-outer-spin-button {
         padding-left: 15px;
         box-sizing: border-box;
     }
+		.leftfl p{
+			text-align: left;
+		}
+	.slide3-branch-bg{
+		display: none;
+	}
+	.slide3 .branch{
+		padding-bottom: 0;
+	}
+	.slide3 .branch .half{
+		margin-bottom: 40px;
+	}
+		.titleRight:after, .titleLeft:after, .titleRight:before, .titleLeft:before{
+			display: none;
+		}
     .title4 {
         position: relative;
         top: -0;
@@ -1152,52 +1390,5 @@ input[type=number]::-webkit-outer-spin-button {
     .col {
         width: 100%;
         margin-bottom: 30px;
-    }
-    .cbox {
-        width: 50%;
-        margin-left: 25%;
-    }
-    .plus {
-        width: 100%;
-        height: 10px;
-        float: left;
-        position: relative;
-        top: 19px;
-        left: 64%;
-    }
-    .calculator button {
-        font-size: 36px;
-        color: white;
-        border-radius: 15px;
-        border: none;
-        background: #d46863;
-        padding: 10px;
-        width: 70%;
-        margin-left: 15%;
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-    .boxes{
-        WIDTH: 50%;
-        float: left;
-    }
-    .cbox {
-        width: 84%;
-        margin-left: 25%;
-    }
-    .indicators{
-        width: 50%;
-        float: left;
-    }
-    .txbot {
-            width: 50%;
-            float: left;
-            box-sizing: border-box;
-            padding: 20px;
-            text-align: center;
-            border-radius: 15px;
-            margin-left: 8.5%;
-            margin-top: 45px;
-            text-align: center;
     }
 }
