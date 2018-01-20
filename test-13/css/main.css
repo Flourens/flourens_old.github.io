@@ -1,0 +1,228 @@
+
+@font-face {
+    font-family: "Decalotype-Bold";
+    src: url(../fonts/Decalotype-Bold.ttf);
+}
+@font-face {
+    font-family: "Decalotype-Black";
+    src: url(../fonts/Decalotype-Black.otf);
+}
+@font-face {
+    font-family: "Decalotype-Regular";
+    src: url(../fonts/Decalotype-Regular.ttf);
+}
+@font-face {
+    font-family: "Decalotype-Medium";
+    src: url(../fonts/Decalotype-Medium.otf);
+}
+@font-face {
+    font-family: "Decalotype-Light";
+    src: url(../fonts/Decalotype-Light.otf);
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content{
+	max-width: 965px;
+	margin: 0 auto;
+}
+.header {
+	text-align: center;
+	padding-top: 48px;
+	padding-bottom: 31px;
+}
+.header .title{
+	font-family: "Decalotype-Black";
+	font-size: 35px;
+	color: #3593c5;
+	margin-bottom: 5px;
+}
+.header .subtitle{
+	font-family: "Decalotype-Regular";
+	font-size: 16px;
+	color: #9d9e9e;
+}
+.options{
+	position: relative;
+	padding-top: 288px;
+	z-index: 10;
+}
+
+.point{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: #f16864;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	font-family: 'arial', sans-serif;
+	z-index: 10;
+}
+.point-1{
+	top: 80px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.point-2{
+	top: 165px;
+	left: 310px;
+}
+.point-3{
+	top: 165px;
+	right: 310px;
+}
+.point:after{
+	position: absolute;
+	top: calc(50% - 40px);
+	left: calc(50% - 40px);
+	margin: 0 auto;
+	border-radius: 50%;
+	content: '';
+	width: 80px;
+	height: 80px;
+	background-color: #f16864;
+	opacity: 1;
+	animation: scaleout 2.0s infinite ease-in-out;
+	
+}
+.point p{
+	margin: 0;
+	padding: 4px;
+}
+
+.bubble{
+	position: absolute;
+	max-width: 250px;
+	border: 1px solid #f16864;
+	border-radius: 10px;
+	background-color: #fff;
+	z-index: 10;
+}
+.bubble.bubble-l{
+	left: 60px;
+	top: 138px;
+	display: none;
+}
+.bubble.bubble-2{
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 50px;
+	display: none;
+}
+.bubble.bubble-3{
+	right: 60px;
+	top: 138px;
+	display: none;
+}
+.bubble.buble-on{
+	display: block;
+}
+
+.bubble:after{
+	position: absolute;
+	content: url(../img/small-arrow.png);
+	z-index: 1;
+}
+.bubble.bubble-l:after{
+	bottom: -34px;
+	right: 10px;
+	
+}
+.bubble.bubble-2:after{
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 34px;
+	content: url(../img/small-arrow-3.png);
+}
+.bubble.bubble-3:after{
+	bottom: -34px;
+	left: 10px;
+	content: url(../img/small-arrow-2.png);
+}
+.bubble .head{
+	background-color: #f16864;
+	text-align: center;
+	border-radius: 8px 8px 0 0;
+	padding: 9px 0;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+}
+.bubble .head h2{
+	margin: 0;
+	font-size: 24px;
+	font-family: "Decalotype-bold";
+	color: #fff;
+	letter-spacing: 2px;
+}
+.bubble .top-text{
+	padding: 10px 15px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #f16864;
+}
+.bubble .top-text p{
+	margin: 0;
+	font-size: 14px;
+	font-family: "Decalotype-bold";
+	color: #2d2d2d;
+	letter-spacing: 1.5px;
+}
+.bubble .main-text{
+	padding: 0 17px;
+	padding-top: 11px;
+	
+}
+.bubble .main-text p{
+	margin: 0;
+	font-size: 14px;
+	font-family: "Decalotype-Regular";
+	color: #2d2d2d;
+	letter-spacing: 1.5px;
+	margin-bottom: 11px;
+	
+}
+.bubble .button{
+	height: 30px;
+	padding-bottom: 12px;
+}
+.bubble .btn{
+	font-size: 11px;
+	font-family: "Decalotype-Regular";
+	color: #2d2d2d;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: #e1e1e1;
+	padding: 5px 11px;
+	margin-left: 17px;
+	letter-spacing: 1px;
+}
+
+
+.logo-animation{
+	height: 550px;
+	background-image: url(../img/B_Neil_logo%20reveal_v1.gif);
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes scaleout {
+  0% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
