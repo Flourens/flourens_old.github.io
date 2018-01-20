@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: "Decalotype-Bold";
+    src: url(../fonts/Decalotype-Bold.ttf);
+}
+@font-face {
+    font-family: "Decalotype-Black";
+    src: url(../fonts/Decalotype-Black.otf);
+}
+@font-face {
+    font-family: "Decalotype-Regular";
+    src: url(../fonts/Decalotype-Regular.ttf);
+}
+@font-face {
+    font-family: "Decalotype-Medium";
+    src: url(../fonts/Decalotype-Medium.otf);
+}
+@font-face {
+    font-family: "Decalotype-Light";
+    src: url(../fonts/Decalotype-Light.otf);
+}
+
+.text br {
+	line-height: 2;
+}
+
+p, a, li{
+    font-family: "Decalotype-Regular";
+    color: #3b3b3b;
+		letter-spacing: 2.4px;
+}
+
+h1, h2, h3{
+    font-family: "Decalotype-Bold";
+		letter-spacing: 4px;
+}
+
+.main{
+    width: 965px;
+    margin: 0 auto;
+    background-image: url("../img/iconbg.png");
+    background-repeat: no-repeat;
+    background-position: 100% 8%;
+}
+
+.content{
+    width: 720px;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 170px;
+		padding-bottom: 110px;
+		position: relative;
+}
+.quote-img{
+	position: absolute;
+	right: 0;
+	top: 115px;
+	z-index: 1;
+}
+
+.quote{
+    padding-top: 0px;
+		position: relative;
+		z-index: 10;
+}
+.quote:before{
+	content: url(../img/quote.png);
+	position: absolute;
+	width: 41px;
+	height: auto;
+	top: 0;
+	left: 0;
+}
+
+.quote p{
+    color: #244c67;
+    font-size: 25px;
+    font-family: "Decalotype-Bold";
+    padding-top: 50px;
+}
+
+.quote p.name{
+    color: #f26864;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Decalotype-Regular";
+    padding-top: 10px;
+}
+
+.firsts{
+    margin-top: 120px;
+}
+
+.firsts h2{
+    color: #f26864;
+    font-size: 43px;
+    padding-bottom: 45px;
+}
+
+.firsts p{
+    font-size: 23px;
+		color: #3b3b3b;
+		line-height: 1.6;
+}
+
+.firsts h2.diff {
+    font-size: 36px;
+    padding-top: 40px;
+		padding-bottom: 25px;
+}
+.firsts  .diff-text{
+	line-height: 1.3;
+	letter-spacing: 2.9px;
+}
+
+.firsts li{
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.firsts ul{
+    margin-bottom: 30px;
+}
+
+button{
+		display: block;
+    background-color: #f26864;;
+    color: white;
+    padding: 12px 23px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Decalotype-Regular";
+    font-size: 24px;
+    text-align: center;
+		margin: 0 auto;
+    margin-top: 70px;
+		margin-bottom: 65px;
+}
+
+.branch{
+		padding-top: 10px;
+    overflow: hidden;
+    margin-bottom: 100px;
+		padding-bottom: 170px;
+		position: relative;
+}
+.branch-bg{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 94.8%;
+	background-color: #379dd7;
+	top: 23px;
+	left: 50%;
+}
+.branch-bg:before, .branch-bg:after{
+		position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid #379dd7;
+    background-color: #379dd7;
+    border-radius: 50%;
+}
+.branch-bg:before{
+	top: -15px;
+	left: calc(50% - 9px);
+}
+.branch-bg:after{
+	bottom: -7px;
+	left: calc(50% - 9px);
+}
+
+.branch .half p{
+	font-size: 14px;
+	letter-spacing: 1.4px;
+}
+
+.half{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.halfc{
+	padding-right: 34px;
+	padding-left: 15px;
+}
+
+.halfcpad{
+    box-sizing: border-box;
+    padding-left: 60px;
+}
+
+.block{
+    padding: 30px 0;
+    overflow: hidden;
+}
+.block-3{
+	padding-top: 55px;
+}
+.block-3 .sp1{
+	margin-top: 0;
+	margin-left: 0;
+}
+.block-3 .imgr-wrap{
+	margin-top: 20px;
+}
+
+.block h3{
+    color: #f26864;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.imgr{
+    width: 100%;
+    right: 16px;
+}
+.imgl{
+    width: 100%;
+		margin-top: 35px;
+}
+.imgr-wrap, .imgl-wrap{
+	 margin-top: 50px;
+	 margin-left: 70px;
+	 position: relative;
+	 width: 296px;
+	 height: auto;
+}
+.imgl-wrap{
+	margin-left: auto;
+	margin-right: 50px;
+}
+
+.imgr-wrap:after, .imgl-wrap:after{
+		position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #379dd7;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.imgr-wrap:before, .imgl-wrap:before{
+	  position: absolute;
+    content: '';
+    width: 90px;
+    height: 3px;
+    background-color: #379dd7;
+}
+.imgl-wrap:after {
+		top: 50%;
+    right: -61px;
+}
+.imgl-wrap:before {
+		width: 68px;
+		top: 53%;
+    right: -45px;
+}
+.imgr-wrap:after {
+		top: 43%;
+    left: -79px;
+}
+.imgr-wrap:before {
+		top: 46%;
+    left: -70px;
+}
+.imgr.title1:before{
+	width: 130px;
+}
+.titleRight.title4:before{
+	width: 215px;
+}
+
+
+.sp1{
+    margin-top: 130px;
+		margin-left: 16px;
+}
+.sp1 ul{
+	list-style-type: none;
+}
+
+/* responsive */
+@media screen and (max-width: 965px){
+    .main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+		.half{
+			width: 100%;
+			text-align: center;
+		}
+		.branch{
+			position: relative;
+		}
+		.branch-bg{
+			display: none;
+		}
+		.imgr-wrap, .imgl-wrap{
+			width: 150px;
+			position: absolute;
+			top: 30px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		.imgr-wrap:after, .imgl-wrap:after, .imgr-wrap:before, .imgl-wrap:before{
+			display: none;
+		}
+		.block{
+			padding-bottom: 0;
+		}
+		.sp1{
+			margin-top: 10px;
+		}
+		.halfcpad, .halfc{
+			padding-left: 0px;
+			padding-right: 0;
+			max-width: 300px;
+			margin: 0 auto;
+			margin-top: 160px;
+		}
+		.imgr-wrap, .imgl-wrap{
+			margin: 0 auto;
+		}
+		.imgr-wrap img, .imgl-wrap img{
+			margin: 0;
+		}
+		.block-3 .imgr-wrap{
+			margin-top: 0;
+		}	
+		.block-3 {
+			padding-top: 20px;
+		}
+    .content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    .firsts h2.diff {
+        font-size: 40px;
+        padding: 30px 0;
+    }
+		.quote-img{
+			width: 250px;
+		}
+}
+
+@media screen and (max-width: 640px){
+    .quote-img{
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+		}
+		.quote p{
+			font-size: 20px;
+			text-align: center;
+		}
+		.quote:before{
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		header{
+			padding-top: 400px;
+		}
+    .firsts {
+        margin-top: 10px;
+    }
+    .firsts h2.diff {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .half {
+        width: 100%;
+    }
+    .branch{
+        background: white;
+    }
+    .halfcpad {
+        padding-left: 0px;
+    }
+    .half {
+        padding-right: 0px;
+    }
+    button {
+        margin: 50px 0 50px 24%;
+    }
+    .firsts h2 {
+        font-size: 35px;
+    }
+    .firsts p {
+        font-size: 18px;
+    }
+    .firsts li {
+        font-size: 18px;
+    }
+}
