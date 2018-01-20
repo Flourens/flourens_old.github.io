@@ -332,19 +332,27 @@ img.box.right-box {
 }
 
 .picrow {
+	
+	justify-content: center;
+	display: flex;
+	
+	flex-wrap: wrap;
 	padding-top: 65px;
 	padding-bottom: 80px;
-	width: 75%;
-	margin: 0 auto;
 	background: url("../img/pointbg.png");
 	background-repeat: no-repeat;
 	background-position: 0 47%;
 	background-size: contain;
 }
+.lex-item-wrap{
+	display: flex;
+	justify-content: center;
+}
 
 .picrow img {
+	margin-left: 10px;
+	margin-top: 10px;
 	width: auto;
-	margin-right: 27px;
 	box-shadow: 0px 8px 24.3px 2.7px rgba(0, 0, 0, 0.22);
 }
 
@@ -672,9 +680,6 @@ button.res {
 		width: 100%;
 		;
 	}
-	.picrow {
-		padding-left: 10%;
-	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -682,9 +687,6 @@ button.res {
 	.rowbg2,
 	.rowbg3 {
 		background-image: none;
-	}
-	.picrow img {
-		width: 24.4%;
 	}
 	.circlescont {
 		background-position: 0 45%;
@@ -705,9 +707,6 @@ button.res {
 	}
 	.blue2 p {
 		font-size: 16px;
-	}
-	.picrow img {
-		width: 24.2%;
 	}
 	.circle {
 		width: 48%;
@@ -808,9 +807,6 @@ button.res {
 	.blue2 {
 		background-image: none;
 	}
-	.picrow img {
-		width: 23%;
-	}
 	.circle {
 		width: 100%;
 	}
@@ -830,6 +826,10 @@ button.res {
 }
 
 @media screen and (max-width: 425px) {
+	.picrow img{
+		margin-left: 25%;
+		width: 50%;
+	}
 	.selectbox {
 		width: 98%;
 	}
