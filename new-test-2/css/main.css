@@ -379,7 +379,7 @@ img.box.right-box {
 	position: relative;
 }
 .circles-wrap:before {
-    top: 75%;
+    top: 78%;
     position: absolute;
     content: '';
     left: 0;
@@ -394,7 +394,7 @@ img.box.right-box {
 }
 
 .circles .pcont p {
-	font-size: 16px;
+	font-size: 15px;
 	font-family: "Decalotype-Medium";
 }
 
@@ -402,7 +402,7 @@ img.box.right-box {
 	font-size: 16px;
 	text-align: center;
 	padding: 18px 0;
-	padding-bottom: 30px;
+	padding-bottom: 80px;
 	color: #3b3b3b;
 	letter-spacing: 1.5px;
 }
@@ -696,6 +696,9 @@ button.res {
 /* responsive  */
 
 @media screen and (min-width: 1200px) {
+	.circlescont{
+		max-width: 100%;
+	}
 	.halfcont p{
 		font-size: 17px;
 	}
