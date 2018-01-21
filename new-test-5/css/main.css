@@ -797,6 +797,18 @@ button.res {
 }
 
 @media screen and (max-width: 768px) {
+	.pics-wrap:before{
+		display: none;
+	}
+	img.box{
+		width: 90%;
+	}
+	img.box{
+		margin-left: 5%;
+	}
+	img.box.right-box{
+		margin-left: 5%;
+	}
 img.box.right-box
 	.circles-wrap:before {
 		display: none;
@@ -852,9 +864,34 @@ img.box.right-box
 		width: 85%;
 		margin-left: 7.5%;
 	}
+	.circles-wrap:before{
+		display: none;
+	}
 }
 
 @media screen and (max-width: 670px) {
+	img.box{
+		width: 60%;
+	}
+	.rowbg2, .rowbg3{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.half-tot{
+		order: 1;
+	}
+	.half-tob{
+		order: 2;
+	}
 	img.save{
 		top: 100px;
 	}
