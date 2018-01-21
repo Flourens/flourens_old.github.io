@@ -1073,10 +1073,12 @@ span.small{
 	content: '';
 	position: absolute;
 	width: 1px;
-	height: 281%;
+	height: 262%;
 	bottom: 170px;
 	right: -22px;
 	border-right: 1px dotted #5c9ad1;
+	background-color: #fff;
+	z-index: 1;
 }
 .col3box.lastbox:after{
 	content: '';
@@ -1099,6 +1101,16 @@ span.small{
 	left: -17px;
 	border-bottom: 1px dotted #5c9ad1;
 }
+.col4 .colCont1-top:after{
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 65px;
+	top: 24px;
+	left: -18px;
+	border-right: 1px dotted #5c9ad1;
+	
+}
 
 .col4 .colCont1 .colTitle:nth-child(1) {
     border-top-left-radius: 20px;
@@ -1118,15 +1130,31 @@ span.small{
 
 .photobox1{
 	height: 110px;
+	background-image: url(../img/vid1.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 .photobox2{
 	height: 115px;
+	background-image: url(../img/vid2.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 .photobox3{
 	height: 107px;
+	background-image: url(../img/vid3.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 .photobox4{
 	height: 118px;
+	background-image: url(../img/vid4.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 
 .col4 .colCont1{
@@ -1435,6 +1463,9 @@ input[type=number]::-webkit-outer-spin-button {
 		max-width: 100%;
 		font-size: 14px;
 	}
+	.left-block, .right-block{
+		max-width: 300px;
+	}
 	.right-block-img, .left-block-img{
 		width: 62px;
 		height: 62px;
@@ -1560,6 +1591,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 425px){
+	
+	.col3box.lastbox:before{
+		display: none;
+	}
+	.col3box.lastbox:after{
+		display: none;
+	}
+	.col4 .colTitle:before{
+		display: none;
+	}
+	.col4 .colCont1-top:after{
+		display: none;
+	}
+	
 	.calculator button{
 		width: 100%;
 	}

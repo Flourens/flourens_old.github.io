@@ -1,12 +1,12 @@
 	$(document).ready(function () {
 		$('#cbox-1, #sum').html($('.value-1').val());
-		$('.col1 .colCont').click(function () {
-			if ($('.col1 .colCont').hasClass('active-price')) {
-				$('#cbox-1').html('0');
-			} else {
-				$('#cbox-1').html($('.value-1').val());
-			}
-		});
+//		$('.col1 .colCont').click(function () {
+//			if ($('.col1 .colCont').hasClass('active-price')) {
+//				$('#cbox-1').html('0');
+//			} else {
+//				$('#cbox-1').html($('.value-1').val());
+//			}
+//		});
 		$('.col2 .colCont').click(function () {
 			if ($('.col2 .colCont').hasClass('active-price')) {
 				$('#cbox-2').html('0');
@@ -14,7 +14,7 @@
 				$('#cbox-2').html($('.value-2').val());
 			}
 		});
-		$('.colCont, .col3box').click(function () {
+		$('.col2 .colCont, .col3box').click(function () {
 			$(this).toggleClass('active-price');
 		});
 
@@ -26,7 +26,7 @@
 			$('#cbox-3').html(totalPoints);
 		});
 
-		$('.colCont, .col3box').click(function () {
+		$('.col2 .colCont, .col3box').click(function () {
 			var totalsum = 0;
 			$('.cbox').find('#cbox-1, #cbox-2, #cbox-3').each(function () {
 				totalsum += parseInt($(this).html());
