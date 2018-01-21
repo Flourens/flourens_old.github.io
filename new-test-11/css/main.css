@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+button{
+	cursor: pointer;
+}
+
+@font-face {
+    font-family: "Decalotype-Bold";
+    src: url(../fonts/Decalotype-Bold.ttf);
+}
+@font-face {
+    font-family: "Decalotype-Black";
+    src: url(../fonts/Decalotype-Black.otf);
+}
+@font-face {
+    font-family: "Decalotype-Regular";
+    src: url(../fonts/Decalotype-Regular.ttf);
+}
+@font-face {
+    font-family: "Decalotype-Medium";
+    src: url(../fonts/Decalotype-Medium.otf);
+}
+@font-face {
+    font-family: "Decalotype-Light";
+    src: url(../fonts/Decalotype-Light.otf);
+}
+
+.text br {
+	line-height: 2;
+}
+
+p, a, li{
+    font-family: "Decalotype-Regular";
+    color: #3b3b3b;
+		letter-spacing: 2.4px;
+}
+
+h1, h2, h3{
+    font-family: "Decalotype-Bold";
+		letter-spacing: 4px;
+}
+
+.main{
+    width: 965px;
+    margin: 0 auto;
+    background-image: url("../img/iconbg.png");
+    background-repeat: no-repeat;
+    background-position: 100% 8%;
+}
+
+.content{
+    width: 720px;
+    margin: 0 auto;
+}
+.branch{
+    overflow: hidden;
+    margin-bottom: 100px;
+		padding-bottom: 170px;
+		position: relative;
+		padding-top: 155px;
+}
+.branch-bg{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 76%;
+	background-color: #379dd7;
+	top: 100px;
+	left: 50%;
+}
+.branch-bg:before, .branch-bg:after{
+		position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid #379dd7;
+    background-color: #379dd7;
+    border-radius: 50%;
+}
+.branch-bg:before{
+	top: -15px;
+	left: calc(50% - 9px);
+}
+.branch-bg:after{
+	bottom: -7px;
+	left: calc(50% - 9px);
+}
+.branch {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.branch .half p{
+	font-size: 14px;
+	letter-spacing: 1.4px;
+}
+
+.half{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.halfc{
+	padding-right: 10px;
+}
+
+.halfcpad{
+    box-sizing: border-box;
+    padding-left: 60px;
+}
+
+.block{
+    overflow: hidden;
+		padding-bottom: 123px;
+}
+
+.imgr{
+    width: 100%;
+		z-index: 100;
+}
+.imgl{
+    width: 100%;
+}
+.imgr-wrap, .imgl-wrap{
+	 margin-left: 58px;
+	 position: relative;
+	 width: 296px;
+	 height: auto;
+}
+.imgl-wrap{
+	margin-left: auto;
+	margin-right: 50px;
+	z-index: 2;
+}
+
+.imgr-wrap:after, .imgl-wrap:after{
+		position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #379dd7;
+    background-color: #fff;
+    border-radius: 50%;
+		z-index: 2;
+}
+.imgr-wrap:before, .imgl-wrap:before{
+	  position: absolute;
+    content: '';
+    width: 190px;
+    height: 3px;
+    background-color: #379dd7;
+		z-index: -1;
+}
+.imgl-wrap:after {
+		top: 33.5%;
+    right: -72px;
+}
+.imgl-wrap:before {
+		display: none;
+}
+.imgr-wrap:after {
+		display: none;
+}
+.imgr-wrap:before {
+		top: 37%;
+    left: -170px;
+}
+.imgr.title1:before{
+	width: 130px;
+}
+.titleRight.title4:before{
+	width: 215px;
+}
+
+.brunch-btn{
+	background-color: #2f9dd8;
+	color: #fff;
+	font-family: "Decalotype-Bold";
+	letter-spacing: 1px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: 60px;
+	display: block;
+	text-align: center;
+	margin-top: 19px;
+	padding: 12px;
+	padding-right: 10px;
+	padding-left: 46px;
+	text-decoration: none;
+}
+.brunch-btn-b{
+	background-image: url(../img/btn-b.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.brunch-btn-r{
+	background-image: url(../img/btn-r.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+/* responsive */
+@media screen and (max-width: 965px){
+    .main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+	.branch-bg{
+		height: 90%;
+	}
+	.block{
+		padding-bottom: 0;
+	}
+		.half{
+			width: 100%;
+			text-align: center;
+		}
+		.imgr-wrap:after, .imgl-wrap:after, .imgr-wrap:before, .imgl-wrap:before{
+			display: none;
+		}
+		.halfcpad, .halfc{
+			padding-left: 0px;
+			padding-right: 0;
+			max-width: 300px;
+			margin: 0 auto;
+			margin-top: 0px;
+		}
+		.imgr-wrap, .imgl-wrap{
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+		.imgr-wrap img, .imgl-wrap img{
+			margin: 0;
+		}
+		
+}
+
+@media screen and (max-width: 640px){
+
+}
+
+@media screen and (max-width: 425px){
+    .half {
+        width: 100%;
+    }
+    .branch{
+        background: white;
+    }
+    .halfcpad {
+        padding-left: 0px;
+    }
+    .half {
+        padding-right: 0px;
+    }
+    button {
+        margin: 50px 0 50px 24%;
+    }
+}
