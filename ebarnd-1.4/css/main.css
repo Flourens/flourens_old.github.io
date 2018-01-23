@@ -1224,7 +1224,7 @@ span.blue{
 }
 .cbox{
 		height: 56px;
-    width: 100%;
+    width: 90%;
     border: solid 2px white;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1301,7 +1301,7 @@ span.blue{
     float: left;
     position: relative;
     top: 76px;
-    left: 12px;
+    left: 5px;
 }
 
 /* inputs */
@@ -1593,7 +1593,7 @@ footer .r2 img{
 		width: 44%;
 	}	
 	.plus{
-		left: 0.5%;
+		left: -1%;
 		width: 5%;
 	}
 		.mids{
@@ -1677,6 +1677,9 @@ footer .r2 img{
 		}
 }
 @media screen and (max-width: 425px){
+	.cbox{
+		width: 100%;
+	}
 	header h1, header p{
 		max-width: 300px;
 	}
