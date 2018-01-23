@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
 }
-
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
 
 button{
 	cursor: pointer;
@@ -53,7 +57,11 @@ h1, h2, h3{
 }
 
 .content{
-    width: 720px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+footer .content{
+    max-width: 90%;
     margin: 0 auto;
 }
 .branch{
@@ -115,7 +123,6 @@ h1, h2, h3{
 
 .block{
     overflow: hidden;
-		padding-bottom: 123px;
 }
 
 .imgr{
@@ -205,6 +212,75 @@ h1, h2, h3{
 	background-position: center;
 }
 
+
+/*---- Footer  ----*/
+footer{
+	background-color: #3c84bf;
+	width: 100%;
+}
+footer a{
+	text-decoration: none;
+}
+footer .right-bar{
+	float: right;
+	width: 30%;
+	padding-top: 27px;
+}
+footer .left-bar{
+	padding-top: 27px;
+	float: left;
+	width: 30%;
+}
+.footer-logo{
+	width: 40%;
+	float: left;
+	padding-top: 11px;
+}
+.footer-logo img{
+	display: block;
+	width: 52px;
+	height: auto;
+	margin: 0 auto;
+}
+
+footer p{
+	font-size: 8px;
+	font-family: 'Arial', sans-serif;
+	color: #fff;
+	display: block;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	
+}
+footer .l1, footer .l2, footer .r1, footer .r2{
+	display: inline-block;
+	
+}
+footer .l1{
+	margin-right: 25px;
+}
+footer .r1{
+	margin-right: 25px;
+}
+footer .r1, footer .r2{
+	display: inline-block;
+	float: right;
+}
+
+footer .l1 img, footer .l2 img, footer .r1 img, footer .r2 img{
+	width: 26px;
+	height: 26px;
+	margin: 0 auto;
+	display: block;
+}
+footer .r2 img{
+	margin-right: 40px;
+}
+/*---- /footer  ----*/
+
+
+
 /* responsive */
 @media screen and (max-width: 965px){
     .main {
@@ -248,6 +324,19 @@ h1, h2, h3{
 }
 
 @media screen and (max-width: 425px){
+		footer .r2 img{
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+	footer .l1, footer .l2, footer .r1, footer .r2{
+		display: block;
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.footer-logo{
+		padding-top: 45px;
+	}
     .half {
         width: 100%;
     }
