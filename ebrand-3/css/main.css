@@ -65,6 +65,7 @@ h3 {
 	background-image: url("../img/iconbg.png");
 	background-repeat: no-repeat;
 	background-position: 100% 8%;
+	owh
 }
 
 .content {
@@ -429,6 +430,9 @@ footer .r2 img {
 /* responsive */
 
 @media screen and (min-width: 1200px) {
+	footer .content{
+	width: 1200px;
+}
 	.quote p {
 		font-size: 40px;
 	}
@@ -439,7 +443,7 @@ footer .r2 img {
 	.quote-img {
 		top: 50px;
 		width: 550px;
-		right: -200px;
+		right: -100px;
 	}
 	.main {
 		background-position: 100% 15%;
