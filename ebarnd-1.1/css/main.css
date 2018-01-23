@@ -1480,7 +1480,7 @@ footer p{
 }
 footer .l1, footer .l2, footer .r1, footer .r2{
 	display: inline-block;
-	width: 30%;
+	
 }
 footer .l1{
 	margin-right: 25px;
@@ -1490,6 +1490,7 @@ footer .r1{
 }
 footer .r1, footer .r2{
 	display: inline-block;
+	float: right;
 }
 
 footer .l1 img, footer .l2 img, footer .r1 img, footer .r2 img{
@@ -1497,6 +1498,9 @@ footer .l1 img, footer .l2 img, footer .r1 img, footer .r2 img{
 	height: 26px;
 	margin: 0 auto;
 	display: block;
+}
+footer .r2 img{
+	margin-right: 40px;
 }
 /*---- /footer  ----*/
 
@@ -1660,6 +1664,10 @@ footer .l1 img, footer .l2 img, footer .r1 img, footer .r2 img{
 }
 
 @media screen and (max-width: 425px){
+		footer .r2 img{
+	margin: 0 auto;
+	margin-top: 30px;
+	}
 	footer .l1, footer .l2, footer .r1, footer .r2{
 		display: block;
 		float: none;
