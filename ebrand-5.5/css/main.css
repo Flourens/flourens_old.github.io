@@ -31,11 +31,11 @@ body {
 .content{
 	max-width: 965px;
 	margin: 0 auto;
-	margin-bottom: 250px;
+	margin-bottom: 750px;
 }
 footer .content{
 	margin-bottom: 0px;
-	width: 90%;
+	max-width: 1200px;
 }
 .header {
 	text-align: center;
@@ -303,7 +303,7 @@ footer .left-bar{
 	width: 30%;
 }
 .footer-logo{
-	width: 40%;
+	width: 40%; 
 	float: left;
 	padding-top: 11px;
 }
@@ -322,6 +322,7 @@ footer p{
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 15px;
+	letter-spacing: 2px;
 	
 }
 footer .l1, footer .l2, footer .r1, footer .r2{
@@ -351,6 +352,12 @@ footer .r2 img{
 /*---- /footer  ----*/
 
 
+@media screen and (max-width: 1200px){
+	footer .content{
+	max-width: 90%;
+}
+	
+}
 @media screen and (max-width: 986px){
 
 	.bubble{

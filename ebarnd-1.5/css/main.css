@@ -431,8 +431,7 @@ header img{
 	font-size: 24px;
 }
 .boxes{
-	width: 100%;
-	max-width: 852px;
+	width: 97%;
 	margin: 0 auto;
 }
 
@@ -1219,20 +1218,20 @@ span.blue{
     overflow: hidden;
 }
 .box-item{
-	float: left;
-	width: 21%;
+	display: inline-block;
+	width: 23%;
 }
 .cbox{
 		height: 56px;
-    width: 90%;
+    width: 95%;
     border: solid 2px white;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 5px;
     text-align: center;
     border-radius: 10px;
-    margin-left: 0;
-    margin-top: 60px;
+    margin: 0 auto;
+    margin-top: 60px;		
 }
 
 .cbox span{
@@ -1242,7 +1241,7 @@ span.blue{
 }
 
     .txbot {
-			width: 184px;
+			width: 100%;
 			float: left;
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
@@ -1296,12 +1295,10 @@ span.blue{
 }
 
 .plus{
-    width: 4.5%;
-    height: 10px;
-    float: left;
+    width: 2.6%;
     position: relative;
-    top: 76px;
-    left: 0px;
+    left: 3px;
+		display: inline-block;
 }
 
 /* inputs */
@@ -1507,6 +1504,10 @@ footer .r2 img{
 
 /* responsive  */
 @media screen and (min-width: 1200px) {
+	.boxes{
+		max-width: 1000px;
+		margin: 0 auto;
+	}
 	header img{
 		padding-top: 80px;
 		padding-bottom: 0;
@@ -1574,6 +1575,10 @@ footer .r2 img{
 	}
 }
 @media screen and (max-width: 1200px) {
+		.boxes{
+			max-width: 875px;
+			margin: 0 auto;
+		}
 
     .main {
       width: 100%;
@@ -1586,15 +1591,19 @@ footer .r2 img{
 }
 
 @media screen and (max-width: 768px) {
+	.cbox{
+		width: 95%;
+		margin-right: 9px;
+		margin-left: 9px;
+	}
 	.txbot{
 		width: 100%;
 	}
 	.box-item{
-		width: 44%;
+		width: 47%;
 	}	
 	.plus{
-		left: -1%;
-		width: 5%;
+		left: 0%;
 	}
 		.mids{
 			background: rgba(0,0,0,0);
@@ -1677,8 +1686,13 @@ footer .r2 img{
 		}
 }
 @media screen and (max-width: 425px){
+	.boxes{
+		padding: 0;
+	}
 	.cbox{
-		width: 100%;
+		width: 93%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	header h1, header p{
 		max-width: 300px;
@@ -1725,11 +1739,8 @@ footer .r2 img{
 			width: 100%;
 		}
 	.plus {
-    width: 14.5%;
     height: 20px;
-    float: none;
-    position: relative;
-    top: 16px;
+    top: 30px;
     left: calc(50% - 5px);
 	}
 	.no-br{

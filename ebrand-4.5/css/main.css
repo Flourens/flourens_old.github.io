@@ -51,9 +51,6 @@ h1, h2, h3{
 .main{
     width: 965px;
     margin: 0 auto;
-    background-image: url("../img/iconbg.png");
-    background-repeat: no-repeat;
-    background-position: 100% 8%;
 }
 
 .content{
@@ -61,13 +58,12 @@ h1, h2, h3{
     margin: 0 auto;
 }
 footer .content{
-    max-width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .branch{
     overflow: hidden;
-    margin-bottom: 100px;
-		padding-bottom: 170px;
+		padding-bottom: 50px;
 		position: relative;
 		padding-top: 155px;
 }
@@ -75,7 +71,7 @@ footer .content{
 	content: '';
 	position: absolute;
 	width: 3px;
-	height: 76%;
+	height: 100%;
 	background-color: #379dd7;
 	top: 100px;
 	left: 50%;
@@ -91,15 +87,16 @@ footer .content{
 }
 .branch-bg:before{
 	top: -15px;
-	left: calc(50% - 9px);
+	left: calc(50% - 10px);
 }
 .branch-bg:after{
-	bottom: -7px;
-	left: calc(50% - 9px);
+	bottom: 100px;
+	left: calc(50% - 10px);
 }
 .branch {
 	max-width: 900px;
 	margin: 0 auto;
+	margin-bottom: 700px;
 }
 
 .branch .half p{
@@ -191,7 +188,7 @@ footer .content{
 	letter-spacing: 1px;
 	width: 100px;
 	margin-left: auto;
-	margin-right: 60px;
+	margin-right: auto;
 	display: block;
 	text-align: center;
 	margin-top: 19px;
@@ -252,6 +249,7 @@ footer p{
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 15px;
+	letter-spacing: 2px;
 	
 }
 footer .l1, footer .l2, footer .r1, footer .r2{
@@ -283,6 +281,37 @@ footer .r2 img{
 
 
 /* responsive */
+@media screen and (min-width: 1200px){
+	.content{
+		max-width: 1200px;
+	}
+	.main{
+		width: 1200px;
+	}
+	.branch{
+		max-width: 100%;
+	}
+	.imgl-wrap, .imgr-wrap{
+		width: 85%;
+		margin: 0 auto;
+	}
+	.imgl-wrap:after{
+		right: -57px;
+		top: 34.5%;
+	}
+	.imgl-wrap, .imgr-wrap{
+		
+	}
+	.halfc{
+		padding: 0;
+	}
+	
+}
+@media screen and (max-width: 1200px){
+		footer .content{
+		max-width: 90%;
+	}
+}
 @media screen and (max-width: 965px){
     .main {
         width: 100%;
@@ -290,8 +319,11 @@ footer .r2 img{
 }
 
 @media screen and (max-width: 720px) {
+	.branch-bg:after{
+		bottom: 0;
+	}
 	.branch-bg{
-		height: 90%;
+		height: 93%;
 	}
 	.block{
 		padding-bottom: 0;

@@ -92,6 +92,9 @@ header {
 	position: relative;
 	z-index: 10;
 }
+footer p{
+	letter-spacing: 2px;
+}
 
 .quote:before {
 	content: url(../img/quote.png);
@@ -192,7 +195,8 @@ button {
 	padding-top: 10px;
 	overflow: hidden;
 	margin-bottom: 100px;
-	padding-bottom: 170px;
+	padding-bottom: 70px;
+	
 	position: relative;
 }
 
@@ -230,6 +234,7 @@ button {
 .branch {
 	max-width: 700px;
 	margin: 0 auto;
+	margin-bottom: 600px;
 }
 
 .branch .half p {
@@ -472,9 +477,15 @@ footer .r2 img {
 	}
 	.branch {
 		max-width: 1000px;
+		
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	footer .content{
+		width: 90%;
+	}
+}
 @media screen and (max-width: 965px) {
 	footer .content {
 		width: 90%;
@@ -605,7 +616,8 @@ footer .r2 img {
 		padding-right: 0px;
 	}
 	button {
-		margin: 50px 0 50px 24%;
+		font-size: 26px;
+		margin-top: 40px;
 	}
 	.firsts h2 {
 		font-size: 35px;
