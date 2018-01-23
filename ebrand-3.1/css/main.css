@@ -147,7 +147,25 @@ header {
 .firsts li {
 	list-style-type: none;
 	font-size: 16px;
-	line-height: 2;
+	line-height: 1;
+	position: relative;
+	margin: 25px 0;
+	margin-left: 25px;
+	
+}
+.firsts li:before {
+	content: '';
+	-webkit-background-size: cover;
+	background-size: 100%;
+	background-position: center;
+	width: 16px;
+	height: 100%;
+	background-image: url(../img/logo.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	top: 0;
+	left: -25px;
+	
 }
 
 .firsts ul {
@@ -159,11 +177,11 @@ button {
 	background-color: #f26864;
 	;
 	color: white;
-	padding: 12px 23px;
+	padding: 18px 34px;
 	border: none;
 	border-radius: 10px;
 	font-family: "Decalotype-Regular";
-	font-size: 24px;
+	font-size: 44px;
 	text-align: center;
 	margin: 0 auto;
 	margin-top: 70px;
