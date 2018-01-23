@@ -136,7 +136,7 @@ header {
 .firsts h2.diff {
 	font-size: 36px;
 	padding-top: 40px;
-	padding-bottom: 25px;
+	padding-bottom: 0px;
 }
 
 .firsts .diff-text {
