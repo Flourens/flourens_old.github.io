@@ -1507,6 +1507,10 @@ footer .r2 img{
 
 /* responsive  */
 @media screen and (min-width: 1200px) {
+	header img{
+		padding-top: 80px;
+		padding-bottom: 0;
+	}
 	header{
 		background-position: center;
 	}
@@ -1570,6 +1574,7 @@ footer .r2 img{
 	}
 }
 @media screen and (max-width: 1200px) {
+
     .main {
       width: 100%;
     }
