@@ -521,15 +521,41 @@ template {
 	padding-left: 15px;
 	margin-bottom: 15px;
 }
+.download-span{
+ 	font-size: 12px;
+	font-family: "Helvetica Neue";
+	padding: 13px 0;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 5px;
+	text-transform: uppercase;
+	border-left: 1px solid #fff;
+	position: relative;
+	margin-top: -12px;
+	display: none;
+	
+}
+.fa-download{
+	background-color: #438bc9;
+	padding: 10px;
+	border-radius: 3px;
+	z-index: 10;
+	position: relative;
+	border-right: 1px solid #fff;
+}
+.fa-download:hover{
+	transition: all 0.3s ease;
+}
+.fa-download:hover span{
+	display:inline;
+}
+
 .vp-info__text-d{
 	text-align: left;
 	padding-left: 15px;
-	
 }
 .vp-info__link{
-	background-color: #438bc9;
 	color: #fff;
-	padding: 8px;
 	font-size: 16px;
 	border-radius: 3px;
 	white-space: nowrap;
@@ -572,10 +598,7 @@ template {
 	right: 0;
   top: 0;
 }
-.vp-info__link:hover{
-	background-color: #1b5588;
-	transition: all 0.3s ease;
-}
+
 
 @media screen and (max-width: 1378px) {
 	.vp-info__item:nth-child(2n){
@@ -587,7 +610,8 @@ template {
 		margin-bottom: 20px;
 	}
 	.vp-info__download{
-		margin-top: 15px;
+		margin-top: 0px;
+		margin-bottom: 5px;
 	}
 	.vp-info{
 		width: 20%;
@@ -600,7 +624,7 @@ template {
 		font-size: 25px;
 	}
 }
-@media screen and (max-width: 1256px) {
+@media screen and (max-width: 960px) {
 	.vp-info{
 		width: 100%;
 		margin-bottom: 20px;
