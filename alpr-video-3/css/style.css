@@ -535,7 +535,7 @@ template {
 	display: none;
 	
 }
-.fa-download{
+.fa{
 	background-color: #438bc9;
 	padding: 10px;
 	border-radius: 3px;
@@ -543,10 +543,10 @@ template {
 	position: relative;
 	border-right: 1px solid #fff;
 }
-.fa-download:hover{
+.fa:hover{
 	transition: all 0.3s ease;
 }
-.fa-download:hover span{
+.fa:hover span{
 	display:inline;
 }
 
