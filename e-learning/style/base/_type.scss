@@ -1,0 +1,243 @@
+$link-color: 						$brand;
+$heading-color:					$major;
+$h1-font-size: 					32px;
+$h2-font-size: 					28px;
+$h3-font-size: 					24px;
+$h4-font-size: 					20px;
+$h5-font-size: 					16px;
+$h6-font-size: 					12px;
+
+
+::selection {
+	color: $white;
+	background-color: $brand;
+}
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+
+	&:hover {
+		color: $link-color;
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+p {
+	@include distancing(18px);
+	@include distancing(8px, both, 'p');
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $heading-color;
+	font-weight: 600;
+
+	+ .sub-heading {
+		margin-top: 10px;
+	}
+
+	+ .sub-heading-2 {
+		margin-top: 4px;
+	}
+}
+
+.sub-heading,
+.sub-heading-2 {
+	+ h1, + h2, + h3, + h4, + h5, + h6 {
+		margin-top: 10px !important;
+	}
+}
+
+h1 {
+	font-size: $h1-font-size;
+	text-transform: uppercase;
+	text-align: center;
+	@include distancing(30px !important, top);
+	@include distancing(30px, bottom);
+}
+
+h2 {
+	font-size: $h2-font-size;
+	text-align: center;
+	text-transform: uppercase;
+	@include distancing(30px !important, top);
+	@include distancing(20px, bottom);
+}
+
+h3 {
+	font-size: $h3-font-size;
+	@include distancing(30px !important, top);
+	@include distancing(20px, bottom);
+}
+
+h4 {
+	font-size: $h4-font-size;
+	@include distancing(30px !important, top);
+	@include distancing(20px, bottom);
+}
+
+h5 {
+	font-size: $h5-font-size;
+	@include distancing(30px !important, top);
+	@include distancing(20px, bottom);
+}
+
+h6 {
+	font-size: $h6-font-size;
+	@include distancing(30px !important, top);
+	@include distancing(20px, bottom);
+}
+
+
+// nearby headings
+
+// @for $i from 1 through 5 {
+//   h#{$i} {
+// 		@for $ii from 1 through 5 {
+//   		+ h#{$ii} {
+// 				margin-top: 2.5rem !important;
+// 			}
+//   	}
+//   }
+// }
+
+
+// text colors
+
+.color-brand {
+	color: $brand;
+}
+
+.color-danger {
+	color: $danger;
+}
+
+.color-success {
+	color: $success;
+}
+
+.color-minor {
+	color: $minor;
+}
+
+
+// text sizes
+
+.text-xs {
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.text-sm {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.text-lg {
+	font-size: 20px;
+	line-height: 26px;
+}
+
+// .text-xl {
+// 	font-size: 6.4rem;
+// 	line-height: 6.4rem;
+// }
+
+
+// text alignment
+
+.text-left { text-align: left }
+.text-right { text-align: right }
+.text-center { text-align: center }
+.text-upper {	text-transform: uppercase }
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.text-thin { font-weight: 300; }
+
+.text-ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+// lists
+
+// ul,
+// ol,
+// .list-simple {
+// 	@include list-reset();
+
+// 	li + li {
+// 		margin-top: 1.2rem;
+// 	}
+// }
+
+// ul {
+// 	list-style-type: disc;
+// 	padding-left: 32px;
+
+// 	li {
+
+// 	}
+// }
+
+// ol {
+// 	@include distancing(1.2rem, top);
+// 	@include distancing(1.2rem, bottom);
+// 	counter-reset: list;
+
+// 	li {
+// 		padding-left: 50px;
+// 		position: relative;
+
+// 		+ li {
+// 			margin-top: 2.6rem;
+// 		}
+
+// 		&:before {
+// 			@include pseudo-block();
+// 			padding-left: 1px;
+// 			padding-right: 1px;
+// 			counter-increment: list;
+// 			content: counter(list);
+// 			left: 0;
+// 			top: 4px;
+// 			font-size: 3rem;
+// 			line-height: 3.2rem;
+// 			font-weight: bold;
+// 			text-align: center;
+// 			border-bottom: 2px solid $brand;
+// 		}
+// 	}
+// }
+
+// dl {
+// 	@include distancing(1.2rem, top);
+// 	@include distancing(1.2rem, bottom);
+// }
+
+// br {
+// 	@include distancing(0 !important);
+// }
+
+hr {
+// 	border: solid $border;
+// 	border-width: 1px 0 0;
+// 	@include distancing(5rem, both);
+
+	&.hr-indent-sm {
+		@include distancing(21px !important, both);
+	}
+
+	&.hr-intense {
+		border-color: #2e4b4f;
+	}
+}

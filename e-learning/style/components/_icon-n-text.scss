@@ -1,0 +1,38 @@
+.icon-n-text {
+	width: auto;
+	height: auto;
+	@include flexbox;
+	@include flex-direction(row);
+	@include justify-content(flex-start);
+	@include align-items(center);
+
+	@include distancing(7px);
+	
+	html[dir=rtl] & {
+		> [class^=icon] + .text {
+			margin-right: 11px;
+		}
+	}
+
+	html[dir=ltr] & {
+		> [class^=icon] + .text {
+			margin-left: 11px;
+		}
+	}
+
+	.icon {
+		@include flex-shrink(0);
+	}
+
+	.text {
+		
+	}
+
+	@at-root a#{&} {
+		text-decoration: none;
+	}
+	
+	&._vertical {
+		@include flex-direction(column);
+	}
+}

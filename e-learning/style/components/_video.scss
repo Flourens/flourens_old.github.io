@@ -1,0 +1,129 @@
+.video-responsive-wrap {
+	background-color: #191919;
+	@include flexbox;
+	@include flex-direction(row);
+	@include justify-content(flex-start);
+	@include align-content(stretch);
+	@include align-items(stretch);
+}
+
+.video-responsive {
+	width: 100%;
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	// overflow: hidden;
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom: 0;
+		height: auto;
+		@include align-self(stretch);
+	}
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.button_play_wrap {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0.1;
+	z-index: 999;
+
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+
+.button_play {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 174px;
+	height: 94px;
+	margin-left: -87px;
+	margin-top: -47px;
+	z-index: 1000;
+	border: 5px solid rgba(255, 255, 255, 0.6);
+	border-radius: 8px;
+	background-color: rgb(3, 214, 243);
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+
+.button_play:hover {
+		background-color: #2e4b4f;
+}
+
+.pencil {
+	background: url('../images/pencil.svg') no-repeat;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto 6px auto;
+	display: block;
+}
+
+.ytp-icon.ytp-icon-large-play-button-hover {
+		background: none !important;
+}
+
+
+.video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($black, .7);
+	z-index: 10;
+}
+
+
+.button-edit {
+	display: inline-block;
+	text-decoration: none;
+	width: 174px;
+	height: 94px;
+	position: absolute;
+	padding-top: 17px;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 1000;
+	border: 5px solid $brand;
+	border-radius: 8px;
+	background-color: rgba($major, .85);
+	text-align: center;
+	color: $white;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 22px;
+	
+	&:hover {
+		color: $white;
+	}
+}
+

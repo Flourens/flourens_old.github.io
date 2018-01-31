@@ -1,0 +1,23 @@
+{
+  "name": "elearning",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "sanvovanych <sanvovanych@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^3.2.1",
+    "multiselect": "^0.9.12",
+    "magnific-popup": "^1.1.0"
+  }
+}

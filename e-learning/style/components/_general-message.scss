@@ -1,0 +1,17 @@
+.general-message {
+	width: 320px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	@include transform(translateX(-50%) translateY(-50%));
+	text-align: center;
+
+	.sub {
+		margin-top: 18px;
+	}
+
+	.site-logo {
+		width: 124px;
+		height: 62px;
+	}
+}

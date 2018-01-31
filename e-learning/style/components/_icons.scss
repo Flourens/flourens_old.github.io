@@ -1,0 +1,411 @@
+.icon,
+.menu-item-icon {
+	display: inline-block;
+	vertical-align: middle;
+	background-position: 50%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+// mixin for change icon on hover, active, etc.
+@mixin icon-shift($image-url: 'none') {
+	@at-root a#{&}:hover,
+	a:hover > &,
+	a.active > & {
+		background-image: url($image-url);
+	}
+}
+
+
+// context
+.icon-position-start {
+	margin: -4px -10px 0 8px;
+}
+
+.icon-position-end {
+	margin: -4px 8px 0 -10px;
+}
+
+
+.icon-manage {
+	width: 26px;
+	height: 25px;
+	background-image: url(../images/menu-1.svg);
+
+	@include icon-shift('../images/menu-1-hover.svg');
+}
+
+.icon-options {
+	width: 26px;
+	height: 23px;
+	background-image: url(../images/options.svg);
+
+	@include icon-shift('../images/options-hover.svg');
+}
+
+.icon-options-2 {
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/options-2.svg);
+}
+
+.icon-users {
+	width: 26px;
+	height: 20px;
+	background-image: url(../images/menu-3.svg);
+
+	@include icon-shift('../images/menu-3-hover.svg');
+}
+
+.icon-coupon {
+	width: 26px;
+	height: 26px;
+	background-image: url(../images/menu-4.svg);
+
+	@include icon-shift('../images/menu-4-hover.svg');
+}
+
+.icon-handshake {
+	width: 26px;
+	height: 24px;
+	background-image: url(../images/menu-5.svg);
+
+	@include icon-shift('../images/menu-5-hover.svg');
+}
+
+.icon-payment {
+	width: 26px;
+	height: 25px;
+	background-image: url(../images/menu-6.svg);
+
+	@include icon-shift('../images/menu-6-hover.svg');
+}
+
+.icon-code {
+	width: 26px;
+	height: 20px;
+	background-image: url(../images/code.svg);
+
+	@include icon-shift('../images/code-hover.svg');
+}
+
+.icon-course-complete {
+	width: 23px;
+	height: 21px;
+	background-image: url(../images/course-complete.svg);
+}
+
+.icon-course-pause {
+	width: 23px;
+	height: 21px;
+	background-image: url(../images/course-pause.svg);
+}
+
+.icon-course-number {
+	width: 23px;
+	height: 21px;
+	background-image: url(../images/course-number.svg);
+	color: $white;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.icon-course-number-2 {
+	width: 34px;
+	height: 29px;
+	padding-top: 2px;
+	background-image: url(../images/course-number-2.svg);
+	font-size: 16px;
+	color: $major;
+	line-height: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.icon-course-number-white {
+	width: 28px;
+	height: 24px;
+	padding-top: 2px;
+	background-image: url(../images/course-number-white.svg);
+	color: $white;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.icon-edit-2 {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/edit-2.svg);
+}
+
+.icon-edit {
+	width: 18px;
+	height: 18px;
+	background-image: url(../images/edit.svg);
+}
+
+.icon-remove {
+	width: 18px;
+	height: 19px;
+	background-image: url(../images/remove.svg);
+}
+.icon-remove-2 {
+	width: 14px;
+	height: 15px;
+	background-image: url(../images/remove-2.svg);
+}
+
+.icon-add-partner {
+	width: 53px;
+	height: 39px;
+	background-image: url(../images/add-partner.svg);
+}
+
+.icon-add-coupon {
+	width: 49px;
+	height: 44px;
+	background-image: url(../images/add-coupon.svg);
+}
+
+.icon-add-code {
+	width: 46px;
+	height: 32px;
+	background-image: url(../images/add-code.svg);
+}
+
+.icon-add-user {
+	width: 41px;
+	height: 35px;
+	background-image: url(../images/add-user.svg);
+}
+
+.icon-arrow-left {
+	width: 4px;
+	height: 9px;
+	background-image: url(../images/arrow-left-2.svg);
+}
+
+.icon-arrow-left-2 {
+	width: 8px;
+	height: 16px;
+	background-image: url(../images/arrow_left.svg);
+}
+
+.icon-paypal {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/paypal.svg);
+	background-size: 26px 26px;
+}
+
+.icon-cardcom {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/cardcom.svg);
+	background-position: 50% 60%;
+	background-size: 37px 29px;
+}
+
+.icon-success {
+	width: 22px;
+	height: 16px;
+	background-image: url(../images/success.svg);
+}
+
+.icon-danger {
+	width: 18px;
+	height: 19px;
+	background-image: url(../images/danger.svg);
+}
+
+.icon-info {
+	width: 14px;
+	height: 14px;
+	background-image: url(../images/info.svg);
+}
+
+.icon-exit {
+	width: 19px;
+	height: 21px;
+	background-image: url(../images/exit.svg);
+}
+
+.icon-cart {
+	width: 18px;
+	height: 20px;
+	background-image: url(../images/cart.svg);
+}
+
+.icon-visible-on {
+	width: 24px;
+	height: 13px;
+	background-image: url(../images/visible-on.svg);
+}
+
+.icon-visible-off {
+	width: 22px;
+	height: 20px;
+	background-image: url(../images/visible-off.svg);
+}
+
+.icon-arrow-right {
+	width: 10px;
+	height: 19px;
+	background-image: url(../images/arrow-right.svg);
+}
+
+.icon-smile {
+	width: 77px;
+	height: 77px;
+	background-image: url(../images/icon-smile.svg);
+}
+
+.icon-lock-2 {
+	width: 17px;
+	height: 25px;
+	background-image: url(../images/lock-2.svg);
+}
+
+.icon-lock-open {
+	width: 17px;
+	height: 17px;
+	background-image: url(../images/lock-open.svg);
+}
+
+.icon-lock-open-2 {
+	width: 17px;
+	height: 17px;
+	background-image: url(../images/lock-open-2.svg);
+
+	@include icon-shift('../images/lock-open-2-hover.svg');
+}
+
+.icon-plus-2 {
+	width: 17px;
+	height: 17px;
+	background-image: url(../images/plus-2.svg);
+	background-size: 14px;
+
+	// @include icon-shift('../images/lock-plus-2-hover.svg');
+}
+
+.icon-lock-closed-2 {
+	width: 17px;
+	height: 17px;
+	background-image: url(../images/lock-closed-2.svg);
+
+	@include icon-shift('../images/lock-closed-2-hover.svg');
+}
+
+.icon-cart-2 {
+	width: 66px;
+	height: 73px;
+	background-image: url(../images/cart-2.svg);
+}
+
+.icon-home {
+	width: 18px;
+	height: 17px;
+	background-image: url(../images/home.svg);
+}
+
+.icon-color {
+	width: 18px;
+	height: 21px;
+	background-image: url(../images/color.svg);
+}
+
+.icon-move {
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/move.svg);
+	background-size: 6px 14px;
+}
+
+.icon-course-plus {
+	width: 18px;
+	height: 16px;
+	background-image: url(../images/course-plus.svg);
+}
+
+.icon-www {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/www.svg);
+	background-position: 45% 60%;
+	background-size: 33px 30px;
+}
+
+.icon-video {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/video.svg);
+	background-size: 23px 26px;
+}
+
+.icon-pdf {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/pdf.svg);
+	background-position: 65% 50%;
+	background-size: 30px 26px;
+}
+
+.icon-files {
+	width: 17px;
+	height: 18px;
+	background-image: url(../images/files.svg);
+}
+
+.icon-hand {
+	width: 24px;
+	height: 21px;
+	background-image: url(../images/hand.svg);
+}
+
+.icon-hand-2 {
+	width: 29px;
+	height: 27px;
+	background-image: url(../images/hand.svg);
+}
+
+.icon-hand-light {
+	width: 24px;
+	height: 21px;
+	background-image: url(../images/hand.svg);
+	opacity: .3;
+}
+
+.icon-published {
+	width: 18px;
+	height: 19px;
+	background-image: url(../images/published.png);
+}
+
+.icon-draft {
+	width: 15px;
+	height: 20px;
+	background-image: url(../images/draft.png);
+}
+
+.icon-sheet {
+	width: 23px;
+	height: 23px;
+	background-image: url(../images/sheet.png);
+}
+
+.icon-menu-opener {
+	width: 28px;
+	height: 20px;
+	background-image: url(../images/menu-opener.png);
+}
+
+.icon-tick {
+	width: 18px;
+	height: 18px;
+	background-image: url(../images/tick.svg);
+}

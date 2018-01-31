@@ -1,0 +1,73 @@
+// text
+// ===========================
+$font-sans:						'Assistant', Arial, sans-serif;
+$font-main: 					$font-sans;
+$rem-size: 						10px;
+$base-font-size:			16px;
+$base-line-height:		22px;
+$base-font-weight: 		normal;
+
+
+// colors
+// ===========================
+$white: 							#ffffff;
+$black: 							#000000;
+$turquose:						#03d6f3;
+$gray-light-1: 				#c1c9cb;
+$gray-light-2: 				#d5d5d5;
+$green: 							#5ed53a;
+$red: 								#ce0000;
+
+	
+$brand: 							$turquose;
+$accent:	 						yellow;
+$major: 							#2e4b4f;
+$minor: 							#929292;
+// $intense: 						#3F4A58;
+$success: 						$green;
+$danger: 							$red;
+
+// $border: 							rgba($white, .25);
+$bg: 									$major;
+$bg-2: 								#253c3f;
+
+
+// responsive dimensions
+// ===========================
+$side-padding: 							 	30px;
+
+$screen-xs:                  	480px;
+$screen-xs-min:              	$screen-xs;
+
+$screen-sm:                  	768px;
+$screen-sm-min:              	$screen-sm;
+
+$screen-md:                  	992px;
+$screen-md-min:              	$screen-md;
+
+$screen-lg:                  	1200px;
+$screen-lg-min:              	$screen-lg;
+
+$screen-xs-max:              	($screen-sm-min - 1);
+$screen-sm-max:              	($screen-md-min - 1);
+$screen-md-max:              	($screen-lg-min - 1);
+
+$screen-height-xs:            100px;
+$screen-height-xs-min:        $screen-height-xs;
+
+$screen-height-sm:            380px;
+$screen-height-sm-min:        $screen-height-sm;
+
+$screen-height-md:            500px;
+$screen-height-md-min:        $screen-height-md;
+
+$screen-height-lg:            700px;
+$screen-height-lg-min:        $screen-height-lg;
+
+$screen-height-xs-max:        ($screen-height-sm-min - 1);
+$screen-height-sm-max:        ($screen-height-md-min - 1);
+$screen-height-md-max:        ($screen-height-lg-min - 1);
+
+$wrapper-sm:             			(720px + $side-padding);
+$wrapper-md:            			(940px + $side-padding);
+$wrapper-lg:      						(1140px + $side-padding);

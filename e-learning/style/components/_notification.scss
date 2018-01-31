@@ -1,0 +1,51 @@
+.notification {
+	padding: 20px 26px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 300px;
+	z-index: 1000;
+	border: solid;
+	border-width: 0 1px 1px 1px;
+	border-radius: 0 0 5px 5px;
+	
+	&:first-child {
+		@include distancing(0 !important);
+	}
+
+	.close {
+		font-size: 22px;
+		line-height: 22px;
+		padding: 5px 10px;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: 0 !important;
+	}
+
+	&.notification-success {
+		background-color: #f3ffe4;
+		border-color: $success;
+
+		.close {
+			color: $success;
+			font-weight: 700;
+		}
+	}
+
+	&.notification-danger {
+		background-color: #ffe4e4;
+		border-color: $danger;
+
+		.close {
+			color: $danger;
+			font-weight: 700;
+		}
+	}
+
+
+	@media (max-width: $screen-xs-max) {
+		right: 0;
+	}
+}

@@ -1,0 +1,195 @@
+$button-default-color: 									$major;
+$button-default-text-color: 						$white;
+
+$button-primary-color: 									$brand;
+$button-primary-text-color: 						$white;
+
+$button-secondary-color: 									#4c6468;
+$button-secondary-text-color: 						$white;
+
+$button-accent-color: 									$accent;
+$button-accent-text-color: 							$white;
+
+$button-alternative-color: 							$major;
+$button-alternative-text-color: 				$white;
+
+$button-inverse-color: 									transparent;
+$button-inverse-text-color: 						$white;
+
+$button-border-radius: 									5px;
+
+$button-sm-font-size: 									2rem;
+$button-md-font-size: 									18px;
+$button-lg-font-size: 									4rem;
+
+$button-border: 												$black;
+
+button {
+	&:focus {
+		outline: none;
+	}
+}
+
+.button {
+	padding: 9px 24px;
+	display: inline-block;
+	background-color: $button-default-color;
+	border: 0 none;
+	font-size: $button-md-font-size;
+	line-height: $button-md-font-size + 4px;
+	font-weight: normal;
+	font-family: $font-sans;
+	color: $button-default-text-color;
+	border-radius: $button-border-radius;
+	cursor: pointer;
+	transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: lighten($major, 5);
+		color: $white;
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.button-primary {
+	background-color: $button-primary-color;
+	color: $button-primary-text-color;
+
+	&:hover {
+		background-color: lighten($button-primary-color, 5);
+		color: $button-primary-text-color;
+	}
+}
+
+.button-secondary {
+	background-color: $button-secondary-color;
+	color: $button-secondary-text-color;
+
+	&:hover {
+		background-color: lighten($button-secondary-color, 5);
+		color: $button-secondary-text-color;
+	}
+}
+
+.button-w-tip {
+	position: relative;
+	margin-right: 45px;
+
+	&:before {
+		@include pseudo-block(50px, 40px);
+		top: 0;
+		right: -45px;
+		bottom: 0;
+		background-color: $bg;
+		border-radius: 0 5px 5px 0;
+	}
+
+	&:after {
+		@include pseudo-block(5px, 40px);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $brand;
+		border-radius: 0 5px 5px 0;
+		transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+	}
+	
+	.icon {
+		position: absolute;
+		right: -30px;
+		top: 7px;
+	}
+
+	&:hover {
+		&:after {
+			background-color: darken($button-primary-color, 5);
+		}
+	}
+}
+
+.button-link {
+	
+}
+
+.pills {
+	@include distancing(27px);
+	cursor: default;
+}
+
+.pill {
+	padding: 4px 16px;
+	background-color: rgba($major, .2);
+	cursor: pointer;
+	text-decoration: none;
+	color: $major;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 28px;
+
+	&.selected {
+		background-color: $brand;
+		color: $white;
+	}
+
+	+ .pill {
+		margin-right: 6px;
+	}
+}
+
+.button-stack {
+	@include flexbox;
+	@include flex-direction(row);
+	@include align-items(stretch);
+
+	.button {
+		white-space: nowrap;
+
+		&:first-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		&:last-child {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&:not(:first-child):not(:last-child) {
+			border-radius: 0 !important;
+		}
+	}
+}
+
+.button-circle {
+	padding: 12px 5px 0;
+	border: 0 none;
+	cursor: pointer;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 40px;
+	background-color: $major;
+	color: $white;
+	box-shadow: 0 0 20px rgba(0,0,0,.4);
+	text-align: center;
+
+	.icon-sheet {
+		margin-right: -2px;
+	}
+}
+
+// context
+.bottom-panel {
+	.button {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}
