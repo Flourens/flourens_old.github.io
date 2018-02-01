@@ -88,7 +88,7 @@
 	.page-lable{
 		background-color: #909090;
 		&:after{
-			content: url(/images/test-mistaces-smile.svg);
+			content: url(../images/test-mistaces-smile.svg);
 			background-color: #fff;
 		}
 	}
@@ -133,7 +133,7 @@
 	.page-lable{
 		background-color: #03d6f3;
 		&:after{
-			content: url(/images/test-mistaces-smile-accent.png);
+			content: url(../images/test-mistaces-smile-accent.png);
 			background-color: #fff;
 		}
 	}

@@ -3527,7 +3527,7 @@ button:focus {
 }
 
 .st-look-mistakes .page-lable:after {
-    content: url(/images/test-mistaces-smile.svg);
+    content: url(../images/test-mistaces-smile.svg);
     background-color: #fff
 }
 
@@ -3575,7 +3575,7 @@ button:focus {
 }
 
 .st-look-saccess .page-lable:after {
-    content: url(/images/test-mistaces-smile-accent.png);
+    content: url(../images/test-mistaces-smile-accent.png);
     background-color: #fff
 }
 
