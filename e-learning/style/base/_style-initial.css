@@ -477,6 +477,12 @@ body {
 .user_name {
     padding-right: 30px;
 }
+.schooler-logo img{
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
 
 .left_menu li a {
     display: inline-block;
@@ -1070,6 +1076,18 @@ body {
     border: 2px solid #2e4b4f;
     border-radius: 5px;
     z-index: 100;
+}
+.answer-error{
+	input[type="radio"]:checked ~ .nm-checkbox:after,
+	input[type="checkbox"]:checked ~ .nm-checkbox:after{
+		background-color: #ff0000 !important;
+	}
+}
+.answer-correct{
+	input[type="radio"]:checked ~ .nm-checkbox:after,
+	input[type="checkbox"]:checked ~ .nm-checkbox:after{
+		background-color: #03d1ed !important;
+	}
 }
 
 .nm-check-img {
