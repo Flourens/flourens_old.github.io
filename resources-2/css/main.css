@@ -198,6 +198,8 @@ footer .content{
 	padding-right: 10px;
 	padding-left: 46px;
 	text-decoration: none;
+	transition: all 0.3s ease;
+	margin-bottom: 10px;
 }
 .brunch-btn-b{
 	background-image: url(../img/btn-b.png);
@@ -210,7 +212,15 @@ footer .content{
 	background-position: center;
 }
 
-
+.brunch-btn-r:hover{
+	transition: all 0.2s ease;
+	box-shadow: 0px 0px 12px 2px rgba(212,104,99,0.94);
+}
+.brunch-btn-b:hover{
+	transition: all 0.2s ease;
+	box-shadow: 0px 0px 12px 2px rgba(92,153,209,0.94);
+}
+ 
 /*---- Footer  ----*/
 footer{
 	background-color: #3c84bf;
