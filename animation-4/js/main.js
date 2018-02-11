@@ -29,7 +29,7 @@
 
 $(document).scroll(function() {
   var y = $(window).scrollTop() + $(window).height();
-  if (y > $('.header').position().top + 400) {
+  if (y > $('.header').position().top + 200) {
     $('.options').css('display', 'block');
   }
 });
