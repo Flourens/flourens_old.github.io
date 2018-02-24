@@ -233,10 +233,14 @@ ul{
   box-shadow: 0px 2px 6px 0 rgba(84, 84, 84, 0.3);
 	font-weight: bold;
 	z-index: 10;
+/*
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+*/
 }
+
+
 .reason-t2 .reason-part1{
 	padding-left: 30px;
 }
@@ -743,8 +747,19 @@ footer {
 	.reason-t3 .reason-text .reason-btn{
 		margin-bottom: 30px;
 	}
+	.reason-btn{
+		text-align: center;
+	}
 }
 @media screen and (max-width: 500px) {
+	
+	.reason-btn span{
+		display: block;
+		width: 100%;
+	}
+	.reason-t5 .reason-box .reason-btn img{
+		padding-bottom: 10px;
+	}
 	.headSlides .h1{
 		font-size: 25px;
 	}
@@ -757,5 +772,12 @@ footer {
 	.reason-t4{
 		padding-right: 50px;
 		padding-left: 50px;
+	}
+	.macscreen-link{
+		width: 100px;
+		height: 100px;
+		top: -40px;
+		font-size: 12px;
+		padding: 30px 10px;
 	}
 }
