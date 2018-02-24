@@ -369,11 +369,11 @@ ul{
 .macscreen-screen{
 	position: absolute;
 	display: block;
-	width: 75.6%;
+	width: 75.7%;
 	max-width: 608px;
 	right: 0;
 	left: 0;
-	top: 6%;
+	top: 5.9%;
 	margin: 0 auto;
 	z-index: 20;
 }
