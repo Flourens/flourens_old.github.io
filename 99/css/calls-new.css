@@ -18,6 +18,7 @@ ul{
 	list-style-type: none;
 }
 
+/*
 .mSlider{
 	width: 100%;
 	margin-top: 115px;
@@ -37,6 +38,7 @@ ul{
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+*/
 .w3-animate-opacity {
 	animation: opac 1.2s
 }
@@ -844,8 +846,10 @@ footer {
 		background-image: url(../images/slide-3-mid.jpg);
 	}
 }
+/*
 @media screen and (max-width: 415px) {
 	.bgWrap{
 		display: none;
 	}
+*/
 }
