@@ -39,20 +39,12 @@ ul{
 	background-size: cover;
 }
 */
-.mSlider{
-	width: 100%;
-	margin-top: 115px;
-	padding-top: 10%;
-	padding-bottom: 9%;
-	padding-right: 30px;
-	padding-left: 30px;
-	position: relative;
-}
 .w3-animate-opacity {
 	animation: opac 1.2s
 }
 
 .headSlides{
+	opacity: 1;
 	position: relative;
 	text-align: center;
 	z-index: 10;
