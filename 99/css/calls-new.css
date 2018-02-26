@@ -45,13 +45,6 @@ ul{
 
 .headSlides{
 	opacity: 1;
-	position: relative;
-	text-align: center;
-	z-index: 10;
-	font-weight: normal;
-	max-width: 866px;
-	margin: 0 auto;
-	padding-top: 50px;
 }
 .headSlides .h1{
 	font-size: 40px;
