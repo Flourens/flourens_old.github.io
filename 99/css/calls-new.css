@@ -10,6 +10,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
+	
 }
 ul{
 	margin-left: 0;
@@ -25,7 +26,16 @@ ul{
 	padding-right: 30px;
 	padding-left: 30px;
 	position: relative;
-	background-color: #000;
+	background:
+		linear-gradient(
+      rgba(0, 0, 0, 0.66), 
+      rgba(0, 0, 0, 0.66)
+    ),
+		url(../images/slide-1-low.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 .w3-animate-opacity {
 	animation: opac 1.2s
@@ -835,13 +845,7 @@ footer {
 	}
 }
 @media screen and (max-width: 415px) {
-	.slider-bg.slider-bg-1{
-		background-image: url(../images/slide-1-low.jpg) !important;
-	}
-	.slider-bg.slider-bg-2{
-		background-image: url(../images/slide-2-low.jpg) !important;
-	}
-	.slider-bg.slider-bg-3{
-		background-image: url(../images/slide-3-low.jpg) !important;
+	.bgWrap{
+		display: none;
 	}
 }
