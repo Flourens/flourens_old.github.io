@@ -569,8 +569,9 @@ ul{
 	content: "•";
 	font-size: 22px;
   color: #e9a700;
-	bottom: 1px;
 	left: -20px;
+	top: 10px;
+	line-height: 0; 
 }
 
 .s-reason3{
