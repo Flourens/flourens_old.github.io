@@ -1,0 +1,2193 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+} 
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+
+
+
+/*Import Fonts*/
+/* This stylesheet generated by Transfonter (https://transfonter.org) on October 13, 2017 3:14 PM */
+@font-face {
+	font-family: 'ProximaNova-Bold';
+	src: url('../fonts/ProximaNova-Bold/ProximaNova-Bold.eot');
+	src: url('../fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Extrabold';
+	src: url('../fonts/ProximaNova-Extrabold/ProximaNova-Extrabold.eot');
+	src: url('../fonts/ProximaNova-Extrabold/ProximaNova-Extrabold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Extrabold/ProximaNova-Extrabold.woff') format('woff'),
+		url('../fonts/ProximaNova-Extrabold/ProximaNova-Extrabold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Light';
+	src: url('../fonts/ProximaNova-Light/ProximaNova-Light.eot');
+	src: url('../fonts/ProximaNova-Light/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Light/ProximaNova-Light.woff') format('woff'),
+		url('../fonts/ProximaNova-Light/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Regular';
+	src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot');
+	src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova-Semibold';
+	src: url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot');
+	src: url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff') format('woff'),
+		url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+/* end import fonts*/
+
+
+/* ----------------Style fo SECTIONS TITLE Start Here------------------*/
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section-size{
+	max-width: 1100px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.section-title{
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 35px;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 0;
+	position: relative;
+	line-height: 1.4;
+}
+.section-title__color{
+	color: #326cd8;
+}
+.section-title:after{
+	content: '';
+	position: absolute;
+	background-image: url(../img/divider_grey.png);
+	width: 56px;
+	height: 10px;
+	left: 0;
+	right: 0;
+	bottom: -25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.section-title-s3{
+	text-align: left;
+}
+.section-3 .section-title:after{
+	top: 15px;
+	right: -70px;
+	left: auto;
+	
+}
+/*
+.section-3 .section-title:after{
+	content: '';
+	position: absolute;
+	background-image: url(../img/divider_grey.png);
+	width: 56px;
+	height: 10px;
+	right: -65px;
+	top: 15px;
+	float: right;
+	display: inline;
+	margin-right: 0;
+}
+*/
+.section-title__text{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.8;
+	padding: 0px 3%;
+	text-align: center;
+	margin-top: 60px;
+}
+/* ----------------Style fo SECTIONS TITLE Finish Here------------------*/
+
+
+/*  ---------------------Section HEADER Start Here-----------------------*/
+.section-header{
+	position: relative;
+}
+/* ---Row TOP LINE Start Here--*/
+.sh-top{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	box-sizing: content-box;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.sh-top__logo{
+	float: left
+}
+.sh-top__call{
+	float: right;
+	margin-top: 5px;
+	color: #fff;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 25px;
+}
+.sh-top__number{
+	color: #fff;
+	font-family: "ProximaNova-Extrabold", sans-serif;
+	font-size: 34px;
+	text-decoration: none;
+	margin-right: 15px;
+}
+/* ---Row TOP LINE Finish Here--*/
+
+/* ---Row NAVIGATION Start Here--*/
+.sh-navigation{
+	position: absolute;
+	top: 120px;
+	width: 100%;
+	height: 57px;
+	background-color: #1d5ed7;
+	z-index: 100;
+}
+.nav-bg{
+	max-width: 1100px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+.nav-list{
+	padding-left: 0;
+	display: inline-block;
+}
+.nav-list__item{
+	height: 57px;
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+}
+
+.nav-list__link{
+	text-decoration: none;
+	color: #fff;
+	height: 57px;
+	text-transform: uppercase;
+	font-family: "ProximaNova-Bold", sans-serif;
+	font-size: 16px;
+	padding: 17px 30px; 
+	background-color: #1d5ed7;
+	transition: background-color 0.3s;	
+}
+.nav-list__link:after{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 17px;
+		right: -3px;
+		top: 4px;
+		background-color: rgba(255, 255, 255, 0.25);
+	}
+.nav-list__link:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+.nav-icon{
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	margin-right: 15px;
+}
+
+/* ---Row NAVIGATION Finish Here--*/
+
+/* ---Row CAROUSEL Start Here--*/
+.sh-carousel{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.mySlides {
+	display:none;
+}
+.sh-slide{
+	content: '';
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 830px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;	
+}
+.sh-slide__1{
+	background-image: url(../img/Slider%20Image_1.png);
+}
+.sh-slide__2{
+	background-image: url(../img/Slider%20Image_2.png);
+}
+.sh-slide__3{
+	background-image: url(../img/Slider%20Image_3.png);
+}
+.carousel-caption{
+	position: absolute;
+	top: 280px;
+	left: 0;
+	right: 0;
+}
+.carousel-text_wrap{
+	margin-right: 40px;
+}
+.carousel-text__bg{
+	background-color: rgba(0, 0, 0, 0.25);
+	box-sizing: border-box;
+	text-align: center;
+	padding: 25px;
+}
+.carousel-text__border{
+	border: 1px solid #fff;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.carousel-text__title{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 43px;
+	color: #fff;
+	line-height: 1.4;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.text-bold{
+	font-family: "ProximaNova-Extrabold", sans-serif;
+}
+.text-uppercase{
+	text-transform: uppercase;
+}
+.carousel-text__sale{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: underline;
+	margin-top: 10px;
+	margin-bottom: 0;	
+}
+.carousel-text__call{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 24px;
+	color: #fff;
+	text-decoration: underline;
+	margin-bottom: 5px;	
+	margin-top: 10px;
+}
+.carousel-text__number{
+	color: #fbee1f;
+	font-family: "ProximaNova-Extrabold", sans-serif;
+	font-size: 37px;
+}
+.carousel-form__wrap{
+	margin-left: 45px;
+	margin-right: -15px;
+}
+.carousel-form__bg{
+	background-color:#fff;
+	border-radius: 10px;
+	padding: 30px 35px;
+	text-align: left;
+	margin-bottom: 90px;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.15);
+}
+.carousel-form__title{
+	color: #326cd8;
+	font-family: "ProximaNova-Bold", sans-serif;
+	font-size: 28px;
+	margin-top: 0;
+}
+.carousel-form__text{
+	color: #59585b;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 14px;
+	margin-right: 10px;
+	line-height: 1.8;
+	margin-bottom: 0;
+}
+.carousel-form__inpute{
+	background-color: rgba(255, 255, 255, 0);
+	margin-top: 17px;
+	margin-bottom: 10px;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	border: none;
+	border-bottom: 1px solid #59585b;
+	padding: 12px 5px;
+}
+.carousel-form__width50{
+	width: 48%;
+}
+.carousel-form__width100{
+	width: 98%;
+}
+.carousel-form__btn{
+	display: block;
+	width: 98%;
+	margin-top: 10px;
+	font-family: "ProximaNova-Semibold", sans-serif;
+	background-color: #326cd8;
+	border: none;
+	border-radius: 30px;
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 15px 70px;
+}
+.sf-form-button:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+/* ---Row CAROUSEL Finish Here--*/
+
+/*  ---------------------Section HEADER Finish Here-----------------------*/
+
+
+/*  ---------------------Section 	WHO WE ARE Start Here-----------------------*/
+
+.section-1{
+	background-color: #f3f6fc;
+	background-image: url(../img/Who_background.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding-top: 90px;
+	padding-bottom: 70px;
+}
+.s1-sale{
+	background-image: url(../img/Shape_background.png);
+	background-position: top left;
+	width: 470px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+	padding-top: 50px;
+	text-align: center;
+}
+.s1-sale__percent{
+	font-family: "ProximaNova-Extrabold", sans-serif;
+	font-size: 29px;
+	color:  #326cd8;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.s1-sale__text{
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 18px;
+	color:  #6f6f6f;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.s1-sale__number{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 30px;
+	color: #326cd8;
+	margin-bottom: 0;
+}
+.s1-sale__icon{
+	font-size: 35px;
+	color: #326cd8;
+	display: block;
+	margin-top: 5px;
+}
+
+/*  ---------------------Section 	WHO WE ARE Finish Here-----------------------*/
+
+/*  ---------------------Section 	WHAT WE DO Start Here-----------------------*/
+
+.section-2{
+	background-color: #fff;
+	padding-top: 100px;
+	padding-bottom: 125px;
+}
+.s2-options{
+	margin-top: 55px;
+	margin-bottom: 90px;
+}
+.s2-row__1{
+	margin-top: 65px;
+	min-height: 160px;
+	padding-right: 10px;
+}
+.s2-row__2{
+	margin-top: 80px;
+	min-height: 160px;
+	padding-right: 10px;
+}
+.s2-item__1{
+	margin-right: 10px;
+}
+.s2-item__2{
+	margin-left: 15px;
+	margin-right: 10px;
+}
+.s2-item__3{
+	margin-left: 30px;
+	margin-right: -15px;
+}
+.s2-item__icon{
+	background-color: #1d5ed7;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-top: 5px;
+}
+.s2-item__img{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 22px;
+	top: 22px;
+}
+.s2-item__description{
+	width: 70%;
+	float: right;
+	padding-right: 10px;
+}
+.s2-item__title{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.s2-item__text{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 15px;
+	color: #000;
+	text-align: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.s2-item__more{
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 16px;
+	color: #326cd8;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: left;
+	display: block;
+	transition: color 0.3;	
+}
+.s2-item__more:hover{
+	color: #255bbe;
+	transition: color 0.3;	
+}
+.s2-wbtn{
+	display: block;
+	text-align: center;
+	
+}
+.s2-btn{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #326cd8;
+	text-align: center;
+	text-decoration: none;
+	background-color:  #f2e51c;
+	border-radius: 40px;
+	padding: 18px 45px;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.15);
+	transition: background-color 0.3s;
+}
+.s2-btn:hover{
+	background-color: #f2d61c;
+	transition: background-color 0.3s;
+}
+
+
+/*  ---------------------Section 	WHAT WE DO Finish Here-----------------------*/
+
+
+/*  ---------------------Section 	A CLEAN HOME Start Here-----------------------*/
+.section-3{
+	padding-top: 80px;
+	padding-bottom: 85px;
+	position: relative;
+	background-color: #f3f6fc;
+	background-image: url(../img/Clean%20Home.png);
+	background-position: right top;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+.s3-content{
+	background-color: #fff;
+	box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.1);
+	padding-top: 55px;
+	padding-left: 50px;
+	padding-right: 30px;
+	margin-right: 30px;
+	padding-bottom: 35px;
+}
+.section-title-s3{
+	font-size: 30px;
+	display: inline-block;
+}
+.s3-text{
+	text-align: left;
+	line-height: 1.85;
+	margin-top: 20px;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.85;
+}
+
+/*  ---------------------Section 	A CLEAN HOME Finish Here-----------------------*/
+
+
+/*  ---------------------Section TRUSTWORTHY HOUSE CLEANING Start Here-----------------------*/
+
+.section-4{
+	padding-top: 115px;
+	padding-bottom: 125px;
+	background-color: #fff;
+	background-image: url(../img/house_background.png);
+	background-size: cover;
+}
+.s4-servises{
+	margin-top: 80px;
+}
+.s4-item{
+	min-height: 360px;
+	position: relative;
+	background-color: #f3f6fc;
+	padding: 20px 30px;
+	box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.s4-wrap__1{
+	padding-right: 15px;
+}
+.s4-wrap__2{
+	padding-left: 20px;
+	margin-right: -15px;
+}
+.s4-icon{
+	background-color: #1d5ed7;
+	width: 87px;
+	height: 87px;
+	border-radius: 50%;
+	position: absolute;
+	display: inline-block;
+	margin-top: 5px;
+	right: 15px;
+	top: -40px;
+}
+.s4-img{
+	width: auto; 
+	height: auto; 
+	position: absolute;
+	left: 30px;
+	top: 22px;
+}
+.s4-title{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 22px;
+	color: #326cd8;
+	text-align: left;
+	margin-right: 20%;
+}
+.s4-text{
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+	line-height: 1.7;
+	margin-top: 5px;
+}
+.s4-more{
+	color: #326cd8;
+	text-decoration: none;
+	transition: color 0.3;
+}
+.s4-more:hover{
+	color: #255bbe;
+	transition: color 0.3;
+}
+
+/*  ---------------------Section TRUSTWORTHY HOUSE CLEANING Finish Here-----------------------*/
+
+
+/*  ---------------------Section CALL TO ACTION Start Here-----------------------*/
+
+.section-5{
+	background: #125ac2; 
+	background: linear-gradient(to bottom, #125ac2 0%,#125ae2 52%,#854bd4 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#125ac2', endColorstr='#854bd4',GradientType=0 ); /* IE6-9 */
+	padding-top: 75px;
+	padding-bottom: 60px;
+}
+.s5-text__subtitle{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #fff;
+	margin-top: 0;
+	text-transform: uppercase;
+	text-align: left;
+}
+.s5-text__title{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 40px;
+	color: #fff;
+	margin-top: 0;
+	text-transform: capitalize;
+	text-align: left;
+}
+.s5-btn{
+	margin-top: 30px;
+	margin-right: 0px;
+	text-align: right;
+	margin-left: 0;
+}
+.s5-btn__link{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #326cd8;
+	text-align: center;
+	background-color: #f2e51c;
+	border-radius: 40px;
+	padding: 19px 45px;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.15);
+	transition: background-color 0.3s;
+}
+.s5-btn__link:hover{
+	background-color: #f2d61c;
+	transition: background-color 0.3s;
+}
+
+/*  ---------------------Section CALL TO ACTION Finish Here-----------------------*/
+
+
+
+/*  ---------------------Section CUSTOMER’S STORIES Start Here-----------------------*/
+
+.section-6{
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+.s6-wrap__1{
+	padding-right: 15px;
+}
+.s6-wrap__2{
+	padding-left: 15px;
+}
+.s6-wrap__3{
+	padding-left: 30px;
+	margin-right: -15px;
+}
+.s6-testimonails{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+.s6-testimonial{
+	position: relative;
+	background-color: #f3f6fc;
+	box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
+	padding: 20px 15px;
+}
+.s6-testimonial__img{
+	width: 85px;
+	height: 85px;
+	display: inline-block;
+	float: left;
+	border-radius: 50%;
+	margin-right: 15px;
+	position: relative;
+}
+/*.s6-testimonial__photo:after{
+	content: '';
+	width: 85px;
+	height: 85px;
+	border: 7px solid #f3f6fc;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	top: 19px	;
+	z-index: 100;
+}
+*/
+.s6-testimonial__icon{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 30px;
+	color: #326cd8;
+}
+.s6-testimonial__name{
+	text-align: left;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 0;
+}
+.s6-testimonial__profecion{
+	text-align: left;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 14px;
+	color: #326cd8;
+	margin-top: 0;
+}
+.s6-testimonial__text{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+	margin-top: 35px;
+}
+.s6-testimonail__wbtn{
+	text-align: center;
+}
+.s6-testimonail__btn{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 17px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background-color: #326cd8;
+	border-radius: 40px;
+	padding: 19px 65px;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.15);
+	transition: background-color 0.3s;
+}
+.s6-testimonail__btn:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+
+/*  ---------------------Section CUSTOMER’S STORIES Finish Here-----------------------*/
+
+
+
+/*  ---------------------Section Footer Start Here-----------------------*/
+
+/*  Section Footer Row-1 Start Here*/
+.sf-row__1{
+	background-color: #f3f6fc;
+	padding-top: 105px;
+	padding-bottom: 60px;
+}
+.sf-title{
+	text-align: left;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 20px;
+	color: #000;
+	text-transform: uppercase;	
+	margin-top: 20px;
+	position: relative;
+}
+.sf-title:before{
+	content: '';
+	position: absolute;
+	background-image: url(../img/divider_blue.png);
+	width: 56px;
+	height: 10px;
+	left: 0;
+	top: -30px;	
+}
+.sf-wrap__about{
+	margin-right: -15px;
+}
+.sf-text{
+	text-align: left;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	margin-top: 15px;
+	line-height: 1.8;
+}
+.sf-wrap__links{
+	margin-left: 80px;
+}
+.sf-links{
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 15px;
+}
+.sf-link__a{
+	text-decoration: none;
+	text-align: left;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.85;
+	transition: color 0.3s;
+}
+.sf-link__a:hover{
+	color: #326cd8;
+	transition: color 0.3s;
+}
+.sf-link__a__active{
+	color: #326cd8;
+}
+.sf-wrap__contact{
+	margin-left: 70px;
+	margin-right: -15px;
+}
+.sf-subtitle{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #000;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.sf-address{
+	text-align: left;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin-top: 8px;
+}
+.sf-phone{
+	margin-bottom: 0;
+	margin-top: 5px;
+	text-decoration: none;
+	display: block;
+		text-align: left;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 15px;
+	color: #000;
+}
+.sf-wrap__form{
+	margin-left: 65px;
+	margin-right: -15px;
+}
+.sf-form__inpute{
+	background-color: rgba(255, 255, 255, 0);
+	margin-top: 10px;
+	margin-bottom: 0px;
+	border: solid rgba(0, 0, 0, 0.2) 1px; 
+	padding: 8px 5px; 
+	border-radius: 5px;
+}
+.sf-form__width50{
+	width: 48%;
+}
+.sf-form__width100{
+	width: 98%;
+}
+.sf-form-button{
+	display: block;
+	margin-top: 10px;
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background-color: #326cd8;
+	border-radius: 20px;
+	padding: 12px 25px;
+	border: none;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.15);
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+.sf-form-button:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+/*  Section Footer Row-1 Finish Here*/
+
+
+/*  Section Footer Row-2 Start Here*/
+.sf-row__2{
+	background-color: #e9effb;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.sf-rights{
+	display: inline-block;
+	text-align: left;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 14px;
+	color: #5d6065;
+	margin: 0;
+}
+.sf-social{
+	display: inline-block;
+	float: right;
+	text-align: right;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 14px;
+	color: #5d6065;
+	margin: 0;
+	text-transform: uppercase;
+	margin-right: -15px;
+	margin-top: 5px;
+}
+.sf-social__link{
+	text-decoration: none;
+	margin-left: 30px;
+	transition: color 0.3s;
+	margin-bottom: 0;
+}
+.sf-social__link:hover{
+	color: #326cd8;
+	transition: color 0.3s;
+}
+/*  Section Footer Row-2 Finish Here*/
+
+/*  -----------------------Section Footer Finish Here-----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+
+  /* --Style fo SECTIONS TITLE Start Here--*/
+.section-size{
+	max-width: 930px;	
+	}
+.section-title{
+	font-size: 30px;
+}
+.section-title__text{
+	font-size: 15px;
+}
+/* --Style fo SECTIONS TITLE Finish Here--*/
+
+
+/*  --Section HEADER Start Here--*/
+	
+.sh-top__number{
+	font-size: 30px;
+}
+.nav-list{
+		display: none;
+	}
+/* 
+.nav-list{
+	padding-left: 0;
+	display: inline-block;
+}
+.nav-list__item{
+	height: 57px;
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+}
+
+.nav-list__link{
+	text-decoration: none;
+	color: #fff;
+	height: 57px;
+	text-transform: uppercase;
+	font-family: "ProximaNova-Bold", sans-serif;
+	font-size: 16px;
+	padding: 17px 30px; 
+	background-color: #1d5ed7;
+	transition: background-color 0.3s;	
+}
+.nav-list__link:after{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 17px;
+		right: -3px;
+		top: 4px;
+		background-color: rgba(255, 255, 255, 0.25);
+	}
+.nav-list__link:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+.nav-icon{
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	margin-right: 15px;
+}
+*/
+.sh-carousel{
+	padding-bottom: 330px;
+}
+.carousel-caption{
+	position: absolute;
+	top: 220px;
+	left: 0;
+	right: 0;
+}
+.carousel-text_wrap{
+	margin-right: 0px;
+}
+.carousel-text__bg{
+	padding: 25px;
+}
+.carousel-text__border{
+	padding: 30px;
+}
+.carousel-text__title{
+	font-size: 40px;
+}
+.carousel-text__number{
+	font-size: 35px;
+}
+.carousel-form__wrap{
+	margin-top: 40px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+/*  ---Section HEADER Finish Here--*/
+
+
+/*  ---Section WHO WE ARE Start Here--*/
+.section-1{
+	padding-top: 95px;
+	padding-bottom: 95px;
+}
+	
+/*  ---Section WHO WE ARE Finish Here--*/
+	
+/* --Section 	WHAT WE DO Start Here---*/
+
+.section-2{
+	padding-top: 95px;
+	padding-bottom: 95px;
+}
+.s2-options{
+	margin-top: 25px;
+	margin-bottom: 70px;
+}
+.s2-row__1{
+	margin-top: 45px;
+	min-height: 150px;
+	padding-right: 10px;
+}
+.s2-row__2{
+	margin-top: 45px;
+	min-height: 150px;
+	padding-right: 10px;
+}
+.s2-item__1{
+	margin-right: 10px;
+}
+.s2-item__2{
+	margin-left: 0px;
+	margin-right: 10px;
+}
+.s2-item__3{
+	margin-left: 0px;
+	margin-right: 10px;
+}
+.s2-item__medium{
+	margin-right: -15px;	
+	}
+
+/*  --Section 	WHAT WE DO Finish Here --*/
+
+
+/*  --Section 	A CLEAN HOME Start Here --*/
+
+.section-title-s3{
+	font-size: 27px;
+}
+.s3-text{
+	font-size: 15px;
+}
+
+/*  --Section 	A CLEAN HOME Finish Here--*/
+
+
+/*  --Section TRUSTWORTHY HOUSE CLEANING Start Here--*/
+
+.section-4{
+	padding-top: 95px;
+	padding-bottom: 95px;
+}
+.s4-item{
+	min-height: 370px;
+}
+.s4-wrap__1{
+	padding-right: 0px;
+}
+.s4-wrap__2{
+	padding-left: 20px;
+	margin-right: -15px;
+}
+.s4-icon{
+	transform: scale(0.9);
+	right: 5px;
+	top: -40px;
+}
+.s4-title{
+	font-size: 20px;
+}
+.s4-text{
+	font-size: 15px;
+}
+
+/*  --Section TRUSTWORTHY HOUSE CLEANING Finish Here--*/
+
+
+/*  --Section CALL TO ACTION Start Here---*/
+
+.section-5{
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+.s5-text__subtitle{
+	text-align: center;
+}
+.s5-text__title{
+	font-size: 37px;
+	text-align: center;
+}
+.s5-btn{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*  --Section CALL TO ACTION Finish Here--*/
+
+
+/*  --Section CUSTOMER’S STORIES Start Here--*/
+
+.section-6{
+	padding-top: 95px;
+	padding-bottom: 80px;
+}
+.s6-testimonial__icon{
+	font-size: 27px;
+}
+
+/*  --Section CUSTOMER’S STORIES Finish Here--*/
+
+
+
+/*  --Section Footer Start Here--*/
+
+.sf-row__1{
+	padding-top: 95px;
+	padding-bottom: 60px;
+}
+.sf-title{
+	font-size: 18px;
+}
+.sf-wrap__about{
+	margin-right: -15px;
+}
+.sf-text{
+	margin-top: 14px;
+}
+.sf-wrap__links{
+	margin-left: 80px;
+}
+.sf-link__a{
+	font-size: 15px;
+}
+.sf-wrap__contact{
+	margin-left: 0px;
+	margin-right: -15px;
+	margin-top: 60px;
+}
+.sf-wrap__form{
+	margin-top: 60px;	
+}
+
+.sf-social{
+	margin-top: 5px;
+}
+/*  -Section Footer Finish Here--*/
+}
+
+@media screen and (max-width: 840px) {
+	
+.s3-content{
+	width: 100%;
+	padding-top: 45px;
+	padding-left: 40px;
+	padding-right: 20px;
+	padding-bottom: 25px;
+	margin-right: -15px;
+	margin-left: 0px;
+}
+.section-3 .section-size{
+		padding-right: 15px;
+	}
+	.s4-item{
+	min-height: 440px;
+}
+	
+.s6-testimonial__photo{
+	display: block;
+	width: 100%;
+}
+	
+.s6-testimonial__name{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+}
+.s6-testimonial__text{
+	margin-top: 15px;
+}	
+}
+
+@media screen and (max-width: 680px) {
+	
+.s4-item{
+	min-height: 490px;
+}
+}
+
+@media screen and (max-width: 600px){
+	
+/*  -Section HEADER Start Here-*/
+.section-header{
+	position: relative;
+}
+
+.sh-top{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	box-sizing: content-box;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.sh-top__logo{
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sh-top__call{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	font-size: 20px;
+}
+.sh-top__number{
+	font-size: 24px;
+	margin-right: 15px;
+	text-align: center;
+	color: #fff;
+}
+
+.nav-list{
+	display: none;
+}
+.sh-navigation{
+	top: 150px;
+	}
+/*
+.sh-navigation{
+	position: absolute;
+	top: 120px;
+	width: 100%;
+	height: 57px;
+	background-color: #1d5ed7;
+	z-index: 100;
+}
+.nav-bg{
+	max-width: 1100px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+.nav-list__item{
+	height: 57px;
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+}
+
+.nav-list__link{
+	text-decoration: none;
+	color: #fff;
+	height: 57px;
+	text-transform: uppercase;
+	font-family: "ProximaNova-Bold", sans-serif;
+	font-size: 16px;
+	padding: 17px 30px; 
+	background-color: #1d5ed7;
+	transition: background-color 0.3s;	
+}
+.nav-list__link:after{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 17px;
+		right: -3px;
+		top: 4px;
+		background-color: rgba(255, 255, 255, 0.25);
+	}
+.nav-list__link:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+.nav-icon{
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	margin-right: 15px;
+}
+*/
+
+.carousel-caption{
+	top: 250px;
+}
+.carousel-text__bg{
+	padding: 15px;
+}
+.carousel-text__title{
+	font-size: 25px;
+}
+.text-smale{
+	font-size: 25px;
+}
+.carousel-text__sale{
+	font-size: 18px;
+}
+.carousel-text__number{
+	font-size: 27px;
+}
+.carousel-form__bg{
+	padding: 15px;
+}
+.carousel-form__title{
+	font-size: 25px;
+	line-height: 1.2;
+}
+.carousel-form__inpute{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.carousel-form__mwidth100{
+	width: 98%;
+}
+.carousel-form__btn{
+	margin-top: 25px;
+}
+
+/*  --Section HEADER Finish Here--*/
+
+
+/* --Section 	WHO WE ARE Start Here--*/
+
+.section-1{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.s1-sale{
+		width: 300px;
+		height: auto;
+		background-size: 100%;
+		margin-left: auto;
+		background-repeat: no-repeat;
+		margin-right: auto;
+		margin-top: 45px;
+		padding-top: 20px;
+}
+.s1-sale__percent{
+	font-size: 22px;
+}
+.s1-sale__text{
+	font-size: 16px;
+}
+.s1-sale__number{
+	font-size: 25px;
+}
+.s1-sale__icon{
+	font-size: 30px;
+	margin-top: 0px;
+}
+
+/*  --Section 	WHO WE ARE Finish Here--*/
+
+/* --Section WHAT WE DO Start Here---*/
+
+.section-2{
+	background-color: #fff;
+	padding-top: 70px;
+	padding-bottom: 75px;
+}
+.s2-options{
+	margin-top: 35px;
+	margin-bottom: 0px;
+}
+.s2-row__1{
+	margin-top: 0px;
+	padding-right: 0px;
+}
+.s2-row__2{
+	margin-top: 0px;
+	padding-right: 0px;
+}
+.s2-item__1{
+	margin-right: 0px;
+}
+.s2-item__2{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.s2-item__3{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.s2-item__description{
+	width: 80%;
+	float: right;
+	margin-left: 0px;
+}
+
+/*  --Section 	WHAT WE DO Finish Here--*/
+
+
+/*  --Section 	A CLEAN HOME Start Here--*/
+
+.s3-content{
+	padding-top: 35px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 35px;
+}
+	
+.section-3 .section-title:after{
+	top: auto;
+	bottom: -15px;
+	right: auto;
+	left: 0;
+}
+	
+/*  ---------------------Section 	A CLEAN HOME Finish Here-----------------------*/
+
+
+/*  ---------------------Section TRUSTWORTHY HOUSE CLEANING Start Here-----------------------*/
+
+.section-4{
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+}
+.s4-servises{
+	margin-top: 80px;
+}
+.s4-item{
+	min-height: auto;
+}
+.s4-wrap__1{
+	padding-right: 0px;
+}
+.s4-wrap__2{
+	padding-left: 0px;
+	margin-right: 0px;
+	margin-top: 80px;
+}
+.s4-icon{
+	transform: scale(0.9);
+}
+.s4-title{
+	font-size: 20px;
+}
+.s4-text{
+	font-size: 15px;
+}
+
+/*  --Section TRUSTWORTHY HOUSE CLEANING Finish Here--*/
+
+
+/*  --Section CALL TO ACTION Start Here--*/
+
+.section-5{
+	padding-top: 75px;
+	padding-bottom: 60px;
+}
+.s5-text__subtitle{
+	text-align: center;
+}
+.s5-text__title{
+	text-align: center;
+	line-height: 1.2;
+}
+.s5-btn{
+	margin-top: 40px;
+	margin-bottom: 0;
+	text-align: center;
+}
+/*  --Section CALL TO ACTION Finish Here--*/
+
+
+
+/*  --Section CUSTOMER’S STORIES Start Here--*/
+
+.section-6{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.s6-wrap__1{
+	padding-right: 0px;
+	margin-top: 30px;
+}
+.s6-wrap__2{
+	padding-left: 0px;
+	margin-top: 50px;
+}
+.s6-wrap__3{
+	padding-left: 0px;
+	margin-right: 0px;
+	margin-top: 50px;
+}
+.s6-testimonails{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+	
+.s6-testimonial{
+	position: relative;
+	background-color: #f3f6fc;
+	box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
+	padding: 20px 15px;
+}
+	
+.s6-testimonial__img{
+	width: 85px;
+	height: 85px;
+	display: inline-block;
+	float: left;
+	border-radius: 50%;
+	margin-right: 15px;
+	position: relative;
+}
+/*.s6-testimonial__photo:after{
+	content: '';
+	width: 85px;
+	height: 85px;
+	border: 7px solid #f3f6fc;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	top: 19px	;
+	z-index: 100;
+}
+*/
+.s6-testimonial__icon{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 30px;
+	color: #326cd8;
+}
+.s6-testimonial__name{
+	text-align: left;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 0;
+
+}
+.s6-testimonial__profecion{
+	text-align: left;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 14px;
+	color: #326cd8;
+	margin-top: 0;
+
+}
+.s6-testimonial__text{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+	margin-top: 35px;
+}
+
+
+/*  ---------------------Section CUSTOMER’S STORIES Finish Here-----------------------*/
+
+
+
+/*  ---------------------Section Footer Start Here-----------------------*/
+
+.sf-row__1{
+	background-color: #f3f6fc;
+	padding-top: 105px;
+	padding-bottom: 60px;
+}
+.sf-title{
+	margin-top: 18px;
+}
+.sf-wrap__about{
+	margin-right: 0px;
+}
+.sf-wrap__links{
+	margin-left: 0px;
+	margin-top: 60px;
+}
+.sf-wrap__contact{
+	margin-left: 0px;
+	margin-right: -0px;
+}
+.sf-wrap__form{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.sf-form-button{
+	margin-top: 20px;
+}
+.sf-rights{
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+}
+.sf-social{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+.sf-social__link{
+	margin-left: 0px;
+}
+
+
+/*  Section Footer Row-2 Finish Here*/
+
+/*  -----------------------Section Footer Finish Here-----------------------*/
+}
+
+@media screen and (max-width: 450px) {
+.s2-item__icon{
+	transform: scale(0.9)
+}
+	.s2-row__1{
+		margin-top: 30px;
+	}
+		.s2-row__2{
+		margin-top: 30px;
+	}
+.s2-item__description{
+	width: 70%;
+	float: right;
+	margin-left: 0px;
+}
+	.s2-wbtn{
+		margin-top: 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
