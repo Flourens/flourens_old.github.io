@@ -22,8 +22,8 @@ $(document).ready(function () {
 				x[myIndex-1].style.display = "block";  
 				setTimeout(carousel, 4000); // Change image every 2 seconds
 		}
+
 	
-		$(document).ready(function() {
     // Configure/customize these variables.
     var showChar = 350;  // How many characters are shown by default
     var ellipsestext = "...";
@@ -58,7 +58,22 @@ $(document).ready(function () {
         $(this).prev().toggle();
         return false;
     });
-});
 	// ------- end click event handler ----
-		
 });
+
+	$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+
+			 //>=, not <=
+			if (scroll >= 100) {
+					//clearHeader, not clearheader - caps H
+					$(".w3-top").addClass("w3-top-bg");
+					$(".sh-top").addClass("sh-top-scrolled");
+					$(".w3-bar-block").addClass("w3-bar-block-scrolled");
+			} else {
+				$(".w3-top").removeClass("w3-top-bg");
+				$(".sh-top").removeClass("sh-top-scrolled");
+				$(".w3-bar-block").removeClass("w3-bar-block-scrolled");
+			}
+	}); //missing );
+

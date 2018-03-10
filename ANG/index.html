@@ -23,7 +23,7 @@
 <!--Row TOP LINE Start Here-->
 		
 			<div class="w3-container sh-top">
-				<div class="section-size clearfix">
+				<div class="section-size logo-container clearfix">
 						<img class="sh-top__logo" src="img/Logo.png" alt="ANG Cleaning Services">
 						<h2 class="sh-top__call" > Call Us <a class="sh-top__number" href="tel:+15089744994">(508) 974-4994</a></h2>
 				</div>
@@ -35,18 +35,28 @@
 	<div class="w3-top">
 		<nav class="w3-bar sh-navigation">
 			<div class="section-size clearfix">
-				<a href="#" class="w3-bar-item w3-button nav-link">Home</a>
-				<a href="#" class="w3-bar-item w3-button nav-link">Services</a>
-				<a href="#" class="w3-bar-item w3-button nav-link">Service area</a>
-				<a href="#" class="w3-bar-item w3-button nav-link">Reviews</a>
-				<a href="#" class="w3-bar-item w3-button nav-link">Gallery</a>
-				<a href="#" class="w3-bar-item w3-button nav-link">Contact</a>
+				<a href="#" class="w3-bar-item w3-button nav-link w3-hide-medium w3-hide-small">Home</a>
+				<a href="#" class="w3-bar-item w3-button nav-link w3-hide-medium w3-hide-small">Services</a>
+				<a href="#" class="w3-bar-item w3-button nav-link w3-hide-medium w3-hide-small">Service area</a>
+				<a href="#" class="w3-bar-item w3-button nav-link w3-hide-medium w3-hide-small">Reviews</a>
+				<a href="#" class="w3-bar-item w3-button nav-link w3-hide-medium w3-hide-small">Gallery</a>
+				<a href="#" class="w3-bar-item w3-button nav-link w3-hide-medium w3-hide-small">Contact</a>
 				<a href="#" class="w3-bar-item w3-button nav-link nav-search w3-right"><i class="fa fa-search nav-icon"></i></a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large nav-link nav-open-btn" onclick="navCollaps()">&#9776;</a>
 <!--				<input type="text" class="w3-bar-item w3-input w3-right" placeholder="Search..">-->
 			</div>
 		</nav>
 	</div>
-			
+	
+	<div id="nav-collapsed" class="w3-bar w3-bar-block w3-hide w3-hide-large">
+		<a href="#" class="w3-bar-item w3-button nav-link">Home</a>
+		<a href="#" class="w3-bar-item w3-button nav-link">Services</a>
+		<a href="#" class="w3-bar-item w3-button nav-link">Service area</a>
+		<a href="#" class="w3-bar-item w3-button nav-link">Reviews</a>
+		<a href="#" class="w3-bar-item w3-button nav-link">Gallery</a>
+		<a href="#" class="w3-bar-item w3-button nav-link">Contact</a>
+		<a href="#" class="w3-bar-item w3-button nav-link nav-search w3-right w3-hide-medium w3-hide-small"><i class="fa fa-search nav-icon"></i></a>
+	</div>		
 			
 <!--Row Navigation Finish Here-->	
 
@@ -452,7 +462,16 @@
 
 <!---------------------		Section 	Footer Finish Here---------------->
 
-
+		<script type="text/javascript" charset="utf-8">
+			function navCollaps() {
+				var x = document.getElementById("nav-collapsed");
+				if (x.className.indexOf("w3-show") == -1) {
+						x.className += " w3-show";
+				} else { 
+						x.className = x.className.replace(" w3-show", "");
+				}
+			}
+		</script>
 
 		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
 		<script type="text/javascript" charset="utf-8"  src="libs/jquery/dist/jquery.min.js"></script>
