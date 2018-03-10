@@ -23,42 +23,6 @@ $(document).ready(function () {
 				setTimeout(carousel, 4000); // Change image every 2 seconds
 		}
 
-	
-    // Configure/customize these variables.
-    var showChar = 350;  // How many characters are shown by default
-    var ellipsestext = "...";
-    var moretext = "(read more)";
-    var lesstext = "(show less)";
-    
-
-    $('.more').each(function() {
-        var content = $(this).html();
- 
-        if(content.length > showChar) {
- 
-            var c = content.substr(0, showChar);
-            var h = content.substr(showChar, content.length - showChar);
- 
-            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
- 
-            $(this).html(html);
-        }
- 
-    });
- 
-    $(".morelink").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });
-	// ------- end click event handler ----
 });
 
 	$(window).scroll(function() {    
@@ -75,5 +39,8 @@ $(document).ready(function () {
 				$(".sh-top").removeClass("sh-top-scrolled");
 				$(".w3-bar-block").removeClass("w3-bar-block-scrolled");
 			}
-	}); //missing );
+		
+		
+		
+	});
 
