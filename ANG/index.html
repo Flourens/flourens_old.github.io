@@ -336,10 +336,15 @@
 							<div class="s6-testimonial__photo clearfix">
 								<img class="s6-testimonial__img" src="img/Client_1.png" alt="">
 							</div>
-							<i class="fa fa-quote-left s6-testimonial__icon"></i>		
-							<p class="s6-testimonial__name">Mila Kunis</p>
-							<p class="s6-testimonial__profecion">Teacher</p>
+							<i class="fa fa-quote-left s6-testimonial__icon"></i>
+							
+							<div class="s6-testimonial-wrap">
+								<p class="s6-testimonial__name">Mila Kunis</p>
+								<p class="s6-testimonial__profecion">Teacher</p>
+							</div>
+							
 							<p class="s6-testimonial__text">Lorem ipsum dolor sit amet, consectetur ad ipiscing elit, sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua agna aliqua. Ut enim ad minim veniam.</p>
+							
 						</div>	
 					</div>
 				</div>
@@ -350,9 +355,11 @@
 							<div class="s6-testimonial__photo clearfix">
 								<img class="s6-testimonial__img" src="img/Client_2.png" alt="">
 							</div>
-							<i class="fa fa-quote-left s6-testimonial__icon"></i>		
-							<p class="s6-testimonial__name">David Traston</p>
-							<p class="s6-testimonial__profecion">Banker</p>
+							<i class="fa fa-quote-left s6-testimonial__icon"></i>	
+							<div class="s6-testimonial-wrap">
+								<p class="s6-testimonial__name">David Traston</p>
+								<p class="s6-testimonial__profecion">Banker</p>
+							</div>
 							<p class="s6-testimonial__text">Lorem ipsum dolor sit amet, consectetur ad ipiscing elit, sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua agna aliqua. Ut enim ad minim veniam.</p>
 						</div>	
 					</div>
@@ -365,9 +372,11 @@
 								<img class="s6-testimonial__img" src="img/Client_3.png" alt="">
 							</div>	
 
-							<i class="fa fa-quote-left s6-testimonial__icon"></i>		
-							<p class="s6-testimonial__name">Nabah Wadia</p>
-							<p class="s6-testimonial__profecion">Banker</p>
+							<i class="fa fa-quote-left s6-testimonial__icon"></i>	
+							<div class="s6-testimonial-wrap">	
+								<p class="s6-testimonial__name">Nabah Wadia</p>
+								<p class="s6-testimonial__profecion">Banker</p>
+							</div>
 							<p class="s6-testimonial__text">Lorem ipsum dolor sit amet, consectetur ad ipiscing elit, sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua agna aliqua. Ut enim ad minim veniam.</p>
 					</div>
 				</div>
@@ -389,16 +398,20 @@
 
 	<footer class="section-footer">
 		<div class="w3-row sf-row__1">
-			<div class="section-size">
-
-			<div class="w3-col l3 m7 s12">
-				<div class="sf-wrap__about">
-					<h2 class="sf-title">About Us</h2>
-					<p class="sf-text">Lorem ipsum dolor sit amet, consectetur priscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cconsequat.</p>
+			<div class="section-size clearfix">
+			
+			<div class="w3-row">
+				
+			<div class="w3-col l7 m6 s12">
+				
+				<div class="w3-col l5 m12 s12">
+					<div class="sf-wrap__about">
+						<h2 class="sf-title">About Us</h2>
+						<p class="sf-text">Lorem ipsum dolor sit amet, consectetur priscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cconsequat.</p>
+					</div>
 				</div>
-			</div>
 
-			<div class="w3-col l2 m5 s5">
+			<div class="w3-col l3 m5 s6">
 				<div class="sf-wrap__links">
 					<h2 class="sf-title">Links</h2>
 						<ul class="sf-links">
@@ -412,7 +425,7 @@
 				</div>
 			</div>
 
-			<div class="w3-col l3 m4 s7">
+			<div class="w3-col l4 m7 s6">
 				<div class="sf-wrap__contact">
 					<h2 class="sf-title">Contact Us</h2>
 						<h3 class="sf-subtitle">Address:</h3>
@@ -422,19 +435,27 @@
 						<a class="sf-phone" href="tel:+15088085150">(508) 808-5150</a>
 				</div>
 			</div>
-
-			<div class="w3-col l4 m8 s12">
-				<div class="sf-wrap__form">
-					<h2 class="sf-title">Get a Price</h2>
-					<input type="hidden" name="Page" value=""> 
-					<input class="sf-form__inpute sf-form__width50" type="text" placeholder="Name" required>
-					<input class="sf-form__inpute sf-form__width50" type="text" placeholder="Phone" required>
-					<input class="sf-form__inpute sf-form__width100" type="text" placeholder="Email" required>
-					<input class="sf-form__inpute sf-form__width100" type="text" placeholder="Your Massage" required>
-					<button type="submit" class="sf-form-button">Get in Touch</button>	
-
-				</div>
+			
 			</div>
+			
+			<div class="w3-col l5 m6 s12">
+			
+				<div class="w3-col s12">
+					<div class="sf-wrap__form">
+						<h2 class="sf-title">Get a Price</h2>
+						<input type="hidden" name="Page" value=""> 
+						<input class="sf-form__inpute sf-form__width50" type="text" placeholder="Name" required>
+						<input class="sf-form__inpute sf-form__width50" type="text" placeholder="Phone" required>
+						<input class="sf-form__inpute sf-form__width100" type="text" placeholder="Email" required>
+						<input class="sf-form__inpute sf-form__width100" type="text" placeholder="Your Massage" required>
+						<button type="submit" class="sf-form-button">Get in Touch</button>	
+					</div>
+				</div>
+			
+			</div>
+			
+		</div>
+			
 		
 		</div>	
 	</div>

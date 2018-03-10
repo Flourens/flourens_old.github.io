@@ -373,7 +373,7 @@
 }
 .carousel-form__inpute{
 	background-color: rgba(255, 255, 255, 0);
-	margin-top: 17px;
+	margin-top: 12px;
 	margin-bottom: 10px;
 	font-family: "ProximaNova-Light", sans-serif;
 	font-size: 16px;
@@ -771,25 +771,28 @@
 	padding-top: 100px;
 	padding-bottom: 80px;
 }
-.s6-wrap__1{
-	padding-right: 15px;
-}
-.s6-wrap__2{
-	padding-left: 15px;
-}
-.s6-wrap__3{
-	padding-left: 30px;
-	margin-right: -15px;
+.s6-wrap__1, .s6-wrap__2, .s6-wrap__3{
+	padding: 0 15px;
+	padding-bottom: 30px;
 }
 .s6-testimonails{
 	margin-top: 70px;
 	margin-bottom: 70px;
 }
+.s6-testimonial__photo{
+	display: inline-block;
+}
+
 .s6-testimonial{
 	position: relative;
 	background-color: #f3f6fc;
 	box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
 	padding: 20px 15px;
+}
+.s6-testimonial-wrap{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
 }
 .s6-testimonial__img{
 	width: 85px;
@@ -800,18 +803,6 @@
 	margin-right: 15px;
 	position: relative;
 }
-/*.s6-testimonial__photo:after{
-	content: '';
-	width: 85px;
-	height: 85px;
-	border: 7px solid #f3f6fc;
-	border-radius: 50%;
-	position: absolute;
-	left: 15px;
-	top: 19px	;
-	z-index: 100;
-}
-*/
 .s6-testimonial__icon{
 	position: absolute;
 	right: 20px;
@@ -824,7 +815,7 @@
 	font-family: "ProximaNova-Regular", sans-serif;
 	font-size: 18px;
 	color: #000;
-	margin-bottom: 0;
+	margin: 0;
 }
 .s6-testimonial__profecion{
 	text-align: left;
@@ -901,9 +892,7 @@
 	margin-top: 15px;
 	line-height: 1.8;
 }
-.sf-wrap__links{
-	margin-left: 80px;
-}
+
 .sf-links{
 	list-style-type: none;
 	padding-left: 0;
@@ -924,6 +913,9 @@
 }
 .sf-link__a__active{
 	color: #326cd8;
+}
+.sf-wrap__links{
+	margin-left: 40px;
 }
 .sf-wrap__contact{
 	margin-left: 70px;
@@ -954,8 +946,7 @@
 	color: #000;
 }
 .sf-wrap__form{
-	margin-left: 65px;
-	margin-right: -15px;
+	margin-left: 40px;
 }
 .sf-form__inpute{
 	background-color: rgba(255, 255, 255, 0);
@@ -1116,7 +1107,9 @@
 }
 
 /*  --Section 	A CLEAN HOME Finish Here--*/
-
+.sf-wrap__links{
+	margin-left: 0px;
+}
 
 /*  --Section TRUSTWORTHY HOUSE CLEANING Start Here--*/
 
@@ -1200,23 +1193,20 @@
 .sf-text{
 	margin-top: 14px;
 }
-.sf-wrap__links{
-	margin-left: 80px;
-}
 .sf-link__a{
 	font-size: 15px;
 }
 .sf-wrap__contact{
 	margin-left: 0px;
-	margin-right: -15px;
-	margin-top: 60px;
-}
-.sf-wrap__form{
-	margin-top: 60px;	
+	margin-top: 50px;
 }
 
 .sf-social{
 	margin-top: 5px;
+}
+
+.sf-wrap__links{
+	margin-top: 50px;
 }
 /*  -Section Footer Finish Here--*/
 }
@@ -1232,7 +1222,9 @@
 	display: block;
 	width: 100%;
 }
-	
+.s6-testimonial-wrap{
+	margin-top: 0;
+}
 .s6-testimonial__name{
 	display: block;
 	width: 100%;
@@ -1427,23 +1419,22 @@
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
-.s6-wrap__1{
-	padding-right: 0px;
-	margin-top: 30px;
-}
-.s6-wrap__2{
-	padding-left: 0px;
-	margin-top: 50px;
-}
-.s6-wrap__3{
-	padding-left: 0px;
-	margin-right: 0px;
-	margin-top: 50px;
-}
+	
 .s6-testimonails{
 	margin-top: 70px;
 	margin-bottom: 70px;
 }
+.s6-testimonial__photo{
+	display: inline-block;
+	width: auto;
+}
+.s6-testimonial__name{
+	display: inline-block;
+	width: auto;
+	margin-top: 15px;
+}
+	
+	
 	
 .s6-testimonial{
 	position: relative;
@@ -1461,18 +1452,7 @@
 	margin-right: 15px;
 	position: relative;
 }
-/*.s6-testimonial__photo:after{
-	content: '';
-	width: 85px;
-	height: 85px;
-	border: 7px solid #f3f6fc;
-	border-radius: 50%;
-	position: absolute;
-	left: 15px;
-	top: 19px	;
-	z-index: 100;
-}
-*/
+	
 .s6-testimonial__icon{
 	position: absolute;
 	right: 20px;
@@ -1523,23 +1503,17 @@
 	margin-right: 0px;
 }
 .sf-wrap__links{
-	margin-left: 0px;
-	margin-top: 60px;
+	margin-top: 50px;
 }
 .sf-wrap__contact{
 	margin-left: 0px;
 	margin-right: -0px;
-}
-.sf-wrap__form{
-	margin-left: 0px;
-	margin-right: 0px;
 }
 .sf-form-button{
 	margin-top: 20px;
 }
 .sf-rights{
 	width: 100%;
-	display: block;
 	text-align: center;
 	margin-top: 15px;
 }
@@ -1547,11 +1521,25 @@
 	width: 100%;
 	display: block;
 	text-align: center;
+	float: none;
 }
 .sf-social__link{
-	margin-left: 0px;
+	float: none;
+	margin: 0 15px;
+}
+	
+.sf-wrap__form{
+	margin-top: 60px;
+}
+.sf-form-button{
+	width: 100%;
 }
 
+.sf-wrap__form{
+	margin-left: 0;	
+}
+.sf-form__width50, .sf-form__width100{width: 100%;}
+	
 
 /*  Section Footer Row-2 Finish Here*/
 
@@ -1571,16 +1559,6 @@
 .s2-item__icon{
 	transform: scale(0.9)
 }
-/*
-	.s2-row__1{
-		margin-top: 30px;
-	}
-*/
-/*
-		.s2-row__2{
-		margin-top: 30px;
-	}
-*/
 .s2-item__description{
 	width: 70%;
 	float: right;

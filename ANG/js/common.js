@@ -29,7 +29,7 @@ $(document).ready(function () {
 			var scroll = $(window).scrollTop();
 
 			 //>=, not <=
-			if (scroll >= 70) {
+			if (scroll >= 50) {
 					//clearHeader, not clearheader - caps H
 					$(".w3-top").addClass("w3-top-bg");
 					$(".sh-top").addClass("sh-top-scrolled");
