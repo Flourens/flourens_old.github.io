@@ -13,8 +13,71 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
-		<style>
-			/* W3.CSS 4.10 February 2018 by Jan Egil and Borge Refsnes */
+		
+	<script type="text/javascript" charset="utf-8"  src="libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8">$(document).ready(function () {
+		
+	//--------- Click Event--------------
+		
+	$(".navigation").on("click", function (e) {
+		e.preventDefault();
+		$('.overlay').toggleClass('active');
+		
+	});
+	
+	var myIndex = 0;
+		carousel();
+
+		function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+					 x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 4000); // Change image every 2 seconds
+		}
+
+});
+
+	$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+
+			 //>=, not <=
+			if (scroll >= 50) {
+					//clearHeader, not clearheader - caps H
+					$(".w3-top").addClass("w3-top-bg");
+					$(".sh-top").addClass("sh-top-scrolled");
+					$(".w3-bar-block").addClass("w3-bar-block-scrolled");
+			} else {
+				$(".w3-top").removeClass("w3-top-bg");
+				$(".sh-top").removeClass("sh-top-scrolled");
+				$(".w3-bar-block").removeClass("w3-bar-block-scrolled");
+			}
+		
+		
+});
+
+			
+			
+			function navCollaps() {
+				var x = document.getElementById("nav-collapsed");
+				if (x.className.indexOf("w3-show") == -1) {
+						x.className += " w3-show";
+				} else { 
+						x.className = x.className.replace(" w3-show", "");
+				}
+			}
+			
+			
+			
+			
+		</script>
+		
+	<style>
+		/* W3.CSS 4.10 February 2018 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -1205,20 +1268,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 <!---------------------		Section 	Footer Finish Here---------------->
 
-		<script type="text/javascript" charset="utf-8">
-			function navCollaps() {
-				var x = document.getElementById("nav-collapsed");
-				if (x.className.indexOf("w3-show") == -1) {
-						x.className += " w3-show";
-				} else { 
-						x.className = x.className.replace(" w3-show", "");
-				}
-			}
-		</script>
+
 
 		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-		<script type="text/javascript" charset="utf-8"  src="libs/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+<!--		<script type="text/javascript" charset="utf-8" src="js/common.js"></script>-->
 		
 	</body>
 
