@@ -103,20 +103,6 @@
 	left: auto;
 	
 }
-/*
-.section-3 .section-title:after{
-	content: '';
-	position: absolute;
-	background-image: url(../img/divider_grey.png);
-	width: 56px;
-	height: 10px;
-	right: -65px;
-	top: 15px;
-	float: right;
-	display: inline;
-	margin-right: 0;
-}
-*/
 .section-title__text{
 	font-family: "ProximaNova-Light", sans-serif;
 	font-size: 16px;
