@@ -260,6 +260,19 @@
 /* ---Row NAVIGATION Finish Here--*/
 
 /* ---Row CAROUSEL Start Here--*/
+.sh-carousel-wrap{
+	content: '';
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 830px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../img/Slider-Image_1.jpg);
+}
 .sh-carousel{
 	width: 100%;
 	height: auto;
@@ -278,16 +291,16 @@
 	height: 830px;
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
 }
 .sh-slide__1{
-	background-image: url(../img/Slider%20Image_1.png);
+	background-image: url(../img/Slider-Image_1.jpg);
 }
 .sh-slide__2{
-	background-image: url(../img/Slider%20Image_2.png);
+	background-image: url(../img/Slider-Image_2.jpg);
 }
 .sh-slide__3{
-	background-image: url(../img/Slider%20Image_3.png);
+	background-image: url(../img/Slider-Image_3.jpg);
 }
 .carousel-caption{
 	position: absolute;
@@ -608,7 +621,7 @@
 	padding-bottom: 85px;
 	position: relative;
 	background-color: #f3f6fc;
-	background-image: url(../img/Clean%20Home.png);
+	background-image: url(../img/Clean-Home.jpg);
 	background-position: right top;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
@@ -1564,8 +1577,15 @@
 	float: right;
 	margin-left: 0px;
 }
-	.s2-wbtn{
-		margin-top: 30px;
+.s2-wbtn{
+	margin-top: 30px;
+}
+	
+	.sh-carousel{
+		display: none;
+	}
+	.sh-carousel-wrap{
+	background-image: url(../img/Slider-Image_1-small.jpg);
 	}
 }
 
