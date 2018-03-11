@@ -464,9 +464,10 @@
 	margin-bottom: 0;
 }
 .s1-sale__icon{
-	font-size: 35px;
-	color: #326cd8;
+	width: 25px;
+	height: auto;
 	display: block;
+	margin: 0 auto;
 	margin-top: 5px;
 }
 
@@ -803,11 +804,11 @@
 	position: relative;
 }
 .s6-testimonial__icon{
+	width: 26px;
+	height: auto;
 	position: absolute;
 	right: 20px;
 	top: 10px;
-	font-size: 30px;
-	color: #326cd8;
 }
 .s6-testimonial__name{
 	text-align: left;
