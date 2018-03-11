@@ -13,6 +13,498 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+		<style>
+			.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ---------------- SECTIONS TITLE Start Here------------------*/
+
+
+
+.section-size{
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.section-title{
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 35px;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 0;
+	position: relative;
+	line-height: 1.4;
+}
+.section-title__color{
+	color: #326cd8;
+}
+.section-title:after{
+	content: '';
+	position: absolute;
+	background-image: url(../img/divider_grey.png);
+	width: 56px;
+	height: 10px;
+	left: 0;
+	right: 0;
+	bottom: -25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.section-title-s3{
+	text-align: left;
+}
+.section-3 .section-title:after{
+	top: 15px;
+	right: -90px;
+	left: auto;
+	
+}
+.section-title__text{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.8;
+	padding: 0px 3%;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+/* ----------------Style fo SECTIONS TITLE Finish Here------------------*/
+
+
+/*  ---------------------Section HEADER Start Here-----------------------*/
+.section-header{
+	position: relative;
+}
+/* ---Row TOP LINE Start Here--*/
+.sh-top{
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	box-sizing: content-box;
+	transition: all 0.3s ease;
+}
+.sh-top.sh-top-scrolled {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: all 0.3s ease;
+}
+
+.w3-top{
+	background-color: rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease;
+}
+.section-size.logo-container{
+	padding-right: 0;
+	padding-left: 0;
+}
+.sh-top__logo{
+	float: left
+}
+
+.sh-top__call{
+	float: right;
+	margin-top: 5px;
+	color: #fff;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 25px;
+}
+.sh-top__number{
+	color: #fff;
+	font-family: "ProximaNova-Extrabold", sans-serif;
+	font-size: 34px;
+	text-decoration: none;
+	margin-right: 15px;
+}
+/* ---Row TOP LINE Finish Here--*/
+
+/* ---Row NAVIGATION Start Here--*/
+.sh-navigation{
+	margin-top: 120px;
+	background-color: #1d5ed7;
+	z-index: 100;
+	transition: all 0.3s ease;
+}
+
+.w3-bar .nav-link{
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "ProximaNova-Bold", sans-serif;
+	font-size: 16px;
+	padding: 22px 0;
+	padding-left: 0;
+	padding-right: 60px;
+	transition: background-color 0.3s;
+}
+.w3-bar-block{
+	position: fixed;
+	top: 180px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: #1d5ed7;
+	z-index: 100;
+}
+.w3-bar-block-scrolled{
+	top: 145px;
+}
+#nav-collapsed .w3-bar-item{
+	text-align: center;
+	color: #fff;
+	padding-right: 0;
+	padding-bottom: 10px;
+}
+#nav-collapsed.w3-bar-block{
+	padding-bottom: 20px;
+}
+
+.w3-top-bg{
+	background-color: rgba(29,94,215,0.95);
+	transition: all 0.3s ease;
+}
+.w3-top-bg .sh-navigation{
+	border-top: 1px #fff solid;
+	margin-top: 80px;
+	transition: all 0.3s ease;
+}
+.nav-link:before{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 17px;
+		right: -3px;
+		top: 14px;
+		background-color: rgba(255, 255, 255, 1);
+	}
+.nav-link:hover{
+	background-color: #255bbe !important;
+	transition: background-color 0.3s;
+	color: #fff !important;
+}
+.w3-bar .nav-search{
+	padding-right: 0;
+}
+.nav-icon{
+	font-size: 20px;
+	color: #fff;
+}
+.w3-bar .nav-open-btn{
+	font-size: 25px;
+	padding: 18px 0;
+	
+}
+
+/* ---Row NAVIGATION Finish Here--*/
+
+/* ---Row CAROUSEL Start Here--*/
+.sh-carousel-wrap{
+	content: '';
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 830px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(img/Slider-Image_1.jpg);
+}
+.sh-carousel{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.mySlides {
+	display:none;
+}
+.sh-slide{
+	content: '';
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 830px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.sh-slide__1{
+	background-image: url(img/Slider-Image_1.jpg);
+}
+.sh-slide__2{
+	background-image: url(img/Slider-Image_2.jpg);
+}
+.sh-slide__3{
+	background-image: url(img/Slider-Image_3.jpg);
+}
+.carousel-caption{
+	position: absolute;
+	top: 280px;
+	left: 0;
+	right: 0;
+}
+.carousel-text__bg{
+	background-color: rgba(0, 0, 0, 0.25);
+	box-sizing: border-box;
+	text-align: center;
+	padding: 25px;
+	max-width: 507px;
+	margin-right: 15px;
+}
+.carousel-text__border{
+	border: 1px solid #fff;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.carousel-text__title{
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 43px;
+	color: #fff;
+	line-height: 1.4;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.text-bold{
+	font-family: "ProximaNova-Extrabold", sans-serif;
+}
+.text-uppercase{
+	text-transform: uppercase;
+}
+.carousel-text__sale{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: underline;
+	margin-top: 10px;
+	margin-bottom: 0;	
+}
+.carousel-text__call{
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 24px;
+	color: #fff;
+	text-decoration: underline;
+	margin-bottom: 5px;	
+	margin-top: 10px;
+}
+.carousel-text__number{
+	color: #fbee1f;
+	font-family: "ProximaNova-Extrabold", sans-serif;
+	font-size: 37px;
+}
+.carousel-form__bg{
+	max-width: 507px;
+	margin-right: 0;
+	margin-left: auto;
+	background-color:#fff;
+	border-radius: 10px;
+	padding: 30px 35px;
+	text-align: left;
+	margin-bottom: 90px;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.15);
+/*	margin-left: 8.5%;*/
+}
+.carousel-form__title{
+	color: #326cd8;
+	font-family: "ProximaNova-Bold", sans-serif;
+	font-size: 28px;
+	margin-top: 0;
+}
+.carousel-form__text{
+	color: #59585b;
+	font-family: "ProximaNova-Regular", sans-serif;
+	font-size: 14px;
+	margin-right: 10px;
+	line-height: 1.8;
+	margin-bottom: 0;
+}
+.carousel-form__inpute{
+	background-color: rgba(255, 255, 255, 0);
+	margin-top: 12px;
+	margin-bottom: 10px;
+	font-family: "ProximaNova-Light", sans-serif;
+	font-size: 16px;
+	color: #000;
+	border: none;
+	border-bottom: 1px solid #59585b;
+	padding: 12px 5px;
+}
+.carousel-form__width50{
+	width: 48%;
+}
+.carousel-form__width100{
+	width: 98%;
+}
+.carousel-form__btn{
+	display: block;
+	width: 98%;
+	margin-top: 10px;
+	font-family: "ProximaNova-Semibold", sans-serif;
+	background-color: #326cd8;
+	border: none;
+	border-radius: 30px;
+	font-family: "ProximaNova-Semibold", sans-serif;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 15px 70px;
+}
+.sf-form-button:hover{
+	background-color: #255bbe;
+	transition: background-color 0.3s;
+}
+/* ---Row CAROUSEL Finish Here--*/
+
+/*  ---------------------Section HEADER Finish Here-----------------------*/
+		
+			
+@media screen and (max-width: 992px) {
+
+  /* --Style fo SECTIONS TITLE Start Here--*/
+.section-title{
+	font-size: 30px;
+}
+.section-title__text{
+	font-size: 15px;
+}
+
+.carousel-caption{
+	position: absolute;
+	top: 220px;
+	left: 0;
+	right: 0;
+}
+.carousel-text__bg{
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.carousel-text__border{
+	padding: 30px;
+}
+.carousel-text__title{
+	font-size: 40px;
+}
+.carousel-text__number{
+	font-size: 35px;
+}
+.carousel-form__bg{
+	margin: 0 auto;
+}
+}
+/*  ---Section HEADER Finish Here--*/
+@media screen and (max-width: 600px){	
+/*  -Section HEADER Start Here-*/
+.w3-bar-block{
+	top: 150px;
+}
+.section-header{
+	position: relative;
+}
+.sh-top{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.sh-top__logo{
+	width: 120px;
+	padding-top: 10px;
+}
+.sh-top__call{
+	text-align: center;
+	font-size: 20px;
+	
+}
+.sh-top__number{
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	margin-right: 15px;
+	text-align: center;
+	color: #fff;
+}
+.nav-list{
+	display: none;
+}
+.sh-navigation{
+	margin-top: 100px;
+}
+
+	
+
+.carousel-caption{
+	top: 250px;
+}
+.carousel-text__bg{
+	padding: 15px;
+}
+.carousel-text__title{
+	font-size: 25px;
+}
+.text-smale{
+	font-size: 25px;
+}
+.carousel-text__sale{
+	font-size: 18px;
+}
+.carousel-text__number{
+	font-size: 27px;
+}
+.carousel-form__bg{
+	padding: 15px;
+}
+.carousel-form__title{
+	font-size: 25px;
+	line-height: 1.2;
+}
+.carousel-form__inpute{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.carousel-form__mwidth100{
+	width: 98%;
+}
+.carousel-form__btn{
+	margin-top: 25px;
+}
+}
+/*  --Section HEADER Finish Here--*/
+@media screen and (max-width: 450px) {
+	.sh-carousel{
+		display: none;
+	}
+	.sh-carousel-wrap{
+	background-image: url(img/Slider-Image_1-small.jpg);
+	}
+}
+
+</style>
+		
+		
+		
+		
 	</head> 
 	<body>
 
