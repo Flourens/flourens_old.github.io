@@ -663,13 +663,13 @@ ul{
 }
 
 .testimonials{
-	width: 330px;
+	width: 300px;
 	margin: 0 auto;
 	margin-top: 120px;
 }
 .testimonials .testimonials-item{
 	display: inline-block;
-	margin: 0 7px;
+	margin: 0 1px;
 }
 .view-all{
 	display: block;
