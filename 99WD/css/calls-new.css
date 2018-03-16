@@ -85,62 +85,6 @@ ul{
   z-index: 1;
 }
 
-/*---------- NRT Section -------------*/
-
-
-.s-nrt{
-	text-align: center;
-	padding-top: 84px;
-	padding-bottom: 100px;
-	background-color: #f5f7f9;
-	background-image: url(../images/reason6bg.png);
-	background-position: center;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-color: #f5f7f9;
-}
-.s-nrt .nrt-text{
-	width: 100%;
-	max-width: 815px;
-	margin: 0 auto;
-}
-
-.s-nrt .nrt-text p{
-	font-size: 18px;
-	font-style: italic;
-	color: rgba(0, 0, 0, 0.75);
-	font-weight: 500;
-	margin-bottom: 55px;
-}
-.s-nrt .nrt-text p.last-item{
-	margin-bottom: 30px;
-}
-.s-nrt .nrt-text .services-btn{
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	max-width: 510px;
-}
-.s-nrt .bottom-text .price{
-	color: #0189c5;
-}
-.s-nrt .bottom-text .offer{
-	color: #5c5c5c;
-	margin-bottom: 35px;
-}
-
-.quote-img-box{
-	width: 44px;
-	height: 44px;
-	border-radius: 40px;
-	background-color: #e9a700;
-	margin: 0 auto;
-	padding: 7px;
-}
-.qoute-img{
-	width: 17px;
-	height: 15px;
-}
 
 
 /*------------ Value  -------------*/
@@ -980,10 +924,7 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-	.s-nrt, .s-value, .s-blue, .s-howm, .s-blue, .s-why, .s-questions, .s-system, .s-customers, .s-price{
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
+	
 	.s-customers{
 		padding-top: 0;
 	}
