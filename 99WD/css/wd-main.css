@@ -380,6 +380,10 @@ ul{
 .s-questions{
 	padding-top: 60px;
 	padding-bottom: 100px;
+	background-image: url(../images/customer-bg.png);
+	background-position: bottom center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
 }
 .s-questions .section-title{
 	text-align: center;
@@ -510,6 +514,10 @@ ul{
 .s-customers{
 	padding-top: 83px;
 	padding-bottom: 90px;
+	background-image: url(../images/reason6bg.png);
+	-webkit-background-size: auto;
+	background-size: 100%;
+	background-position: center;
 	
 }
 .s-customers .section-title{
