@@ -17,7 +17,7 @@ gulp.task('browser-sync', function () {
 	var files =[
 		'*/*.png',
 		'*/*.css',
-		'*/*.html',
+		'*.html',
 		'*/*.js'
 	];
 	browserSync.init(files, {
