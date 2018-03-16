@@ -440,19 +440,7 @@ ul{
 }
 
 /*------ Buttons ---------*/
-.slideButton{
-	max-width: 210px;
-	display: block;
-	font-size: 16px;
-	color: #fff;
-	text-decoration: none;
-	padding: 13px 54px;
-	background-color: #e9a700;
-	border-radius: 24px;
-	margin: 0 auto;
-	position: relative;
 
-}
 .slideButton img{
 	position: absolute;
 	top: calc(50% - 13px);
