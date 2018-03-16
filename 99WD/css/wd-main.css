@@ -133,6 +133,7 @@ ul{
 	background-color: #00afe8;
 	border-radius: 40px;
 	margin-right: 10px;
+	box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 .value-content .item-1{max-width: 30%;}
 .value-content .item-2{max-width: 30%;}
@@ -250,6 +251,7 @@ ul{
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
+	align-items: stretch;
 }
 .step-title{
 	font-size: 16px;
@@ -257,6 +259,7 @@ ul{
 	margin-top: 0;
 }
 .steps-item-wrap{
+	
 	width: 33%;
 	max-width: 405px;
 	min-width: 300px;
@@ -265,13 +268,14 @@ ul{
 	-ms-flex: 1px;
 	-o-flex: 1px;
 	flex: 1px;
+	margin-bottom: 60px;
 }
 .steps-item{
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.3);
 	text-align: center;
-	padding: 52px 30px 35px 30px;
+	padding: 52px 30px 0px 30px;
 	margin-right: 20px;
 	margin-left: 20px;
 	margin-top: 40px;
@@ -279,6 +283,7 @@ ul{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	position: relative;
+	height: 100%;
 }
 .step-number{
 	position: absolute;
@@ -656,7 +661,7 @@ ul{
 }
 
 .lines-nav{
-	width: 90px;
+	width: 65px;
 	position: absolute;
 	bottom: -83px;
 	left: 0;
