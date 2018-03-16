@@ -52,55 +52,7 @@ ul{
 
 /*---------- Slider -----------*/
 
-.headSlides{
-	opacity: 1;
-	position: relative;
-	text-align: center;
-	z-index: 10;
-	font-weight: normal;
-	max-width: 866px;
-	margin: 0 auto;
-	padding-top: 50px;
-}
-.headSlides-text{
-	position: relative;
-	margin-bottom: 60px;
-}
-.headSlides-text:after{
-	content: '';
-	position: absolute;
-	width: 19px;
-	height: 3px;
-	background-color: #00afe8;
-	bottom: -30px;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-}
 
-.headSlides .h1{
-	font-size: 50px;
-	font-weight: bold;
-	line-height: 1.5;
-	color: #fff;
-}
-.headSlides .h2{
-	position: relative;
-	font-size: 38px;
-	color: #fff;
-}
-
-.headSlides .h1 span, .headSlides .h2 span{
-	color: #e9a700;
-	font-weight: bold;
-}
-.headSlides p{
-	color: #fff;
-	font-size: 18px;
-	line-height: 30px;
-	margin-bottom: 72px;
-	position: relative;
-}
 
 
 .slider-bg{
@@ -358,6 +310,11 @@ ul{
 	width: 33%;
 	max-width: 405px;
 	min-width: 300px;
+	-webkit-flex: 1px;
+	-moz-flex: 1px;
+	-ms-flex: 1px;
+	-o-flex: 1px;
+	flex: 1px;
 }
 .steps-item{
 	background-color: #fff;
@@ -603,6 +560,7 @@ ul{
 .s-customers{
 	padding-top: 83px;
 	padding-bottom: 90px;
+	
 }
 .s-customers .section-title{
 	text-align: center;
@@ -1026,6 +984,9 @@ footer {
 		padding-top: 50px;
 		padding-bottom: 50px;
 	}
+	.s-customers{
+		padding-top: 0;
+	}
 	.s-why{
 		padding-bottom: 150px;
 		background-position: bottom left;
@@ -1036,23 +997,7 @@ footer {
 		display: block;
 		width: 100%;
 	}
-	.headSlides .h1{
-		font-size: 25px;
-	}
-	.headSlides p{
-		font-size: 16px;
-		margin-bottom: 30px;
-	}
-	.headSlides p:after{
-		display: none;
-	}
-	.mSlider{
-		padding-top: 20px;
-		padding-bottom: 40px;
-	}
-	.headSlides{
-		padding-top: 0;
-	}
+
 	.testimonials .testimonials-item{
 		display: block;
 		margin-right: auto;
@@ -1086,10 +1031,15 @@ footer {
 		font-size: 7vw;
 	}
 	.value-content .values-item{
-		
+		max-width: 100%;
+		width: 100%;
 	}
-	.value-content .values{
+	.values p{
+		max-width: 60%;
+		margin-right: auto;
+		margin-left: auto;
 	}
+	
 	.value-content .values-item{
 	}
 	
