@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>ALPR Sites and Cameras</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="/static/css/images/favicon.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/static/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/static/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/static/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/css/openalpr.css" rel="stylesheet">
+
+    
+
+<style>
+
+
+    .green_text {
+        color: green;
+    }
+    .red_text, .error-text {
+        color: red;
+    }
+
+      .bottomrow
+      {
+        padding-bottom: 100px;
+      }
+
+    td.cam_url
+    {
+        word-break: break-all;
+    }
+
+    ul.status_section
+    {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0;
+    }
+
+</style>
+
+<link href="/static/css/bootstrap-editable.css" rel="stylesheet">
+
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/static/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <script src="/static/js/alpr_helpers.js"></script>
+
+    <script src="/static/js/jstz.min.js"></script>
+
+    
+
+
+
+</head>
+<body>
+
+    
+
+
+    <div id="wrapper">
+        <div id="topdrawer_error" class="alert alert-danger collapse" role="alert">
+          <span id="close_errordrawer_button" onclick="close_drawer()" class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          <span id="topdrawer_errortext"></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navmenu" class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand with-image" href="/"><img src="/static/css/images/logo.png" /></a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li><small><a href="/account/my_account">matthill+evgeniy@gmail.com</a></small></li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="/account/my_account"><i class="fa fa-user fa-fw"></i> Account Settings</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li><a href="/account/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form id="quicksearchform" action="/search/" method="GET">
+                            <div class="input-group custom-search-form">
+                                <input type="hidden" name="search_type" value="plate" />
+                                <input type="hidden" name="site" value="" />
+                                <input type="hidden" id="quicksearch_start" name="start_time" value="" />
+                                <input type="hidden" id="quicksearch_end" name="end_time" value="" />
+                                <input name="plate_number" id="quicksearch_plate_number" type="text" class="form-control" placeholder="Quick Search...">
+                                <span class="input-group-btn">
+                                    <button id="quicksearch_button" class="btn btn-default" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            </form>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a id="dashboardlink" href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/playvideo/"><i class="fa fa-video-camera fa-fw"></i> Video</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/metrics/"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+                        </li>
+                        <li>
+                            <a id="searchlink" href="/search/"><i class="fa fa-search fa-fw"></i> Search</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-area-chart fa-fw"></i> Analytics<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="/analytics/create-report">Create</a>
+                                </li>
+                                <li>
+                                    <a href="/analytics/view-reports">Reports</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="/getting_started/"><i class="fa fa-files-o fa-fw"></i> Getting Started</a>
+                        </li>
+                        
+
+                        
+                        <li>
+                            <a href="/cloudapi"><i class="fa fa-cogs fa-fw"></i> Cloud API</a>
+                        </li>
+                        
+
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Configuration<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+
+                                <li>
+                                    <a href="/configure/alerts">Alerts</a>
+                                </li>
+
+                            
+                                <li>
+                                    <a id="agent_link" href="/configure/agents">Agents</a>
+                                </li>
+                                <li>
+                                    <a href="/configure/webhooks">WebHooks</a>
+                                </li>
+                                <li>
+                                    <a href="/account/users">User Management</a>
+                                </li>
+                                
+                                
+
+                            
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        
+                        <li>
+                            <a href="/audit/"><i class="fa fa-eye fa-fw"></i> Search Audit</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+
+
+        <div id="page-wrapper">
+
+        
+
+
+<div class="toprow row">
+    <div class="col-lg-12">
+        <p></p>
+        <div id="alerts"></div>
+
+        <h4><a href="/configure/agents">Agents</a> ➜ aa05c0c75664</h4>
+        <hr />
+
+            <h1>Status</h1>
+
+            <div id="status_section">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <ul class="status_section">
+                            <li><strong>Agent Status: </strong><span class="runstatus"></span></li>
+                            <li><strong>Agent Version: </strong><span class="agentversion"></span> <i class="operatingsystem"></i></li>
+                            <li><strong>Upload Queue Size: </strong><span class="uploadqueuesize"></span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <ul class="status_section">
+                            <li><strong>Processing Threads: </strong><span class="threadcount"></span></li>
+                            <li><strong>CPU Cores: </strong><span class="cpucorecount"></span></li>
+                            <li><strong>CPU Usage: </strong><span class="cpuusage"></span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <ul class="status_section">
+                            <li><strong>Agent Uptime: </strong><span class="agentuptime"></span></li>
+                            <li><strong>System Uptime: </strong><span class="systemuptime"></span></li>
+                            <li><strong>Last Update: </strong><span class="lastupdated"></span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <ul class="status_section">
+                            <li><strong>Oldest Image: </strong><span class="diskquotaoldest"></span></li>
+                            <li><strong>Disk Usage: </strong><span class="diskquotasize"></span></li>
+                            <li><strong>Swap Usage: </strong><span class="swapusage"></span></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+    </div>
+</div>
+<div class="middlerow row">
+    <div class="col-lg-12">
+        <hr />
+
+
+            <h1>Video Streams</h1>
+            <div id="stream_section">
+
+                <div id="current_stream_list"></div>
+                <div id="add_stream_button_container" class="text-right">
+                    <button  type="button" class="btn btn-default">Add Stream</button>
+                </div>
+
+                <div id="add_edit_camera_form" class="graybox collapse">
+                    <div id="camera_close_button" class="text-right">
+                        <strong class="pull-left">Camera Stream Config</strong>
+                        <span class="glyph-clickable glyphicon glyphicon-remove"></span>
+                    </div>
+
+                    <div class="row"> <!-- row 1 -->
+                        <div class="form-group col-sm-3">
+                            <select class="form-control" name="camera_model" id="camera_model" >
+                                <option>Generic URL</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <select class="form-control" name="stream_type" id="stream_type" >
+                                <option>----</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control" id="ip_address" name="ip_address" placeholder="Camera IP Address">
+                        </div>
+                    </div>
+                    <div class="row"> <!-- row 2 -->
+                        <div class="col-sm-1">
+                        </div>
+                        <div class="checkbox col-sm-3">
+                            <label>
+                              <input type="checkbox" id="use_credentials"> Use Credentials
+                            </label>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="row"> <!-- row 3 -->
+                        <div class="col-sm-1">
+                        </div>
+                        <div class="form-group col-sm-11">
+                            <input type="text" class="form-control" id="url" name="url" placeholder="URL">
+                        </div>
+                    </div>
+                    <div class="row"> <!-- row 3 -->
+                        <div class="form-group col-sm-12 text-right">
+                          <span id="stream_error_text" class="collapse pull-left"></span>
+                          <button id="stream_test_btn" class="btn btn-default has-spinner"><span class="spinner"><i class="icon-spin icon-refresh"></i></span> Test</button>
+                          <button id="stream_save_btn" class="btn btn-default btn-primary stream_save">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class=" clearfix"></div>
+
+            <hr />
+
+
+    </div>
+</div>
+<div class="middlerow row">
+    <div class="col-lg-12">
+
+
+            <h1>Agent Parameters</h1>
+            <form action="/configure/ajax/config" method="POST" id="config_form" class="form">
+              <input type="hidden" name="agent_uid" value="S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q" />
+
+              <div class="form-group">
+                <label for="country">Country</label>
+                <a href="#" onClick="return false;" class="pull-right" title="Country" data-toggle="popover" data-trigger="focus" tabindex="-1" data-placement="left" data-content="The 'country' specifies the training database to use to detect and recognize number plates.  The 'us' dataset identifies North-American style plates that are 12 inches wide and 6 inches high.  The 'eu' dataset identifies European-style plates that measure 520mm wide by 114mm high.  There are also specialized datasets that provide higher accuracy for certain countries.">
+                  <span class="glyphicon glyphicon-info-sign glyph-clickable"></span>
+                </a>
+                <select class="form-control" name="country" id="country" >
+                
+                    
+                    <option value="ar">Argentina</option>
+                    
+                
+                    
+                    <option value="au">Australia</option>
+                    
+                
+                    
+                    <option value="br">Brazil</option>
+                    
+                
+                    
+                    <option value="cn">China</option>
+                    
+                
+                    
+                    <option value="eu">Europe</option>
+                    
+                
+                    
+                    <option value="gb">Great Britain</option>
+                    
+                
+                    
+                    <option value="in">India</option>
+                    
+                
+                    
+                    <option value="kr">Korea</option>
+                    
+                
+                    
+                    <option value="nz">New Zealand</option>
+                    
+                
+                    
+                    <option value="us" selected>North America</option>
+                    
+                
+                    
+                    <option value="sa">Saudi Arabia</option>
+                    
+                
+                    
+                    <option value="za">South Africa</option>
+                    
+                
+                    
+                    <option value="th">Thailand</option>
+                    
+                
+                    
+                    <option value="ae">United Arab Emirates</option>
+                    
+                
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="analysis_threads">Processing Cores</label>
+                <a href="#" onClick="return false;" class="pull-right" title="Processing Cores" data-toggle="popover" data-trigger="focus" tabindex="-1" data-placement="left" data-content="OpenALPR analyzes faster when more CPU cores are provided.  You may control how many CPU resources are used by the software with this setting.  This value cannot exceed the number of physical CPU cores on the server.">
+                  <span class="glyphicon glyphicon-info-sign glyph-clickable"></span>
+                </a>
+                <input type="text" class="form-control" id="analysis_threads" name="analysis_threads" placeholder="CPU Cores" value="1" />
+              </div>
+
+
+              <div class="form-group">
+                <label for="disk_quota">Disk Quota (MB)</label>
+                <a href="#" onClick="return false;" class="pull-right" title="Disk Quota" data-toggle="popover" data-trigger="focus" tabindex="-1" data-placement="left" data-content="OpenALPR stores images containing vehicle license plates on the agent's hard drive.  Old images are automatically removed in a rolling buffer.  You can control how much disk space is used to store images using this parameter.  This value should be less than the size of the hard drive.">
+                  <span class="glyphicon glyphicon-info-sign glyph-clickable"></span>
+                </a>
+                <input type="text" class="form-control" id="disk_quota" name="store_plates_maxsize_mb" placeholder="Disk Quota (MB)" value="8000" />
+              </div>
+
+              <button type="submit" class="btn btn-default pull-right">Update</button>
+              <div class="collapse submit_status"></div>
+            </form>
+
+            <div class=" clearfix"></div>
+
+            <hr />
+
+    </div>
+</div>
+<div class="bottomrow row">
+    <div class="col-lg-12">
+
+            <h4>Agent Log</h4>
+
+            <pre id="log"></pre>
+
+            </pre>
+
+            <span id="agent_restart_info" class="success-text collapse  pull-left">empty</span>
+            <div class="text-right">
+                <button type="button" class="btn btn-default" id="btn_stop_agent">Stop Agent</button>
+                <button type="button" class="btn btn-default" id="btn_start_agent">Start Agent</button>
+            </div>
+
+            <div class=" clearfix"></div>
+
+
+
+
+
+        <!--<div class="hidden">-->
+        <!-- Modal -->
+        <div class="modal fade" id="test_stream_results_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!--<div id="test_stream_results_popup">-->
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Stream Test Results</h4>
+              </div>
+              <div class="modal-body">
+                <img class="collapse" src="" />
+                  <div><strong>Log:</strong></div>
+                  <pre>
+
+                  </pre>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary stream_save"  data-dismiss="modal">Save Stream</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+        </div>
+        <!-- /#page-wrapper -->
+
+
+    </div>
+
+
+
+    
+
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/static/js/plugins/morris/raphael.min.js"></script>
+    <script src="/static/js/plugins/morris/morris.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/js/sb-admin-2.js"></script>
+
+    <script src="/static/js/moment.min.js"></script>
+
+    
+
+    <script src="/static/js/bootbox.min.js"></script>
+
+        <script type="text/javascript">
+            // Setup the nav bar to show "Agents" as selected
+            $(document).ready(function() {
+
+                $("#agent_link").addClass('active');
+                $("#agent_link").parents("li").addClass('active');
+                $("#agent_link").parents("ul").addClass('in');
+
+            });
+        </script>
+
+
+  <script src="/static/js/jquery.form.js"></script>
+  <script src="/static/js/jquery.timeago.js"></script>
+  <script src="/static/js/bootstrap-editable.js"></script>
+  <script src="/static/js/agent-warnings.js"></script>
+
+  <script>
+    var CAMERA_INFO = {"version": 1, "manufacturers": {"A-Linking": {"mjpeg": ["http://[username]:[password]@[ip_address]/GetData.cgi"]}, "Convision": {"mjpeg": ["http://[username]:[password]@[ip_address]/fullsize.push?camera=1&sleep=15"]}, "Swann": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi/jpg/image.cgi"]}, "Foscam": {"mjpeg": ["http://[username]:[password]@[ip_address]/videostream.cgi", "http://[username]:[password]@[ip_address]/snapshot.cgi"]}, "Fulicom": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]}, "Sharkx": {"mjpeg": ["http://[username]:[password]@[ip_address]/stream.jpg"]}, "Lumens": {"h264": ["rtsp://[username]:[password]@[ip_address]:8557/h264"]}, "Airlive": {"mjpeg": ["http://[username]:[password]@[ip_address]/video.mjpg", "http://[username]:[password]@[ip_address]/mjpg/video.mjpg"]}, "Airwave": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/pusher.cgi"]}, "Gadspot": {"mjpeg": ["http://[username]:[password]@[ip_address]/Jpeg/CamImg.jpg", "http://[username]:[password]@[ip_address]/GetData.cgi?Status=0"]}, "Hikvision": {"h264": ["rtsp://[username]:[password]@[ip_address]/h264/ch1/sub/", "rtsp://[username]:[password]@[ip_address]:554/Streaming/Channels/1", "rtsp://[username]:[password]@[ip_address]:554/ch0_0.h264"], "mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/video.jpg?cam=1&quality=3&size=2"]}, "Lumenera": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/nph-video"]}, "Bosch": {"h264": ["rtsp://[username]:[password]@[ip_address]/rtsp_tunnel"], "mjpeg": ["http://[username]:[password]@[ip_address]/rtsp_tunnel?h26x=4&line=1&inst=2"]}, "Moxa": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/video.jpg"]}, "Mobotix": {"mjpeg": ["http://[username]:[password]@[ip_address]/record/current.jpg", "http://[username]:[password]@[ip_address]/control/faststream.jpg?stream=full", "http://[username]:[password]@[ip_address]/faststream.jpg?stream=full&fps=1.0 (1 fps)", "http://[username]:[password]@[ip_address]/faststream.jpg?stream=full&fps=3.0 (1 fps)", "http://[username]:[password]@[ip_address]/faststream.jpg?stream=full&fps=0 (max frame rate)"]}, "Intellinet": {"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg"]}, "Trendnet": {"mjpeg": ["http://[username]:[password]@[ip_address]/goform/video", "http://[username]:[password]@[ip_address]/goform/video2", "http://[username]:[password]@[ip_address]/cgi/mjpg/mjpg.cgi", "http://[username]:[password]@[ip_address]/GetData.cgi", "http://[username]:[password]@[ip_address]/image.jpg"]}, "Goscam": {"mjpeg": ["http://[ip_address]/cgi-bin/Stream?Video?Acc=[username]?Pwd=[password]?webcamPWD=RootCookies00000"]}, "Skyway_Security": {"mjpeg": ["http://[username]:[password]@[ip_address]/GetData.cgi?Status=0", "http://[username]:[password]@[ip_address]/Jpeg/CamImg.jpg"]}, "Toshiba": {"mjpeg": ["http://[username]:[password]@[ip_address]/__live.jpg?&&&", "http://[username]:[password]@[ip_address]getstream.cgi?10&10&&&10&0&0&0&0"]}, "PLANET": {"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg"]}, "Linudix": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/nph-update_4ch.cgi?ch=1"]}, "Avigilon": {"h264": ["rtsp://[username]:[password]@[ip_address]/defaultPrimary?streamType=u"], "mjpeg": ["http://[username]:[password]@[ip_address]/media/still.jpg"]}, "Y-Cam": {"mjpeg": ["http://[username]:[password]@[ip_address]/stream.jpg"]}, "Linksys": {"mjpeg": ["http://[username]:[password]@[ip_address]/img/video.mjpeg", "http://[username]:[password]@[ip_address]/img/mjpeg.cgi", "http://[username]:[password]@[ip_address]/img/snapshot.cgi?size=2", "http://[username]:[password]@[ip_address]/adm/file.cgi?h_videotype=mjpeg&todo=save"]}, "Vilar": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]}, "Samsung": {"h264": ["rtsp://[ip_address]/profile1/media.smp"], "mjpeg": ["http://[username]:[password]@[ip_address]/video?submenu=mjpg", "http://[username]:[password]@[ip_address]/video?submenu=jpg"]}, "Sanyo": {"mjpeg": ["http://[username]:[password]@[ip_address]/liveimg.cgi?serverpush=1"]}, "Dahua": {"h264": ["rtsp://[username]:[password]@[ip_address]:554/cam/realmonitor?channel=1&subtype=1"]}, "Arecont": {"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg?res=full&x0=0&y0=0&x1=100%&y1=100%&quality=12&doublescan=0&fps=15&ver=HTTP/1.1", "http://[username]:[password]@[ip_address]/image?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0"]}, "Axis": {"h264": ["rtsp://[username]:[password]@[ip_address]/axis-media/media.amp", "rtsp://[username]:[password]@[ip_address]/mpeg4/media.amp"], "mjpeg": ["http://[username]:[password]@[ip_address]/axis-cgi/mjpg/video.cgi?fps=15"]}, "Pixord": {"mjpeg": ["http://[username]:[password]@[ip_address]/Getimage.cgi", "http://[username]:[password]@[ip_address]/Getimage?camera=1&fmt=full", "http://[username]:[password]@[ip_address]/Getimage?camera=1&fmt=qsif"]}, "Kingnow": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]}, "Qnap": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi/mjpg/mjpeg.cgi"]}, "Sony": {"h264": ["rtsp://[username]:[password]@[ip_address]/media/video1"], "mjpeg": ["http://[username]:[password]@[ip_address]/image", "http://[username]:[password]@[ip_address]/image?speed=0", "http://[username]:[password]@[ip_address]/oneshotimage.jpg"]}, "JVC": {"mjpeg": ["http://[username]:[password]@[ip_address]/api/video?encode=jpeg&framerate=15&boundary=on"]}, "Edimax": {"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg", "http://[username]:[password]@[ip_address]/mjpg/video.mjpg", "http://[username]:[password]@[ip_address]/snapshot.cgi"]}, "Digicom": {"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]}, "CNB": {"h264": ["rtsp://[username]:[password]@[ip_address]/"]}, "Easyn": {"mjpeg": ["http://[username]:[password]@[ip_address]/videostream.cgi?user=username&pwd=password"]}, "Marmitek": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi/mjpg/mjpeg.cgi"]}, "Zavio": {"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg"]}, "Shenzen_Sunsky": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]}, "Cisco": {"h264": ["rtsp://[username]:[password]@[ip_address]/"]}, "D-Link": {"mjpeg": ["http://[username]:[password]@[ip_address]/video/mjpg.cgi", "http://[username]:[password]@[ip_address]/video.cgi", "http://[username]:[password]@[ip_address]/mjpeg.cgi", "http://[username]:[password]@[ip_address]/cgi-bin/video.jpg", "http://[username]:[password]@[ip_address]/IMAGE.jpg", "http://[username]:[password]@[ip_address]/cgi-bin/video.vam", "http://[username]:[password]@[ip_address]/_gCVimage.jpg"]}, "Canon": {"mjpeg": ["http://[username]:[password]@[ip_address]/-wvhttp-01-/", "http://[username]:[password]@[ip_address]/-wvhttp-01-/GetOneShot", "http://[username]:[password]@[ip_address]/-wvhttp-01-/GetOneShot?frame_count=no_limit", "http://[username]:[password]@[ip_address]/-wvhttp-01-/GetStillImage"]}, "Surecom": {"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]}, "Airlink": {"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi", "http://[username]:[password]@[ip_address]/cgi/mjpg/mjpeg.cgi", "http://[username]:[password]@[ip_address]/cgi/jpg/image.cgi"]}, "Hamlet": {"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]}, "TP-Link": {"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg", "http://[username]:[password]@[ip_address]/video.mjpg"]}, "Bowya": {"mjpeg": ["http://[username]:[password]@[ip_address]/video.cgi"]}, "IQeye": {"h264": ["rtsp://[username]:[password]@[ip_address]/stream1", "rtsp://[username]:[password]@[ip_address]/now.mp4&res=high"], "mjpeg": ["http://[username]:[password]@[ip_address]/now.jpg?snap=spush"]}, "Ego": {"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]}, "Aviosys": {"mjpeg": ["http://[username]:[password]@[ip_address]/GetData.cgi", "http://[username]:[password]@[ip_address]/cgi-bin/Stream?Video?Authorization="]}, "Vivotek": {"h264": ["rtsp://[username]:[password]@[ip_address]/live.sdp"], "mjpeg": ["http://[username]:[password]@[ip_address]/video.mjpg", "http://[username]:[password]@[ip_address]/cgi-bin/video.jpg", "http://[username]:[password]@[ip_address]/cgi-bin/viewer/video.jpg"]}, "Topcom": {"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]}, "Panasonic": {"h264": ["rtsp://[username]:[password]@[ip_address]/MediaInput/h264/stream_1"], "mjpeg": ["http://[username]:[password]@[ip_address]/nphMotionJpeg?Resolution=640x480&Quality=Clarity", "http://[username]:[password]@[ip_address]/cgi-bin/nphContinuousServerPush", "http://[username]:[password]@[ip_address]/SnapshotJPEG?mode=Refresh", "http://[username]:[password]@[ip_address]/cgi-bin/camera"]}}};
+    var GENERIC_URL_VAL = "Generic URL"
+
+    function sortkeys(obj)
+    {
+        var keys = [];
+
+        for(var key in obj)
+        {
+            if(obj.hasOwnProperty(key))
+            {
+                keys.push(key);
+            }
+        }
+
+        return keys.sort();
+    }
+
+    function update_camera_status(data)
+    {
+
+        if ("error" in data)
+        {
+            $('td.cam_status').text('-');
+            $('td.cam_fps').text('-');
+        }
+
+        $("#current_stream_list tbody tr").each(function(index, value) {
+            this_url = $(this).find('td.cam_url').text();
+            var found_it = false;
+
+            if (data.agent_status !== undefined)
+            {
+                for (stream_index in data.agent_status.video_streams)
+                {
+                    stream = data.agent_status.video_streams[stream_index];
+                    if (stream.url == this_url)
+                    {
+                        if (!data.agent_status.alprd_active)
+                        {
+                            $(this).find('td.cam_status').html('-');
+                            $(this).find('td.cam_fps').text("-");
+                        }
+                        else if (stream.is_streaming)
+                        {
+                            $(this).find('td.cam_status').html('<span class="glyphicon glyphicon-thumbs-up green_text"></span>');
+                            $(this).find('td.cam_fps').text(Math.round(stream.fps));
+                        }
+                        else
+                        {
+                            $(this).find('td.cam_status').html('<span class="glyphicon glyphicon-thumbs-down red_text"></span>');
+                            $(this).find('td.cam_fps').text("-");
+                        }
+                        found_it = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!found_it)
+            {
+                $(this).find('td.cam_status').html('<span class="glyphicon glyphicon-thumbs-down red_text"></span>');
+                $(this).find('td.cam_fps').text("-");
+            }
+
+        });
+    }
+
+    function populate_url_fields()
+    {
+        var url_template = $("#url").attr('data-url');
+
+        if (url_template == undefined || url_template.length == 0)
+            return;
+
+        if ($("#camera_model").val() == GENERIC_URL_VAL)
+            return;
+        var has_credentials = $('#use_credentials').is(':checked');
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        var ip_address = $('#ip_address').val();
+
+        if (has_credentials && username.length > 0 && password.length > 0)
+        {
+            url_template = url_template.replace("[username]", username);
+            //fake_password = ''
+            //for (var i = 0; i < password.length; i++)
+            //    fake_password += '*'
+            url_template = url_template.replace("[password]", password);
+        }
+        else
+        {
+            url_template = url_template.replace("[username]:[password]@", "");
+        }
+        url_template = url_template.replace("[ip_address]", ip_address);
+
+        $("#url").val(url_template);
+    }
+
+    function set_url(url)
+    {
+        $("#url").attr('data-url', url);
+        populate_url_fields();
+    }
+
+    function reload_camera_list()
+    {
+
+        jQuery.ajax({url: '/configure/ajax/config?agent_uid=S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'})
+            .done( function(data) {
+
+                if (typeof data.config != "undefined" && typeof data.config['stream.d'] != "undefined")
+                {
+                    $("#current_stream_list .delete_button").unbind();
+                    $("#current_stream_list").empty();
+
+                    var $camtable = $('<table class="table table-striped"><thead><tr></tr></thead><tbody></tbody></table>');
+                    //$camtable.find('tr').append('<th></th>');
+                    $camtable.find('tr').append('<th class="cam_url">Stream URL</th>');
+                    $camtable.find('tr').append('<th class="cam_name">Name</th>');
+                    $camtable.find('tr').append('<th class="cam_status">Status</th>');
+                    $camtable.find('tr').append('<th class="cam_fps">FPS</th>');
+                    $camtable.find('tr').append('<th class="cam_delete"></th>');
+
+                    stream_d_obj = data.config['stream.d']
+                    for (var stream_file in stream_d_obj)
+                    {
+                        var stream_url = '';
+                        var camera_id = undefined;
+
+                        for (var i in stream_d_obj[stream_file])
+                        {
+                            prop_name = stream_d_obj[stream_file][i].name
+                            prop_value = stream_d_obj[stream_file][i].value
+                            if (prop_name == "stream")
+                            {
+                                stream_url = prop_value;
+                            }
+                            else if (prop_name == "camera_id")
+                            {
+                                camera_id = parseInt(prop_value);
+                            }
+                        }
+
+                        if (stream_url.length > 0)
+                        {
+                            var $camlink = $('<td class="cam_name"></td>');
+
+                            if (camera_id in data.camera_names && camera_id !== undefined)
+                            {
+                                $alink = $('<a href="#">' + data.camera_names[camera_id] + '</a>');
+                                $camlink.append($alink);
+
+                                $.fn.editable.defaults.ajaxOptions = {type: "GET"};
+                                $alink.editable({
+                                   type:  'text',
+                                   pk:    1,
+                                   name:  'name',
+                                   url:   '/configure/update/edit_camera',
+                                   title: 'Enter Camera Name',
+                                   params: function(params) {
+                                    params.camera = $(this).data('camera_id');
+                                    params.agent_uid = 'S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q';
+                                    return params;
+                                   },
+                                   success: function(response, newValue) {
+                                     $(this).text(newValue);
+                                   }
+                                });
+                                $alink.data('camera_id', camera_id);
+
+                            }
+                            $camrow = $('<tr></tr>');
+                            //$camrow.append('<td><span class="glyph-clickable glyphicon glyphicon-edit"></span></td>');
+
+
+                            $camurl = $('<a href="#">' + prop_value + '</a>');
+                            $.fn.editable.defaults.ajaxOptions = {type: "GET"};
+                                $camurl.editable({
+                                   type:  'text',
+                                   pk:    1,
+                                   name:  'name',
+                                   url:   '/configure/ajax/edit_stream',
+                                   title: 'Enter Stream URL',
+                                   params: function(params) {
+                                    params.stream_file = $(this).data('stream_file');
+                                    params.agent_uid = 'S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q';
+                                    return params;
+                                   },
+                                   success: function(response, newValue) {
+                                     $(this).text(newValue);
+                                   }
+                                });
+                            $camurl.data('stream_file', stream_file);
+                            $urltd = $('<td class="cam_url"></td>');
+                            $urltd.append($camurl);
+
+                            $camrow.append($urltd);
+
+                            $camrow.append($camlink);
+                            $camrow.append('<td class="cam_status"></td>');
+                            $camrow.append('<td class="cam_fps"></td>');
+
+                            $camrow.append('<td class="cam_delete"> \
+                                <a class="btn btn-default btn-xs configure_button" href="/configure/agent/S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q/' + stream_file + '"><span class="glyphicon glyphicon-wrench"></span> Configure</a> \
+                                <a class="btn btn-danger btn-xs delete_button" href="#" data-streamname="' + stream_file + '" data-url="' + prop_value + '"><span class="glyphicon glyphicon-trash"></span> Delete</a>         \
+                                </td>');
+
+                            $camtable.find('tbody').append($camrow);
+                        }
+
+
+                    }
+
+                    $("#current_stream_list").append($camtable);
+                }
+                else
+                {
+                    $("#current_stream_list .delete_button").unbind();
+                    $("#current_stream_list").empty();
+                    $("#current_stream_list").append('<strong>No Video Streams Defined</strong>');
+                }
+
+
+                $("#current_stream_list .delete_button").click(function() {
+
+                    $delete_button_obj = $(this);
+                    var url_to_delete = $(this).attr('data-url');
+
+                    bootbox.confirm("Deleting a camera will remove all data associated with that camera.  Are you sure?", function(result) {
+
+                        console.log(result);
+
+                        if (result == true)
+                        {
+
+                            jQuery.ajax({
+                                url: '/configure/ajax/delete_stream',
+                                data:{
+                                    url:url_to_delete,
+                                    agent_uid: "S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q"
+                                }
+                            })
+                                .done( function(data) {
+                                   //$delete_button_obj.parent().parent().remove();
+                                    reload_camera_list();
+                                })
+                                .error(function(data) {
+
+                                    alert("Failed to remove stream.");
+                                });
+
+                        }
+
+                    });
+
+                });
+            });
+
+    }
+
+    function test_stream(url_to_test)
+    {
+
+        $("#stream_error_text").hide().clearQueue();
+
+        jQuery.ajax(
+            {
+                url: '/configure/ajax/test_stream',
+                data: {
+                  url: url_to_test,
+                  agent_uid: "S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q"
+                }
+            })
+            .done( function(data) {
+                //$("#agent_restart_info").text("Restarted Agent").fadeIn(500).delay(5000).fadeOut(1000);
+                if (data.success)
+                {
+                    $("#test_stream_results_popup .modal-title").text('Test Successful');
+                    $("#test_stream_results_popup button.stream_save").attr('disabled', false);
+                    random_num = Math.floor((Math.random() * 100000) + 1);
+                    var src_b64 = 'data:image/jpeg;charset=utf-8;base64,' + data.image;
+                    $("#test_stream_results_popup img").attr('src', src_b64).show();
+                }
+                else
+                {
+
+                    $("#test_stream_results_popup .modal-title").text('Test Failed');
+                    $("#test_stream_results_popup button.stream_save").attr('disabled', true);
+                    $("#test_stream_results_popup img").hide();
+                }
+
+                $("#test_stream_results_popup pre").text(data.log);
+                $('#test_stream_results_popup').modal('show')
+            })
+            .fail(function(data) {
+                var failure_reason = 'Unable to test stream.';
+                if (typeof data.responseJSON != "undefined" && typeof data.responseJSON.errors != "undefined")
+                    failure_reason = data.responseJSON.errors[0];
+
+                $("#stream_error_text").removeClass("success-text").addClass("error-text").text(failure_reason)
+                    .fadeIn(500).delay(10000).fadeOut(1000);
+            })
+            .always(function() {
+                $("#stream_test_btn").removeClass('disabled active');
+                $("#stream_save_btn").removeClass('disabled');
+            });
+
+    }
+
+    function camera_model_changed()
+    {
+        //alert($('#camera_model').val());
+        selected_manufacturer = $('#camera_model').val();
+        $("#stream_type").empty();
+        if (selected_manufacturer == GENERIC_URL_VAL)
+        {
+            $("#stream_type").append('<option>----</option>');
+            $("#ip_address").attr('disabled', true);
+            $("#username").attr('disabled', true);
+            $("#password").attr('disabled', true);
+            $("#use_credentials").attr('disabled', true);
+
+        }
+        else if (selected_manufacturer in CAMERA_INFO.manufacturers)
+        {
+            $("#ip_address").attr('disabled', false);
+            $("#use_credentials").attr('disabled', false);
+            use_credentials_checked = $("#use_credentials").is(':checked');
+            $("#username").attr('disabled', !use_credentials_checked);
+            $("#password").attr('disabled', !use_credentials_checked);
+
+            selected_mfr_obj = CAMERA_INFO.manufacturers[selected_manufacturer];
+            first_url = '';
+            for (stream_type in selected_mfr_obj)
+            {
+                for (url_idx in selected_mfr_obj[stream_type])
+                {
+                    name = stream_type.toUpperCase()
+                    if (url_idx > 0)
+                        name += " Alt " + (url_idx)
+                    url = selected_mfr_obj[stream_type][url_idx];
+
+                    $("#stream_type").append('<option data-url="' + url + '">' + name + '</option>');
+                    if (first_url == '')
+                        first_url = url;
+                }
+            }
+            set_url(first_url);
+        }
+    }
+
+    $(document).ready(function() {
+
+        // Make the help icons on the config form work
+        $('[data-toggle="popover"]').popover();
+
+        // Setup camera form
+        manufacturers = sortkeys(CAMERA_INFO.manufacturers);
+        for (var index in manufacturers)
+        {
+            key = manufacturers[index];
+            $('#camera_model').append('<option>' + key + '</option>');
+
+        }
+
+        $("#stream_type").change(function(data) {
+            var url_val = $(this.selectedOptions).attr('data-url');
+            set_url(url_val);
+        });
+
+        camera_model_changed();
+
+        $('#camera_model').change(camera_model_changed);
+
+
+        $("#add_stream_button_container button").click(function() {
+            $(this).parent().slideUp({ duration: 250});
+            $("#add_edit_camera_form").delay(300).slideDown({ duration: 500});
+        });
+
+        $("#camera_close_button .glyph-clickable").click(function() {
+            $("#add_edit_camera_form").slideUp({ duration: 500});
+            $('#add_stream_button_container').delay(550).slideDown({ duration: 250});
+        });
+
+        $("#stream_test_btn").click(function() {
+            // Validate
+            $("#stream_error_text").hide().clearQueue();
+
+            if ($("#camera_model").val() != GENERIC_URL_VAL && $("#ip_address").val().length == 0)
+            {
+                $("#stream_error_text").removeClass("success-text").addClass("error-text").text("Invalid IP Address")
+                .fadeIn(500).delay(10000).fadeOut(1000);
+            }
+            else if ($("#url").val().length == 0)
+            {
+                $("#stream_error_text").removeClass("success-text").addClass("error-text").text("Missing Stream URL")
+                .fadeIn(500).delay(10000).fadeOut(1000);
+            }
+            else
+            {
+                $(this).addClass('disabled active');
+                $("#stream_save_btn").addClass('disabled');
+                test_stream($("#url").val());
+            }
+
+        });
+
+        $("button.stream_save").click(function() {
+            url_to_save = $("#url").val();
+
+            jQuery.ajax({
+                url: '/configure/ajax/add_stream',
+                data:{
+                  agent_uid:'S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q',
+                  url:url_to_save
+                }
+            })
+            .done( function(data) {
+
+               reload_camera_list();
+               $("#add_edit_camera_form").slideUp({ duration: 500});
+               $('#add_stream_button_container').delay(550).slideDown({ duration: 250});
+            })
+            .error(function(response) {
+                var errortext = "Failed to add stream.";
+                if (typeof response.responseJSON != "undefined" && typeof response.responseJSON.errors != "undefined")
+                    errortext = response.responseJSON.errors[0];
+                $("#stream_error_text").hide().clearQueue();
+                $("#stream_error_text").removeClass("success-text").addClass("error-text").text(errortext)
+                .fadeIn(500).delay(10000).fadeOut(1000);
+            });
+        });
+
+
+        $('#use_credentials').change(function(data) {
+            is_checked = $(this).is(':checked');
+            $("#username").attr('disabled', !is_checked);
+            $("#password").attr('disabled', !is_checked);
+            populate_url_fields();
+        });
+
+        $("#ip_address").keyup(function(data) {
+            populate_url_fields();
+        });
+        $("#username").keyup(function(data) {
+            populate_url_fields();
+        });
+        $("#password").keyup(function(data) {
+            populate_url_fields();
+        });
+        $("#url").keyup(function(data) {
+            $("#camera_model").prop("selectedIndex",0);
+            camera_model_changed();
+
+            //populate_url_fields();
+        });
+        $("#username").attr('disabled', true);
+        $("#password").attr('disabled', true);
+
+        reload_camera_list();
+    });
+  </script>
+
+  <script>
+
+    var ALPR_PATTERNS = {"eu": ["ad", "al", "am", "at", "az", "ba", "be", "bg", "by", "ch", "cy", "cz", "de", "dk", "ee", "es", "fi", "fr", "gb", "ge", "gi", "gr", "hr", "hu", "ie", "is", "it", "kz", "li", "lt", "lu", "lv", "mc", "md", "me", "mk", "mt", "nl", "no", "pl", "pt", "ro", "rs", "ru", "se", "si", "sk", "sm", "tr", "ua", "va"], "ar": ["ar"], "au": ["au-act", "au-nsw", "au-nt", "au-qld", "au-sa", "au-tas", "au-vic", "au-wa"], "br": ["br"], "us": ["al", "ak", "as", "az", "ar", "ca", "co", "ct", "de", "dc", "fl", "ga", "gu", "hi", "id", "il", "in", "ia", "ks", "ky", "la", "me", "ms", "md", "ma", "mi", "mn", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd", "mp", "oh", "ok", "or", "pa", "pr", "ri", "sc", "sd", "tn", "tx", "ut", "vt", "vi", "va", "wa", "wi", "wv", "wy", "ca-ab", "ca-bc", "ca-mb", "ca-nl", "ca-ns", "ca-nt", "ca-nu", "ca-on", "ca-pe", "ca-qc", "ca-sk", "ca-yt", "mx"]};
+
+    function humanFileSize(bytes) {
+        var thresh = 1024;
+        if(Math.abs(bytes) < thresh) {
+            return bytes + ' B';
+        }
+        var units = ['kB','MB','GB','TB','PB','EB','ZB','YB'];
+        var u = -1;
+        do {
+            bytes /= thresh;
+            ++u;
+        } while(Math.abs(bytes) >= thresh && u < units.length - 1);
+        return bytes.toFixed(1)+' '+units[u];
+    }
+
+    String.prototype.toHHMMSS = function () {
+
+        var d, h, m, s;
+        s = parseInt(this, 10); // don't forget the second param
+        m = Math.floor(s / 60);
+        s = s % 60;
+        h = Math.floor(m / 60);
+        m = m % 60;
+        d = Math.floor(h / 24);
+        h = h % 24;
+        //return { d: d, h: h, m: m, s: s };
+
+        if (d > 0)
+            return d+' days, ' + h + ' hours';
+        if (h > 0)
+            return h+' hours, ' + m + ' minutes';
+
+        return m+' minutes '+s+' seconds';
+
+    }
+
+    function populate_patterns(countryname)
+    {
+        $("#pattern").empty();
+        $("#pattern").append("<option>None</option>");
+        for (var pattern in ALPR_PATTERNS[countryname])
+        {
+            // Select the one that is currently selected in the config.
+            var patternname = ALPR_PATTERNS[countryname][pattern];
+            var optionval = "<option>"
+            if ($("#pattern").attr('data-patternval') == patternname)
+                optionval = "<option selected>"
+            $("#pattern").append(optionval + patternname + "</option>");
+        }
+
+    }
+
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1);
+           var vars = query.split("&");
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=");
+                   if(pair[0] == variable){return pair[1];}
+           }
+           return(false);
+    }
+
+    $(document).ready(function() {
+
+        $("#nav_config").addClass('active');
+
+
+        // Handle restart agent
+        $("#btn_stop_agent").click(function() {
+            jQuery.ajax({url: '/configure/ajax/agent_restart?op=stop&agent_uid=S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'})
+                .done( function() {
+                   $("#agent_restart_info").text("Stopped Agent").fadeIn(500).delay(5000).fadeOut(1000);
+                });
+        });
+        $("#btn_start_agent").click(function() {
+            jQuery.ajax({url: '/configure/ajax/agent_restart?op=start&agent_uid=S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'})
+                .done( function() {
+                   $("#agent_restart_info").text("Started Agent").fadeIn(500).delay(5000).fadeOut(1000);
+                });
+        });
+
+        // Handle config form
+        $('#config_form').ajaxForm({
+            success: function() {
+                $("#config_form .submit_status").empty();
+                $("#config_form .submit_status").append("<div class='success-text'>Config settings updated.</div>");
+                $("#config_form .submit_status").fadeIn(500).delay(5000).fadeOut(1000);
+                $("#pattern").attr('data-patternval', $("#pattern").val());
+            },
+            error: function(response, statusText, xhr, $form) {
+                $("#config_form .submit_status").empty();
+                if (typeof response.responseJSON == "undefined" || typeof response.responseJSON.errors == "undefined")
+                {
+                    $("#config_form .submit_status").append("<div class='error-text'>Error submitting config.</div>")
+                }
+                else
+                {
+                    $.each(response.responseJSON.errors, function(index, error_reason) {
+                        $("#config_form .submit_status").append("<div class='error-text'>" + error_reason + "</div>")
+                    });
+                }
+
+                $("#config_form .submit_status").fadeIn(500).delay(10000).fadeOut(1000);
+            }
+        });
+
+        // Handle selecting a country and updating pattern on config form
+        populate_patterns($("#country").val());
+        $("#country").change(function(data) {
+            populate_patterns($("#country").val());
+        });
+
+        // Auto-refresh Agent info
+        var refreshLog = function () {
+
+            jQuery.ajax({url: '/configure/ajax/agent_info/S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'})
+                .done( function(data) {
+                    try
+                    {
+                        var agent_status = data.agent_status;
+
+                        if ("error" in data)
+                        {
+                            $("#status_section li span").text("-");
+                            $("#status_section .runstatus").text("Error: " + data.error);
+                        }
+                        else
+                        {
+                            if (agent_status.alprd_active)
+                            {
+                                $("#status_section .runstatus").text("Running");
+                                $("#status_section .agentuptime").text(agent_status.daemon_uptime_seconds.toString().toHHMMSS());
+                                $("#status_section .lastupdated").text($.timeago(new Date(agent_status.cpu_last_update)) );
+
+                                $("#status_section .threadcount").text(agent_status.processing_threads_active + " / " + agent_status.processing_threads_configured);
+
+                                $("#status_section .cpuusage").text(agent_status.cpu_usage_percent.toFixed(2) + "%");
+                                if (agent_status.beanstalk_queue_size < 0)
+                                    $("#status_section .uploadqueuesize").text('-');
+                                else
+                                    $("#status_section .uploadqueuesize").text(agent_status.beanstalk_queue_size);
+                                $("#status_section .systemuptime").text(agent_status.system_uptime_seconds.toString().toHHMMSS());
+                                $("#status_section .swapusage").text(humanFileSize(agent_status.memory_swapused_bytes) + " / " + humanFileSize(agent_status.memory_swaptotal_bytes));
+
+
+                                if ("disk_quota_earliest_result" in agent_status)
+                                {
+                                    $("#status_section .diskquotaoldest").text( $.timeago(new Date(agent_status.disk_quota_earliest_result)) );
+                                    $("#status_section .diskquotasize").text( humanFileSize(agent_status.disk_quota_consumed_bytes) + " / " + humanFileSize(agent_status.disk_quota_total_bytes)  );
+                                }
+
+                            }
+                            else
+                            {
+                                $("#status_section li span").text("-");
+                                if (typeof agent_status.cpu_last_update != "undefined" && agent_status.cpu_last_update != 0)
+                                    $("#status_section .lastupdated").text($.timeago(new Date(agent_status.cpu_last_update)) );
+
+                                $("#status_section .runstatus").text("Inactive");
+
+                            }
+
+                            $("#log").text(data.agent_log);
+
+                            if (agent_status.os == "linux")
+                                $("#status_section .operatingsystem").attr("class", "fa fa-linux");
+                            else if (agent_status.os == "windows")
+                                $("#status_section .operatingsystem").attr("class", "fa fa-windows");
+
+                            $("#status_section .agentversion").text(agent_status.openalpr_version);
+                            $("#status_section .cpucorecount").text(agent_status.cpu_cores);
+                        }
+
+
+
+                        
+
+                        update_camera_status(data);
+                        agentWarnings(data, "2.5.103");
+                    }
+                    catch (err) {
+                        console.log("Caught update exception:");
+                        console.log(err);
+                    }
+
+                })
+                .always(function() {
+                    if (getQueryVariable("skip_update") != 1)
+                        setTimeout(refreshLog, 1000);
+                });
+        };
+        refreshLog();
+    });
+
+
+
+  </script>
+
+    
+
+
+<script type="text/javascript">
+    // Fix the active links on the navmenu:
+    $(document).ready(function () {
+        if (location.pathname == "/")
+            $navitem = $("#dashboardlink");
+        else
+        {
+            path_without_slash = location.pathname;
+            if (path_without_slash[path_without_slash.length-1] == '/')
+                path_without_slash = path_without_slash.substring(0,path_without_slash.length -1);
+
+            path_pieces = path_without_slash.split("/");
+            last_path_piece = path_pieces[path_pieces.length - 1];
+
+            $navitem = $('#navmenu a[href*="' + last_path_piece + '"][class!="noselect"]');
+        }
+        $navitem.addClass('active');
+        $navitem.parents("li").addClass('active');
+        $navitem.parents("ul").addClass('in');
+    });
+</script>
+
+<script>
+    // Setup the search bar on the nav menu
+    $(document).ready(function() {
+        start_time = moment().subtract(7, 'days').format();
+        end_time = moment().format();
+        tz_offset = moment().utcOffset();
+
+        $("#quicksearch_start").val(start_time);
+        $("#quicksearch_end").val(end_time);
+
+        if ($("#searchlink").hasClass('active'))
+        {
+            $("#quicksearchform input").attr('disabled', true);
+            $("#quicksearchform button").attr('disabled', true);
+        }
+
+        $("#quicksearchform").submit(function() {
+            var url = '/search/#' + $(this).serialize();
+
+            window.location.href = url;
+            return false;
+        });
+    });
+</script>
+
+
+    
+
+    
+    
+    <!-- chatwik support chat -->
+    <script>
+        $.getScript("https://cdn.chatkwik.com/cdn/widget/c6311f94a5243ea1ddfcd3758b400a9c1f85f2ce8b4492a82b68110da768dde1", function() {
+            var identityHandler = function(data) {
+                window.akwik.identify({name:'support-matthill+evgeniy@gmail.com'})
+            }
+            document.addEventListener("chatkwik_loaded", identityHandler, false);
+        });
+    </script>
+
+    <!-- chatwik support chat -->
+    
+
+</body>
+</html>

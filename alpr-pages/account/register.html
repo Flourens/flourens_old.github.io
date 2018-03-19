@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Register</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../static/css/images/favicon.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../static/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../static/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../static/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../static/css/openalpr.css" rel="stylesheet">
+
+    
+<style>
+	body {
+	  padding-top: 40px;
+	  padding-bottom: 40px;
+	  background-color: #eee;
+	}
+
+	body .container
+	{
+	  max-width: 800px;
+	}
+</style>
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="../static/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    <script src="../static/js/alpr_helpers.js"></script>
+
+    <script src="../static/js/jstz.min.js"></script>
+
+    
+
+</head>
+<body>
+
+    
+
+    <div class="container">
+      <div class="starter-template">
+        
+                    <div style="text-align:right;">
+                        <img src="../static/css/images/logo.png" />
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            New User Registration
+                        </div>
+                        <div class="panel-body">
+
+                                    <form class="form-horizontal" role="form" action="register.html" method="POST">
+                                        <input type='hidden' name='csrfmiddlewaretoken' value='h0liRHSrMfT6Kqwmciuw8marBbY1i6aiJLI4g84bRGDv31lS3hoSX4rZDWvC5BU1' />
+                                        
+                                        
+
+
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_email">Email Address</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="text" name="email" id="id_email" required class=" form-control" maxlength="150" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_password">Password</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="password" name="password" id="id_password" minlength="6" required class=" form-control" maxlength="80" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_password_confirm">Confirm Password</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="password" name="password_confirm" id="id_password_confirm" minlength="6" required class=" form-control" maxlength="80" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_first_name">First Name</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="text" name="first_name" id="id_first_name" required class=" form-control" maxlength="70" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_last_name">Last Name</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="text" name="last_name" id="id_last_name" required class=" form-control" maxlength="70" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_company">Company</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="text" name="company" id="id_company" class=" form-control" maxlength="150" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_phone">Phone Number</label>
+        
+
+        <div class=" col-lg-9 ">
+            <input type="text" name="phone" id="id_phone" class=" form-control" maxlength="40" />
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        
+            <label class="control-label col-lg-3 " for="id_captcha">Captcha</label>
+        
+
+        <div class=" col-lg-9 ">
+            <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+<div class="g-recaptcha" data-sitekey="6LcaGjUUAAAAAOxpzdKmrpHjChp2VSRE6Jo1GULX" data-theme="clean" data-required="True" data-class=" form-control" data-id="id_captcha" ></div>
+<noscript>
+  <div style="width: 302px; height: 352px;">
+    <div style="width: 302px; height: 352px; position: relative;">
+      <div style="width: 302px; height: 352px; position: absolute;">
+        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LcaGjUUAAAAAOxpzdKmrpHjChp2VSRE6Jo1GULX"
+                frameborder="0" scrolling="no"
+                style="width: 302px; height:352px; border-style: none;">
+        </iframe>
+      </div>
+      <div style="width: 250px; height: 80px; position: absolute; border-style: none;
+                  bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
+        <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="recaptcha_challenge_field"
+                  style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
+                         margin: 0px; padding: 0px; resize: none;" value="">
+        </textarea>
+        <input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+      </div>
+    </div>
+  </div>
+</noscript>
+
+            
+
+            
+        </div>
+    
+</div>
+
+
+    
+
+<div class="form-group">
+    
+        <div class=" col-lg-offset-3 col-lg-9">
+            <div class="checkbox">
+                
+                    <label >
+                        <input type="checkbox" name="terms_of_service" required id="id_terms_of_service" /> <span>I agree to the <a href="terms.html" target="_blank">Terms of Service</a></span>
+                    </label>
+                
+                
+
+                
+            </div>
+        </div>
+    
+</div>
+
+
+
+                                        <!--
+                                        <div class="form-group">
+                                            <label for="input_email" class="col-sm-3 control-label">E-Mail Address</label>
+					    <div class="col-sm-9">
+                                                <input id="input_email" type="email" class="form-control" placeholder="Enter email">
+					    </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="input_password" class="col-sm-3 control-label">Password</label>
+					    <div class="col-sm-9">
+                                                <input id="input_password" type="password" class="form-control" placeholder="Password">
+					    </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="input_password" class="col-sm-3 control-label">First Name</label>
+					    <div class="col-sm-9">
+                                                <input id="input_email" class="form-control" placeholder="First Name">
+					    </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="input_password" class="col-sm-3 control-label">Last Name</label>
+					    <div class="col-sm-9">
+                                                <input id="input_email" class="form-control" placeholder="Last Name">
+					    </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="input_password" class="col-sm-3 control-label">Company</label>
+					    <div class="col-sm-9">
+                                                <input id="input_email" class="form-control" placeholder="Company">
+					    </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="input_password" class="col-sm-3 control-label">Phone Number</label>
+					    <div class="col-sm-9">
+                                                <input id="input_email" class="form-control" placeholder="Phone Number">
+					    </div>
+                                        </div>
+
+                                        <input type='hidden' name='csrfmiddlewaretoken' value='h0liRHSrMfT6Kqwmciuw8marBbY1i6aiJLI4g84bRGDv31lS3hoSX4rZDWvC5BU1' />
+                    -->
+                                        <button type="submit" class="btn btn-default pull-right">Sign Up</button>
+
+                                    </form>
+                                
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+	
+
+      </div>
+    </div><!-- /.container -->
+
+
+
+    
+
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../static/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../static/js/plugins/morris/raphael.min.js"></script>
+    <script src="../static/js/plugins/morris/morris.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../static/js/sb-admin-2.js"></script>
+
+    <script src="../static/js/moment.min.js"></script>
+
+    
+    
+
+    
+
+    
+</body>
+</html>

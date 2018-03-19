@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Create report</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="static/css/images/favicon.ico" />
+
+	<!-- Bootstrap Core CSS -->
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- MetisMenu CSS -->
+	<link href="static/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+	<!-- Timeline CSS -->
+	<link href="static/css/plugins/timeline.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="static/css/sb-admin-2.css" rel="stylesheet">
+
+	<!-- Morris Charts CSS -->
+	<link href="static/css/plugins/morris.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<link href="static/css/openalpr.css" rel="stylesheet">
+
+
+	<link href="static/css/daterangepicker.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+
+	<style>
+		#errortext {
+			font-weight: bold;
+		}
+
+		#errortext.green {
+			color: #15de15;
+		}
+
+		#errortext.red {
+			color: #de1515;
+		}
+	</style>
+
+
+
+	<!-- jQuery Version 1.11.0 -->
+	<script src="static/js/jquery-1.11.0.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="static/js/bootstrap.min.js"></script>
+
+	<script src="static/js/alpr_helpers.js"></script>
+
+	<script src="static/js/jstz.min.js"></script>
+
+	<link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+	<div id="wrapper">
+		<div id="topdrawer_error" class="alert alert-danger collapse" role="alert">
+			<span id="close_errordrawer_button" onclick="close_drawer()" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			<span id="topdrawer_errortext"></span>
+		</div>
+
+		<!-- Navigation -->
+		<nav id="navmenu" class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand with-image" href=""><img src="static/css/images/logo.png" /></a>
+			</div>
+			<!-- /.navbar-header -->
+
+			<ul class="nav navbar-top-links navbar-right">
+				<li><small><a href="account/my_account">matthill+evgeniy@gmail.com</a></small></li>
+				<!-- /.dropdown -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+					<ul class="dropdown-menu dropdown-user">
+						<li><a href="account/my_account"><i class="fa fa-user fa-fw"></i> Account Settings</a>
+						</li>
+
+						<li class="divider"></li>
+						<li><a href="account/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+						</li>
+					</ul>
+					<!-- /.dropdown-user -->
+				</li>
+				<!-- /.dropdown -->
+			</ul>
+			<!-- /.navbar-top-links -->
+
+			<div class="navbar-default sidebar" role="navigation">
+				<div class="sidebar-nav navbar-collapse">
+					<ul class="nav" id="side-menu">
+						<li class="sidebar-search">
+							<form id="quicksearchform" action="/search/" method="GET">
+								<div class="input-group custom-search-form">
+									<input type="hidden" name="search_type" value="plate" />
+									<input type="hidden" name="site" value="" />
+									<input type="hidden" id="quicksearch_start" name="start_time" value="" />
+									<input type="hidden" id="quicksearch_end" name="end_time" value="" />
+									<input name="plate_number" id="quicksearch_plate_number" type="text" class="form-control" placeholder="Quick Search...">
+									<span class="input-group-btn">
+                                    <button id="quicksearch_button" class="btn btn-default" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+								</div>
+							</form>
+							<!-- /input-group -->
+						</li>
+						<li>
+							<a id="dashboardlink" href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+						</li>
+
+						<li>
+							<a href="playvideo/"><i class="fa fa-video-camera fa-fw"></i> Video</a>
+						</li>
+
+						<li>
+							<a href="metrics/"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+						</li>
+						<li>
+							<a id="searchlink" href="search/"><i class="fa fa-search fa-fw"></i> Search</a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-area-chart fa-fw"></i> Analytics<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level collapse">
+								<li>
+									<a href="analytics/create-report">Create</a>
+								</li>
+								<li>
+									<a href="analytics/view-reports">Reports</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="getting_started/"><i class="fa fa-files-o fa-fw"></i> Getting Started</a>
+						</li>
+
+
+
+						<li>
+							<a href="cloudapi"><i class="fa fa-cogs fa-fw"></i> Cloud API</a>
+						</li>
+
+
+						<li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Configuration<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level collapse">
+
+								<li>
+									<a href="configure/alerts">Alerts</a>
+								</li>
+
+
+								<li>
+									<a id="agent_link" href="configure/agents">Agents</a>
+								</li>
+								<li>
+									<a href="configure/webhooks">WebHooks</a>
+								</li>
+								<li>
+									<a href="account/users">User Management</a>
+								</li>
+
+
+
+
+							</ul>
+							<!-- /.nav-second-level -->
+						</li>
+
+
+						<li>
+							<a href="audit/"><i class="fa fa-eye fa-fw"></i> Search Audit</a>
+						</li>
+
+					</ul>
+				</div>
+				<!-- /.sidebar-collapse -->
+			</div>
+			<!-- /.navbar-static-side -->
+		</nav>
+
+
+
+		<div id="page-wrapper">
+
+
+
+			<div class="row top-row">
+				<div class="col-lg-12">
+					<div class="panels-wrap">
+
+						<!--	Panel	1		-->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								Choose Analysis
+							</div>
+							<div class="panel-body">
+								<div class="col-lg-4 form-group">
+									<select class="form-control" id="report-type-selector">
+                        
+                            <option  selected  value="INTERDICTION">Interdiction Analysis</option>
+                        
+                            <option  value="CONVOY">Convoy Analysis</option>
+                        
+                            <option  value="BULK_SEARCH">Bulk Search Analysis</option>
+                        
+                        </select>
+									<p></p>
+									<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97100&w=250&h=100" class="img-thumbnail">
+								</div>
+								<div class="col-lg-8" id="report-type-description">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non. Placeat expedita veritatis iure magnam accusamus, iusto consequuntur a accusantium reiciendis odio sint vero minus enim assumenda, libero quis ipsum quo ullam alias. Corporis dolore, provident odit! Libero nulla soluta, unde qui quidem mollitia dolorem, totam laboriosam beatae atque ad, fugiat dolore deleniti quibusdam nisi corporis facilis accusamus nemo. In aliquam, saepe veniam totam velit, eveniet accusamus expedita, quia explicabo hic unde! Laboriosam omnis sed asperiores minus tempora nam? Repudiandae unde magni dolore facere quia quaerat sequi rerum labore accusantium non, sunt nisi tempore accusamus mollitia dicta, sed maxime optio.</p>
+								</div>
+							</div>
+
+						</div>
+						<!--	End Panel	1		-->
+						<!--	Panel	2		-->
+						<form class="form-horizontal" id="interdiction-report-form" action="/analytics/generate/interdiction-analysis" method="post" style="display"> 
+							<div class="panel panel-default">
+								<div class="panel-heading">Configure Analysis</div>
+								<div class="panel-body">
+									<input type='hidden' name='csrfmiddlewaretoken' value='AQusNAhCOTsm8dB9bYznShkcv7pPZ8amJMv9wW9NbZeKfvrpyyvKPBtLNaaxqJoH' />
+									<div class="form-group " id="interdiction-title-group">
+										<label class="col-lg-2 control-label">Report title:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<input type="text" class="form-control" name="interdiction_report_title" value="" required>
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label" for="date-range">Date Range:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<input type="text" class="form-control" name="interdiction_report_date_range">
+
+										</div>
+									</div>
+									<div class="form-group site-camera-group">
+										<label class="col-lg-2 control-label">Site/Cameras:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<div class="row">
+												<div class="col-lg-5">
+													<select id="interdiction_site_selector" class="form-control">
+
+														<option value="913">EE</option>
+
+														<option value="1129">unnamed</option>
+
+														<option value="1147">aa05c0c75664</option>
+
+														<option value="1188">unnamed</option>
+
+														<option value="1190">latest_axis</option>
+
+														<option value="1118">unnamed</option>
+
+												</select>
+												</div>
+												<div class="col-lg-5">
+													<select id="interdiction_camera_selector" class="form-control"></select>
+												</div>
+												<div class="col-lg-2">
+													<a id="interdition_add_camera" class="pull-right btn btn-primary">Add</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="form-group">
+										<label class="col-lg-2 control-label"></label>
+										<div class="col-lg-10 lg-10-expanded">
+											<select multiple class="form-control" name="interdiction_report_cameras"></select>
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Must pass through:</label>
+										<div class="col-lg-10">
+											<div class="row">
+												<div class="col-lg-5">
+													<select disabled class="form-control" name="interdiction_must_pass_through"></select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-lg-12">
+											<a id="interdiction_report_submit" class="pull-right btn btn-primary">Generate</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--	End Panel	2		-->
+
+						<!--	Panel	3		-->
+						<form class="form-horizontal" enctype="multipart/form-data" id="bulk-search-report-form" action="/analytics/generate/bulk-search" method="post">
+							<div class="panel panel-default">
+								<div class="panel-heading">Configure Analysis</div>
+								<div class="panel-body">
+
+									<input type='hidden' name='csrfmiddlewaretoken' value='AQusNAhCOTsm8dB9bYznShkcv7pPZ8amJMv9wW9NbZeKfvrpyyvKPBtLNaaxqJoH' />
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Report title:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<input required type="text" class="form-control" name="bulk_search_title" value="" placeholder="Report description">
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Numbers list:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<textarea required class="form-control" name="bulk_search_plates" placeholder="List of plates, one plate per line"></textarea>
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Date range:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<input required type="text" class="form-control" name="bulk_search_date_range" value="" placeholder="Last week">
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Rows limit:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<select class="form-control" name="bulk_search_rows_limit">
+
+											<option >100</option>
+
+											<option >500</option>
+
+											<option >1000</option>
+
+										</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-lg-12">
+											<button type="submit" class="btn btn-primary custom-submit">Generate</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--	End Panel	3		-->
+
+						<!--	Panel	4		-->
+						<form class="form-horizontal" id="convoy-report-form" action="/analytics/generate/convoy-analytics" method="post">
+							<div class="panel panel-default">
+								<div class="panel-heading">Configure Analysis</div>
+								<div class="panel-body">
+									<input type='hidden' name='csrfmiddlewaretoken' value='AQusNAhCOTsm8dB9bYznShkcv7pPZ8amJMv9wW9NbZeKfvrpyyvKPBtLNaaxqJoH' />
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Report Title:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<input type="text" class="form-control" name="convoy_report_title" placeholder="Report title" value="">
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Date range:</label>
+										<div class="col-lg-10 lg-10-expanded">
+											<input type="text" class="form-control" name="convoy_report_date_range" value="">
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Plate number:</label>
+										<div class="col-lg-5">
+											<input type="text" class="form-control" name="convoy_report_plate" value="">
+
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Convoy period:</label>
+										<div class="col-lg-5">
+											<div class="input-group" id="convoy-period">
+												<a class="input-group-addon num-spinner-decrement"><span class="glyphicon glyphicon-minus-sign"></span></a>
+												<input type="text" class="form-control spinner-value" name="convoy_report_period" value="20">
+												<a class="input-group-addon num-spinner-increment"><span class="glyphicon glyphicon-plus-sign"></span></a>
+											</div>
+
+										</div>
+										<div class="col-lg-3">
+											<i>Minutes between occurences</i>
+										</div>
+									</div>
+									<div class="form-group ">
+										<label class="col-lg-2 control-label">Cameras:</label>
+										<div class="col-lg-5">
+											<select class="selectpicker" multiple data-selected-text-format="count > 2" data-actions-box="true" name="convoy_report_cameras">
+
+										<optgroup label="ACCC8E61524E">
+
+												<option value="1170">dont know</option>
+
+										</optgroup>
+
+										<optgroup label="ACCC8E7E3178">
+
+												<option value="1393">unnamed</option>
+
+										</optgroup>
+
+										<optgroup label="S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q">
+
+												<option value="1441">qxwjvmgy</option>
+
+										</optgroup>
+
+										<optgroup label="TEST">
+
+												<option value="1483">unnamed</option>
+
+										</optgroup>
+
+										<optgroup label="TEST1234">
+
+												<option value="1486">latest_axis_cam</option>
+
+										</optgroup>
+
+										<optgroup label="Y24N0F6LI90RM87PYWAD2BG5I6DN2RJGU33UI9VG">
+
+												<option value="1372">unnamed</option>
+
+										</optgroup>
+
+								</select>
+
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="col-lg-12">
+											<a class="pull-right btn btn-primary" id="convoy_report_submit">Submit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--	End Panel	4		-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /#page-wrapper -->
+
+
+	</div>
+
+
+
+
+
+
+	<!-- Metis Menu Plugin JavaScript -->
+	<script src="static/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+	<!-- Morris Charts JavaScript -->
+	<script src="static/js/plugins/morris/raphael.min.js"></script>
+	<script src="static/js/plugins/morris/morris.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="static/js/sb-admin-2.js"></script>
+
+	<script src="static/js/moment.min.js"></script>
+
+
+	<script type="text/javascript" src="static/js/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="static/plate_analytics/js/create-report.js"></script>
+	<script type="text/javascript" src="static/plate_analytics/js/bulk-search.js"></script>
+	<script type="text/javascript" src="static/plate_analytics/js/interdiction-report.js"></script>
+	<script type="text/javascript" src="static/plate_analytics/js/convoy-report.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$("form").css("display", "none");
+
+			$("#report-type-selector").on("change", function() {
+				$("form").css("display", "none");
+				const curReportType = $(this).val();
+				setReportAttributes(curReportType);
+			});
+
+			if (!initReport("")) {
+				const curReportType = $("#report-type-selector").val();
+				setReportAttributes(curReportType);
+			}
+
+			setUpBulkSearchForm();
+			setUpInterdictionReportForm();
+			setUpConvoyReportForm();
+		});
+	</script>
+
+
+
+
+	<script type="text/javascript">
+		// Fix the active links on the navmenu:
+		$(document).ready(function() {
+			if (location.pathname == "/")
+				$navitem = $("#dashboardlink");
+			else {
+				path_without_slash = location.pathname;
+				if (path_without_slash[path_without_slash.length - 1] == '/')
+					path_without_slash = path_without_slash.substring(0, path_without_slash.length - 1);
+
+				path_pieces = path_without_slash.split("/");
+				last_path_piece = path_pieces[path_pieces.length - 1];
+
+				$navitem = $('#navmenu a[href*="' + last_path_piece + '"][class!="noselect"]');
+			}
+			$navitem.addClass('active');
+			$navitem.parents("li").addClass('active');
+			$navitem.parents("ul").addClass('in');
+		});
+	</script>
+
+	<script>
+		// Setup the search bar on the nav menu
+		$(document).ready(function() {
+			start_time = moment().subtract(7, 'days').format();
+			end_time = moment().format();
+			tz_offset = moment().utcOffset();
+
+			$("#quicksearch_start").val(start_time);
+			$("#quicksearch_end").val(end_time);
+
+			if ($("#searchlink").hasClass('active')) {
+				$("#quicksearchform input").attr('disabled', true);
+				$("#quicksearchform button").attr('disabled', true);
+			}
+
+			$("#quicksearchform").submit(function() {
+				var url = '/search/#' + $(this).serialize();
+
+				window.location.href = url;
+				return false;
+			});
+		});
+	</script>
+
+
+
+
+
+
+	<!-- chatwik support chat -->
+	<script>
+		$.getScript("https://cdn.chatkwik.com/cdn/widget/c6311f94a5243ea1ddfcd3758b400a9c1f85f2ce8b4492a82b68110da768dde1", function() {
+			var identityHandler = function(data) {
+				window.akwik.identify({
+					name: 'support-matthill+evgeniy@gmail.com'
+				})
+			}
+			document.addEventListener("chatkwik_loaded", identityHandler, false);
+		});
+	</script>
+
+	<!-- chatwik support chat -->
+
+
+</body>
+
+</html>

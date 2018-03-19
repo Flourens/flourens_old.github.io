@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>ALPR Sites and Cameras</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="static/css/images/favicon.ico">
+
+	<!-- Bootstrap Core CSS -->
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- MetisMenu CSS -->
+	<link href="static/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+	<!-- Timeline CSS -->
+	<link href="static/css/plugins/timeline.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="static/css/sb-admin-2.css" rel="stylesheet">
+
+	<!-- Morris Charts CSS -->
+	<link href="static/css/plugins/morris.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+
+	<link href="static/css/openalpr.css" rel="stylesheet">
+	
+
+
+	<style>
+		.green_text {
+			color: green;
+		}
+
+		.red_text,
+		.error-text {
+			color: red;
+		}
+
+		.bottomrow {
+			padding-bottom: 100px;
+		}
+
+		td.cam_url {
+			word-break: break-all;
+		}
+
+		ul.status_section {
+			list-style-type: none;
+			padding: 0px;
+			margin: 0;
+		}
+	</style>
+
+	<link href="static/css/bootstrap-editable.css" rel="stylesheet">
+	<!-- jQuery Version 1.11.0 -->
+	<script type="text/javascript" async="" src="https://cdn.chatkwik.com/cdn/clientjs/c6311f94a5243ea1ddfcd3758b400a9c1f85f2ce8b4492a82b68110da768dde1"></script><script src="static/js/jquery-1.11.0.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="static/js/bootstrap.min.js"></script>
+
+	<script src="static/js/alpr_helpers.js"></script>
+
+	<script src="static/js/jstz.min.js"></script>
+
+<style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style><link rel="stylesheet" type="text/css" href="https://cdn.chatkwik.com/slack/kwikchat/js/jquery-emojiarea/jquery.emojiarea.css"><link rel="stylesheet" type="text/css" href="https://cdn.chatkwik.com/slack/kwikchat/js/jquery-emojiarea/example/fontello/css/fontello.css"><link rel="stylesheet" type="text/css" href="https://cdn.chatkwik.com/slack/kwikchat/css/dropzone.css"><link rel="stylesheet" type="text/css" href="https://cdn.chatkwik.com/slack/kwikchat/css/style.css"><style>			.part__comment--user .comment__body--caret:before {					border-left-color: #0074b0;				}			.part__comment--system .comment__body--caret:before {					border-right-color: #DADEE2;				}			.part__comment--admin .comment__body {					background-color: #fff;					color: #455a64;					border-color: #fff;				}			.part__comment--user .comment__body {					background-color: #0074b0;					color: #fff;					border-color: #0074b0;				}			.conversation__body {					background-color: rgba(238, 238, 242, 0.96);				}			.launcher__button {					background-color: #a4d5ff;					border: 1px solid #a4d5ff;					border-radius: 50%;				};			</style></head>
+<body>
+
+
+
+
+	<div id="wrapper">
+		<div id="topdrawer_error" class="alert alert-danger collapse" role="alert">
+			<span id="close_errordrawer_button" onclick="close_drawer()" class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			<span id="topdrawer_errortext"></span>
+		</div>
+
+		<!-- Navigation -->
+		<nav id="navmenu" class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand with-image" href=""><img src="static/css/images/logo.png" /></a>
+			</div>
+			<!-- /.navbar-header -->
+
+			<ul class="nav navbar-top-links navbar-right">
+				<li><small><a href="account/my_account">matthill+evgeniy@gmail.com</a></small></li>
+				<!-- /.dropdown -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+					<ul class="dropdown-menu dropdown-user">
+						<li><a href="account/my_account"><i class="fa fa-user fa-fw"></i> Account Settings</a>
+						</li>
+
+						<li class="divider"></li>
+						<li><a href="account/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+						</li>
+					</ul>
+					<!-- /.dropdown-user -->
+				</li>
+				<!-- /.dropdown -->
+			</ul>
+			<!-- /.navbar-top-links -->
+
+			<div class="navbar-default sidebar" role="navigation">
+				<div class="sidebar-nav navbar-collapse">
+					<ul class="nav" id="side-menu">
+						<li class="sidebar-search">
+							<form id="quicksearchform" action="/search/" method="GET">
+								<div class="input-group custom-search-form">
+									<input type="hidden" name="search_type" value="plate" />
+									<input type="hidden" name="site" value="" />
+									<input type="hidden" id="quicksearch_start" name="start_time" value="" />
+									<input type="hidden" id="quicksearch_end" name="end_time" value="" />
+									<input name="plate_number" id="quicksearch_plate_number" type="text" class="form-control" placeholder="Quick Search...">
+									<span class="input-group-btn">
+                                    <button id="quicksearch_button" class="btn btn-default" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+								</div>
+							</form>
+							<!-- /input-group -->
+						</li>
+						<li>
+							<a id="dashboardlink" href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+						</li>
+
+						<li>
+							<a href="playvideo/"><i class="fa fa-video-camera fa-fw"></i> Video</a>
+						</li>
+
+						<li>
+							<a href="metrics/"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+						</li>
+						<li>
+							<a id="searchlink" href="search/"><i class="fa fa-search fa-fw"></i> Search</a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-area-chart fa-fw"></i> Analytics<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level collapse">
+								<li>
+									<a href="analytics/create-report">Create</a>
+								</li>
+								<li>
+									<a href="analytics/view-reports">Reports</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="getting_started/"><i class="fa fa-files-o fa-fw"></i> Getting Started</a>
+						</li>
+
+
+
+						<li>
+							<a href="cloudapi"><i class="fa fa-cogs fa-fw"></i> Cloud API</a>
+						</li>
+
+
+						<li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Configuration<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level collapse">
+
+								<li>
+									<a href="configure/alerts">Alerts</a>
+								</li>
+
+
+								<li>
+									<a id="agent_link" href="configure/agents">Agents</a>
+								</li>
+								<li>
+									<a href="configure/webhooks">WebHooks</a>
+								</li>
+								<li>
+									<a href="account/users">User Management</a>
+								</li>
+
+
+
+
+							</ul>
+							<!-- /.nav-second-level -->
+						</li>
+
+
+						<li>
+							<a href="audit/"><i class="fa fa-eye fa-fw"></i> Search Audit</a>
+						</li>
+
+					</ul>
+				</div>
+				<!-- /.sidebar-collapse -->
+			</div>
+			<!-- /.navbar-static-side -->
+		</nav>
+
+
+
+		<div id="page-wrapper" style="min-height: 391px;">
+
+       <div class="row top-row">
+				<div class="col-lg-12">
+					<p></p>
+					<div id="alerts"></div>
+					
+					<!--	Panel	1		-->
+					<div class="panel panel-default">
+						<div class="panel-heading">Reports</div>
+						<div class="panel-body">
+							 <i> * Reports will be available for view as soon as they become completed.</i>
+						<div id="status_section">
+							<div class="row">
+								<div class="col-lg-12">
+									<form class="form-inline reports-form clearfix">
+											
+											<div class="col-sm-6 col-md-4">
+												<div class="form-group">
+												<label for="user-filter">Created By:</label>
+												<div class="btn-group bootstrap-select show-tick"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="user-filter" title="Nothing selected"><span class="filter-option pull-left">Nothing selected</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off" role="textbox" aria-label="Search"></div><div class="bs-actionsbox"><div class="btn-group btn-group-sm btn-block"><button type="button" class="actions-btn bs-select-all btn btn-default">Select All</button><button type="button" class="actions-btn bs-deselect-all btn btn-default">Deselect All</button></div></div><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">matthill@gmail.com</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select id="user-filter" class="selectpicker" data-live-search="true" multiple="" data-actions-box="true" tabindex="-98">
+
+														<option value="2209">matthill@gmail.com</option>
+
+												</select></div>
+											</div>
+											</div>
+											
+											<div class="col-sm-6 col-md-4">
+												<div id="report-type-group" class="form-group">
+												<label for="type-filter">Report Type:</label>
+												<div class="btn-group bootstrap-select show-tick"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="type-filter" title="Nothing selected"><span class="filter-option pull-left">Nothing selected</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><div class="bs-actionsbox"><div class="btn-group btn-group-sm btn-block"><button type="button" class="actions-btn bs-select-all btn btn-default">Select All</button><button type="button" class="actions-btn bs-deselect-all btn btn-default">Deselect All</button></div></div><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Interdiction Analysis</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Bulk Search Analysis</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select id="type-filter" class="selectpicker" multiple="" data-actions-box="true" tabindex="-98">
+
+														<option value="INTERDICTION">Interdiction Analysis</option>
+
+														<option value="BULK_SEARCH">Bulk Search Analysis</option>
+
+												</select></div>
+</div>
+											</div>
+											
+											<div class="col-sm-6 col-md-4">
+												<div class="form-group">
+												<label for="timestamp-filter">Time range:</label>
+												<input id="timerange-filter" class="form-control">
+</div>
+											</div>
+											
+											<div class="col-sm-12">
+												<a id="search-reports" class="btn btn btn-primary">Search</a>
+											</div>
+											
+								</form>
+								</div>
+								
+							</div>
+						</div>
+						</div>
+					</div><!--	End Panel	1		-->
+					
+				</div>
+			</div>
+			
+			
+			
+			<div class="middlerow row">
+				<div class="col-lg-12">
+				
+				
+					<!--	Panel	2		-->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Test
+						</div>
+						<div class="panel-body">
+							<div id="reports" class="list-group">
+          
+           <a class="list-group-item" href="/analytics/view-report/346d9fbe-d5a3-4211-ab99-1ff6b50fba58">
+           
+          	 <table class="table text-left">
+                <tbody><tr>
+                    <th>Creation Time:</th>
+                    <td>Fri Mar 16 01:04:57 2018</td>
+                </tr>
+                <tr>
+                    <th>Report Type:</th>
+                    <td>Bulk Search Analysis</td>
+                </tr>
+                <tr>
+                    <th>Report Status:</th>
+                    <td><span class="label label-success">Complete</span></td>
+                </tr>
+                <tr>
+                    <th>Created by:</th>
+                    <td>matthill@gmail.com</td>
+                </tr>
+            </tbody></table>
+            
+           </a>
+        </div>
+						</div>
+					</div><!--	End Panel	2		-->
+					
+					
+					
+					
+					<!--	Panel	3		-->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Test
+						</div>
+						<div class="panel-body">
+							<div id="reports" class="list-group">
+
+            
+            <a class="list-group-item" href="/analytics/view-report/5a5eb1a2-bbfb-4b09-80f6-2e811a6b33f2">
+      				<table class="table text-left">
+									<tbody><tr>
+											<th>Creation Time:</th>
+											<td>Fri Mar 16 01:04:17 2018</td>
+									</tr>
+									<tr>
+											<th>Report Type:</th>
+											<td>Bulk Search Analysis</td>
+									</tr>
+									<tr>
+											<th>Report Status:</th>
+											<td><span class="label label-success">Complete</span></td>
+									</tr>
+									<tr>
+											<th>Created by:</th>
+											<td>matthill@gmail.com</td>
+									</tr>
+							</tbody></table>
+
+            </a>
+        		
+        </div>
+						</div>
+					</div><!--	End Panel	2		-->
+					
+					<!--	Panel	4		-->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Test
+						</div>
+						<div class="panel-body">
+							<div id="reports" class="list-group">
+            <a class="list-group-item btn disabled">
+							<table class="table text-left">
+									<tbody><tr>
+											<th>Creation Time:</th>
+											<td>Fri Mar 16 00:52:54 2018</td>
+									</tr>
+									<tr>
+											<th>Report Type:</th>
+											<td>Interdiction Analysis</td>
+									</tr>
+									<tr>
+											<th>Report Status:</th>
+											<td><span class="label label-default">Scheduled</span></td>
+									</tr>
+									<tr>
+											<th>Created by:</th>
+											<td>matthill@gmail.com</td>
+									</tr>
+							</tbody></table>
+
+        		</a>
+     	   </div>
+						</div>
+					</div><!--	End Panel	4		-->
+				</div>
+			</div>
+    <div class="bottomrow">
+        <div class="col-lg-12">
+            
+            
+            <div id="pagination" class="text-center">
+                <button id="btn-prev" class="btn btn-default btn-sm disabled">Previous</button>
+                <button id="btn-next" class="btn btn-default btn-sm disabled">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+        </div>
+		<!-- /#page-wrapper -->
+
+
+	</div>
+
+
+
+
+
+
+	<!-- Metis Menu Plugin JavaScript -->
+	<script src="static/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+	<!-- Morris Charts JavaScript -->
+	<script src="static/js/plugins/morris/raphael.min.js"></script>
+	<script src="static/js/plugins/morris/morris.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="static/js/sb-admin-2.js"></script>
+
+	<script src="static/js/moment.min.js"></script>
+
+
+
+	<script src="static/js/bootbox.min.js"></script>
+
+	<script type="text/javascript">
+		// Setup the nav bar to show "Agents" as selected
+		$(document).ready(function() {
+
+			$("#agent_link").addClass('active');
+			$("#agent_link").parents("li").addClass('active');
+			$("#agent_link").parents("ul").addClass('in');
+
+		});
+	</script>
+
+
+	<script src="static/js/jquery.form.js"></script>
+	<script src="static/js/jquery.timeago.js"></script>
+	<script src="static/js/bootstrap-editable.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js/agent-warnings.js"></script>
+
+	<script>
+		var CAMERA_INFO = {
+			"version": 1,
+			"manufacturers": {
+				"A-Linking": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/GetData.cgi"]
+				},
+				"Convision": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/fullsize.push?camera=1&sleep=15"]
+				},
+				"Swann": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi/jpg/image.cgi"]
+				},
+				"Foscam": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/videostream.cgi", "http://[username]:[password]@[ip_address]/snapshot.cgi"]
+				},
+				"Fulicom": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]
+				},
+				"Sharkx": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/stream.jpg"]
+				},
+				"Lumens": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]:8557/h264"]
+				},
+				"Airlive": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/video.mjpg", "http://[username]:[password]@[ip_address]/mjpg/video.mjpg"]
+				},
+				"Airwave": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/pusher.cgi"]
+				},
+				"Gadspot": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/Jpeg/CamImg.jpg", "http://[username]:[password]@[ip_address]/GetData.cgi?Status=0"]
+				},
+				"Hikvision": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/h264/ch1/sub/", "rtsp://[username]:[password]@[ip_address]:554/Streaming/Channels/1", "rtsp://[username]:[password]@[ip_address]:554/ch0_0.h264"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/video.jpg?cam=1&quality=3&size=2"]
+				},
+				"Lumenera": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/nph-video"]
+				},
+				"Bosch": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/rtsp_tunnel"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/rtsp_tunnel?h26x=4&line=1&inst=2"]
+				},
+				"Moxa": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/video.jpg"]
+				},
+				"Mobotix": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/record/current.jpg", "http://[username]:[password]@[ip_address]/control/faststream.jpg?stream=full", "http://[username]:[password]@[ip_address]/faststream.jpg?stream=full&fps=1.0 (1 fps)", "http://[username]:[password]@[ip_address]/faststream.jpg?stream=full&fps=3.0 (1 fps)", "http://[username]:[password]@[ip_address]/faststream.jpg?stream=full&fps=0 (max frame rate)"]
+				},
+				"Intellinet": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg"]
+				},
+				"Trendnet": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/goform/video", "http://[username]:[password]@[ip_address]/goform/video2", "http://[username]:[password]@[ip_address]/cgi/mjpg/mjpg.cgi", "http://[username]:[password]@[ip_address]/GetData.cgi", "http://[username]:[password]@[ip_address]/image.jpg"]
+				},
+				"Goscam": {
+					"mjpeg": ["http://[ip_address]/cgi-bin/Stream?Video?Acc=[username]?Pwd=[password]?webcamPWD=RootCookies00000"]
+				},
+				"Skyway_Security": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/GetData.cgi?Status=0", "http://[username]:[password]@[ip_address]/Jpeg/CamImg.jpg"]
+				},
+				"Toshiba": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/__live.jpg?&&&", "http://[username]:[password]@[ip_address]getstream.cgi?10&10&&&10&0&0&0&0"]
+				},
+				"PLANET": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg"]
+				},
+				"Linudix": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/nph-update_4ch.cgi?ch=1"]
+				},
+				"Avigilon": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/defaultPrimary?streamType=u"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/media/still.jpg"]
+				},
+				"Y-Cam": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/stream.jpg"]
+				},
+				"Linksys": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/img/video.mjpeg", "http://[username]:[password]@[ip_address]/img/mjpeg.cgi", "http://[username]:[password]@[ip_address]/img/snapshot.cgi?size=2", "http://[username]:[password]@[ip_address]/adm/file.cgi?h_videotype=mjpeg&todo=save"]
+				},
+				"Vilar": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]
+				},
+				"Samsung": {
+					"h264": ["rtsp://[ip_address]/profile1/media.smp"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/video?submenu=mjpg", "http://[username]:[password]@[ip_address]/video?submenu=jpg"]
+				},
+				"Sanyo": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/liveimg.cgi?serverpush=1"]
+				},
+				"Dahua": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]:554/cam/realmonitor?channel=1&subtype=1"]
+				},
+				"Arecont": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg?res=full&x0=0&y0=0&x1=100%&y1=100%&quality=12&doublescan=0&fps=15&ver=HTTP/1.1", "http://[username]:[password]@[ip_address]/image?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0"]
+				},
+				"Axis": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/axis-media/media.amp", "rtsp://[username]:[password]@[ip_address]/mpeg4/media.amp"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/axis-cgi/mjpg/video.cgi?fps=15"]
+				},
+				"Pixord": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/Getimage.cgi", "http://[username]:[password]@[ip_address]/Getimage?camera=1&fmt=full", "http://[username]:[password]@[ip_address]/Getimage?camera=1&fmt=qsif"]
+				},
+				"Kingnow": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]
+				},
+				"Qnap": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi/mjpg/mjpeg.cgi"]
+				},
+				"Sony": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/media/video1"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/image", "http://[username]:[password]@[ip_address]/image?speed=0", "http://[username]:[password]@[ip_address]/oneshotimage.jpg"]
+				},
+				"JVC": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/api/video?encode=jpeg&framerate=15&boundary=on"]
+				},
+				"Edimax": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg", "http://[username]:[password]@[ip_address]/mjpg/video.mjpg", "http://[username]:[password]@[ip_address]/snapshot.cgi"]
+				},
+				"Digicom": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]
+				},
+				"CNB": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/"]
+				},
+				"Easyn": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/videostream.cgi?user=username&pwd=password"]
+				},
+				"Marmitek": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi/mjpg/mjpeg.cgi"]
+				},
+				"Zavio": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg"]
+				},
+				"Shenzen_Sunsky": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]
+				},
+				"Cisco": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/"]
+				},
+				"D-Link": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/video/mjpg.cgi", "http://[username]:[password]@[ip_address]/video.cgi", "http://[username]:[password]@[ip_address]/mjpeg.cgi", "http://[username]:[password]@[ip_address]/cgi-bin/video.jpg", "http://[username]:[password]@[ip_address]/IMAGE.jpg", "http://[username]:[password]@[ip_address]/cgi-bin/video.vam", "http://[username]:[password]@[ip_address]/_gCVimage.jpg"]
+				},
+				"Canon": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/-wvhttp-01-/", "http://[username]:[password]@[ip_address]/-wvhttp-01-/GetOneShot", "http://[username]:[password]@[ip_address]/-wvhttp-01-/GetOneShot?frame_count=no_limit", "http://[username]:[password]@[ip_address]/-wvhttp-01-/GetStillImage"]
+				},
+				"Surecom": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]
+				},
+				"Airlink": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi", "http://[username]:[password]@[ip_address]/cgi/mjpg/mjpeg.cgi", "http://[username]:[password]@[ip_address]/cgi/jpg/image.cgi"]
+				},
+				"Hamlet": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]
+				},
+				"TP-Link": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/jpg/image.jpg", "http://[username]:[password]@[ip_address]/video.mjpg"]
+				},
+				"Bowya": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/video.cgi"]
+				},
+				"IQeye": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/stream1", "rtsp://[username]:[password]@[ip_address]/now.mp4&res=high"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/now.jpg?snap=spush"]
+				},
+				"Ego": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/cgi-bin/sf.cgi"]
+				},
+				"Aviosys": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/GetData.cgi", "http://[username]:[password]@[ip_address]/cgi-bin/Stream?Video?Authorization="]
+				},
+				"Vivotek": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/live.sdp"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/video.mjpg", "http://[username]:[password]@[ip_address]/cgi-bin/video.jpg", "http://[username]:[password]@[ip_address]/cgi-bin/viewer/video.jpg"]
+				},
+				"Topcom": {
+					"mjpeg": ["http://[username]:[password]@[ip_address]/mjpeg.cgi"]
+				},
+				"Panasonic": {
+					"h264": ["rtsp://[username]:[password]@[ip_address]/MediaInput/h264/stream_1"],
+					"mjpeg": ["http://[username]:[password]@[ip_address]/nphMotionJpeg?Resolution=640x480&Quality=Clarity", "http://[username]:[password]@[ip_address]/cgi-bin/nphContinuousServerPush", "http://[username]:[password]@[ip_address]/SnapshotJPEG?mode=Refresh", "http://[username]:[password]@[ip_address]/cgi-bin/camera"]
+				}
+			}
+		};
+		var GENERIC_URL_VAL = "Generic URL"
+
+		function sortkeys(obj) {
+			var keys = [];
+
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					keys.push(key);
+				}
+			}
+
+			return keys.sort();
+		}
+
+		function update_camera_status(data) {
+
+			if ("error" in data) {
+				$('td.cam_status').text('-');
+				$('td.cam_fps').text('-');
+			}
+
+			$("#current_stream_list tbody tr").each(function(index, value) {
+				this_url = $(this).find('td.cam_url').text();
+				var found_it = false;
+
+				if (data.agent_status !== undefined) {
+					for (stream_index in data.agent_status.video_streams) {
+						stream = data.agent_status.video_streams[stream_index];
+						if (stream.url == this_url) {
+							if (!data.agent_status.alprd_active) {
+								$(this).find('td.cam_status').html('-');
+								$(this).find('td.cam_fps').text("-");
+							} else if (stream.is_streaming) {
+								$(this).find('td.cam_status').html('<span class="glyphicon glyphicon-thumbs-up green_text"></span>');
+								$(this).find('td.cam_fps').text(Math.round(stream.fps));
+							} else {
+								$(this).find('td.cam_status').html('<span class="glyphicon glyphicon-thumbs-down red_text"></span>');
+								$(this).find('td.cam_fps').text("-");
+							}
+							found_it = true;
+							break;
+						}
+					}
+				}
+
+				if (!found_it) {
+					$(this).find('td.cam_status').html('<span class="glyphicon glyphicon-thumbs-down red_text"></span>');
+					$(this).find('td.cam_fps').text("-");
+				}
+
+			});
+		}
+
+		function populate_url_fields() {
+			var url_template = $("#url").attr('data-url');
+
+			if (url_template == undefined || url_template.length == 0)
+				return;
+
+			if ($("#camera_model").val() == GENERIC_URL_VAL)
+				return;
+			var has_credentials = $('#use_credentials').is(':checked');
+			var username = $('#username').val();
+			var password = $('#password').val();
+
+			var ip_address = $('#ip_address').val();
+
+			if (has_credentials && username.length > 0 && password.length > 0) {
+				url_template = url_template.replace("[username]", username);
+				//fake_password = ''
+				//for (var i = 0; i < password.length; i++)
+				//    fake_password += '*'
+				url_template = url_template.replace("[password]", password);
+			} else {
+				url_template = url_template.replace("[username]:[password]@", "");
+			}
+			url_template = url_template.replace("[ip_address]", ip_address);
+
+			$("#url").val(url_template);
+		}
+
+		function set_url(url) {
+			$("#url").attr('data-url', url);
+			populate_url_fields();
+		}
+
+		function reload_camera_list() {
+
+			jQuery.ajax({
+					url: '/configure/ajax/config?agent_uid=S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'
+				})
+				.done(function(data) {
+
+					if (typeof data.config != "undefined" && typeof data.config['stream.d'] != "undefined") {
+						$("#current_stream_list .delete_button").unbind();
+						$("#current_stream_list").empty();
+
+						var $camtable = $('<table class="table table-striped"><thead><tr></tr></thead><tbody></tbody></table>');
+						//$camtable.find('tr').append('<th></th>');
+						$camtable.find('tr').append('<th class="cam_url">Stream URL</th>');
+						$camtable.find('tr').append('<th class="cam_name">Name</th>');
+						$camtable.find('tr').append('<th class="cam_status">Status</th>');
+						$camtable.find('tr').append('<th class="cam_fps">FPS</th>');
+						$camtable.find('tr').append('<th class="cam_delete"></th>');
+
+						stream_d_obj = data.config['stream.d']
+						for (var stream_file in stream_d_obj) {
+							var stream_url = '';
+							var camera_id = undefined;
+
+							for (var i in stream_d_obj[stream_file]) {
+								prop_name = stream_d_obj[stream_file][i].name
+								prop_value = stream_d_obj[stream_file][i].value
+								if (prop_name == "stream") {
+									stream_url = prop_value;
+								} else if (prop_name == "camera_id") {
+									camera_id = parseInt(prop_value);
+								}
+							}
+
+							if (stream_url.length > 0) {
+								var $camlink = $('<td class="cam_name"></td>');
+
+								if (camera_id in data.camera_names && camera_id !== undefined) {
+									$alink = $('<a href="#">' + data.camera_names[camera_id] + '</a>');
+									$camlink.append($alink);
+
+									$.fn.editable.defaults.ajaxOptions = {
+										type: "GET"
+									};
+									$alink.editable({
+										type: 'text',
+										pk: 1,
+										name: 'name',
+										url: '/configure/update/edit_camera',
+										title: 'Enter Camera Name',
+										params: function(params) {
+											params.camera = $(this).data('camera_id');
+											params.agent_uid = 'S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q';
+											return params;
+										},
+										success: function(response, newValue) {
+											$(this).text(newValue);
+										}
+									});
+									$alink.data('camera_id', camera_id);
+
+								}
+								$camrow = $('<tr></tr>');
+								//$camrow.append('<td><span class="glyph-clickable glyphicon glyphicon-edit"></span></td>');
+
+
+								$camurl = $('<a href="#">' + prop_value + '</a>');
+								$.fn.editable.defaults.ajaxOptions = {
+									type: "GET"
+								};
+								$camurl.editable({
+									type: 'text',
+									pk: 1,
+									name: 'name',
+									url: '/configure/ajax/edit_stream',
+									title: 'Enter Stream URL',
+									params: function(params) {
+										params.stream_file = $(this).data('stream_file');
+										params.agent_uid = 'S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q';
+										return params;
+									},
+									success: function(response, newValue) {
+										$(this).text(newValue);
+									}
+								});
+								$camurl.data('stream_file', stream_file);
+								$urltd = $('<td class="cam_url"></td>');
+								$urltd.append($camurl);
+
+								$camrow.append($urltd);
+
+								$camrow.append($camlink);
+								$camrow.append('<td class="cam_status"></td>');
+								$camrow.append('<td class="cam_fps"></td>');
+
+								$camrow.append('<td class="cam_delete"> \
+                                <a class="btn btn-default btn-xs configure_button" href="configure/agent/S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q/' + stream_file + '"><span class="glyphicon glyphicon-wrench"></span> Configure</a> \
+                                <a class="btn btn-danger btn-xs delete_button" href="#" data-streamname="' + stream_file + '" data-url="' + prop_value + '"><span class="glyphicon glyphicon-trash"></span> Delete</a>         \
+                                </td>');
+
+								$camtable.find('tbody').append($camrow);
+							}
+
+
+						}
+
+						$("#current_stream_list").append($camtable);
+					} else {
+						$("#current_stream_list .delete_button").unbind();
+						$("#current_stream_list").empty();
+						$("#current_stream_list").append('<strong>No Video Streams Defined</strong>');
+					}
+
+
+					$("#current_stream_list .delete_button").click(function() {
+
+						$delete_button_obj = $(this);
+						var url_to_delete = $(this).attr('data-url');
+
+						bootbox.confirm("Deleting a camera will remove all data associated with that camera.  Are you sure?", function(result) {
+
+							console.log(result);
+
+							if (result == true) {
+
+								jQuery.ajax({
+										url: '/configure/ajax/delete_stream',
+										data: {
+											url: url_to_delete,
+											agent_uid: "S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q"
+										}
+									})
+									.done(function(data) {
+										//$delete_button_obj.parent().parent().remove();
+										reload_camera_list();
+									})
+									.error(function(data) {
+
+										alert("Failed to remove stream.");
+									});
+
+							}
+
+						});
+
+					});
+				});
+
+		}
+
+		function test_stream(url_to_test) {
+
+			$("#stream_error_text").hide().clearQueue();
+
+			jQuery.ajax({
+					url: '/configure/ajax/test_stream',
+					data: {
+						url: url_to_test,
+						agent_uid: "S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q"
+					}
+				})
+				.done(function(data) {
+					//$("#agent_restart_info").text("Restarted Agent").fadeIn(500).delay(5000).fadeOut(1000);
+					if (data.success) {
+						$("#test_stream_results_popup .modal-title").text('Test Successful');
+						$("#test_stream_results_popup button.stream_save").attr('disabled', false);
+						random_num = Math.floor((Math.random() * 100000) + 1);
+						var src_b64 = 'data:image/jpeg;charset=utf-8;base64,' + data.image;
+						$("#test_stream_results_popup img").attr('src', src_b64).show();
+					} else {
+
+						$("#test_stream_results_popup .modal-title").text('Test Failed');
+						$("#test_stream_results_popup button.stream_save").attr('disabled', true);
+						$("#test_stream_results_popup img").hide();
+					}
+
+					$("#test_stream_results_popup pre").text(data.log);
+					$('#test_stream_results_popup').modal('show')
+				})
+				.fail(function(data) {
+					var failure_reason = 'Unable to test stream.';
+					if (typeof data.responseJSON != "undefined" && typeof data.responseJSON.errors != "undefined")
+						failure_reason = data.responseJSON.errors[0];
+
+					$("#stream_error_text").removeClass("success-text").addClass("error-text").text(failure_reason)
+						.fadeIn(500).delay(10000).fadeOut(1000);
+				})
+				.always(function() {
+					$("#stream_test_btn").removeClass('disabled active');
+					$("#stream_save_btn").removeClass('disabled');
+				});
+
+		}
+
+		function camera_model_changed() {
+			//alert($('#camera_model').val());
+			selected_manufacturer = $('#camera_model').val();
+			$("#stream_type").empty();
+			if (selected_manufacturer == GENERIC_URL_VAL) {
+				$("#stream_type").append('<option>----</option>');
+				$("#ip_address").attr('disabled', true);
+				$("#username").attr('disabled', true);
+				$("#password").attr('disabled', true);
+				$("#use_credentials").attr('disabled', true);
+
+			} else if (selected_manufacturer in CAMERA_INFO.manufacturers) {
+				$("#ip_address").attr('disabled', false);
+				$("#use_credentials").attr('disabled', false);
+				use_credentials_checked = $("#use_credentials").is(':checked');
+				$("#username").attr('disabled', !use_credentials_checked);
+				$("#password").attr('disabled', !use_credentials_checked);
+
+				selected_mfr_obj = CAMERA_INFO.manufacturers[selected_manufacturer];
+				first_url = '';
+				for (stream_type in selected_mfr_obj) {
+					for (url_idx in selected_mfr_obj[stream_type]) {
+						name = stream_type.toUpperCase()
+						if (url_idx > 0)
+							name += " Alt " + (url_idx)
+						url = selected_mfr_obj[stream_type][url_idx];
+
+						$("#stream_type").append('<option data-url="' + url + '">' + name + '</option>');
+						if (first_url == '')
+							first_url = url;
+					}
+				}
+				set_url(first_url);
+			}
+		}
+
+		$(document).ready(function() {
+
+			// Make the help icons on the config form work
+			$('[data-toggle="popover"]').popover();
+
+			// Setup camera form
+			manufacturers = sortkeys(CAMERA_INFO.manufacturers);
+			for (var index in manufacturers) {
+				key = manufacturers[index];
+				$('#camera_model').append('<option>' + key + '</option>');
+
+			}
+
+			$("#stream_type").change(function(data) {
+				var url_val = $(this.selectedOptions).attr('data-url');
+				set_url(url_val);
+			});
+
+			camera_model_changed();
+
+			$('#camera_model').change(camera_model_changed);
+
+
+			$("#add_stream_button_container button").click(function() {
+				$(this).parent().slideUp({
+					duration: 250
+				});
+				$("#add_edit_camera_form").delay(300).slideDown({
+					duration: 500
+				});
+			});
+
+			$("#camera_close_button .glyph-clickable").click(function() {
+				$("#add_edit_camera_form").slideUp({
+					duration: 500
+				});
+				$('#add_stream_button_container').delay(550).slideDown({
+					duration: 250
+				});
+			});
+
+			$("#stream_test_btn").click(function() {
+				// Validate
+				$("#stream_error_text").hide().clearQueue();
+
+				if ($("#camera_model").val() != GENERIC_URL_VAL && $("#ip_address").val().length == 0) {
+					$("#stream_error_text").removeClass("success-text").addClass("error-text").text("Invalid IP Address")
+						.fadeIn(500).delay(10000).fadeOut(1000);
+				} else if ($("#url").val().length == 0) {
+					$("#stream_error_text").removeClass("success-text").addClass("error-text").text("Missing Stream URL")
+						.fadeIn(500).delay(10000).fadeOut(1000);
+				} else {
+					$(this).addClass('disabled active');
+					$("#stream_save_btn").addClass('disabled');
+					test_stream($("#url").val());
+				}
+
+			});
+
+			$("button.stream_save").click(function() {
+				url_to_save = $("#url").val();
+
+				jQuery.ajax({
+						url: '/configure/ajax/add_stream',
+						data: {
+							agent_uid: 'S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q',
+							url: url_to_save
+						}
+					})
+					.done(function(data) {
+
+						reload_camera_list();
+						$("#add_edit_camera_form").slideUp({
+							duration: 500
+						});
+						$('#add_stream_button_container').delay(550).slideDown({
+							duration: 250
+						});
+					})
+					.error(function(response) {
+						var errortext = "Failed to add stream.";
+						if (typeof response.responseJSON != "undefined" && typeof response.responseJSON.errors != "undefined")
+							errortext = response.responseJSON.errors[0];
+						$("#stream_error_text").hide().clearQueue();
+						$("#stream_error_text").removeClass("success-text").addClass("error-text").text(errortext)
+							.fadeIn(500).delay(10000).fadeOut(1000);
+					});
+			});
+
+
+			$('#use_credentials').change(function(data) {
+				is_checked = $(this).is(':checked');
+				$("#username").attr('disabled', !is_checked);
+				$("#password").attr('disabled', !is_checked);
+				populate_url_fields();
+			});
+
+			$("#ip_address").keyup(function(data) {
+				populate_url_fields();
+			});
+			$("#username").keyup(function(data) {
+				populate_url_fields();
+			});
+			$("#password").keyup(function(data) {
+				populate_url_fields();
+			});
+			$("#url").keyup(function(data) {
+				$("#camera_model").prop("selectedIndex", 0);
+				camera_model_changed();
+
+				//populate_url_fields();
+			});
+			$("#username").attr('disabled', true);
+			$("#password").attr('disabled', true);
+
+			reload_camera_list();
+		});
+	</script>
+
+	<script>
+		var ALPR_PATTERNS = {
+			"eu": ["ad", "al", "am", "at", "az", "ba", "be", "bg", "by", "ch", "cy", "cz", "de", "dk", "ee", "es", "fi", "fr", "gb", "ge", "gi", "gr", "hr", "hu", "ie", "is", "it", "kz", "li", "lt", "lu", "lv", "mc", "md", "me", "mk", "mt", "nl", "no", "pl", "pt", "ro", "rs", "ru", "se", "si", "sk", "sm", "tr", "ua", "va"],
+			"ar": ["ar"],
+			"au": ["au-act", "au-nsw", "au-nt", "au-qld", "au-sa", "au-tas", "au-vic", "au-wa"],
+			"br": ["br"],
+			"us": ["al", "ak", "as", "az", "ar", "ca", "co", "ct", "de", "dc", "fl", "ga", "gu", "hi", "id", "il", "in", "ia", "ks", "ky", "la", "me", "ms", "md", "ma", "mi", "mn", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd", "mp", "oh", "ok", "or", "pa", "pr", "ri", "sc", "sd", "tn", "tx", "ut", "vt", "vi", "va", "wa", "wi", "wv", "wy", "ca-ab", "ca-bc", "ca-mb", "ca-nl", "ca-ns", "ca-nt", "ca-nu", "ca-on", "ca-pe", "ca-qc", "ca-sk", "ca-yt", "mx"]
+		};
+
+		function humanFileSize(bytes) {
+			var thresh = 1024;
+			if (Math.abs(bytes) < thresh) {
+				return bytes + ' B';
+			}
+			var units = ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+			var u = -1;
+			do {
+				bytes /= thresh;
+				++u;
+			} while (Math.abs(bytes) >= thresh && u < units.length - 1);
+			return bytes.toFixed(1) + ' ' + units[u];
+		}
+
+		String.prototype.toHHMMSS = function() {
+
+			var d, h, m, s;
+			s = parseInt(this, 10); // don't forget the second param
+			m = Math.floor(s / 60);
+			s = s % 60;
+			h = Math.floor(m / 60);
+			m = m % 60;
+			d = Math.floor(h / 24);
+			h = h % 24;
+			//return { d: d, h: h, m: m, s: s };
+
+			if (d > 0)
+				return d + ' days, ' + h + ' hours';
+			if (h > 0)
+				return h + ' hours, ' + m + ' minutes';
+
+			return m + ' minutes ' + s + ' seconds';
+
+		}
+
+		function populate_patterns(countryname) {
+			$("#pattern").empty();
+			$("#pattern").append("<option>None</option>");
+			for (var pattern in ALPR_PATTERNS[countryname]) {
+				// Select the one that is currently selected in the config.
+				var patternname = ALPR_PATTERNS[countryname][pattern];
+				var optionval = "<option>"
+				if ($("#pattern").attr('data-patternval') == patternname)
+					optionval = "<option selected>"
+				$("#pattern").append(optionval + patternname + "</option>");
+			}
+
+		}
+
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}
+			return (false);
+		}
+
+		$(document).ready(function() {
+
+			$("#nav_config").addClass('active');
+
+
+			// Handle restart agent
+			$("#btn_stop_agent").click(function() {
+				jQuery.ajax({
+						url: '/configure/ajax/agent_restart?op=stop&agent_uid=S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'
+					})
+					.done(function() {
+						$("#agent_restart_info").text("Stopped Agent").fadeIn(500).delay(5000).fadeOut(1000);
+					});
+			});
+			$("#btn_start_agent").click(function() {
+				jQuery.ajax({
+						url: '/configure/ajax/agent_restart?op=start&agent_uid=S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'
+					})
+					.done(function() {
+						$("#agent_restart_info").text("Started Agent").fadeIn(500).delay(5000).fadeOut(1000);
+					});
+			});
+
+			// Handle config form
+			$('#config_form').ajaxForm({
+				success: function() {
+					$("#config_form .submit_status").empty();
+					$("#config_form .submit_status").append("<div class='success-text'>Config settings updated.</div>");
+					$("#config_form .submit_status").fadeIn(500).delay(5000).fadeOut(1000);
+					$("#pattern").attr('data-patternval', $("#pattern").val());
+				},
+				error: function(response, statusText, xhr, $form) {
+					$("#config_form .submit_status").empty();
+					if (typeof response.responseJSON == "undefined" || typeof response.responseJSON.errors == "undefined") {
+						$("#config_form .submit_status").append("<div class='error-text'>Error submitting config.</div>")
+					} else {
+						$.each(response.responseJSON.errors, function(index, error_reason) {
+							$("#config_form .submit_status").append("<div class='error-text'>" + error_reason + "</div>")
+						});
+					}
+
+					$("#config_form .submit_status").fadeIn(500).delay(10000).fadeOut(1000);
+				}
+			});
+
+			// Handle selecting a country and updating pattern on config form
+			populate_patterns($("#country").val());
+			$("#country").change(function(data) {
+				populate_patterns($("#country").val());
+			});
+
+			// Auto-refresh Agent info
+			var refreshLog = function() {
+
+				jQuery.ajax({
+						url: '/configure/ajax/agent_info/S5EFPHMIR85A79S6ZSLXVSDIJMB4IXUQI8MN585Q'
+					})
+					.done(function(data) {
+						try {
+							var agent_status = data.agent_status;
+
+							if ("error" in data) {
+								$("#status_section li span").text("-");
+								$("#status_section .runstatus").text("Error: " + data.error);
+							} else {
+								if (agent_status.alprd_active) {
+									$("#status_section .runstatus").text("Running");
+									$("#status_section .agentuptime").text(agent_status.daemon_uptime_seconds.toString().toHHMMSS());
+									$("#status_section .lastupdated").text($.timeago(new Date(agent_status.cpu_last_update)));
+
+									$("#status_section .threadcount").text(agent_status.processing_threads_active + " / " + agent_status.processing_threads_configured);
+
+									$("#status_section .cpuusage").text(agent_status.cpu_usage_percent.toFixed(2) + "%");
+									if (agent_status.beanstalk_queue_size < 0)
+										$("#status_section .uploadqueuesize").text('-');
+									else
+										$("#status_section .uploadqueuesize").text(agent_status.beanstalk_queue_size);
+									$("#status_section .systemuptime").text(agent_status.system_uptime_seconds.toString().toHHMMSS());
+									$("#status_section .swapusage").text(humanFileSize(agent_status.memory_swapused_bytes) + " / " + humanFileSize(agent_status.memory_swaptotal_bytes));
+
+
+									if ("disk_quota_earliest_result" in agent_status) {
+										$("#status_section .diskquotaoldest").text($.timeago(new Date(agent_status.disk_quota_earliest_result)));
+										$("#status_section .diskquotasize").text(humanFileSize(agent_status.disk_quota_consumed_bytes) + " / " + humanFileSize(agent_status.disk_quota_total_bytes));
+									}
+
+								} else {
+									$("#status_section li span").text("-");
+									if (typeof agent_status.cpu_last_update != "undefined" && agent_status.cpu_last_update != 0)
+										$("#status_section .lastupdated").text($.timeago(new Date(agent_status.cpu_last_update)));
+
+									$("#status_section .runstatus").text("Inactive");
+
+								}
+
+								$("#log").text(data.agent_log);
+
+								if (agent_status.os == "linux")
+									$("#status_section .operatingsystem").attr("class", "fa fa-linux");
+								else if (agent_status.os == "windows")
+									$("#status_section .operatingsystem").attr("class", "fa fa-windows");
+
+								$("#status_section .agentversion").text(agent_status.openalpr_version);
+								$("#status_section .cpucorecount").text(agent_status.cpu_cores);
+							}
+
+
+
+
+
+							update_camera_status(data);
+							agentWarnings(data, "2.5.103");
+						} catch (err) {
+							console.log("Caught update exception:");
+							console.log(err);
+						}
+
+					})
+					.always(function() {
+						if (getQueryVariable("skip_update") != 1)
+							setTimeout(refreshLog, 1000);
+					});
+			};
+			refreshLog();
+		});
+	</script>
+
+
+
+
+	<script type="text/javascript">
+		// Fix the active links on the navmenu:
+		$(document).ready(function() {
+			if (location.pathname == "/")
+				$navitem = $("#dashboardlink");
+			else {
+				path_without_slash = location.pathname;
+				if (path_without_slash[path_without_slash.length - 1] == '/')
+					path_without_slash = path_without_slash.substring(0, path_without_slash.length - 1);
+
+				path_pieces = path_without_slash.split("/");
+				last_path_piece = path_pieces[path_pieces.length - 1];
+
+				$navitem = $('#navmenu a[href*="' + last_path_piece + '"][class!="noselect"]');
+			}
+			$navitem.addClass('active');
+			$navitem.parents("li").addClass('active');
+			$navitem.parents("ul").addClass('in');
+		});
+	</script>
+
+	<script>
+		// Setup the search bar on the nav menu
+		$(document).ready(function() {
+			start_time = moment().subtract(7, 'days').format();
+			end_time = moment().format();
+			tz_offset = moment().utcOffset();
+
+			$("#quicksearch_start").val(start_time);
+			$("#quicksearch_end").val(end_time);
+
+			if ($("#searchlink").hasClass('active')) {
+				$("#quicksearchform input").attr('disabled', true);
+				$("#quicksearchform button").attr('disabled', true);
+			}
+
+			$("#quicksearchform").submit(function() {
+				var url = '/search/#' + $(this).serialize();
+
+				window.location.href = url;
+				return false;
+			});
+		});
+	</script>
+
+
+
+
+
+
+	<!-- chatwik support chat -->
+	<script>
+		$.getScript("https://cdn.chatkwik.com/cdn/widget/c6311f94a5243ea1ddfcd3758b400a9c1f85f2ce8b4492a82b68110da768dde1", function() {
+			var identityHandler = function(data) {
+				window.akwik.identify({
+					name: 'support-matthill+evgeniy@gmail.com'
+				})
+			}
+			document.addEventListener("chatkwik_loaded", identityHandler, false);
+		});
+	</script>
+
+	<!-- chatwik support chat -->
+
+
+</body>
+
+</html>

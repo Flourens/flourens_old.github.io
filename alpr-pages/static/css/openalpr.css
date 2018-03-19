@@ -1,0 +1,357 @@
+
+    .top-row
+    {
+        padding-top:25px;
+    }
+
+    #floating_crop_img
+    {
+        display:none;
+        position:fixed;
+        min-width: 250px;
+    }
+
+    #floating_crop_img img
+    {
+        max-width:225px;
+        height:auto;
+    }
+
+    .navbar-brand.with-image
+    {
+        padding: 5px 15px;
+    }
+
+    #floating_crop_img {outline:none; }
+    #floating_crop_img strong {line-height:30px;}
+    #floating_crop_img {text-decoration:none;}
+    #floating_crop_img span {
+        pointer-events: none;
+        z-index:10;
+        padding:14px 20px;
+        margin-top:-30px;
+        margin-left:28px;
+        max-width:300px;
+        line-height:16px;
+    }
+    #floating_crop_img span{
+        display:inline;
+        position:absolute;
+        color:#111;
+        border:1px solid #dca;
+        background:#fffAf0;
+    }
+    .callout {
+        z-index:20;
+        position:absolute;
+        top:30px;
+        border:0;
+        left:-12px;
+    }
+    #floating_crop_img .croperror
+    {
+        width:150px;
+    }
+
+    /*CSS3 extras*/
+    #floating_crop_img span
+    {
+        border-radius:4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+
+    @-webkit-keyframes throbber {
+      0% {
+        background: #dde2e7;
+      }
+
+      10% {
+        background: #6b9dc8;
+      }
+
+      40% {
+        background: #dde2e7;
+      }
+    }
+
+    @-moz-keyframes throbber {
+      0% {
+        background: #dde2e7;
+      }
+
+      10% {
+        background: #6b9dc8;
+      }
+
+      40% {
+        background: #dde2e7;
+      }
+    }
+
+    @-o-keyframes throbber {
+      0% {
+        background: #dde2e7;
+      }
+
+      10% {
+        background: #6b9dc8;
+      }
+
+      40% {
+        background: #dde2e7;
+      }
+    }
+
+    @keyframes throbber {
+      0% {
+        background: #dde2e7;
+      }
+
+      10% {
+        background: #6b9dc8;
+      }
+
+      40% {
+        background: #dde2e7;
+      }
+    }
+
+    /* :not(:required) hides these rules from IE9 and below */
+    .throbber:not(:required) {
+      -webkit-animation: throbber 2000ms 300ms infinite ease-out;
+      -moz-animation: throbber 2000ms 300ms infinite ease-out;
+      -ms-animation: throbber 2000ms 300ms infinite ease-out;
+      -o-animation: throbber 2000ms 300ms infinite ease-out;
+      animation: throbber 2000ms 300ms infinite ease-out;
+      background: #dde2e7;
+      display: inline-block;
+      position: relative;
+      text-indent: -9999px;
+      width: 0.9em;
+      height: 1.5em;
+      margin: 0 1.6em;
+    }
+    .throbber:not(:required):before, .throbber:not(:required):after {
+      background: #dde2e7;
+      content: '\x200B';
+      display: inline-block;
+      width: 0.9em;
+      height: 1.5em;
+      position: absolute;
+      top: 0;
+    }
+    .throbber:not(:required):before {
+      -webkit-animation: throbber 2000ms 150ms infinite ease-out;
+      -moz-animation: throbber 2000ms 150ms infinite ease-out;
+      -ms-animation: throbber 2000ms 150ms infinite ease-out;
+      -o-animation: throbber 2000ms 150ms infinite ease-out;
+      animation: throbber 2000ms 150ms infinite ease-out;
+      left: -1.6em;
+    }
+    .throbber:not(:required):after {
+      -webkit-animation: throbber 2000ms 450ms infinite ease-out;
+      -moz-animation: throbber 2000ms 450ms infinite ease-out;
+      -ms-animation: throbber 2000ms 450ms infinite ease-out;
+      -o-animation: throbber 2000ms 450ms infinite ease-out;
+      animation: throbber 2000ms 450ms infinite ease-out;
+      right: -1.6em;
+    }
+
+
+
+    .imagefail
+    {
+        text-align: center;
+        padding: 105px 0 100px 0;
+        border: 5px dashed gray !important;
+        background-color: #d9d9d9;
+    }
+
+    #imgurl
+    {
+        font-size: 0.9em;
+        text-align: right;
+        font-style: italic;
+    }
+
+    #close_errordrawer_button
+    {
+        cursor: pointer;
+    }
+    #close_errordrawer_button:hover
+    {
+        color: #ed3333;
+    }
+
+  .glyph-clickable:hover
+      {
+        color: #5a5aff;
+        cursor: pointer;
+      }
+
+
+
+
+/*--------- New Styles -------------*/
+
+/*--------- Create-report page -------------*/
+.panels-wrap{
+	max-width: 1100px;
+}
+.panel-heading{
+	min-height: 40px;
+}
+/*
+.form-horizontal{
+	display: block !important;
+}
+*/
+.form-horizontal .control-label{
+	text-align: left;
+	max-width: 120px;
+}
+#interdiction_report_submit{
+	width: 100%;
+}
+#report-type-selector{
+	max-width: 260px;
+}
+.custom-submit{
+	width: 100%;
+}
+.selectpicker{
+	width: 100%;
+}
+#add_edit_camera_form{
+	display: block;
+	margin-top: 25px;
+}
+#camera_close_button{
+	margin-bottom: 5px;
+}
+#add_stream_button_container p{
+	float: left;
+	margin: 0;
+	padding-top: 7px;
+}
+.status_section{
+	padding-left: 0;
+}
+.status_section li{
+	padding-bottom: 10px;
+	white-space: wrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+.runstatus{
+	max-width: 100px;
+}
+.dl-horizontal dt{
+	width: auto;
+	max-width: 80px;
+	text-align: left;
+	padding-bottom: 10px;
+	white-space: pre-wrap;
+}
+.dl-horizontal dd{
+	margin-left: 90px;
+	padding-bottom: 10px;
+}
+#report-data-table tbody td{
+	word-break: break-all;
+}
+
+#report-data-table_filter{
+	float: right;
+}
+#report-data-table_filter label{
+	margin-left: 30px;
+}
+#report-data-table_filter label input{
+	margin-left: 10px;
+}
+.reports-form{
+	margin-top: 30px;
+}
+.reports-form .form-group label{
+	width: 100px;
+}
+
+.reports-form .form-group input{
+	margin-bottom: 15px;
+}
+.reports-form .form-group input{
+	display: inline-block;
+	width: 220px;
+}
+#reports {
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+#reports .list-group-item{
+	border: none;
+}
+div.dataTables_length{
+	text-align: left !important;
+}
+div.dataTables_filter{
+	text-align: left !important;
+}
+.list-group-item.btn{
+	white-space: normal;
+}
+
+	
+/*--------- media ----------*/
+@media only screen and (max-width: 768px) {
+	#report-data-table_filter label input{
+		margin-left: 10PX;
+		margin-right: 0px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.reports-form .form-group{
+		margin-bottom: 15px;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.site-camera-group select{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	#report-data-table_filter{
+		float: left;
+	}
+	#report-data-table_filter label{
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	#report-data-table_filter span{
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.lg-10-expanded{
+		width: 86.3333%;
+	}
+	.custom-submit{
+		
+	}
+	.pull-right.btn.btn-primary{
+		width: 100%;
+	}
+	
+
+}
+@media only screen and (min-width: 1400px) {
+	.lg-10-expanded{
+		width: 88.95%;
+	}
+}
+
+
+
+
+
+
+
+
