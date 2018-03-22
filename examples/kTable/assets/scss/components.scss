@@ -1,0 +1,187 @@
+.btn {
+	display: inline-block;
+	vertical-align: bottom;
+	text-align: center;
+	font-weight: 400;
+	font-size: 0.7777777777777778rem; // 14px
+	padding: .75em 1.5em;
+	line-height: 1em;
+	@include rounded-corners(2em);
+	text-decoration: none;
+	min-width: 8.333333333333333rem;
+
+	@include from-xlarge {
+		font-size: 1.111111111111111rem; // 20px
+		padding: .75em 1.2em;
+		min-width: 11.11111111111111rem;
+	}
+
+	&.btn-cta {
+		@include box-shadow(0 0.5555555555555556rem 0.5555555555555556rem 0 rgba(0, 0, 0, 0.25)); // 10px
+	}
+
+	&.btn-slider {
+		margin: 1.111111111111111rem .5555555555555556rem; // 20px 10px
+
+		@include from-xlarge {
+			margin: 1.111111111111111rem; // 20px
+		}
+	}
+	
+	&.btn-black {
+		background-color: $black-btn;
+		color: $text-light;
+
+		&:hover, &:focus, &:active {
+			background-color: lighten($black-btn, 10%);
+			text-decoration: none;
+		}
+	}
+
+	&.btn-green {
+		background-color: $green-btn;
+		color: $text-light;
+
+		&:hover, &:focus, &:active {
+			background-color: darken($green-btn, 10%);
+			text-decoration: none;
+		}
+	}
+
+	&.btn-blue {
+		background-color: $blue-btn;
+		color: $text-light;
+
+		&:hover, &:focus, &:active {
+			background-color: darken($blue-btn, 10%);
+			text-decoration: none;
+		}
+	}
+
+	&.btn-purple {
+		background-color: $purple-btn;
+		color: $text-light;
+
+		&:hover, &:focus, &:active {
+			background-color: darken($purple-btn, 10%);
+			text-decoration: none;
+		}
+	}
+}
+
+// Slider button when active slide
+.carousel-cell {
+	&.is-selected .btn.btn-slider {
+		@include box-shadow(0 0.5555555555555556rem 0.5555555555555556rem 0 rgba(0, 0, 0, 0.25)); // 10px
+		background-color: $slider-btn;
+		color: $text-light;
+	}
+
+	.btn.btn-slider:hover {
+		background-color: lighten($slider-btn, 10%);
+		text-decoration: none;
+	}
+}
+
+// Tags
+.tags {
+			display: flex;
+			flex-wrap: wrap;
+			list-style-type: none;
+			.tag {
+    		margin-bottom: .75rem;
+				&:not(:last-child) {
+					margin-right: 1.5rem;
+				}
+				a{
+					display: inline-block;
+					padding: 0 1.3rem;
+					background-color: $black-btn;
+					color: $text-light;
+					font-size: 1.08rem;
+					line-height: 1.6;
+					border-radius: 40px;
+					&:hover, &:active, &:focus{
+						background-color: $blue-btn;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+// "Monthly/Yearly" switch button
+.period-switch-box{
+		margin-top: 43px;
+    display: inline-block;
+    position: relative;
+    background-color: $dark-btn;
+    border-radius: 34px;
+		input {
+			position: absolute;
+			visibility: hidden;
+			width: 0;
+			height: 0;
+			&:checked+label {
+				position: relative;
+				background-color: $slider-btn;
+				border-radius: 34px;
+				cursor: auto;
+				-webkit-transition: .4s;
+				transition: .4s;
+				box-shadow: 0 0.3rem 0.55556rem 0.16rem rgba(0, 0, 0, 0.25);
+			}
+		}
+		label{
+			display: inline-block;
+			padding: 10px 0px;
+			text-align: center;
+			min-width: 100px;
+			margin-bottom: 0;
+			font-size: 20px;
+			font-weight: 300;
+			cursor: pointer;
+			border-radius: 34px;
+		}
+	}
+
+// processes-btn
+
+.processes-btn{
+	box-shadow: 0 0.25556rem 0.45556rem 0.2rem rgba(0, 0, 0, 0.2);
+	text-decoration: none !important;
+	position: absolute;
+	top: 2px;
+	background-color: $midnight-btn !important;
+	width: 25px;
+	height: 25px;
+	border-radius: 40px;
+	line-height: 0.2;
+	padding: 3.5px;
+	text-align: center;
+	font-size: 45px;
+	color: $caribbean-green !important;
+	font-weight: 300;
+	&-left{
+		left: 0;
+		line-height: 0.1;
+		padding: 6px;
+	}
+	&-right{
+		right: 0;
+	}
+}
+
+// Pricing table btn
+.pricing-btn{
+			width: 75%;
+			margin: 0 auto;
+			padding: 10px 10px;
+			border-radius: 40px;
+			align-self: flex-end;
+			margin-bottom: 40px;
+			margin-top: auto;
+			box-shadow: 0 0.55556rem 0.55556rem 0 rgba(0, 0, 0, 0.25);
+			font-size: 0.89rem;
+			font-weight: 500;
+			background-color: $blue-btn;
+		}

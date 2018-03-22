@@ -1,0 +1,93 @@
+/**
+ * Colors used across the website
+ * ------------------------------
+ * [1]
+ * First give them a name using appropriate tool :
+ * http://www.color-blindness.com/color-name-hue/
+ * If two colors get the same name, use the built-in Sass functions :
+ * darken($color-name, xx%)
+ * lighten($color-name, xx%)
+ *
+ * [2]
+ * Then, assign colors to their exact role, to allow easy updates
+ */
+
+
+/* ====== [1] NAMES ====== */
+$black-pearl: #171e27;
+$dangerous-black: #0f1319;
+$white: #ffffff;
+$midnight-express: #202a37;
+$medium-slate-blue: #7f86f5;
+$caribbean-green: #01cea2;
+$cornflower-blue: #3eb1f3;
+$dim-gray: #6a6a6a;
+$space-gray: #979797;
+$fruity-gray: #13181f;
+$yolo-gray: #202a37;
+
+
+/* ====== [2] ASSIGNMENTS ====== */
+
+/* --- global --- */
+$background-main: $black-pearl;
+$background-darker: darken($black-pearl, 17%);
+$background-darkest: darken($black-pearl, 34%);
+$text-light: $white;
+$text-gray: $space-gray;
+$text-dark: $midnight-express;
+
+/* --- theme related --- */
+$enterprise-main: $medium-slate-blue;
+$runtime-main: $cornflower-blue;
+$monitoring-main: $caribbean-green;
+
+$black-bg-section: $black-pearl;
+$blue-bg-section: $cornflower-blue;
+$green-bg-section: $caribbean-green;
+$purple-bg-section: $medium-slate-blue;
+
+$code-bg: $black-pearl;
+$code-line-bg: $dangerous-black;
+$blog-post-bg: $black-pearl;
+
+/* --- Header nav related --- */
+$menu-icon: $white;
+$menu-firstlevel-links: $white;
+$menu-secondlevel-links: $dim-gray;
+$menu-secondlevel-separator: $midnight-express;
+
+/* --- Buttons --- */
+$slider-btn: $black-pearl;
+$black-btn: $black-pearl;
+$dark-btn: $dangerous-black;
+$midnight-btn: $midnight-express;
+$green-btn: $caribbean-green;
+$blue-btn: $cornflower-blue;
+$purple-btn: $medium-slate-blue;
+
+/* --- Footer --- */
+$footer-links: $dim-gray;
+$copyright-border: $space-gray;
+$copyright-text: $dim-gray;
+
+/* Monitoring */
+$box-focus: $black-pearl;
+$box-unfocus: $fruity-gray;
+$icon-bg: $yolo-gray;
+
+/* Pricing */
+$head-option-blue: $cornflower-blue;
+$head-option-green: $caribbean-green;
+$head-option-purple: $medium-slate-blue;
+
+$pricing-main-row: $black-pearl;
+$pricing-light-row: $midnight-express;
+
+/* Blog */
+$blog-box: $midnight-express;
+
+/* Team */
+$team-accent-blue: $cornflower-blue;
+$team-accent-green: $caribbean-green;
+$team-accent-purple: $medium-slate-blue;

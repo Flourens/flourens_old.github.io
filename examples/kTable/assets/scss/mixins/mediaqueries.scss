@@ -1,0 +1,54 @@
+/**
+ * Mediaqueries following the mobile-first method
+ * CSS are set from mobile first, default font-size is 16px.
+ */
+
+/* ====== SETTINGS ====== */
+$width-bp-small: 30em; // 480px
+$width-bp-medium: 48em; // 768px
+$width-bp-large: 62em; // 992px
+$width-bp-xlarge: 90em; // = 1440px
+$width-bp-xxlarge: 116em; // = 1856px
+
+/* ====== QUERIES ====== */
+/* --- small screens, from 480px --- */
+@mixin from-small {
+	@media only screen and (min-width: $width-bp-small) {
+		@content;
+	}
+}
+
+/* --- medium screens, from 768px --- */
+@mixin from-medium {
+	@media only screen and (min-width: $width-bp-medium) {
+		@content;
+	}
+}
+
+/* --- large screens, from 992px --- */
+@mixin from-large {
+	@media only screen and (min-width: $width-bp-large) {
+		@content;
+	}
+}
+
+/* --- medium screens, from 1024 --- */
+@mixin from-large2 {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+/* --- xlarge screens, from 1440px --- */
+@mixin from-xlarge {
+	@media only screen and (min-width: $width-bp-xlarge) {
+		@content;
+	}
+}
+
+/* --- xlarge screens, from 1440px --- */
+@mixin from-xxlarge {
+	@media only screen and (min-width: $width-bp-xxlarge) {
+		@content;
+	}
+}

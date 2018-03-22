@@ -1,0 +1,125 @@
+footer.footer-section {
+	background-color: $background-main;
+	z-index: 90;
+
+	.footer-container {
+		padding: 1.111111111111111rem;
+
+		@include from-xlarge {
+			padding: 1.111111111111111rem 0;
+			width: 48.05555555555556rem;
+		}
+	}
+
+	.footer-nav {
+		@include flexbox;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: left;
+
+		@include from-xlarge {justify-content: space-between;}
+
+		dl {
+			margin: 0 0 2.222222222222222rem;
+			width: 12rem;
+
+			@include from-xlarge {
+				width: auto;
+				margin: 0 0 2.222222222222222rem;
+			}
+
+			dt {
+				text-transform: uppercase;
+				font-size: 1.333333333333333em; // 24 px
+				padding: .625rem 0; // 15px
+			}
+
+			dd a {
+				display: block;
+				font-size: 1.333333333333333em; // 24 px
+				color: $footer-links;
+				padding: .625em 0; // 15px
+
+				&:hover {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+
+			.is-inline-block {
+				&:not(:last-child) {margin-right: .5rem;}
+
+				.icon {
+					border: .5px solid $dim-gray;
+					border-radius: 50%;
+					height: 1.944444444444444rem;
+					width: 1.944444444444444rem;
+					margin-top: .625em; // 15px
+					opacity: .8;
+					@include flexbox;
+					justify-content: center;
+					align-items: center;
+
+					.svg path {fill: $dim-gray;}
+
+					&:hover, &:active, &:focus {
+						border: .5px solid $white;
+						.svg path {fill: $white;}
+					}
+
+					.github {margin-top: .1666666666666667rem;}
+					.twitter {margin-top: .1111111111111111rem;}
+				}
+			} // End of .is-inline-block
+		}
+	} // End of .footer-nav
+
+	.copyright {
+		border-top: .5px solid $copyright-border;
+		padding: 1.111111111111111em 0 0; // 20px
+		text-align: center;
+
+		p {
+			color: $copyright-text;
+			font-size: 1.111111111111111em; // 20px
+			margin: 0 0 1.111111111111111em;
+		}
+
+		ul {
+			@include flexbox;
+			flex-wrap: wrap;
+
+			li {
+				width: 50%;
+
+				a {
+					color: $copyright-text;
+					font-size: 1.111111111111111em; // 20px
+
+					&:hover {
+						color: $white;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		@include from-xlarge {
+			text-align: left;
+
+			p {
+				display: inline-block;
+				vertical-align: bottom;
+			}
+			
+			ul {
+				float: right;
+
+				li {
+					width: auto;
+					margin-left: 4.444444444444444rem;
+				}
+			}
+		}
+	} // End of .copyright
+} // End of footer.footer

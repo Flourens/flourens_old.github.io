@@ -1,0 +1,139 @@
+/**
+* Modern minimal "reset" using box-sizing
+* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*
+* And for deeper (but safe) normalizing/resetting CSS, I'm using Normalize.css
+* The call is made directly from HTML to allow easy update of the vendor
+* https://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
+*/
+
+html {box-sizing: border-box;}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ====== GLOBAL STYLES USED ACROSS THE WEBSITE ====== */
+html {
+	font-size: 18px;
+	font-family: 'Blender';
+	color: $text-light;
+}
+
+body {margin: 0;}
+
+h1, h2, h3, h4, h5, h6,
+p, li, dd, dt, span, a {
+	font-size: 1em;
+	margin: 0;
+	font-weight: 100;
+	letter-spacing: 0.025em;
+}
+
+h1 {
+	font-size: 2.888888888888889rem; // 34px
+	font-weight: 400;
+	padding: 1em 0 0;
+	letter-spacing: .0777777777777778rem; // 1.4px
+
+	@include from-xlarge {
+		font-size: 4.33333333333rem; // 68px
+		padding: 0;
+		letter-spacing: .1555555555555556rem; // 2.8px
+	}
+}
+
+h2 {
+	font-size: 1.555555555555556rem; // 28px
+	font-weight: 500;
+	padding: 0 0 1.111111111111111rem; // 20px
+	letter-spacing: .0666666666666667em; // 1.2px
+
+	@include from-xlarge {
+		font-size: 2.666666666666667rem; // 48px
+	}
+}
+
+h3 {
+	font-size: 1.111111111111111rem; // 20px
+	font-weight: 500;
+	letter-spacing: .0444444444444444rem; // 0.8px
+	padding: 0 0 .5555555555555556rem;
+
+	@include from-xlarge {
+		font-size: 2rem; // 20px
+		letter-spacing: .0777777777777778rem; // 1.4px
+		padding: 0 0 1.111111111111111rem;
+	}
+}
+
+h4 {
+	font-size: 1rem;  // 18px
+	font-weight: 500;
+	letter-spacing: .0444444444444444rem; // 0.8px
+	padding: .2777777777777778rem 0;
+
+	@include from-xlarge {font-size: 1.111111111111111rem;}
+}
+
+h5 {
+	font-size: 1.333333333333333rem; // 24px
+	font-weight: 500;
+	letter-spacing: .0444444444444444rem; // 0.8px
+}
+
+h6 {
+	font-size: 1rem; // 18px
+	font-weight: 500;
+	letter-spacing: .0444444444444444rem; // 0.8px
+	padding: .2777777777777778rem 0; // 5px
+
+	@include from-xlarge {
+		font-size: 2rem;
+		padding: 0;
+		letter-spacing: .0777777777777778rem; // 1.4px
+	}	
+}
+
+a:link {
+	text-decoration: none;
+	color: $text-light;
+}
+a:visited {color: $text-light;}
+a:hover, a:active {text-decoration: underline;}
+
+p {
+	margin-bottom: 1.111111111111111em; // 20px
+
+	&.big-space {
+		margin-bottom: 2.222222222222222em; // 40px
+	}
+
+	@include from-xlarge {
+		font-size: 1.555555555555556em; // 28px
+		margin-bottom: 0.7142857142857143em; // 20px;
+	}
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+dl {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	dd {margin-left: 0;}
+}
+
+img, video {max-width: 100%;}

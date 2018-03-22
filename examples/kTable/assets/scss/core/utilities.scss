@@ -1,0 +1,117 @@
+/**
+* Utility Namespaces
+* ------------------
+* Single responsability rules having very specific and targeted tasks
+* Text alignment or positioning, font-sizing, clearfix, etc.
+*
+* One step away from inline-styling, use sparingly!
+* Can carry "!important" declaration to override less specific rules
+* Shouldn't be modified after having been written, could be used anywhere
+*/
+
+
+/* ====== SHOW/HIDE ====== */
+
+/* --- hidden everywhere --- */
+.is-hidden {
+	display: none !important;
+}
+
+.is-hidden-large {
+	@include from-large {
+		display: none;
+	}
+}
+
+.is-hidden-xlarge {
+	@include from-xlarge {
+		display: none;
+	}
+}
+
+.is-hidden-medium {
+	@include from-medium {
+		display: none;
+	}
+}
+
+.is-hidden-small {
+	@include from-small {
+		display: none;
+	}
+}
+
+.is-visible-small {
+	display: none;
+	@include from-small {
+		display: block;
+	}
+}
+
+.is-visible-medium {
+	display: none;
+	@include from-medium {
+		display: block;
+	}
+}
+
+.is-visible-large {
+	display: none;
+	@include from-large {
+		display: block;
+	}
+}
+
+.is-visible-xlarge {
+	display: none;
+	@include from-xlarge {
+		display: block;
+	}
+}
+
+.is-visible-xxlarge {
+	display: none;
+	@include from-xxlarge {
+		display: block;
+	}
+}
+
+
+/* --- remove side paddings --- */
+.is-paddingless {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* --- restrain element to its parent's width  --- */
+.is-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* --- displays an element as block and centers it --- */
+.is-centered-block {
+	@include center-block;
+	display: block;
+}
+
+
+.is-inline-block {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+/* ====== TEXT TRANSFORMATIONS ====== */
+
+/* --- Text align --- */
+.is-text-centered {text-align: center;}
+.is-text-left {text-align: left;}
+.is-text-right {text-align: right;}
+
+/* --- sets uppercase --- */
+.is-uppercase {text-transform: uppercase;}
+
+.has-shadow {
+	@include box-shadow(0 0.5555555555555556rem 0.5555555555555556rem 0 rgba(0, 0, 0, 0.25)); // 10px
+}
