@@ -155,11 +155,117 @@ if (document.getElementById('monitoring-main')) {
 	});
 }
 	
-	
-	
-
 jQuery(document).ready(function($) {
+
+			var sum1 = 0;
+			var sum2 = 0;
+			var sum3 = 0;
+			var sum4 = 0;
+			var sum5 = 0;
+			var sum6 = 0;
+			var sum7 = 0;
+			var sum8 = 0;
+			var sum9 = 0;
+			var sum10 = 0;
+			var sum11 = 0;
+			var sum12 = 0;
 	
+			$("#form1 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum1 = $(this).val();
+				$("#form1 .input-score").val(sum1);
+			}
+			})
+			
+			$("#form2 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum2 = $(this).val();
+				$("#form2 .input-score").val(sum2);
+			}
+			})
+	
+			$("#form3 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum3 = $(this).val();
+				$("#form3 .input-score").val(sum3);
+			}
+			})
+	
+		$("#form4 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum4 = $(this).val();
+				$("#form4 .input-score").val(sum4);
+			}
+			})
+	
+		$("#form5 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum5 = $(this).val();
+				$("#form5 .input-score").val(sum5);
+			}
+			})
+	
+	$("#form6 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum6 = $(this).val();
+				$("#form6 .input-score").val(sum6);
+			}
+			})
+	
+	$("#form7 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum7 = $(this).val();
+				$("#form7 .input-score").val(sum7);
+			}
+			})
+	
+	$("#form8 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum8 = $(this).val();
+				$("#form8 .input-score").val(sum8);
+			}
+			})
+	
+	$("#form9 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum9 = $(this).val();
+				$("#form9 .input-score").val(sum9);
+			}
+			})
+	
+	$("#form10 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum10 = $(this).val();
+				$("#form10 .input-score").val(sum10);
+			}
+			})
+	
+	$("#form11 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum11 = $(this).val();
+				$("#form11 .input-score").val(sum11);
+			}
+			})
+	
+	$("#form12 .cell-check").on("click", function(){
+			if($(this).is(":checked")) {
+				sum12 = $(this).val();
+				$("#form12 .input-score").val(sum12);
+			}
+			})
+	
+	
+	
+		$(".cell-check").on("click", function() {
+    var sum = 0;
+    $(".input-score").each(function(){
+        sum += +$(this).val();
+				console.log(sum)
+    });
+    $(".total-score-value").val(sum);
+	
+});
+
 });
 
 
