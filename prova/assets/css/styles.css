@@ -1579,6 +1579,9 @@ html {
     .submit-btn {
       margin-top: 30px; } }
 
+.input-score, .total-score-value {
+  padding-left: 15px; }
+
 .footer-section {
   background-color: #231f20;
   padding-top: 40px;
