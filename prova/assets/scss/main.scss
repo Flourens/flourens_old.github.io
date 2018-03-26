@@ -90,6 +90,7 @@ html{
 		color: #000;
 		background-color: #fff;
 		font-size: 14px;
+		text-decoration: none;
 	}
 }
 .section-title{
@@ -291,6 +292,7 @@ html{
 }
 
 .sidebar-side{
+	margin-top: 40px;
 	@include from-large{
 		width: 20.5%;
 			&-extended{
@@ -489,7 +491,7 @@ html{
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: stretch;
 		margin-bottom: 5px;
 		&.gray-row{
@@ -507,6 +509,7 @@ html{
 			}
 		}
 		.chart-cell{
+			margin-right: 25px;
 			position: relative;
 			display: -webkit-flex;
 			display: -moz-flex;
@@ -521,12 +524,15 @@ html{
 			padding: 10px 10px 10px 15px;
 			background-color: #c6d05b;
 			font-weight: 800;
+			@include from-large{
+				width: 27%;
+			}
 			width: 23%;
 			min-height: 30px;
 			word-break: break-all;
 			@include from-small{
 				word-break: break-word;
-				padding: 10px 10px 10px 40px;
+				padding: 10px 40px 10px 40px;
 			}
 			&.chart-last-cell{
 				width: 25%
@@ -634,6 +640,7 @@ html{
 			}
 			.btn-more {
 				background-color: #dccbb1;
+				text-decoration: none;
 			}
 		}
 	}
@@ -648,7 +655,8 @@ html{
 	display: flex;
 	@include from-medium{flex-direction: column;}
 	flex-direction: row;
-	margin-top: 40px;
+	margin-top: 60px;
+	margin-bottom: 50px;
 	.stage-chart-row{
 		text-align: center;
 		margin-bottom: 10px;
@@ -676,7 +684,8 @@ html{
 			margin: 0;
 		}
 		.small-text{
-			font-size: 12px;
+			font-size: 13px;
+			font-weight: 600;
 			margin-bottom: 0px;
 			position: relative;
 			padding-left: 15px;
@@ -713,9 +722,13 @@ html{
 		background-size: contain;
 		background-repeat: no-repeat;
 		align-items: stretch;
+
 		@include from-medium{
 			max-width: 25%;
 			margin-bottom: 0px;
+		}
+		@include from-xlarge{
+			max-width: 28%;
 		}
 		.stage{
 			font-family: 'Event Horizon',sans-serif;
@@ -766,9 +779,11 @@ html{
 			max-width: 80%;
 			background-image: none;
 			position: relative;
-			
 			@include from-medium{
 				max-width: 25%;
+			}
+			@include from-xlarge{
+				max-width: 28%;
 			}
 			.stage-chart-list{
 				padding-left: 0px;
@@ -780,6 +795,8 @@ html{
 }
 
 .causes-chart{
+	padding-top: 40px;
+	padding-bottom: 50px;
 	.cell-box{
 		@include from-medium{
 			flex-direction: row;
@@ -1000,8 +1017,8 @@ html{
 	}
 	input[type="radio"] {
 		margin-top: 10px;
-		width: 15px;
-		height: 15px;
+		width: 18px;
+		height: 18px;
 	}
 }
 .question-number{
