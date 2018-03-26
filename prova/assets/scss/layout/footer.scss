@@ -1,0 +1,20 @@
+.footer-section{
+	background-color: #231f20;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	img{
+		display: block;
+		margin: 0 auto;
+		width: 230px;
+	}
+	.top-first-menu{
+		text-align: center;
+		margin: 0;
+		.menu-item{
+			padding-left: 10px;
+			&:before{
+				padding-right: 10px;
+			}
+		}
+	}
+}

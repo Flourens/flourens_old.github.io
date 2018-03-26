@@ -67,7 +67,7 @@
   @media only screen and (min-width: 62em) {
     .top-first-menu {
       text-align: right;
-      margin-right: 120px;
+      margin-right: 163px;
       margin-bottom: 0; } }
   .top-first-menu .menu-item {
     display: inline-block;
@@ -344,6 +344,7 @@ html {
   .hero-more span {
     text-transform: none; }
   .hero-more .btn-more {
+    display: block;
     margin: 0 auto;
     padding: 6px 0px;
     max-width: 130px;
@@ -370,6 +371,10 @@ html {
   color: #bd9b60;
   text-align: center;
   line-height: 1.5; }
+  .accent-text span {
+    font-weight: 700;
+    font-style: normal !important;
+    color: #000; }
 
 .tags {
   list-style-type: none;
@@ -695,6 +700,24 @@ html {
 .safety-title.copyright {
   padding-top: 50px; }
 
+.safety-page .safety {
+  margin-top: 200px; }
+  .safety-page .safety .safety-title {
+    text-align: left;
+    font-size: 30px;
+    font-style: italic;
+    color: #bd9a62;
+    font-weight: 400; }
+    @media only screen and (min-width: 30em) {
+      .safety-page .safety .safety-title {
+        font-size: 40px; } }
+  .safety-page .safety .safety-title.copyright {
+    font-size: 19px;
+    color: #000;
+    font-style: normal;
+    text-align: center;
+    font-weight: 700; }
+
 .chart {
   margin-top: 10px;
   margin-bottom: 70px; }
@@ -789,7 +812,7 @@ html {
               flex-direction: row; } }
   .strength-hero .s-hero {
     width: 62%;
-    background-image: url(../img/man_bw.png);
+    background-image: url(../img/dude_2.jpg);
     background-position: center;
     background-size: cover;
     height: auto;
@@ -1140,7 +1163,7 @@ html {
   background-image: url(../img/03/PROV_TEST-02.jpg); }
 
 .s-hero.str-hero {
-  background-image: url(../img/man_bw.png); }
+  background-image: url(../img/dude_2.jpg); }
 
 .s-hero.prov-hero {
   background-image: url(../img/03/PROV_WHAT-IS-PROVARIN.jpg); }
@@ -1152,6 +1175,9 @@ html {
   background-image: url(../img/physicians-office1.jpg); }
 
 .s-hero.stkit-hero {
+  background-image: url(../img/03/PROV_WHAT-IS-PROVARIN.jpg); }
+
+.s-hero.contact-hero {
   background-image: url(../img/03/PROV_WHAT-IS-PROVARIN.jpg); }
 
 .s-info.s-info-brown-bg {
@@ -1299,7 +1325,8 @@ html {
 
 .note-text {
   font-size: 13px;
-  padding-top: 100px; }
+  padding-top: 100px;
+  line-height: 1.5; }
 
 /*---------- Free starter kit page -------------*/
 .stkit-form {
@@ -1379,3 +1406,191 @@ html {
       top: 60px;
       right: -400px;
       max-width: 400px; } }
+
+/*-------  Stkit-b page -----------*/
+.s-stkit-b {
+  padding-top: 200px;
+  text-align: center; }
+
+.packages-wrap {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 70px; }
+  @media only screen and (min-width: 62em) {
+    .packages-wrap {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.package-box {
+  text-align: center;
+  background-color: #f8f8f8;
+  border: 1px #bd9b60 solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 50px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 60px; }
+  @media only screen and (min-width: 30em) {
+    .package-box {
+      width: 80%; } }
+  @media only screen and (min-width: 62em) {
+    .package-box {
+      width: 48%;
+      margin-right: 0;
+      margin-left: 0; } }
+
+.package-cell {
+  width: 90%;
+  margin: 0 auto; }
+
+.package-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 20px; }
+
+.package-accent-text {
+  text-align: center !important;
+  font-size: 23px; }
+
+.package-small-text {
+  font-size: 14px; }
+
+.package-price {
+  font-size: 60px;
+  color: #bd9b60;
+  font-weight: 400;
+  margin: 0px;
+  margin-top: 35px;
+  margin-bottom: 20px; }
+
+.order-btn {
+  background-color: #dccbb1;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px; }
+
+.main-text.phone {
+  display: block;
+  font-size: 40px;
+  text-decoration: none;
+  margin-bottom: 30px; }
+
+.note-text.package-note {
+  padding-top: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; }
+
+.accent-text.big-text {
+  font-size: 35px;
+  max-width: 1000px; }
+
+/*------ Contact page --------*/
+.s-contact .accent-text {
+  max-width: 100%; }
+
+.contact-form {
+  max-width: 700px; }
+  .contact-form input, .contact-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 10px;
+    border: none;
+    border: 1px #bd9b60 solid;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding-left: 20px;
+    font-size: 18px; }
+    @media only screen and (min-width: 48em) {
+      .contact-form input, .contact-form textarea {
+        margin-top: 30px; } }
+  .contact-form input.email {
+    float: none; }
+    @media only screen and (min-width: 48em) {
+      .contact-form input.email {
+        float: right; } }
+  .contact-form input.phone {
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .contact-form input.name {
+    margin-right: 0px; }
+    @media only screen and (min-width: 48em) {
+      .contact-form input.name {
+        margin-right: 20px; } }
+  .contact-form input.name, .contact-form input.email {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 100%; }
+    @media only screen and (min-width: 48em) {
+      .contact-form input.name, .contact-form input.email {
+        display: inline-block;
+        width: 100%;
+        max-width: 48%; } }
+  .contact-form textarea.message {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+.submit-btn {
+  background-color: #dccbb1;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 20px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px; }
+  @media only screen and (min-width: 48em) {
+    .submit-btn {
+      margin-top: 30px; } }
+
+.footer-section {
+  background-color: #231f20;
+  padding-top: 40px;
+  padding-bottom: 30px; }
+  .footer-section img {
+    display: block;
+    margin: 0 auto;
+    width: 230px; }
+  .footer-section .top-first-menu {
+    text-align: center;
+    margin: 0; }
+    .footer-section .top-first-menu .menu-item {
+      padding-left: 10px; }
+      .footer-section .top-first-menu .menu-item:before {
+        padding-right: 10px; }

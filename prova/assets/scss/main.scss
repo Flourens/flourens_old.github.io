@@ -83,6 +83,7 @@ html{
 		text-transform: none;
 	}
 	.btn-more{
+		display: block;
 		margin: 0 auto;
 		padding: 6px 0px;
 		max-width: 130px;
@@ -110,6 +111,11 @@ html{
 	color: #bd9b60;
 	text-align: center;
 	line-height: 1.5;
+	span{
+		font-weight: 700;
+		font-style: normal !important;
+		color: #000;
+	}
 }
 .tags{
 	list-style-type: none;
@@ -452,6 +458,28 @@ html{
 .safety-title.copyright{
 	padding-top: 50px;
 }
+.safety-page .safety{
+	margin-top: 200px;
+	.safety-title{
+		text-align: left;
+		@include from-small{
+			font-size: 40px;
+		}
+		font-size: 30px;
+		font-style: italic;
+		color: #bd9a62;
+		font-weight: 400;
+	}
+	.safety-title.copyright{
+		font-size: 19px;
+		color: #000;
+		font-style: normal;
+		text-align: center;
+		font-weight: 700;
+	}
+}
+
+
 .chart{
 	margin-top: 10px;
 	margin-bottom: 70px;
@@ -542,7 +570,7 @@ html{
 	}
 	.s-hero{
 		width: 62%;
-		background-image: url(../img/man_bw.png);
+		background-image: url(../img/dude_2.jpg);
 		background-position: center;
 		background-size: cover;
 		height: auto;
@@ -877,7 +905,7 @@ html{
 	background-image: url(../img/03/PROV_TEST-02.jpg);
 }
 .s-hero.str-hero{
-	background-image: url(../img/man_bw.png);
+	background-image: url(../img/dude_2.jpg);
 }
 .s-hero.prov-hero{
 	background-image: url(../img/03/PROV_WHAT-IS-PROVARIN.jpg);
@@ -889,6 +917,9 @@ html{
 	background-image: url(../img/physicians-office1.jpg);
 }
 .s-hero.stkit-hero{
+	background-image: url(../img/03/PROV_WHAT-IS-PROVARIN.jpg);
+}
+.s-hero.contact-hero{
 	background-image: url(../img/03/PROV_WHAT-IS-PROVARIN.jpg);
 }
 
@@ -1048,6 +1079,7 @@ html{
 .note-text{
 	font-size: 13px;
 	padding-top: 100px;
+	line-height: 1.5;
 }
 
 
@@ -1135,3 +1167,173 @@ html{
 	max-width: 400px;
 	margin: 0 auto;
 }
+
+/*-------  Stkit-b page -----------*/
+.s-stkit-b{
+	padding-top: 200px;
+	text-align: center;
+}
+.packages-wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	@include from-large{
+		flex-direction: row;
+	}
+	flex-direction: column;
+	width: 100%;
+	margin-top: 70px;
+
+}
+.package-box{
+	text-align: center;
+	background-color: #f8f8f8;
+	border: 1px #bd9b60 solid;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+	@include from-small{
+		width: 80%;
+	}
+	@include from-large{
+		width: 48%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+.package-cell{
+	width: 90%;
+	margin: 0 auto;
+}
+.package-title{
+	text-transform: uppercase;
+	font-size: 40px;
+	line-height: 1.4;
+	font-weight: 400;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.package-accent-text{
+	text-align: center !important;
+	font-size: 23px;
+}
+.package-small-text{
+	font-size: 14px;
+}
+.package-price{
+	font-size: 60px;
+	color: #bd9b60;
+	font-weight: 400;
+	margin: 0px;
+	margin-top: 35px;
+	margin-bottom: 20px;
+}
+.order-btn{
+	background-color: #dccbb1;
+	text-decoration: none;
+	color: #000;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 5px 10px;
+}
+.main-text.phone{
+	display: block;
+	font-size: 40px;
+	text-decoration: none;
+	margin-bottom: 30px;
+}
+.note-text.package-note{
+	padding-top: 10px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.accent-text.big-text{
+	font-size: 35px;
+	max-width: 1000px
+}
+
+/*------ Contact page --------*/
+.s-contact{
+	.accent-text{
+		max-width: 100%;
+	}
+}
+
+.contact-form{
+	max-width: 700px;
+	input, textarea{
+		display: block;
+    width: 100%;
+    min-height: 50px;
+		@include from-medium{
+			margin-top: 30px;
+		}
+    margin-top: 10px;
+    border: none;
+    border: 1px #bd9b60 solid;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding-left: 20px;
+    font-size: 18px;
+	}
+	input.email{
+		@include from-medium{
+			float: right;
+		}
+		float: none;
+	}
+	input.phone{
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	input.name{
+		@include from-medium{
+			margin-right: 20px;
+		}
+		margin-right: 0px;
+	}
+	input.name, input.email{
+		box-sizing: border-box;
+		@include from-medium{
+			display: inline-block;
+			width: 100%;
+			max-width: 48%;
+		}
+		display: block;
+		width: 100%;
+		max-width: 100%;
+	}
+	textarea.message{
+		max-width: 100%;
+		min-width: 100%;
+		min-height: 200px;
+		padding-left: 0;
+		padding-top: 10px;
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+}
+	.submit-btn{
+		background-color: #dccbb1;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 20px;
+		border: none;
+		display: block;
+		margin: 0 auto;
+		margin-top: 20px;
+		@include from-medium{
+			margin-top: 30px;
+		}
+	}
