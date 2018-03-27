@@ -6,7 +6,9 @@
 	<title>Provarin Life | Provarin Life</title>
 </head>
 <body>
-	@@include('_header.html')
+	<div id="active-page-6">
+		@@include('_header.html')
+	</div>
 
 	<main class="main">
 		<!--	Hero	-->
@@ -39,40 +41,38 @@
 						<h2 class="section-title">Use the PROVARIN Savings Card today for a FREE 30-Day Starter Kit.*</h2>
 						<p class="accent-text">To be eligible for the Savings Card and Free Starter Kit, you must meet the following requirements.</p>
 						
-						<form action="./starter-kit-b.html" method="GET" class="stkit-form">
-						
-							<input type="hidden" name="resulturl" value="./starter-kit-b.html">
+						<form action="./savings.php" method="post" class="stkit-form">
 							
 							<label class="check-lable" for="requirements1">
-							<input class="circle" type="checkbox" id="requirements1" name="I am 18 or older" value="I am 18 or older">
+							<input class="circle" type="checkbox" id="requirements1" name="opt1" value="I am 18 or older">
 							<span class="circle-new"></span>
 							I am 18 or older.</label>
 
 							<label class="check-lable" for="requirements2">
-							<input class="circle" type="checkbox" id="requirements2" name="I have not previously received a free Provarin Starter Kit" value="I have not previously received a free Provarin Starter Kit">
+							<input class="circle" type="checkbox" id="requirements2" name="opt2" value="I have not previously received a free Provarin Starter Kit">
 							<span class="circle-new"></span>
 							I have not previously received a free Provarin Starter Kit.</label>
 
 							<label class="check-lable" for="requirements3">
-							<input class="circle" type="checkbox" id="requirements3" name="I am not an employee or agent of Provarin, Biotigen LLC, or any associated companies" value="I am not an employee or agent of Provarin, Biotigen LLC, or any associated companies">
+							<input class="circle" type="checkbox" id="requirements3" name="opt3" value="I am not an employee or agent of Provarin, Biotigen LLC, or any associated companies">
 							<span class="circle-new"></span>
 							I am not an employee or agent of Provarin, Biotigen LLC, or any associated companies.</label>
 
 							<label class="check-lable" for="requirements4">
-							<input class="circle" type="checkbox" id="requirements4" name="I am not an employee or participating agent of an online afliate or reseller program" value="I am not an employee or participating agent of an online afliate or reseller program">
+							<input class="circle" type="checkbox" id="requirements4" name="opt4" value="I am not an employee or participating agent of an online afliate or reseller program">
 							<span class="circle-new"></span>
 							I am not an employee or participating agent of an online afliate or reseller program.</label>
 
 							<label for="name" class="name">
 							Please enter your frst name.
-							<input class="text" type="text" id="name" name="name" placeholder="First Name">
+							<input class="text" type="text" id="name" name="name" placeholder="First Name" required />
 							</label>
 
 							<label for="email" class="email">
 							Please enter your email address.
-							<input class="text" type="text" id="email" name="email" placeholder="name@email.com">
+							<input class="text" type="text" id="email" name="email" placeholder="name@email.com" required />
 							</label>
-							<button class="submit-btn large" type="submit">Submit</button>
+							<button name="submit" class="submit-btn large" type="submit">Submit</button>
 						</form>
 						
 						

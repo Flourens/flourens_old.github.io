@@ -48,6 +48,36 @@
 /* --- medium screens, from 768px --- */
 /* --- large screens, from 992px --- */
 /* --- xlarge screens, from 1440px --- */
+#active-page-1 #active-link-1 {
+  color: #bd9b60; }
+
+#active-page-2 #active-link-2 {
+  color: #bd9b60; }
+
+#active-page-3 #active-link-3 {
+  color: #bd9b60; }
+
+#active-page-4 #active-link-4 {
+  color: #bd9b60; }
+
+#active-page-5 #active-link-5 {
+  color: #bd9b60; }
+
+#active-page-6 #active-link-6 {
+  color: #bd9b60; }
+
+#active-page-7 #active-link-7 {
+  color: #bd9b60; }
+
+#active-page-8 #active-link-8 {
+  color: #bd9b60; }
+
+#active-page-9 #active-link-9 {
+  color: #bd9b60; }
+
+#active-page-10 #active-link-10 {
+  color: #bd9b60; }
+
 .clearfix:after {
   content: "";
   display: table;

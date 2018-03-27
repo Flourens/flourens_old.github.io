@@ -6,7 +6,9 @@
 	<title>Provarin Life | Provarin Life</title>
 </head>
 <body>
-	@@include('_header.html')
+	<div id="active-page-10">
+		@@include('_header.html')
+	</div>
 
 	<main class="main">
 		<!--	Hero	-->
@@ -36,12 +38,20 @@
 						<h2 class="section-title">Have a Comment or Question?</h2>
 						<p class="accent-text">Please fll out the form below or call <span>1-888-559-9511 Monday- Friday 10am – 6pm EST.</span></p>
 						
-						<form action="" class="contact-form">
-							<input type="text" class="name" mane="name" placeholder="Name">
-							<input type="text" class="email" mane="email" placeholder="Email">
-							<input type="text" class="phone" mane="phone" placeholder="Phone Number">
-							<textarea class="message" name="message" placeholder="Message"></textarea>
-							<button class="submit-btn" type="submit">SEND</button>
+						<form action="./mail.php" class="contact-form" method="post" name="form">
+						
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="Provarin">
+							<input type="hidden" name="admin_email" value="nvrevan@gmail.com">
+							<input type="hidden" name="form_subject" value="Provarin">
+							<!-- END Hidden Required Fields -->
+
+						
+							<input type="text" name="name" class="name" placeholder="Name" required value=""/>
+							<input type="email" name="email" class="email" placeholder="Email" required value=""/>
+							<input type="tel" name="phone" class="phone" placeholder="Phone Number" value=""/>
+							<textarea class="message" name="msg" placeholder="Message"></textarea>
+							<button type="submit" name="submit" class="submit-btn">SEND</button>
 						</form>
 						
 					</div>

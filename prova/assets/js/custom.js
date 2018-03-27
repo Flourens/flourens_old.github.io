@@ -155,7 +155,8 @@ if (document.getElementById('monitoring-main')) {
 	});
 }
 	
-jQuery(document).ready(function($) {
+
+$(document).ready(function($) {
 
 			var sum1 = 0;
 			var sum2 = 0;
@@ -255,7 +256,6 @@ jQuery(document).ready(function($) {
 			})
 	
 	
-	
 		$(".cell-check").on("click", function() {
     var sum = 0;
     $(".input-score").each(function(){
@@ -265,7 +265,6 @@ jQuery(document).ready(function($) {
     $(".total-score-value").val(sum);
 	
 });
-
 });
 
 

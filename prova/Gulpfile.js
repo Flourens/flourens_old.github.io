@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 // usage: @@include('filename.html') in source file ("src" folder)
 // gulp task will generate final file at the root folder
 gulp.task('include', function() {
-		gulp.src(['src/home.html', 'src/sexual-strength.html', 'src/decline.html', 'src/strength-score.html', 'src/provarin.html', 'src/faq.html', 'src/healthcare.html', 'src/starter-kit-a.html', 'src/contact.html', 'src/starter-kit-b.html', 'src/important-safety.html'])
+		gulp.src(['src/index.html', 'src/sexual-strength.html', 'src/decline.html', 'src/strength-score.html', 'src/provarin.html', 'src/faq.html', 'src/healthcare.html', 'src/starter-kit-a.html', 'src/contact.html', 'src/starter-kit-b.html', 'src/important-safety.html', 'src/contact-thanks.html'])
     .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
