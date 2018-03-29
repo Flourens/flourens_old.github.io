@@ -4548,7 +4548,6 @@ High-Dollar</strong> Lead!</h1>
 			var i;
 			var x = document.getElementsByClassName("quotes-slide");
 			var dots = document.getElementsByClassName("quote-dots");
-			var lines = document.getElementsByClassName("quote-lines");
 			if (n > x.length) {
 				slideIndex = 1
 			}
@@ -4561,12 +4560,8 @@ High-Dollar</strong> Lead!</h1>
 			for (i = 0; i < dots.length; i++) {
 				dots[i].className = dots[i].className.replace(" qoutes-dot-active", "");
 			}
-			for (i = 0; i < lines.length; i++) {
-				lines[i].className = lines[i].className.replace(" qoutes-line-active", "");
-			}
 			x[slideIndex - 1].style.display = "block";
 			dots[slideIndex - 1].className += " qoutes-dot-active";
-			lines[slideIndex - 1].className += " qoutes-line-active";
 		}
 	</script>
 
