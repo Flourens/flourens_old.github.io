@@ -3614,6 +3614,7 @@
 		<style type="text/css">
 					/*---------- Buttons -------------*/
 			.slideButton {
+				white-space: nowrap;
 				max-width: 220px;
 				display: block;
 				font-size: 16px;
@@ -3829,7 +3830,7 @@
 				.mSlider {
 					background: linear-gradient( rgba(0, 0, 0, 0.66),
 					rgba(0, 0, 0, 0.40)),
-					url(/userfiles/-99/painting-leads/img/painting-slide-1-small.jpg);
+					url(userfiles/-99/painting-leads/img/painting-slide-1-small.jpg);
 					background-position: center;
 					background-repeat: no-repeat;
 					-webkit-background-size: cover;
@@ -3854,6 +3855,9 @@
 			}
 
 			@media screen and (max-width: 415px) {
+				.slideButton, .s-questions .slideButton{
+					max-width: 240px;
+				}
 				.bgWrap {
 					display: none;
 				}

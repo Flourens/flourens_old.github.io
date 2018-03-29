@@ -1249,9 +1249,14 @@ footer {
 		margin: 0 auto;
 		margin-bottom: 10px;
 	}
+	.s-why .slideButton{
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media screen and (max-width: 500px) {
+
 	.play{
 		top: calc(50%);
 	}
