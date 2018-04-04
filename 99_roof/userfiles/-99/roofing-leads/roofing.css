@@ -209,7 +209,7 @@ ul {
 .img-bg-blue .phone-link:after {
 	content: '';
 	position: absolute;
-	width: 19px;
+	width: 30px;
 	height: 3px;
 	background-color: #49d3ff;
 	top: -35px;
