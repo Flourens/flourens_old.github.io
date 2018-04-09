@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="no-js runtime-page">
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Desc">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/flickity.min.css" media="screen">
+<link rel="stylesheet" href="assets/css/styles.css">
+		<title>Runtime - PM2</title>
+	</head>
+	<body>
+		<header class="section header-section">
+	<div class="container header-container">
+		<a href="javascript:void(0);" class="logo-container"><div class="logo"></div></a>
+
+		<!-- Menu Icon for mobile -->
+		<div class="btn-menu is-hidden-large" id="toggle-nav-btn" onclick="openMobileMenu('toggle-nav-btn','main-nav');">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<nav class="header-nav" id="main-nav">
+			<ul class="main-nav menu">
+				<li onmouseover="addActive('product_submenu');" onmouseout="removeActive('product_submenu');">
+					<div class="expander">Product<span class="more-arrow">&rsaquo;</span></div>
+					<ul id="product_submenu" class="second-level">
+						<li><a href="./runtime.html">Runtime</a></li>
+						<li><a href="./monitoring.html">Monitoring</a></li>
+						<li><a href="./enterprise.html">Enterprise</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0);">Customers</a></li>
+				<li><a href="./pricing.html">Pricing</a></li>
+				<li onmouseover="addActive('resources_submenu');" onmouseout="removeActive('resources_submenu');">
+					<div class="expander">Resources<span class="more-arrow">&rsaquo;</span></div>
+					<ul id="resources_submenu" class="second-level">
+						<li><a href="./blog.html">Blog</a></li>
+						<li><a href="javascript:void(0);">Doc</a></li>
+						<li><a href="javascript:void(0);">Community</a></li>
+						<li><a href="javascript:void(0);">Support</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul class="user-nav menu">
+				<li><a href="javascript:void(0);">Login</a></li><li><a href="javascript:void(0);">Sign up</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+		
+		<main class="main runtime-main" id="runtime-main" role="main">
+			
+			<section class="section hero-section blue-hero-bg-section runtime-hero-bg">
+				<div class="container hero-container">
+					<h1>A production manager for Node.js</h1>
+				</div> 
+			</section>  
+
+			<section class="section blue-bg-section blue-grid-bg-section quickstart-section">
+				<div class="container quickstart-container">
+					<h2>Why?</h2>
+					<p class="big-space">Welcome to the PM2 Quick Start! Getting started with PM2 is straightforward, it is offered as a simple and intuitive CLI, installable via NPM. Just start your application with PM2 to boost your application and to make it ready to handle a ton of traffic!</p>
+
+					<h2>Quickstart</h2>
+					<div class="carousel-nav quickstart-carousel-nav">
+						<div class="carousel-cell cell-1"><a href="javascript:void(0);" class="btn btn-slider">Installation</a></div>
+						<div class="carousel-cell cell-2"><a href="javascript:void(0);" class="btn btn-slider">Usage</a></div>
+						<div class="carousel-cell cell-3"><a href="javascript:void(0);" class="btn btn-slider">Application&nbsp;declaration</a></div>
+						<div class="carousel-cell cell-4"><a href="javascript:void(0);" class="btn btn-slider">Setup&nbsp;startup&nbsp;script</a></div>
+						<div class="carousel-cell cell-5"><a href="javascript:void(0);" class="btn btn-slider">Folder&nbsp;structure</a></div>
+					</div>
+					  
+					<div class="quickstart-carousel">
+						<div class="carousel-cell">
+							<p>You can also create a configuration file to manage multiple applications:</p>
+							<div class="code-container has-shadow">
+								<ul class="lines"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ul>
+								<pre class="code">apps:
+	- script : app.js
+		instances : 4
+		exec_mode : cluster
+	- script: worker.js
+		watch : true
+		env :
+			NODE_ENV : development
+		env_production:
+			NODE_ENV : production</pre>
+							</div>
+						</div>
+
+						<div class="carousel-cell">
+							<p>You can also create a configuration file to manage multiple applications:</p>
+							<div class="code-container has-shadow">
+								<ul class="lines"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ul>
+								<pre class="code">apps:
+	- script : app.js
+		instances : 4
+		exec_mode : cluster
+	- script: worker.js
+		watch : true
+		env :
+			NODE_ENV : development
+		env_production:
+			NODE_ENV : production</pre>
+							</div>
+						</div>
+
+						<div class="carousel-cell">
+							<p>You can also create a configuration file to manage multiple applications:</p>
+							<div class="code-container has-shadow">
+								<ul class="lines"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ul>
+								<pre class="code">apps:
+	- script : app.js
+		instances : 4
+		exec_mode : cluster
+	- script: worker.js
+		watch : true
+		env :
+			NODE_ENV : development
+		env_production:
+			NODE_ENV : production</pre>
+							</div>
+						</div>
+
+						<div class="carousel-cell">
+							<p>You can also create a configuration file to manage multiple applications:</p>
+							<div class="code-container has-shadow">
+								<ul class="lines"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ul>
+								<pre class="code">apps:
+	- script : app.js
+		instances : 4
+		exec_mode : cluster
+	- script: worker.js
+		watch : true
+		env :
+			NODE_ENV : development
+		env_production:
+			NODE_ENV : production</pre>
+							</div>
+						</div>
+
+						<div class="carousel-cell">
+							<p>You can also create a configuration file to manage multiple applications:</p>
+							<div class="code-container has-shadow">
+								<ul class="lines"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ul>
+								<pre class="code">apps:
+	- script : app.js
+		instances : 4
+		exec_mode : cluster
+	- script: worker.js
+		watch : true
+		env :
+			NODE_ENV : development
+		env_production:
+			NODE_ENV : production</pre>
+							</div>
+						</div>
+					</div><!-- End of .quickstart-carousel -->
+				</div><!-- End of .quickstart-container -->
+			</section>
+
+			<section class="section doc-section">
+				<div class="container doc-container">
+					<h2>Documentation</h2>
+					<div class="img-container"><img src="./assets/img/runtime/doc.png" data-rjs="2" class="doc-img" /></div>
+					<p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin.</p>
+					<div class="btn-container"><a href="javascript:void(0);" class="btn btn-blue btn-cta">View Documentation</a></div>
+				</div>
+			</section>
+
+			<section class="section blue-grid-bg-section features-section">
+				<div class="container features-container">
+					<h2>Features</h2>
+					
+					<div class="carousel-nav features-carousel-nav">
+						<div class="carousel-cell cell-1"><a href="javascript:void(0);" class="btn btn-slider">Forever&nbsp;alive</a></div>
+						<div class="carousel-cell cell-2"><a href="javascript:void(0);" class="btn btn-slider">Process&nbsp;management</a></div>
+						<div class="carousel-cell cell-3"><a href="javascript:void(0);" class="btn btn-slider">Log&nbsp;management</a></div>
+						<div class="carousel-cell cell-4"><a href="javascript:void(0);" class="btn btn-slider">Zero&nbsp;config&nbsp;load&nbsp;balancer</a></div>
+						<div class="carousel-cell cell-5"><a href="javascript:void(0);" class="btn btn-slider">In&nbsp;terminal&nbsp;monitoring</a></div>
+						<div class="carousel-cell cell-6"><a href="javascript:void(0);" class="btn btn-slider">Deploy</a></div>
+					</div>
+					
+					<div class="features-carousel">
+						<div class="carousel-cell">
+							<div class="img-container"><img src="./assets/img/runtime/1.forever-alive.png" data-rjs="2" class="has-shadow" /></div>
+							<p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag.</p>
+						</div>
+
+						<div class="carousel-cell">
+							<div class="img-container"><img src="./assets/img/runtime/2.process-management.png" data-rjs="2" class="has-shadow" /></div>
+							<p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag.</p>
+						</div>
+
+						<div class="carousel-cell">
+							<div class="img-container"><img src="./assets/img/runtime/3.log-management.png" data-rjs="2" class="has-shadow" /></div>
+							<p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag.</p>
+						</div>
+
+						<div class="carousel-cell">
+							<div class="img-container"><img src="./assets/img/runtime/4.zero-config-load-balancer.png" data-rjs="2" class="has-shadow" /></div>
+							<p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag.</p>
+						</div>
+
+						<div class="carousel-cell">
+							<div class="img-container"><img src="./assets/img/runtime/5.in-terminal-monitoring.png" data-rjs="2" class="has-shadow" /></div>
+							<p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag.</p>
+						</div>
+
+						<div class="carousel-cell">
+							<div class="img-container"><img src="./assets/img/runtime/6.deploy.png" data-rjs="2" class="has-shadow" /></div>
+							<p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag.</p>
+						</div>
+					</div><!-- End of .features-carousel -->
+				</div><!-- End of .features-container -->
+			</section>
+
+			<section class="section blue-bottom-shape-section blue-bottom-stripes-section stats-section">
+				<div class="container stats-container">
+					<dl class="stats-list">
+						<div class="stat">
+							<dt><span class="icon icon-dl-today"><img src="./assets/img/runtime/today-download.svg" /></span><span class="title">Today Downloads:</span></dt>
+							<dd>64301</dd>
+						</div>
+
+						<div class="stat">
+							<dt><span class="icon icon-dl-all"><img src="./assets/img/runtime/total-download.svg" /></span><span class="title">Total Downloads:</span></dt>
+							<dd>42,798,611</dd>
+						</div>
+
+						<div class="stat">
+							<dt><span class="icon icon-star"><img src="./assets/img/runtime/stars.svg" /></span><span class="title">Github Stars:</span></dt>
+							<dd>22799</dd>
+						</div>
+
+						<div class="stat">
+							<dt><span class="icon icon-fork"><img src="./assets/img/runtime/forks.svg" /></span><span class="title">Github Forks:</span></dt>
+							<dd>1648</dd>
+						</div>
+					</dl>
+
+					<div class="btn-container"><a href="javascript:void(0);" class="btn btn-blue btn-cta">Check the community</a></div>
+				</div><!-- End of .stats-container -->
+			</section>
+
+			<section class="section blue-grid-bg-section black-bottom-shape-section blog-section">
+				<div class="additional-bg-wrap additional-bg-blue"></div>
+				<div class="container blog-container">
+					<h2>Blog</h2>
+					<p class="blog-intro">Tousled food truck polaroid, salvia bespoke small batch Pinterest Marfa. Fingerstache authentic craft beer, food truck Banksy Carles kale chips hoodie.</p>
+
+					<div class="blog-entries-container">						
+						<article class="blog-entry latest-entry has-shadow">
+							<div class="dark-layer"></div>
+							<h5>Keytar McSweeney's Williamsburg</h5>
+							<div class="blog-img img-container"><img src="http://fakeimg.pl/960x450/" /></div>
+							<p>readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy.</p>
+						</article>
+
+						<article class="blog-entry is-visible-medium has-shadow">
+							<div class="dark-layer"></div>
+							<h5>Keytar McSweeney's Williamsburg</h5>
+							<div class="blog-img img-container"><img src="http://fakeimg.pl/960x450/" /></div>
+							<p>readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy.</p>
+						</article>
+
+						<article class="blog-entry is-visible-large has-shadow">
+							<div class="dark-layer"></div>
+							<h5>Keytar McSweeney's Williamsburg</h5>
+							<div class="blog-img img-container"><img src="http://fakeimg.pl/960x450/" /></div>
+							<p>readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy.</p>
+						</article>
+
+						<article class="blog-entry is-visible-xlarge has-shadow">
+							<div class="dark-layer"></div>
+							<h5>Keytar McSweeney's Williamsburg</h5>
+							<div class="blog-img img-container"><img src="http://fakeimg.pl/960x450/" /></div>
+							<p>readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy.</p>
+						</article>
+
+						<div class="btn-container"><a href="javascript:void(0);" class="btn btn-blue btn-cta">Read the blog</a></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section clients-section">
+				<div class="container clients-container">
+					<h2>Clients</h2>
+					
+					<ul class="clients-list">
+						<li><img src="./assets/img/logo-clients/best-buy.svg" /></li>
+						<li><img src="./assets/img/logo-clients/IBM.svg" /></li>
+						<li><img src="./assets/img/logo-clients/Microsoft.svg" /></li>
+						<li><img src="./assets/img/logo-clients/PayPal.svg" /></li>
+						<li><img src="./assets/img/logo-clients/Siemens.svg" /></li>
+						<li><img src="./assets/img/logo-clients/Societe_Generale.svg" /></li>
+						<li><img src="./assets/img/logo-clients/Southwest_Airlines.svg" /></li>
+						<li><img src="./assets/img/logo-clients/Tesla_Motors.svg" /></li>
+					</ul>
+
+					<div class="btn-container"><a href="javascript:void(0);" class="btn btn-blue btn-cta">Discover our customers</a></div>
+				</div>
+			</section>
+
+			<section class="section black-bottom-shape-section outro-runtime-section">
+				<div class="container outro-runtime-container">
+					<p class="big-space">Want to monitor your apps on a dashboard ?</p>
+
+					<div class="btn-container"><a href="javascript:void(0);" class="btn btn-green btn-cta">Check the community</a></div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="section footer-section">
+	<div class="container footer-container">
+		<nav class="footer-nav">
+			<dl>
+				<dt>Company</dt>
+				<dd>
+					<ul>
+						<li><a href="./team.html">About Us</a></li>
+						<li><a href="javascript:void(0);">Customers</a></li>
+						<li><a href="./pricing.html">Pricing</a></li>
+						<li><a href="javascript:void(0);">Press</a></li>
+						<li><a href="javascript:void(0);">Careers</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>Product</dt>
+				<dd>
+					<ul>
+						<li><a href="./runtime.html">Runtime</a></li>
+						<li><a href="./monitoring.html">Monitoring</a></li>
+						<li><a href="./enterprise.html">Enterprise</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>Resources</dt>
+				<dd>
+					<ul>
+						<li><a href="javascript:void(0);">Blog</a></li>
+						<li><a href="javascript:void(0);">Doc</a></li>
+						<li><a href="javascript:void(0);">Community</a></li>
+						<li><a href="javascript:void(0);">Support</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>Stay in touch</dt>
+				<dd>
+					<ul>
+						<li class="is-inline-block">
+							<a href="javascript:void(0);" class="icon icon-github">
+								<svg version="1.1" class="github svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="11.3px" height="14.1px" viewBox="0 0 11.3 14.1" xml:space="preserve">
+									<path id="Runtime_1_" transform="translate(-1248.000000, -6505.000000)" class="st0" d="M1259.2,6510.9c0.1-0.3,0.1-0.7,0.1-1.1c0-1.7-0.8-2.4-1-2.7c0.2-1.3,0-1.9-0.2-2.1c-0.5-0.2-1.6,0.4-2.3,0.9c-1-0.3-3.3-0.3-4.1,0.1c-1.5-1.1-2.3-0.9-2.3-0.9s-0.5,0.9-0.1,2.3c-0.5,0.6-0.9,1.1-0.9,2.3c0,0.3,0,0.6,0,0.8c0.4,2.3,2.2,3.3,4,3.4c-0.3,0.2-0.6,0.6-0.6,1c-0.3,0.2-1,0.3-1.5,0.1c-0.7-0.2-1-1.7-2.1-1.5c-0.2,0-0.2,0.2,0,0.3c0.3,0.2,0.7,0.5,0.9,1.1c0.2,0.4,0.6,1.2,1.8,1.2c0.5,0,0.8-0.1,0.8-0.1s0,1.1,0,1.6c0,0.5-0.7,0.6-0.7,0.9c0,0.1,0.2,0.1,0.4,0.1c0.4,0,1.1-0.3,1.1-0.8c0-0.4,0-1.8,0-2.1c0-0.5,0.3-0.7,0.3-0.7s0,2.9-0.1,3.3c-0.1,0.5-0.3,0.4-0.3,0.6c0,0.3,0.9,0.1,1.2-0.6c0.2-0.5,0.1-3.3,0.1-3.3l0.2,0c0,0,0,1.3,0,1.9c0,0.6-0.1,1.4,0.3,1.7c0.2,0.2,1,0.7,1,0.3c0-0.2-0.5-0.4-0.5-1v-2.8c0.3,0,0.4,0.9,0.4,0.9l0.1,1.7c0,0-0.1,0.6,0.7,0.9c0.3,0.1,0.8,0.1,0.9,0s-0.7-0.4-0.7-0.9c0-0.3,0-0.5,0-1.7c0-1.3-0.2-1.7-0.8-2.1C1257.1,6513.7,1258.9,6512.9,1259.2,6510.9z"/>
+								</svg>
+							</a>
+						</li>
+						<li class="is-inline-block">
+							<a href="javascript:void(0);" class="icon icon-fb">
+								<svg version="1.1" class="facebook svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="6.9px" height="14.9px" viewBox="0 0 6.9 14.9"  xml:space="preserve">
+									<path id="Runtime_1_" transform="translate(-1368.000000, -6504.000000)" class="st0" d="M1369.5,6506.9c0,0.4,0,2,0,2h-1.5v2.5h1.5v7.4h3.1v-7.4h2.1c0,0,0.2-1.2,0.3-2.5c-0.3,0-2.3,0-2.3,0s0-1.5,0-1.7c0-0.3,0.3-0.6,0.7-0.6c0.3,0,1,0,1.7,0c0-0.3,0-1.5,0-2.6c-0.9,0-1.8,0-2.3,0C1369.4,6504,1369.5,6506.5,1369.5,6506.9z"/>
+								</svg>
+							</a>
+						</li>
+						<li class="is-inline-block">
+							<a href="javascript:void(0);" class="icon icon-li">
+								<svg version="1.1" class="linkedin svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="12.9px" height="12.4px" viewBox="0 0 12.9 12.4"  xml:space="preserve">
+									<path id="Runtime_1_" transform="translate(-1286.000000, -6506.000000)" class="st0" d="M1298.9,6513.6v4.8h-2.8v-4.5
+	c0-1.1-0.4-1.9-1.4-1.9c-0.8,0-1.2,0.5-1.4,1c-0.1,0.2-0.1,0.4-0.1,0.7v4.7h-2.8c0,0,0-7.6,0-8.3h2.8v1.2c0,0,0,0,0,0h0v0
+	c0.4-0.6,1-1.4,2.5-1.4C1297.6,6509.8,1298.9,6511,1298.9,6513.6z M1287.6,6506c-0.9,0-1.6,0.6-1.6,1.4c0,0.8,0.6,1.4,1.5,1.4h0
+	c1,0,1.6-0.6,1.6-1.4C1289.1,6506.6,1288.5,6506,1287.6,6506z M1286.2,6518.4h2.8v-8.3h-2.8V6518.4z"/>
+</svg>
+
+							</a>
+						</li>
+						<li class="is-inline-block">
+							<a href="javascript:void(0);" class="icon icon-twitter">
+								<svg version="1.1" class="twitter svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="12.1px" height="9.9px" viewBox="0 0 12.1 9.9"  xml:space="preserve">
+									<path id="Runtime_1_" transform="translate(-1327.000000, -6507.000000)" class="st0" d="M1339.1,6508.2c-0.4,0.2-0.9,0.3-1.4,0.4c0.5-0.3,0.9-0.8,1.1-1.4c-0.5,0.3-1,0.5-1.6,0.6c-0.5-0.5-1.1-0.8-1.8-0.8c-1.4,0-2.5,1.1-2.5,2.5c0,0.2,0,0.4,0.1,0.6c-2.1-0.1-3.9-1.1-5.1-2.6c-0.2,0.4-0.3,0.8-0.3,1.3c0,0.9,0.4,1.6,1.1,2.1c-0.4,0-0.8-0.1-1.1-0.3v0c0,1.2,0.9,2.2,2,2.4c-0.2,0.1-0.4,0.1-0.7,0.1c-0.2,0-0.3,0-0.5,0c0.3,1,1.2,1.7,2.3,1.7c-0.9,0.7-1.9,1.1-3.1,1.1c-0.2,0-0.4,0-0.6,0c1.1,0.7,2.4,1.1,3.8,1.1c4.6,0,7.1-3.8,7.1-7.1l0-0.3C1338.4,6509.1,1338.8,6508.7,1339.1,6508.2z"/>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</nav>
+
+		<div class="copyright">
+			<p>&copy; 2018 Keymetrics</p>
+			<ul>
+				<li><a href="javascript:void(0);">Terms of Use</a></li>
+				<li><a href="javascript:void(0);">Privacy Policy</a></li>
+			</ul>
+		</div>
+	</div><!-- End of .container -->
+</footer>
+
+<script src="assets/js/retina.min.js"></script>
+<script src="assets/js/flickity.pkgd.min.js"></script>
+<script src="assets/js/scripts.min.js"></script>
+	</body>
+</html>
