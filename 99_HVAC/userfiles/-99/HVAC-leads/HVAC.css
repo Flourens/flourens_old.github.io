@@ -1243,6 +1243,9 @@ footer {
 }
 
 @media screen and (max-width: 770px) {
+	.section-title br{
+		display: none;
+	}
 	.value-content .values-item {
 		display: block;
 		min-width: 130px;
