@@ -1,0 +1,365 @@
+/*
+#08d
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400');
+html {
+	font-size: 1em;
+}
+html * {
+	font-family: Lato, sans-serif;
+	font-size: 1.50rem;
+	line-height: 1.50em;
+	margin: 0;
+	padding: 0;
+	color: #222;
+	font-weight: 400;
+}
+p, li, h1, h2, h3, h4 {
+	margin-bottom: 1.50rem;
+	padding: 0;
+}
+ul li {
+	margin-left: 0;
+}
+h1,
+h2,
+p.title {
+	font-size: 3.00rem;
+	font-weight: 600;
+}
+p.title {
+	text-align: center;
+}
+h3 {
+	font-size: 1.50rem;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a.button { 
+	text-decoration: none;
+	font-weight: 600;
+	font-size: inherit;
+}
+a.button {
+	display: inline-block;
+	font-weight: 600;
+}
+a.button:hover {
+	font-weight: 600;
+}
+strong,
+span.highlight {
+	font-weight: 600;
+	color: inherit;
+}
+hr {
+	border: none;
+	height: 1px;
+	background: #ccc;
+	margin: 0 0; /* MOITIÉ du padding vertical entre sections */
+}
+
+
+/**/
+header div.row,
+nav#breadcrumb div.row,
+section div.row,
+article div.row,
+footer div.row {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0;
+}
+header div.row{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+section div.row,
+article div.row,
+footer div.row {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+}
+article{
+	padding-top: 88px;
+}
+
+/**/
+.cta_btn{
+	background-color: #f88317;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px rgba(23, 33, 109, 0.28) solid;
+	font-size: 1.20rem;
+	font-weight: normal;
+	vertical-align: text-top;
+	padding: 10px 30px;
+}
+
+/**/
+header#topbar{
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+		-webkit-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0);
+	-moz-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0);
+	box-shadow: 0px 3px 20px -1px rgba(0,0,0,0);
+	padding: 10px 0;
+}
+
+header#topbar .logo {
+	text-decoration: none;
+	padding: 0;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	border: none;
+	display: inline-block;
+	width: 200px;
+	font-size: 3.00rem;
+	line-height: 1;
+}
+header#topbar .cta_btn{
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+header#topbar.scrolled{
+	-webkit-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.2);
+}
+
+header#topbar .cta_btn{
+	opacity: 0;
+	pointer-events: none;
+  cursor: default;
+}
+
+header#topbar.scrolled .cta_btn{
+	display: block;
+	opacity: 1;
+	animation: fadein 0.5s;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+/**/
+nav#breadcrumb ul {
+	margin : 0;
+	margin-left: 10.00rem;
+	padding : 0;
+	display: flex;
+	flex-direction: row;
+}
+nav#breadcrumb li {
+	margin : 0;
+	padding : 0;
+	list-style: none;
+	padding-right : 0.75rem;
+	padding-bottom : 1.25rem;
+	padding-top : 1.25rem;
+	font-size: 1.25rem;
+}
+
+
+/**/
+section#intro{
+	padding-top: 88px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+section#intro,
+footer {
+	background-color: #08d;
+}
+section#intro h1,
+section#intro p,
+footer p {
+	color: #fff;
+}
+section#intro img.croissance {
+	width: 85%;
+	margin: auto 0;
+}
+section#intro div.row,
+footer div.row {
+	display: flex;
+	flex-direction: row;
+}
+div.row div.column {
+	width: 50%;
+}
+
+/**/
+#top-svg svg{
+	width: 85%;
+}
+#top-svg svg path:last-child{
+	fill: #fbc9ff !important;
+}
+
+
+/**/
+.what-wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.what-wrap h2{
+	font-size: 2.20rem;
+	margin-right: 50px;
+	margin-left: 50px;
+	line-height: 1.1;
+	
+}
+.what-wrap .what-item{
+	margin: 0 15px;
+	max-width: 500px;
+	min-width: 320px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.what-text{
+	font-size: 20px;
+}
+.what-item-img{
+	max-width: 30%;
+}
+
+
+
+
+.circle {
+  max-width: 100%;
+  height: 260px;
+  border-radius: 200px;
+  text-align: center;
+  text-align: justify;
+}
+.circle::before {
+    content: "";
+    height: 100%;
+    width: 50%;
+    float: left;
+    shape-outside: polygon(
+      0 0,
+      0 50%,
+      5% 65.6%,
+      10% 71.8%,
+      20% 80%,
+      40% 90%,
+      60% 96%,
+      100% 100%,
+      0% 100%
+    );
+  }
+.circle span::before {
+    content: "";
+    height: 100%;
+    width: 50%;
+    float: right;
+    shape-outside: polygon(
+      100% 0,
+      100% 50%,
+      95% 65.6%,
+      90% 71.8%,
+      80% 80%,
+      60% 90%,
+      40% 96%,
+      0 100%,
+      100% 100%
+    );
+  }
+
+
+
+
+
+
+/* sm <= 568px */
+@media screen and (max-width: 35.5em) {
+	.circle{
+		height: auto;
+		margin-bottom: 50px;
+	}
+	header#topbar .logo {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	header#topbar .cta_btn{
+		display: none;
+		text-align: center;
+		float: none;
+	}
+}
+
+/* md <= 768px */
+@media screen and (max-width: 48em) {
+}
+
+/* lg <= 1024px */
+@media screen and (max-width: 64em) {
+}
+
+/* xl <= 1280px */
+@media screen and (max-width: 80em) {
+}
+
+/* <= 1440px */
+@media screen and (max-width: 90em) {
+}
+
+/* <= 1600px */
+@media screen and (max-width: 100em) {
+}
+
+/* <= 1760px */
+@media screen and (max-width: 110em) {
+}
+
+/* <= 1920px */
+@media screen and (max-width: 120em) {
+}
