@@ -107,20 +107,6 @@ nav#breadcrumb li {
 
 /* sm <= 568px */
 @media screen and (max-width: 35.5em) {
-	.circle{
-		height: auto;
-		margin-bottom: 50px;
-	}
-	header#topbar .logo {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-	header#topbar .cta_btn{
-		display: none;
-		text-align: center;
-		float: none;
-	}
 }
 
 /* md <= 768px */
