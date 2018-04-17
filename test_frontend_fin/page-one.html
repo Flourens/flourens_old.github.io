@@ -18,8 +18,98 @@
 						font-style: normal;
 						font-weight: 400;
 						src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(fonts/Ubuntu-Regular.ttf) format('ttf');
-						unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 					}
+				 @font-face {
+						font-family: 'Ubuntu';
+						font-style: normal;
+						font-weight: 400;
+						src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(fonts/Ubuntu-Regular.eot) format('eot');
+					} 
+				 @font-face {
+						font-family: 'Ubuntu';
+						font-style: normal;
+						font-weight: 400;
+						src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(fonts/Ubuntu-Regular.woff) format('woff');
+					}
+				/**/
+				html {
+					font-size: 1em;
+				}
+				html * {
+					font-family: Lato, sans-serif;
+					font-size: 1.50rem;
+					line-height: 1.50em;
+					margin: 0;
+					padding: 0;
+					color: #222;
+					font-weight: 400;
+				}
+				p, li, h1, h2, h3, h4 {
+					margin-bottom: 1.50rem;
+					padding: 0;
+				}
+				ul li {
+					margin-left: 0;
+				}
+				h1,
+				h2,
+				p.title {
+					font-size: 3.00rem;
+					font-weight: 600;
+				}
+				p.title {
+					text-align: center;
+				}
+				h3 {
+					font-size: 1.50rem;
+				}
+				a,
+				a:link,
+				a:visited,
+				a:hover,
+				a:active,
+				a.button { 
+					text-decoration: none;
+					font-weight: 600;
+					font-size: inherit;
+				}
+				a.button {
+					display: inline-block;
+					font-weight: 600;
+				}
+				a.button:hover {
+					font-weight: 600;
+				}
+				strong,
+				span.highlight {
+					font-weight: 600;
+					color: inherit;
+				}
+				hr {
+					border: none;
+					height: 1px;
+					background: #ccc;
+					margin: 0 0; /* MOITIÉ du padding vertical entre sections */
+				}
+
+
+				/**/
+				header div.row,
+				nav#breadcrumb div.row,
+				section div.row,
+				article div.row,
+				footer div.row {
+					max-width: 1280px;
+					margin: 0 auto;
+					padding-right: 15px;
+					padding-left: 15px;
+				}
+				section div.row,
+				article div.row,
+				footer div.row {
+					padding-bottom: 3rem;
+					padding-top: 3rem;
+				}
 				 	/**/
 					section#intro{
 						padding-top: 88px;
