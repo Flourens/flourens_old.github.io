@@ -3,11 +3,149 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <meta name="description" content="<?php if (isset($page['description'])) { echo  $page['description']; } ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="canonical" href="https://caseo.ch/" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
         <link rel="stylesheet" href="css/style.css">
+        
+        <style>
+						/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/*# sourceMappingURL=normalize.min.css.map */
+				</style>
+       <style>
+				 	/**/
+					section#intro{
+						padding-top: 88px;
+						padding-right: 15px;
+						padding-left: 15px;
+					}
+					section#intro,
+					footer {
+						background-color: #08d;
+					}
+					section#intro h1,
+					section#intro p,
+					footer p {
+						color: #fff;
+					}
+					section#intro img.croissance {
+						width: 85%;
+						margin: auto 0;
+					}
+					section#intro div.row,
+					footer div.row {
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+					}
+					div.row div.column {
+						width: 50%;
+						min-width: 250px;
+					}
+
+					/**/
+					#top-svg svg{
+						width: 85%;
+					}
+					#top-svg svg path:last-child{
+						fill: #fbc9ff !important;
+					}
+				 
+				 	/**/
+					.cta_btn{
+						background-color: #f88317;
+						text-decoration: none;
+						color: #fff;
+						text-align: center;
+						border-radius: 10px;
+						border: 1px rgba(23, 33, 109, 0.28) solid;
+						font-size: 1.20rem;
+						font-weight: normal;
+						vertical-align: text-top;
+						padding: 10px 30px;
+					}
+
+					/**/
+					header#topbar{
+						position: fixed;
+						width: 100%;
+						background-color: #fff;
+							-webkit-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0);
+						-moz-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0);
+						box-shadow: 0px 3px 20px -1px rgba(0,0,0,0);
+						padding: 10px 0;
+					}
+
+					header#topbar .logo {
+						text-decoration: none;
+						padding: 0;
+						padding-bottom: 0.5rem;
+						padding-top: 0.5rem;
+						border: none;
+						display: inline-block;
+						width: 200px;
+						font-size: 3.00rem;
+						line-height: 1;
+					}
+					header#topbar .cta_btn{
+						display: inline-block;
+						float: right;
+						margin-top: 10px;
+						text-transform: uppercase;
+						font-size: 1rem;
+					}
+					header#topbar.scrolled{
+						-webkit-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.2);
+						-moz-box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.2);
+						box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.2);
+					}
+
+					header#topbar .cta_btn{
+						opacity: 0;
+						pointer-events: none;
+						cursor: default;
+					}
+
+					header#topbar.scrolled .cta_btn{
+						display: block;
+						opacity: 1;
+						animation: fadein 0.5s;
+						cursor: pointer;
+						pointer-events: all;
+					}
+
+					@keyframes fadein {
+							from { opacity: 0; }
+							to   { opacity: 1; }
+					}
+
+					/* Firefox < 16 */
+					@-moz-keyframes fadein {
+							from { opacity: 0; }
+							to   { opacity: 1; }
+					}
+
+					/* Safari, Chrome and Opera > 12.1 */
+					@-webkit-keyframes fadein {
+							from { opacity: 0; }
+							to   { opacity: 1; }
+					}
+
+					/* Internet Explorer */
+					@-ms-keyframes fadein {
+							from { opacity: 0; }
+							to   { opacity: 1; }
+					}
+
+					/* Opera < 12.1 */
+					@-o-keyframes fadein {
+							from { opacity: 0; }
+							to   { opacity: 1; }
+					}
+
+
+			</style>
+        
+        
     </head>
 
     <body>
@@ -115,8 +253,25 @@
 	        </div>
         </footer>
 
-     <script type="text/javascript" src="js/common.js"></script> 
-     
+    
+         <!--  top-bar on scroll  -->
+    <script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function(){
+			(function() {  
+				let scrollpos = window.scrollY
+				const header = document.querySelector("#topbar")
+				const header_height = header.offsetHeight
+				const add_class_on_scroll = () => header.classList.add("scrolled")
+				const remove_class_on_scroll = () => header.classList.remove("scrolled")
+
+				window.addEventListener('scroll', function() { 
+					scrollpos = window.scrollY;
+					if (scrollpos >= header_height) { add_class_on_scroll() }
+					else { remove_class_on_scroll() }
+				});
+			 })();
+			});
+		</script> 
 		<!--  Email Obfuscator  -->
      <script type="text/javascript">
 			<!--
@@ -124,5 +279,7 @@
 			m=""; for (i=0; i<s.length; i++) m+=String.fromCharCode(s.charCodeAt(i)-1); document.getElementById('mail').innerHTML=(m);
 			//-->
 		</script>
+   
+    <script type="text/javascript" src="js/common.js"></script> 
     </body>
 </html>
