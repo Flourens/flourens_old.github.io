@@ -2,7 +2,6 @@
 #08d
 */
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400');
 html {
 	font-size: 1em;
 }
@@ -102,46 +101,6 @@ nav#breadcrumb li {
 	padding-top : 1.25rem;
 	font-size: 1.25rem;
 }
-
-
-/**/
-section#intro{
-	padding-top: 88px;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-section#intro,
-footer {
-	background-color: #08d;
-}
-section#intro h1,
-section#intro p,
-footer p {
-	color: #fff;
-}
-section#intro img.croissance {
-	width: 85%;
-	margin: auto 0;
-}
-section#intro div.row,
-footer div.row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-div.row div.column {
-	width: 50%;
-	min-width: 250px;
-}
-
-/**/
-#top-svg svg{
-	width: 85%;
-}
-#top-svg svg path:last-child{
-	fill: #fbc9ff !important;
-}
-
 
 /**/
 .what-wrap{
