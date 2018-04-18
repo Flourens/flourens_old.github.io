@@ -6,6 +6,22 @@ body {
 	background-color: #f5f7f9;
 }
 
+placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+font-size: 14px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	font-size: 14px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	font-size: 14px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	font-size: 14px;
+}
+
 a {
 	text-decoration: none;
 	color: #04a1d4;
@@ -52,6 +68,10 @@ ul {
 	line-height: 1.81;
 	text-align: left;
 }
+.main-content-text a{
+	color: #fff;
+	font-weight: bold;
+}
 
 .main-content-text.large {
 	font-size: 16px;
@@ -86,15 +106,15 @@ ul {
 }
 
 .slider-bg.slider-bg-1 {
-	background-image: url('img/HVAC-slide-1.jpg');
+	background-image: url('img/CCleaning-slide-1.jpg');
 }
 
 .slider-bg.slider-bg-2 {
-	background-image: url('img/HVAC-slide-2.jpg');
+	background-image: url('img/CCleaning-slide-2.jpg');
 }
 
 .slider-bg.slider-bg-3 {
-	background-image: url('img/HVAC-slide-3.jpg');
+	background-image: url('img/CCleaning-slide-3.jpg');
 }
 
 .slider-bg:before {
@@ -118,7 +138,7 @@ ul {
 	padding-bottom: 102px;
 	background-color: #c6d4de;
 	background-image: linear-gradient(rgba(36,36,36,0.3),rgba(36,36,36,0.3)),
-		url(img/value-bg.jpg);
+		url(img/seperates-bg.jpg);
 	background-position: 40% center;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -128,7 +148,7 @@ ul {
 .seperates-content .section-title {
 	color: #f5f7f9;
 	font-size: 30px;
-	padding-bottom: 54px;
+	padding-top: 30px;
 }
 .seperates-content p{
 	color: #fff;
@@ -136,7 +156,7 @@ ul {
 
 .seperates-content {
 	width: 100%;
-	max-width: 725px;
+	max-width: 670px;
 	margin-left: auto;
 	margin-right: 15%;
 }
@@ -232,7 +252,7 @@ ul {
 	margin-bottom: 5px;
 	margin-top: 0;
 	font-size: 18px;
-	max-width: 726px;
+	max-width: 850px;
 }
 .s-how .main-content-size{
 	font-size: 14px;
@@ -341,7 +361,7 @@ ul {
 
 .s-why-roof{
 	background-image: linear-gradient(to left, rgba(34,34,34,0.45),rgba(67,94,156,0.45)),
-		url(img/why-roof-bg.jpg);
+		url(img/why-bg.jpg);
 }
 .why-content {
 	max-width: 45%;
@@ -522,7 +542,6 @@ ul {
 	margin-bottom: 20px;
 }
 .nrt-quote-single{
-	max-width: 557px;
 	padding: 27px 25px 29px 90px;
 	margin-right: auto;
 	margin-left: auto;
@@ -948,7 +967,7 @@ ul {
 .price-form__inpute {
 	border: none;
 	border-bottom: 1px #d2d2d2 solid;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: normal;
 	text-align: left;
@@ -963,7 +982,7 @@ ul {
 }
 
 .price-form__inpute.p50 {
-	width: 45.2%;
+	width: 45%;
 }
 
 .price-form__inpute.inpute-name {
@@ -975,6 +994,7 @@ ul {
 }
 
 .price-form textarea {
+	font-size: 16px;
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 110px;
@@ -1152,6 +1172,8 @@ footer {
 	clear: both;
 	height: 0;
 }
+
+p.BBBText a { font-size:12px;}
 
 
 @media screen and (max-width: 1300px) and (min-width: 994px) {
