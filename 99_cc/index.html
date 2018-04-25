@@ -4364,14 +4364,41 @@ High-Dollar</strong> Lead!</h1>
 
 		<div class="w3-container pad0 footerDivMn">Copyright &copy; 2018 Lovine, Inc.</div>
 	</footer>
+	
+	
+	<div class="call-block" style="display: none; opacity: 0;">
+		<div class="call-block__popup" style="display: none;">
+			<div class="call-block__text main-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam doloremque minima quis quisquam, illo sapiente tenetur veniam sit laborum incidunt:</div>
+			<a class="call-block__phone-btn" href="tel:+18007174669">(800) 717-4669</a>
+		</div>
+		<div class="call-block__bg">
+		</div>
+	</div>
+	
 
 	<!-- footer ends here -->
+	
 
 	<!-- Menu Styles -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+	<script type="text/javascript">
+			$( document ).ready(function() {
+				
+				setTimeout(initCallBlock, 30000);
+				function initCallBlock(){
+      		$('.call-block').addClass('call-block-active')
+ 				}
+				
+				$('.call-block__bg').click(function(){
+      		$('.call-block__popup').toggleClass('popup-active');
+ 				});
+				
+			});
 
+			
+	</script>
 
 	<script type="text/javascript" src="themes/responsive-1/pro1/jquery.smartmenus.min.js"></script>
 	<script type="text/javascript">
