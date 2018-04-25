@@ -106,15 +106,15 @@ ul {
 }
 
 .slider-bg.slider-bg-1 {
-	background-image: url('img/CCleaning-slide-1.jpg');
+	background-image: url('img/Plumbing-slide-1.jpg');
 }
 
 .slider-bg.slider-bg-2 {
-	background-image: url('img/CCleaning-slide-2.jpg');
+	background-image: url('img/Plumbing-slide-2.jpg');
 }
 
 .slider-bg.slider-bg-3 {
-	background-image: url('img/CCleaning-slide-3.jpg');
+	background-image: url('img/Plumbing-slide-3.jpg');
 }
 
 .slider-bg:before {
@@ -353,15 +353,14 @@ ul {
 	
 }
 
-.s-why-hvac{
-	background-image: linear-gradient(to bottom, rgba(34,34,34,0.45),rgba(67,94,156,0.45)),
-	linear-gradient(to bottom, rgba(0,175,232,0.25),rgba(67,94,156,0.25)),
-		url(img/why-HVAC-bg.jpg);
+.s-why-plumbing{
+	background-image: linear-gradient(to bottom, rgba(34,34,34,0.45), rgba(67,94,156,0.45)),
+		url(img/why-bg.jpg);
 }
 
-.s-why-roof{
+.s-include{
 	background-image: linear-gradient(to left, rgba(34,34,34,0.45),rgba(67,94,156,0.45)),
-		url(img/why-bg.jpg);
+		url(img/why-include-bg.jpg);
 }
 .why-content {
 	max-width: 45%;
