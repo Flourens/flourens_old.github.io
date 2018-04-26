@@ -39,7 +39,7 @@ function initialize() {
 				map: map,
 				title: 'Sushi',
 				icon: {
-					url: "../assets/img/marker.png",
+					url: "assets/img/marker.png",
 					scaledSize: new google.maps.Size(66, 66)
 				}
     });
@@ -49,7 +49,7 @@ function initialize() {
 				map: map,
 				title: 'Sushi',
 				icon: {
-					url: "../assets/img/marker2.png",
+					url: "assets/img/marker2.png",
 					scaledSize: new google.maps.Size(66, 66)
 				}
     });

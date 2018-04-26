@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="no-js blog-page">
+
+<head>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Desc">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/styles.css">
+	<title>Sushi Near Me</title>
+</head>
+
+<body>
+	<div id="header-type1">
+		<header class="header">
+	<div class="header__nav-bar">
+		<div class="header__nav">
+			<a href="javascript:void(0);"><img src="assets/img/menu.svg" alt="sushi near me"></a>
+		</div>
+		<div class="header__title"><h1>sushi near me</h1></div>
+		<div class="header__logo" style='display: none;'><img src="assets/img/sushi-logo.svg" alt="sushi near me"></div>
+		<div class="header__search">
+			<a href="javascript:void(0);"><img src="assets/img/search.svg" alt="sushi near me"></a>
+		</div>
+	</div>
+</header>
+	</div>
+	<div class="filter-box">
+		<div class="filter-box-single">
+			<p class="filter-box__filter-text">Restaurants nearby:</p>
+				<ul class="restaurants__data">
+					<li class="restaurants__data-item">300m from you</li>
+					<li class="restaurants__data-item">10 min walk</li>
+				</ul>
+		</div>
+	</div>
+	
+	<div class="googlemap-area">
+     <div class="gmap" id="gmap"></div>
+  </div>
+   
+   	
+	<main class="s-main">
+		<div class="contact-tiles">
+			<a href="javascript:void(0);" class="contact-tiles__tile"><img src="assets/img/phone.svg" alt="Sushi Near Me"></a>
+			<a href="javascript:void(0);" class="contact-tiles__tile contact-tiles__tile--middle-tile"><img src="assets/img/mail.svg" alt="Sushi Near Me"></a>
+			<a href="javascript:void(0);" class="contact-tiles__tile"><img src="assets/img/skype.svg" alt="Sushi Near Me"></a>
+		</div>
+		<div class="contacts">
+		<div class="contacts__data">
+			<div class="contacts__item contacts__item--address"><img src="assets/img/place.svg" alt="Sushi Near Me"><p class="contacts__text">1119 SE 163rd Pl, Vancouver, WA 98683,</p></div>
+			<div class="contacts__item contacts__item--phone"><img src="assets/img/phone-dark.svg" alt="Sushi Near Me"><p class="contacts__text">+1 360-891-4296</p></div>
+			<div class="contacts__item contacts__item--link"><img src="assets/img/link.svg" alt="Sushi Near Me"><a class="contacts__text" href="http://makotojapanesebuffet.com/">makotojapanesebuffet.com</a></div>
+		</div>
+		<div class="restaurants__tags">
+					<div class="restaurants__tag">buffet</div>
+					<div class="restaurants__tag">bar</div>
+					<div class="restaurants__tag">vegan</div>
+				</div>
+		</div>
+	</main>
+   
+  
+	<footer class="footer-section">
+
+</footer>
+<!--
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn4uayw359fjMh4P9i2rKKZYHzXaqTRNs"></script>
+  <script src="assets/js/custom.js"></script>
+-->
+<script>
+	
+var myCenter = new google.maps.LatLng(45.6131016,-122.5048753);
+
+function initialize() {
+    var mapProp = {
+        center: myCenter,
+        scrollwheel: false,
+        zoom:15,
+        zoomControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        
+			styles: [{ 
+				"featureType": "landscape", 
+				"stylers": [{ "color": "#fff" }, { "visibility": "on" }] },
+							 
+				{ "featureType": "poi", "stylers": [{ "saturation": -50 }, { "lightness": 21 }, { "visibility": "simplified" }] },
+			
+				{ "featureType": "road.highway", "stylers": [{ "color": "#f0ede5" }, { "visibility": "on" }] },
+							 
+				{ "featureType": "road.arterial", "stylers": [{ "color": "#f0ede5" }, { "visibility": "on" }] },
+				
+				{ "featureType": "road.local", "stylers": [{ "color": "#14adf4" }, { "visibility": "off" }] },
+				
+				{ "featureType": "transit", "stylers": [{ "saturation": 0 }, { "visibility": "simplified" }] },
+						
+				{ "featureType": "administrative.province", "stylers": [{ "visibility": "off" }] },
+							
+//				{ "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "on" }, { "color": "#ed734e" }] },
+//							 
+//				{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#fff" }, { "visibility": "on" }] }
+			]
+		};
+
+    var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
+
+    var marker = new google.maps.Marker({
+        position: {lat: 45.6131016, lng: -122.5048753},
+				map: map,
+				title: 'Sushi',
+				icon: {
+					url: "assets/img/marker.png",
+					scaledSize: new google.maps.Size(66, 66)
+				}
+    });
+	
+		var marker2 = new google.maps.Marker({
+        position: {lat: 45.6100099, lng: -122.5059908},
+				map: map,
+				title: 'Sushi',
+				icon: {
+					url: "assets/img/marker2.png",
+					scaledSize: new google.maps.Size(66, 66)
+				}
+    });
+
+    marker.setMap(map);
+    marker2.setMap(map);
+
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);	
+	
+</script>
+</body>
+
+</html>
