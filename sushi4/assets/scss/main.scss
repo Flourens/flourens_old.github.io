@@ -56,6 +56,55 @@ a{
 		}
 	}
 }
+.sidebar{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 125px;
+	width: 100%;
+	max-width: 650px;
+	background-color: $main-bg;
+	box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+	z-index: 999;
+	&__list{
+		list-style-type: none;
+		padding: 30px 15px;
+		margin: 0;
+	}
+	&__link {
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		border-bottom: 2px rgba($white,0.1) solid;
+		text-align: center;
+		&:last-child{
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+			border: none;
+		}
+		a{
+			text-decoration: none;
+			color: $white;
+			text-transform: capitalize;
+			font-family: 'CircularStd', sans-serif;
+			font-size: 20px;
+		}
+	}
+}
+.sidebar.open {
+	display: block;
+	animation-name: fadeInLeft;
+  animation-duration: 0.3s;
+	
+}
+@keyframes fadeInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 .filter-box{
 		padding: 25px;
@@ -164,7 +213,7 @@ a{
 		font-family: 'CircularStd', sans-serif;
 		font-weight: 400;
 		background-color: $accent;
-		padding: 5px 30px 9px 30px;
+		padding: 8px 30px 9px 30px;
 		margin-right: 30px;
 		margin-bottom: 15px;
 		border-radius: 70px;
@@ -221,4 +270,70 @@ a{
 		line-height: 1.5;
 		word-break: break-all;
 	}
+}
+
+.searchlink:hover,
+.searchlink.open {
+    cursor: pointer;
+}
+
+.searchlink.open > .searchform {
+    display: block;
+}
+
+.searchform {
+    display: none;
+    position: absolute;
+    width: 230px;
+    line-height: 40px;
+    top: 100px;
+    right: 20px;
+    padding: 5px 18px;
+    cursor: default;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e1e1;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+    margin-left: -120px;
+    z-index: 9999999;
+    background-color: #fff;
+}
+
+.searchform.open {
+    display: block;
+}
+
+#search {
+    display: block;
+    position: relative;
+}
+
+#s {
+    width: 130px;
+    background: $white;
+    padding: 5px 11px;
+    border: 1px solid #e1e1e1;
+    color: $main-bg;
+    margin: 14px 0;
+		font-family: 'CircularStd', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+}
+
+.sbtn {
+		font-family: 'CircularStd', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+    display: block;
+    position: absolute;
+    background: none;
+    border: 1px $main-bg solid;
+    color: #fff;
+		padding: 5px 5px;
+    cursor: pointer;
+    right: 0px;
+    top: 14px;
+    width: 65px;
+    background-color: $main-bg;
 }

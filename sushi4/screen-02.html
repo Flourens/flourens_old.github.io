@@ -7,6 +7,9 @@
 <meta name="description" content="Desc">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!--<link rel="stylesheet" href="assets/css/styles.css">-->
+
+
 <style>
 @font-face {
   font-family: 'BlackHanSans';
@@ -24,16 +27,6 @@
   src: url("assets/fonts/mainfonts/CircularStd-Book.ttf");
   src: url("assets/fonts/mainfonts/CircularStd-Book.woff");
   font-weight: 400;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-@font-face {
-  font-family: 'CircularStd';
-  src: url("assets/fonts/mainfonts/CircularStd-Bold.eot");
-  src: url("assets/fonts/mainfonts/CircularStd-Bold.ttf");
-  src: url("assets/fonts/mainfonts/CircularStd-Bold.woff");
-  font-weight: 600;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -400,6 +393,60 @@ a {
     text-align: center;
     color: #454f63; }
 
+.sidebar {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 125px;
+  width: 100%;
+  max-width: 650px;
+  background-color: #454f63;
+  -webkit-box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+  z-index: 999; }
+  .sidebar__list {
+    list-style-type: none;
+    padding: 30px 15px;
+    margin: 0; }
+  .sidebar__link {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px rgba(255, 255, 255, 0.1) solid;
+    text-align: center; }
+    .sidebar__link:last-child {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      border: none; }
+    .sidebar__link a {
+      text-decoration: none;
+      color: #ffffff;
+      text-transform: capitalize;
+      font-family: 'CircularStd', sans-serif;
+      font-size: 20px; }
+
+.sidebar.open {
+  display: block;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s; }
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
 .filter-box {
   padding: 25px;
   display: -webkit-box;
@@ -507,7 +554,7 @@ a {
   font-family: 'CircularStd', sans-serif;
   font-weight: 400;
   background-color: #3acce1;
-  padding: 5px 30px 9px 30px;
+  padding: 8px 30px 9px 30px;
   margin-right: 30px;
   margin-bottom: 15px;
   border-radius: 70px; }
@@ -568,6 +615,66 @@ a {
     line-height: 1.5;
     word-break: break-all; }
 
+.searchlink:hover,
+.searchlink.open {
+  cursor: pointer; }
+
+.searchlink.open > .searchform {
+  display: block; }
+
+.searchform {
+  display: none;
+  position: absolute;
+  width: 230px;
+  line-height: 40px;
+  top: 100px;
+  right: 20px;
+  padding: 5px 18px;
+  cursor: default;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e1e1e1;
+  -webkit-box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
+  margin-left: -120px;
+  z-index: 9999999;
+  background-color: #fff; }
+
+.searchform.open {
+  display: block; }
+
+#search {
+  display: block;
+  position: relative; }
+
+#s {
+  width: 130px;
+  background: #ffffff;
+  padding: 5px 11px;
+  border: 1px solid #e1e1e1;
+  color: #454f63;
+  margin: 14px 0;
+  font-family: 'CircularStd', sans-serif;
+  font-weight: 400;
+  font-size: 16px; }
+
+.sbtn {
+  font-family: 'CircularStd', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  background: none;
+  border: 1px #454f63 solid;
+  color: #fff;
+  padding: 5px 5px;
+  cursor: pointer;
+  right: 0px;
+  top: 14px;
+  width: 65px;
+  background-color: #454f63; }
+
 
 </style>
 	<title>Sushi Near Me</title>
@@ -577,14 +684,36 @@ a {
 	<div id="header-type2">
 		<header class="header">
 	<div class="header__nav-bar">
-		<div class="header__nav">
+		<div id="hamburger" class="header__nav">
 			<a href="javascript:void(0);"><img src="assets/img/menu.svg" alt="sushi near me"></a>
 		</div>
+		
+		<div id="sidebar" class="sidebar">
+			<ul class="sidebar__list">
+				<li class="sidebar__link"><a href="javascript:void(0);">Lorem ipsum</a></li>
+				<li class="sidebar__link"><a href="javascript:void(0);">Lorem ipsum</a></li>
+				<li class="sidebar__link"><a href="javascript:void(0);">Lorem ipsum</a></li>
+				<li class="sidebar__link"><a href="javascript:void(0);">Lorem ipsum</a></li>
+
+			</ul>
+		</div>
+		
 		<div class="header__title"><h1>sushi near me</h1></div>
 		<div class="header__logo" style='display: none;'><img src="assets/img/sushi-logo.svg" alt="sushi near me"></div>
-		<div class="header__search">
-			<a href="javascript:void(0);"><img src="assets/img/search.svg" alt="sushi near me"></a>
+		
+
+	<div class="searchlink" id="searchlink">
+		<img src="assets/img/search.svg" alt="sushi near me"></a>
+	</div>
+	
+		<div id="searchform" class="searchform">
+				<form id="search" action="">
+						<input type="text" class="s" id="s" name="s" placeholder="keywords...">
+						<button type="submit" class="sbtn">Search</button>
+				</form>
 		</div>
+	
+
 	</div>
 </header>
 	</div>
@@ -670,6 +799,30 @@ a {
 	<footer class="footer-section">
 
 </footer>
+<script>
+	
+	
+	(function() {
+		var a = document.getElementById('searchlink');
+		var b = document.getElementById('searchform');
+		
+		a.onclick = function() {
+			b.classList.toggle('open');
+		}
+		
+	})();
+	
+		var c = document.getElementById('hamburger');
+		var c1 = document.getElementById('sidebar');
+	(function() {
+		
+		c.onclick = function() {
+			c1.classList.toggle('open');
+		}
+		
+	})();
+
+</script>
 </body>
 
 </html>
