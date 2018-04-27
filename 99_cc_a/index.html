@@ -4406,8 +4406,8 @@ High-Dollar</strong> Lead!</h1>
 	
 	
 	<script>
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			animation_init();
+		document.addEventListener("DOMContentLoaded", function(event) {
+			setTimeout(animation_init, 3000);
 		});
 	</script>
 	<!-- footer ends here -->
@@ -4420,7 +4420,7 @@ High-Dollar</strong> Lead!</h1>
 	<script type="text/javascript">
 			$( document ).ready(function() {
 				
-				setTimeout(initCallBlock, 5000);
+				setTimeout(initCallBlock, 10000);
 				function initCallBlock(){
       		$('.call-block').addClass('call-block-active')
  				}
