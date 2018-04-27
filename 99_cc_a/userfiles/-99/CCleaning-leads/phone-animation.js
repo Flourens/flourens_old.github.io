@@ -457,4 +457,4 @@ function handleComplete() {
 	makeResponsive(false,'both',false,1);	
 	fnStartAnimation();
 }
-	
+	setTimeout(animation_init, 3000);
