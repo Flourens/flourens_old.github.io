@@ -1188,25 +1188,7 @@ footer {
 	opacity: 1 !important;
 	transition: all 0.3s ease;
 }
-/*
-.call-block__bg{
-	width: 70px;
-	height: 70px;
-	border-radius: 130px;
-	background-color: #fff;
-	border: 2px #e9a700 solid;
-	background-image: url(img/logo-phone.png);
-	background-position: center;
-	-webkit-background-size: contain;
-	background-size: contain; 
-	background-repeat: no-repeat;
-	margin-right: 0;
-	margin-left: auto;
-	margin-top: 15px;
-	cursor: pointer;
-	opacity: 0.9;
-}
-*/
+
 .call-block__bg{
 	margin-right: 0;
 	margin-left: auto;
@@ -1228,6 +1210,17 @@ footer {
 	margin-bottom: 30px;
 	font-size: 18px;
 }
+
+.call-block__close-btn{
+	display: block;
+	width: 20px;
+	margin-right: 0;
+	margin-left: auto;
+	height: auto;
+	padding-bottom: 30px;
+	cursor: pointer;
+}
+
 .call-block__phone-btn{
 	display: block;
 	background-color: #e9a700;
