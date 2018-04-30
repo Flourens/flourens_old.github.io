@@ -433,13 +433,15 @@ function phone_start() {
     
     
     console.log(clicked);
-    setTimeout( phone_start, 30000);
+    setTimeout( phone_start, 10000);
     
 }
-
 function stop_anim() {
+    createjs.Ticker.removeEventListener("tick", stage);
     
-}
+    
+       
+    }	
 
  
 setTimeout(phone_start, 5000);
