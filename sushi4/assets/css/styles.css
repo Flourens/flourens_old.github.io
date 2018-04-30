@@ -347,7 +347,8 @@ a {
 /*---- Header ----*/
 .header {
   padding-top: 32px;
-  background-color: #454f63; }
+  background-color: #454f63;
+  position: relative; }
   .header__nav-bar {
     min-height: 44px;
     background-color: #ffffff;
@@ -602,62 +603,103 @@ a {
     line-height: 1.5;
     word-break: break-all; }
 
-.searchlink:hover,
-.searchlink.open {
-  cursor: pointer; }
-
-.searchlink.open > .searchform {
-  display: block; }
+.searchlink {
+  z-index: 100; }
+  .searchlink path.color-white {
+    fill: #ffffff; }
 
 .searchform {
-  display: none;
   position: absolute;
-  width: 230px;
-  line-height: 40px;
-  top: 100px;
-  right: 20px;
-  padding: 5px 18px;
-  cursor: default;
-  border-radius: 2px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e1e1e1;
-  -webkit-box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.2);
-  margin-left: -120px;
-  z-index: 9999999;
-  background-color: #fff; }
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99; }
+  .searchform #search {
+    min-height: 80px;
+    z-index: 100;
+    position: relative;
+    padding-top: 38px;
+    background-color: #454f63;
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s; }
+    @media only screen and (min-width: 30em) {
+      .searchform #search {
+        min-height: 110px; } }
+    @media only screen and (min-width: 30em) {
+      .searchform #search {
+        padding-top: 32px; } }
+    .searchform #search input {
+      border: none;
+      background-color: rgba(255, 255, 255, 0);
+      color: #fff;
+      font-size: 25px;
+      font-family: 'CircularStd', sans-serif;
+      font-weight: 400;
+      opacity: 0.6;
+      padding: 25px;
+      padding-top: 30px; }
+      @media only screen and (min-width: 30em) {
+        .searchform #search input {
+          font-size: 30px; } }
+      .searchform #search input::-webkit-input-placeholder {
+        color: #fff; }
+      .searchform #search input:-ms-input-placeholder {
+        color: #fff; }
+      .searchform #search input::-ms-input-placeholder {
+        color: #fff; }
+      .searchform #search input::placeholder {
+        color: #fff; }
+      .searchform #search input:focus {
+        outline: none; }
+  .searchform__overlay {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s; }
 
-.searchform.open {
-  display: block; }
+.searchform.active {
+  display: block !important; }
 
-#search {
-  display: block;
-  position: relative; }
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
 
-#s {
-  width: 130px;
-  background: #ffffff;
-  padding: 5px 11px;
-  border: 1px solid #e1e1e1;
-  color: #454f63;
-  margin: 14px 0;
-  font-family: 'CircularStd', sans-serif;
-  font-weight: 400;
-  font-size: 16px; }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
 
-.sbtn {
-  font-family: 'CircularStd', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  display: block;
-  position: absolute;
-  background: none;
-  border: 1px #454f63 solid;
-  color: #fff;
-  padding: 5px 5px;
-  cursor: pointer;
-  right: 0px;
-  top: 14px;
-  width: 65px;
-  background-color: #454f63; }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

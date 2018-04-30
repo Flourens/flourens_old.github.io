@@ -7,15 +7,17 @@
 	(function() {
 		var a = document.getElementById('searchlink');
 		var b = document.getElementById('searchform');
+		var icon = document.getElementById('zzbja');
 		
 		a.onclick = function() {
-			b.classList.toggle('open');
+			b.classList.toggle('active');
+			icon.classList.toggle('color-white');
 		}
 		
 	})();
 	
-		var c = document.getElementById('hamburger');
-		var c1 = document.getElementById('sidebar');
+	var c = document.getElementById('hamburger');
+	var c1 = document.getElementById('sidebar');
 	(function() {
 		
 		c.onclick = function() {
