@@ -452,10 +452,11 @@ function handleComplete() {
 function phone_ring() {
 	stage.children[0].play();
 	console.log('Animation Start');
+	console.log(stage.children[0]);
 }
 
 
-var audio = new Audio('/userfiles/-99/CCleaning-leads/ring/ring.mp3');
+var audio = new Audio('userfiles/-99/CCleaning-leads/ring/ring.mp3');
 function ring_sound() {
   audio.volume = 0.4;
 	audio.play();
