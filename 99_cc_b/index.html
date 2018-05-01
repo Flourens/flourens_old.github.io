@@ -7,8 +7,6 @@
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20624024-1"></script>
 	<script>
-		
-		
 		window.dataLayer = window.dataLayer || [];
 
 		function gtag() {
@@ -42,7 +40,7 @@
 	<!--	Phone animation script -->
 
 
-	<script async src="userfiles/-99/CCleaning-leads/phone-animation.js"></script>
+	<script async src="userfiles/-99/CCleaning-leads/phone-animation2.js"></script>
 
 
 
@@ -4392,15 +4390,16 @@ High-Dollar</strong> Lead!</h1>
 		<div class="call-block__popup" style="display: none;">
 			<img src="userfiles/-99/CCleaning-leads/img/cancel.svg" alt="99 Calls" class="call-block__close-btn">
 			<div class="call-block__text main-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam doloremque minima quis quisquam, illo sapiente tenetur veniam sit laborum incidunt:</div>
-			<a class="call-block__phone-btn" href="tel:+18007174669" >(800) 717-4669</a>
+			<a class="call-block__phone-btn" href="tel:+18007174669">(800) 717-4669</a>
 		</div>
 		<div class="call-block__bg">
-		
-		<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:74px; height:74px; ;bottom: 40px;right: 40px;"><canvas height="74" id="canvas" style="position: absolute; display: block; background-color: rgba(255, 255, 255, 0); width: 74px; height: 74px;" width="74"></canvas>
 
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:74px; height:74px; position: absolute; left: 0px; top: 0px; display: block;">&nbsp;</div>
-		</div>
-		
+			<div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:74px; height:74px">
+				<canvas id="canvas" width="74" height="74" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
+				<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:74px; height:74px; position: absolute; left: 0px; top: 0px; display: block;">
+				</div>
+			</div>
+
 		</div>
 
 	</div>
@@ -4414,39 +4413,49 @@ High-Dollar</strong> Lead!</h1>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-				var audio = new Audio('userfiles/-99/CCleaning-leads/ring/ring.mp3');
-					function ring_sound() {
-                        audio.volume = 0.14;
-						audio.play();
-					}
+		var audio = new Audio('userfiles/-99/CCleaning-leads/ring/ring.mp3');
+
+		function ring_sound() {
+			audio.volume = 0.14;
+			audio.play();
+		}
+
+
 
 		
-		
-		var executed = false;
 		$(document).ready(function() {
-			setTimeout(initCallBlock, 5000);
+			setTimeout(initCallBlock, 10000);
+			var executed = false;
+			
 			function initCallBlock() {
-				$('.call-block').addClass('call-block-active')
+				$('.call-block').addClass('call-block-active');
+				ring_sound();
+				phone_init();
+				phone_ring();
 			}
 			
 			$('.call-block__bg, .call-block__close-btn').click(function() {
-				$('.call-block__popup').toggleClass('popup-active');
-				executed = true;
-                stop_anim();
-                clicked = true;
-                console.log(clicked);
-				
-
-				
+				if($('.call-block__popup').hasClass('popup-active')){
+					
+				$('.call-block__popup').removeClass('popup-active');
+						
+						phone_init();
+						phone_ring();
+					
+					 } else {
+						 
+						$('.call-block__popup').addClass('popup-active');
+						phone_stop();
+						phone_init();
+						executed = true;
+					 }
 			});
-			
+
 			$("html").mouseleave(function() {
-				
 				if ($('.call-block').hasClass('call-block-active') && executed == false) {
 					$('.call-block__popup').toggleClass('popup-active');
+					phone_stop();
 					executed = true;
-                    
-                    
 				}
 			});
 		});
