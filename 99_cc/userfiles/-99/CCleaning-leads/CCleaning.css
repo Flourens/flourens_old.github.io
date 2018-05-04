@@ -1173,6 +1173,111 @@ footer {
 	height: 0;
 }
 
+.call-block{
+	right: 16px;
+	bottom: 30px;
+	position: fixed;
+	margin-left: 16px;
+	max-width: 500px;
+	z-index: 100;
+	opacity: 0;
+	
+}
+.call-block-active{
+	display: block !important;
+	opacity: 1 !important;
+	transition: all 0.3s ease;
+}
+.call-block__bg{
+	width: 70px;
+	height: 70px;
+	border-radius: 130px;
+	background-color: #fff;
+	border: 2px #e9a700 solid;
+	background-image: url(img/logo-phone.png);
+	background-position: center;
+	-webkit-background-size: contain;
+	background-size: contain; 
+	background-repeat: no-repeat;
+	margin-right: 0;
+	margin-left: auto;
+	margin-top: 15px;
+	cursor: pointer;
+	opacity: 0.9;
+}
+.call-block__popup{
+	background-color: rgba(255,255,255,0.98);
+	border-radius: 10px;
+	padding: 30px;
+	box-shadow: 0px 2px 2px 0 rgba(84, 84, 84, 0.3);
+}
+.call-block__text{
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+.call-block__phone-btn{
+	display: block;
+	background-color: #e9a700;
+	color: #fff;
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px 10px 12px 10px;
+}
+
+.call-block__bg {
+ 	animation: vertical_5774 3.44s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes vertical_5774 {
+  0% { transform:translate(0,-3px) }
+  2.32558% { transform:translate(0,3px) }
+  4.65116% { transform:translate(0,-3px) }
+  6.97674% { transform:translate(0,3px) }
+  9.30233% { transform:translate(0,-3px) }
+  11.62791% { transform:translate(0,3px) }
+  12.7907% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+}
+
+.call-block__popup.popup-active{
+	animation: fadeInRight 0.7s ease;
+}
+.call-block__popup.popup-hiden{
+	animation: fadeOutRight 0.7s ease;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.popup-active{
+	display: block !important;
+}
+
 p.BBBText a { font-size:12px;}
 
 
