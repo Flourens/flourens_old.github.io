@@ -456,6 +456,7 @@ ul {
 	padding-top: 60px;
 	padding-bottom: 100px;
 	background-image: url(img/customer-bg.png);
+	background-repeat: no-repeat;
 	background-position: bottom center;
 	-webkit-background-size: 100%;
 	background-size: 100%;

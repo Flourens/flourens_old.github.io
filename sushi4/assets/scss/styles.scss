@@ -1,0 +1,14 @@
+// Custom font
+@import './fonts/mainfonts';
+
+// Config
+@import './mixins/mediaqueries';
+
+// Colors
+@import './colors';
+
+// Styles
+@import '../css/normalize';
+@import './layout/header';
+@import './main';
+@import './layout/footer';
