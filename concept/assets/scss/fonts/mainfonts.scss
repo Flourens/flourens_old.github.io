@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/mainfonts/MyriadPro-Regular.ttf');
+	src: url('../fonts/mainfonts/MyriadPro-Regular.otf');
+	src: url('../fonts/mainfonts/MyriadPro-Regular.eot');
+	src: url('../fonts/mainfonts/MyriadPro-Regular.woff');
+	src: url('../fonts/mainfonts/MyriadPro-Regular.woff2');
+	font-weight: 400;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/mainfonts/MyriadPro-Semibold.ttf');
+	src: url('../fonts/mainfonts/MyriadPro-Semibold.otf');
+	src: url('../fonts/mainfonts/MyriadPro-Semibold.eot');
+	src: url('../fonts/mainfonts/MyriadPro-Semibold.woff');
+	src: url('../fonts/mainfonts/MyriadPro-Semibold.woff2');
+	font-weight: 600;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/mainfonts/MyriadPro-It.ttf');
+	src: url('../fonts/mainfonts/MyriadPro-It.otf');
+	src: url('../fonts/mainfonts/MyriadPro-It.eot');
+	src: url('../fonts/mainfonts/MyriadPro-It.woff');
+	src: url('../fonts/mainfonts/MyriadPro-It.woff2');
+	font-weight: 400;
+	font-style: italic;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

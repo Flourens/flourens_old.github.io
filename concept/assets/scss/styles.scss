@@ -1,0 +1,15 @@
+// Custom font
+@import './fonts/mainfonts';
+
+// Config
+@import './mixins/mediaqueries';
+
+// Colors
+@import './colors';
+
+// Styles
+@import '../css/normalize';
+@import '../css/owl.carousel.min';
+@import './layout/header';
+@import './main';
+@import './layout/footer';
