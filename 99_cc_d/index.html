@@ -30,21 +30,6 @@
 
 
 
-
-
-
-
-
-
-
-	<!--	Phone animation script -->
-
-
-	<script async src="userfiles/-99/CCleaning-leads/phone-animation2.js"></script>
-
-
-
-
 	<style>
 		/* W3.CSS 4.04 Apr 2017 by Jan Egil and Borge Refsnes */
 
@@ -4412,45 +4397,29 @@ High-Dollar</strong> Lead!</h1>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+	<!--	Phone animation script -->
+	<script async src="userfiles/-99/CCleaning-leads/phone-animation.js"></script>
 	<script type="text/javascript">
-		var audio = new Audio('userfiles/-99/CCleaning-leads/ring/ring.mp3');
-
-		function ring_sound() {
-			audio.volume = 0.14;
-			audio.play();
-		}
-
-
-
-		
 		$(document).ready(function() {
-			setTimeout(initCallBlock, 10000);
+			setTimeout(initCallBlock, 5000);
 			var executed = false;
-			
 			function initCallBlock() {
-				$('.call-block').addClass('call-block-active');
-				ring_sound();
-				phone_init();
-				phone_ring();
+				if (executed == false) {
+					$('.call-block').addClass('call-block-active');
+					phone_init();
+					setTimeout(phone_ring, 1000);
+					setTimeout(initCallBlock, 30000);
+				}
 			}
-			
 			$('.call-block__bg, .call-block__close-btn').click(function() {
-				if($('.call-block__popup').hasClass('popup-active')){
-					
-				$('.call-block__popup').removeClass('popup-active');
-						
-						phone_init();
-						phone_ring();
-					
-					 } else {
-						 
-						$('.call-block__popup').addClass('popup-active');
-						phone_stop();
-						phone_init();
-						executed = true;
-					 }
+				if ($('.call-block__popup').hasClass('popup-active')) {
+					$('.call-block__popup').removeClass('popup-active');
+				} else {
+					$('.call-block__popup').addClass('popup-active');
+					phone_stop();
+					executed = true;
+				}
 			});
-
 			$("html").mouseleave(function() {
 				if ($('.call-block').hasClass('call-block-active') && executed == false) {
 					$('.call-block__popup').toggleClass('popup-active');
@@ -4459,7 +4428,6 @@ High-Dollar</strong> Lead!</h1>
 				}
 			});
 		});
-		
 	</script>
 
 	<script type="text/javascript" src="themes/responsive-1/pro1/jquery.smartmenus.min.js"></script>

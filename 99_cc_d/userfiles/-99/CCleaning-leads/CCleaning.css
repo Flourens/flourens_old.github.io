@@ -1234,6 +1234,7 @@ footer {
 	padding: 10px 10px 12px 10px;
 }
 
+/*
 .call-block__bg {
  	animation: vertical_5774 3.44s ease infinite;
   transform-origin: 50% 50%;
@@ -1249,6 +1250,7 @@ footer {
   12.7907% { transform:translate(0,0) }
   100% { transform:translate(0,0) }
 }
+*/
 
 .call-block__popup.popup-active{
 	animation: fadeInRight 0.7s ease;
@@ -1466,6 +1468,5 @@ p.BBBText a { font-size:12px;}
 		padding-left: 50px;
 	}
 
-	.value-content .values-item {}
 
 }
