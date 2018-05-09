@@ -4367,11 +4367,7 @@ High-Dollar</strong> Lead!</h1>
 		<div class="w3-container pad0 footerDivMn">Copyright &copy; 2018 Lovine, Inc.</div>
 	</footer>
 
-
 	<div class="call-block" style="display: none; opacity: 0;">
-
-
-
 		<div class="call-block__popup" style="display: none;">
 			<img src="userfiles/-99/CCleaning-leads/img/cancel.svg" alt="99 Calls" class="call-block__close-btn">
 			<div class="call-block__text main-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam doloremque minima quis quisquam, illo sapiente tenetur veniam sit laborum incidunt:</div>
@@ -4388,7 +4384,7 @@ High-Dollar</strong> Lead!</h1>
 		</div>
 
 	</div>
-
+	<div class="call-overlay" style="display: none;"></div>
 
 	<!-- footer ends here -->
 
@@ -4397,7 +4393,8 @@ High-Dollar</strong> Lead!</h1>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-	<!--	Phone animation script -->
+	<!----------------	Phone animation script ------------->
+	
 	<script async src="userfiles/-99/CCleaning-leads/phone-animation.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -4414,8 +4411,10 @@ High-Dollar</strong> Lead!</h1>
 			$('.call-block__bg, .call-block__close-btn').click(function() {
 				if ($('.call-block__popup').hasClass('popup-active')) {
 					$('.call-block__popup').removeClass('popup-active');
+					$('.call-overlay').removeClass('active');
 				} else {
 					$('.call-block__popup').addClass('popup-active');
+					$('.call-overlay').addClass('active');
 					phone_stop();
 					executed = true;
 				}
@@ -4423,12 +4422,15 @@ High-Dollar</strong> Lead!</h1>
 			$("html").mouseleave(function() {
 				if ($('.call-block').hasClass('call-block-active') && executed == false) {
 					$('.call-block__popup').toggleClass('popup-active');
+					$('.call-overlay').toggleClass('active');
 					phone_stop();
 					executed = true;
 				}
 			});
 		});
 	</script>
+	
+	<!-------------	End Phone animation script ------------->
 
 	<script type="text/javascript" src="themes/responsive-1/pro1/jquery.smartmenus.min.js"></script>
 	<script type="text/javascript">
