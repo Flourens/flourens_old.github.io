@@ -1249,23 +1249,21 @@ footer {
 	padding: 10px 10px 12px 10px;
 }
 
-/*
 .call-block__bg {
- 	animation: vertical_5774 3.44s ease infinite;
+ 	animation: vertical_2869 5.44s ease infinite;
   transform-origin: 50% 50%;
 }
 
-@keyframes vertical_5774 {
+@keyframes vertical_2869 {
   0% { transform:translate(0,-3px) }
-  2.32558% { transform:translate(0,3px) }
-  4.65116% { transform:translate(0,-3px) }
-  6.97674% { transform:translate(0,3px) }
-  9.30233% { transform:translate(0,-3px) }
-  11.62791% { transform:translate(0,3px) }
-  12.7907% { transform:translate(0,0) }
+  1.47059% { transform:translate(0,3px) }
+  2.94118% { transform:translate(0,-3px) }
+  4.41176% { transform:translate(0,3px) }
+  5.88235% { transform:translate(0,-3px) }
+  7.35294% { transform:translate(0,3px) }
+  8.08824% { transform:translate(0,0) }
   100% { transform:translate(0,0) }
 }
-*/
 
 .call-block__popup.popup-active{
 	animation: fadeInRight 0.7s ease;
