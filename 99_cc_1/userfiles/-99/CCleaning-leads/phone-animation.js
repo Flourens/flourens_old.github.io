@@ -450,13 +450,11 @@ function handleComplete() {
 	fnStartAnimation();
 }
 
-
-var audio = new Audio('userfiles/-99/CCleaning-leads/ring/ring.mp3');
-function ring_sound() {
-  audio.volume = 0.4;
-	audio.play();
-}
-
+	var audio = new Audio('userfiles/-99/CCleaning-leads/ring/ring.mp3');
+	function ring_sound() {
+		audio.volume = 0.4;
+		audio.play();
+	}
 
 function phone_ring() {
 	stage.children[0].play();
