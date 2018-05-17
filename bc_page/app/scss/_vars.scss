@@ -1,8 +1,16 @@
-$default-font: "roboto-example", sans-serif;
-$accent: orange;
-$text: #333;
+/* Fonts */
+$default-font: "montserrat", sans-serif;
 
-// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+/* Colors */
+$white: #fff;
+$grey: #364253;
+$dark-grey: #242e36;
+$light-grey: #e6e6e6;
+$red: #f42a41;
+$green: #3ab753;
+$footer-grey: #91a3c0;
+
+/* Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss" */
 $grid-gutter-width: 30px;
 $grid-columns: 12;
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
