@@ -5,8 +5,6 @@
 
 /.git/
 
-/app/css/
-
 /**/_backstage
 /**/package-lock.json
 /**/Thumbs.db
