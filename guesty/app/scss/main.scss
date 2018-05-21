@@ -1,0 +1,255 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $green;
+	color: $white;
+}
+
+body{
+	margin: 0;
+}
+
+/*--- Fonts ---*/
+h1, .h1{
+  font-family: 'Lato', sans-serif;
+  font-size: 57px;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+.top-subtitle{
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: $white;
+	margin-bottom: 69px;
+}
+
+/*--- Sections ---*/
+.section{
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+.section-title{
+	color: $title-text;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 82px;
+}
+
+.s-hero{
+	background-color: $dark-bg;
+	background-image: url(../img/hero_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.s-values, s-join{
+	background-color: #fff;
+}
+.s-video{
+	background-color: $blue-bg;
+	background-image: url(../img/video_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.s-join{
+	background-color: $gray-bg;
+}
+.s-team{
+	background-color: #fff;
+}
+
+
+/*--- Main Styles ---*/
+
+.main-title{
+	width: 100%;
+	max-width: 505px;
+	margin: 0 auto;
+	margin-top: 256px;
+	margin-bottom: 186px;
+	text-align: center;
+	
+	&__btn{
+		display: block;
+		margin: 0 auto;
+		font-family: 'Lato', sans-serif;
+		font-size: 30px;
+		font-weight: 300;
+		color: $white;
+		text-decoration: none;
+		width: 100%;
+		max-width: 300px;
+		padding: 19px 20px 16px 20px;
+		border-radius: 5px;
+		background-color: #30abe5;
+	}
+}
+
+.values{
+	&__item{
+		text-align: center;
+		min-width: 182px;
+		max-width: 300px;
+		width: 100%;
+		padding: 0 15px;
+		padding-bottom: 30px;
+		margin: 0 auto;
+	}
+	&__icon{
+		margin-bottom: 15px;
+	}
+	&__title{
+		color: $title-text;
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+  	font-weight: 400;
+		line-height: 1.8;
+	}
+	&__text{
+		color: $main-text;
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+  	font-weight: 300;
+	}
+}
+
+.video-box{
+	padding-bottom: 270px;
+	&__btn{
+		display: block;
+		max-width: 230px;
+		margin: 0 auto;
+		margin-top: 174px;
+	}
+	
+}
+
+.join{
+	&__item{
+		text-align: center;
+		min-width: 173px;
+		max-width: 222px;
+		width: 100%;
+		padding: 0 10px;
+		padding-bottom: 30px;
+		margin: 0 auto;
+	}
+	&__icon{
+		margin-bottom: 15px;
+	}
+	&__text{
+		color: $title-text;
+		font-family: 'Lato', sans-serif;
+		font-size: 20px;
+  	font-weight: 300;
+	}
+}
+
+.slider-wrap{
+	width: 95%;
+	max-width: 1520px;
+	margin: auto;
+	position: relative;
+}
+
+.slider-nav{
+	position: absolute;
+	top: calc(50% - 30px);
+	width: 100%;
+	height: 100px;
+	.prev{
+		content: url(../img/prev.png);
+		width: 21px;
+		height: auto;
+		position: absolute;
+		left: -100px;
+		cursor: pointer;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+		&:hover{
+			opacity: 0.8;
+			transition: opacity 0.3s ease;
+		}
+	}
+	.next{
+		content: url(../img/next.png);
+		width: 21px;
+		height: auto;
+		position: absolute;
+		right: -100px;
+		cursor: pointer;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+		&:hover{
+			opacity: 0.8;
+			transition: opacity 0.3s ease;
+		}
+	}
+}
+
+.team{
+	&__item{
+		font-family: 'Lato', sans-serif;
+		text-align: center;
+	}
+	&__photo{
+		max-width: 217px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	&__persone{
+		margin-bottom: 14px;
+	}
+	&__name{
+		font-size: 20px;
+		color: $title-text;
+		font-weight: 400;
+	}
+	&__position{
+		font-size: 16px;
+		color: $main-text;
+		font-weight: 300;
+	}
+	&__description{
+		font-size: 15px;
+		color: $main-text;
+		font-weight: 300;
+		max-width: 257px;
+		margin: 0 auto;
+	}
+}
+
+
+/*--- Gallery ---*/
+.grid-sizer,
+.grid-item {
+  width: 19.4%;
+	margin-bottom: 10px;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+
+@import "media"; // Always at the end
