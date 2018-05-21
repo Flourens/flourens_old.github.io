@@ -1,6 +1,5 @@
 @import "_mixins/font-face";
 
-@include font-face("montserrat", "../fonts/Montserrat-Light", 300);
-@include font-face("montserrat", "../fonts/Montserrat-Regular", 400);
-@include font-face("montserrat", "../fonts/Montserrat-Bold", 600);
-@include font-face("montserrat", "../fonts/Montserrat-SemiBold", 700);
+@include font-face("Lato", "../fonts/Lato-Light", 300);
+@include font-face("montserrat", "../fonts/Lato-Regular", 400);
+@include font-face("montserrat", "../fonts/Lato-Bold", 600);

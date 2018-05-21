@@ -5,7 +5,15 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
-
+	.slick-slide {
+		img{
+			width: 70%;
+		}
+	}
+	.grid-sizer,
+	.grid-item {
+		width: calc(33.333% - 10px);
+	}
 }
 
 // ≥992px
@@ -16,12 +24,29 @@
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-
+.grid-sizer,
+	.grid-item {
+		width: calc(50% - 10px);
+	}
 }
 
 // ≥576px
 @include media-breakpoint-down(xs) {
-
+	h1, .h1{
+		font-size: 40px;
+	}
+	.section-title{
+		font-size: 35px;
+	}
+	.grid-sizer,
+	.grid-item {
+		width: calc(100%);
+		height: auto;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 }
 
 

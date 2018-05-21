@@ -1197,6 +1197,7 @@ main.main {
 		padding-top: 87px;
 	}
 }
+
 .blog-content{
 	margin-top: 70px;
 	@include from-xlarge{
@@ -1298,7 +1299,7 @@ main.main {
 		}
 	}
 }
-	.blog-pagination{
+.blog-pagination{
 		padding-top: 10px;
 		padding-bottom: 10px;
 		margin: 0 auto;
@@ -1331,9 +1332,6 @@ main.main {
 			fill: $text-light;
 		}
 	}
-.w940{
-	min-height: 940px;
-}
 .blog-masonry{
 	display: flex;
   flex-flow: column wrap;
@@ -1357,6 +1355,10 @@ main.main {
 //	}
 	
 	
+}
+
+.w940{
+	min-height: 940px;
 }
 .outro-box-section{
 	.container{
