@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	
+	// SLick Slider
+	
   $('.team').slick({
     slidesToShow: 5,
 		slidesToScroll: 1,
@@ -28,18 +31,19 @@ $(document).ready(function(){
       }
     }
   ]
-		
-		
   });
-});
-
-var $grid = $('.grid').masonry({
+	
+	// Masonry
+	var $grid = $('.grid').masonry({
   itemSelector: '.grid-item',
   percentPosition: true,
   columnWidth: '.grid-sizer',
 	gutter: 10
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry();
+	});  
+	
 });
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});  
+
