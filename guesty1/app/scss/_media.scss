@@ -18,9 +18,12 @@
 
 // ≥992px
 @include media-breakpoint-down(md) {
-
+	.apply{
+		max-width:100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
-
 
 // ≥768px
 @include media-breakpoint-down(sm) {
@@ -28,6 +31,18 @@
 	.grid-item {
 		width: calc(50% - 10px);
 	}
+	
+	.social{
+		&__icon{
+			float: none;
+			width: 10%;
+			img{
+				margin-right: auto;
+				margin-left: 0;
+			}
+		}
+	}
+	
 }
 
 // ≥576px
