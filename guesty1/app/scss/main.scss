@@ -1,6 +1,48 @@
-@import "vars";
-@import "fonts";
-@import "libs";
+/* Variables */
+/* Fonts */
+$default-font: "Lato", sans-serif;
+
+/* Colors */
+$white: #fff;
+$gray-bg: #f4f7f8;
+$dark-bg: #114272;
+$blue-bg: #60d8d5;
+$title-text: #3c4858;
+$main-text: #8492a6;
+
+/* Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss" */
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
+
+/* Fonts*/
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+	
+	@font-face {
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+
+		@if $asset-pipeline == true {
+			src: font-url('#{$file-path}.eot');
+			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype');
+		} @else {
+			src: url('#{$file-path}.eot');
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+		}
+	
+	}
+
+}
+
+@include font-face("Lato", "../fonts/Lato-Light", 300);
+@include font-face("montserrat", "../fonts/Lato-Regular", 400);
+@include font-face("montserrat", "../fonts/Lato-Bold", 600);
+
 
 ::placeholder {
 	color: #666;
@@ -92,6 +134,7 @@ h1, .h1{
 
 .s-gallery{
 	background-color: $gray-bg;
+	
 }
 .s-description{
 	background-color: $gray-bg;
@@ -523,4 +566,242 @@ h1, .h1{
 	z-index: 10;
 }
 
-@import "media"; // Always at the end
+
+.wrapper {
+  position: relative;
+	max-height: 630px;
+}
+.wrapper:after {
+  padding-top: 36.25%;   /* 16:9 ratio */
+  display: block;
+  content: ' ';
+}
+.flex-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 5px 0;
+  display: flex;
+	flex-wrap: wrap;
+}
+.flex-container > div {           /*  .flex-col-1, .flex-col-2, .flex-col-3  */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.flex-container > div > div {     /*  .flex-row-1, .flex-row-2    */
+  margin: 5px;
+  display: flex;
+}
+
+.flex-col{
+	background-color: #f4f7f8;
+}
+.flex-row-1,.flex-row-2,.flex-row-3{
+	border-radius: 5px;
+}
+.flex-col-1 {
+  width: 20%;
+  .flex-row-1 {
+    height: 35%;
+    background-color: #ddd;
+  }
+  .flex-row-2 {
+    height: 45%;
+    background-color: #ddd;
+  }
+	.flex-row-3 {
+    height: 20%;
+    background-color: #ddd;
+  }
+}
+
+.flex-col-2 {
+  width: 20%;
+  .flex-row-1 {
+    height: 43%;
+    background-color: #ddd;
+  }
+  .flex-row-2 {
+    height: 29%;
+    background-color: #ddd;
+  }
+	.flex-row-3 {
+    height: 28%;
+    background-color: #ddd;
+  }
+}
+
+	.flex-col-3 {
+		width: 20%;
+		.flex-row-1 {
+			height: 60%;
+			background-color: #ddd;
+		}
+		.flex-row-2 {
+			height: 40%;
+			background-color: #ddd;
+		}
+	}
+
+	.flex-col-4 {
+		width: 40%;
+		.flex-row-1 {
+			height: 24%;
+		}
+		.flex-row-2 {
+			height: 38%;
+			background-color: #ddd;
+		}
+		.flex-row-3 {
+			height: 38%;
+		}
+	}
+
+.flex-col-4-inner {
+  flex: 1;
+  display: flex;
+
+  .flex-col-1-inner {
+    width: 50%;
+    background-color: #ddd;
+    margin-right: 5px;
+  }
+  .flex-col-2-inner {
+    width: 50%;
+    background-color: #ddd;
+    margin-left: 5px;
+  }
+}
+.grid-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.grid-img1{background-image: url(../img/Feel-the-Vibe/1_image_800x550.png);}
+.grid-img2{background-image: url(../img/Feel-the-Vibe/2_image_800x550.png);}
+.grid-img3{background-image: url(../img/Feel-the-Vibe/3_image_800x550.png);}
+.grid-img4{background-image: url(../img/Feel-the-Vibe/4_image_800x550.png);}
+.grid-img5{background-image: url(../img/Feel-the-Vibe/5_image_800x550.png);}
+.grid-img6{background-image: url(../img/Feel-the-Vibe/6_image_800x550.png);}
+.grid-img7{background-image: url(../img/Feel-the-Vibe/7_image_800x550.png);}
+.grid-img8{background-image: url(../img/Feel-the-Vibe/8_image_800x550.png);}
+.grid-img9{background-image: url(../img/Feel-the-Vibe/9_image_800x550.png);}
+.grid-img10{background-image: url(../img/Feel-the-Vibe/10_image_800x550.png);}
+.grid-img11{background-image: url(../img/Feel-the-Vibe/11_image_800x550.png);}
+.grid-img12{background-image: url(../img/Feel-the-Vibe/12_image_800x550.png);}
+.grid-img13{background-image: url(../img/Feel-the-Vibe/13_image_800x550.png);}
+
+/*--- Media ---*/
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@media only screen and (max-width : 1200px) {
+	.slick-slide {
+		img{
+			width: 70%;
+		}
+	}
+	.grid-sizer,
+	.grid-item {
+		width: calc(33.333% - 10px);
+	}
+}
+
+// ≥992px
+@media only screen and (max-width : 1200px) {
+	
+	
+	.apply{
+		max-width:100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.wrapper:after {
+		padding-top: 56.25%;   /* 16:9 ratio */
+	}
+	
+	.flex-col-1 { width: 33.333%; min-width: 33.333%;}
+	.flex-col-2 { width: 33.333%; min-width: 33.333%;}
+	.flex-col-3 { width: 33.333%; min-width: 33.333%;}
+	.flex-col-4 { width: 100%;}
+	
+	.flex-col-4 {
+		.flex-row-1 {
+			height: 50%;
+		}
+		.flex-row-2 {
+			height: 30%;
+			background-color: #ddd;
+		}
+		.flex-row-3 {
+			height: 20%;
+		}
+	}
+	
+}
+
+// ≥768px
+@media only screen and (max-width : 768px) {
+.grid-sizer,
+	.grid-item {
+		width: calc(50% - 10px);
+	}
+	
+	.social{
+		&__icon{
+			float: none;
+			width: 10%;
+			img{
+				margin-right: auto;
+				margin-left: 0;
+			}
+		}
+	}
+	
+}
+
+// ≥576px
+@media only screen and (max-width : 576px){
+	h1, .h1{
+		font-size: 40px;
+	}
+	.section-title{
+		font-size: 35px;
+	}
+	
+	.wrapper {max-height: 100%; height: 430px;}
+	
+	.flex-col-1 { width: 50%; min-width: 50%;}
+	.flex-col-2 { width: 50%; min-width: 50%;}
+	.flex-col-3 { width: 100%; min-width: 100%;}
+	.flex-col-4 { width: 100%;}
+	
+	.flex-col-3 {
+		height: 50% !important;
+		.flex-row-1 {
+			height: 50%;
+		}
+		.flex-row-2 {
+			height: 50%;
+			background-color: #ddd;
+		}
+	}
+	
+	.flex-col-4 {
+		.flex-row-1 {
+			height: 50%;
+		}
+		.flex-row-2 {
+			height: 30%;
+			background-color: #ddd;
+		}
+		.flex-row-3 {
+			height: 20%;
+		}
+	}
+	
+}
