@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="230px" height="230px" viewBox="0 0 230 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon2 / Full Copy 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="114.872797" cy="114.872797" r="114.872797"></circle>
+    </defs>
+    <g id="Icons-and-elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-301.000000, -767.000000)">
+            <g id="Icon2-/-Full" transform="translate(301.000000, 767.000000)">
+                <g id="Advanced-Content-Generation">
+                    <g id="-Icon-/-BG1">
+                        <g id="-BG-icon">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#DCEEFA" xlink:href="#path-1"></use>
+                            <path d="M355.335398,-10.7038928 C355.335398,-3.53987166 196.064841,98.3792393 -122.476274,295.05344 L293.88946,295.05344 C334.853419,84.051197 355.335398,-17.867914 355.335398,-10.7038928 Z" id="Path-11" fill="#4094AA" opacity="0.111979167" mask="url(#mask-2)" transform="translate(116.429562, 141.998338) rotate(-200.000000) translate(-116.429562, -141.998338) "></path>
+                            <path d="M-3.30845702,28.5986162 C-3.30845702,32.7615928 48.8396934,106.605139 153.135994,250.129256 L378.546916,221.911561 C123.976667,88.873288 -3.30845702,24.4356395 -3.30845702,28.5986162 Z" id="Path-11" fill="#0065E3" opacity="0.0799365942" style="mix-blend-mode: multiply;" mask="url(#mask-2)" transform="translate(187.619229, 139.269201) rotate(8.000000) translate(-187.619229, -139.269201) "></path>
+                        </g>
+                    </g>
+                    <g id="Icon2-/-Industry" transform="translate(50.000000, 50.000000)">
+                        <g id="Icon-/-Advanced-Content-Generation" fill="#051F61">
+                            <g id="Oval-5">
+                                <circle cx="65.5" cy="65.5" r="65.5"></circle>
+                            </g>
+                        </g>
+                        <g id="icon-/-company" transform="translate(35.000000, 25.000000)" fill="#FFFFFF">
+                            <path d="M14,39 L28,39 L28,34 L14,34 L14,39 Z M14,48 L28,48 L28,43 L14,43 L14,48 Z M14,56 L28,56 L28,51 L14,51 L14,56 Z M55.025,35.1548673 C55.025,33.871792 53.984175,32.8318584 52.7,32.8318584 L37.1225,32.8318584 L37.1225,22.7654867 C37.1225,21.4824115 36.081675,20.4424779 34.7975,20.4424779 L32.085,20.4424779 L32.085,14.2477876 C32.085,12.9647124 31.044175,11.9247788 29.76,11.9247788 L24.335,11.9247788 L24.335,0 L19.685,0 L19.685,11.9247788 L14.26,11.9247788 C12.975825,11.9247788 11.935,12.9647124 11.935,14.2477876 L11.935,20.4424779 L9.2225,20.4424779 C7.938325,20.4424779 6.8975,21.4824115 6.8975,22.7654867 L6.8975,65.3539823 L0,65.3539823 L0,70 L62,70 L62,65.3539823 L55.025,65.3539823 L55.025,35.1548673 Z" id="Page-1"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="1038px" viewBox="0 0 1920 1038" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>BG / Part2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-13.8289388%" y1="113.397973%" x2="141.941732%" y2="41.5999045%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EAF1FE" offset="81.2837298%"></stop>
+            <stop stop-color="#E6EDFE" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1920" height="1037.16402"></rect>
+        <linearGradient x1="54.792958%" y1="31.8882341%" x2="8.70411797%" y2="9.14961115%" id="linearGradient-4">
+            <stop stop-color="#164FFF" offset="0%"></stop>
+            <stop stop-color="#69FF8C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.5818366%" y1="57.5533636%" x2="32.8944397%" y2="4.57117142%" id="linearGradient-5">
+            <stop stop-color="#00FFE9" offset="0%"></stop>
+            <stop stop-color="#3D6DF6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="29.6075581%" x2="50%" y2="91.1906492%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="BG-/-Part2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BG">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <polygon id="Path-3" fill="url(#linearGradient-4)" opacity="0.0155117754" mask="url(#mask-3)" points="1674.66044 0 2576 1009.78267 -328 0"></polygon>
+            <path d="M1135.09074,113.179321 L353.142728,2227.54212 C2693.9979,756.650769 3864.42549,21.205093 3864.42549,21.205093 C3864.42549,21.205093 2954.64724,51.8631691 1135.09074,113.179321 Z" id="Path-2" fill="url(#linearGradient-5)" opacity="0.06" mask="url(#mask-3)" transform="translate(2108.784107, 1124.373607) rotate(17.000000) translate(-2108.784107, -1124.373607) "></path>
+            <rect id="Rectangle-3" fill="url(#linearGradient-6)" mask="url(#mask-3)" x="0" y="307" width="1920" height="730.31746"></rect>
+        </g>
+    </g>
+</svg>

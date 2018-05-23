@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="258px" height="442px" viewBox="0 0 258 442" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Mockup / MAP grey</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="4.8316906e-13" width="257.552071" height="441.292929" rx="3.54169515"></rect>
+        <rect id="path-3" x="0" y="0" width="52.3818182" height="52.3818182" rx="2.34545455"></rect>
+        <filter x="-14.3%" y="-14.3%" width="128.6%" height="128.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-6" x="0" y="0" width="52.3818182" height="52.3818182" rx="2.34545455"></rect>
+        <filter x="-14.3%" y="-14.3%" width="128.6%" height="128.6%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-9" x="0" y="0" width="52.3818182" height="52.3818182" rx="2.34545455"></rect>
+        <filter x="-14.3%" y="-14.3%" width="128.6%" height="128.6%" filterUnits="objectBoundingBox" id="filter-11">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Mockup-/-MAP-grey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-46-Copy">
+            <g id="Feature-/-Checkout-" transform="translate(0.000000, 0.078704)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="head-image-+stars" mask="url(#mask-2)">
+                    <g transform="translate(27.797980, 331.838384)" id="Stars">
+                        <g transform="translate(0.453405, 0.000000)">
+                            <g id="Group-11" transform="translate(0.000000, 0.000000)">
+                                <g id="Group-2" transform="translate(0.000000, 0.000000)">
+                                    <polygon id="Star-Copy" fill="#051146" points="34.6664591 78.4490799 32.481483 79.5778948 32.8987763 77.1870264 31.1310935 75.4938039 33.5739711 75.1449809 34.6664591 72.969697 35.7589471 75.1449809 38.2018246 75.4938039 36.4341419 77.1870264 36.8514352 79.5778948"></polygon>
+                                    <polygon id="Star-Copy-5" fill="#DFE3EA" points="44.1748034 78.4490799 41.9898273 79.5778948 42.4071206 77.1870264 40.6394379 75.4938039 43.0823154 75.1449809 44.1748034 72.969697 45.2672914 75.1449809 47.7101689 75.4938039 45.9424862 77.1870264 46.3597795 79.5778948"></polygon>
+                                    <polygon id="Star-Copy-2" fill="#051146" points="25.1581148 78.4490799 22.9731387 79.5778948 23.390432 77.1870264 21.6227492 75.4938039 24.0656267 75.1449809 25.1581148 72.969697 26.2506028 75.1449809 28.6934803 75.4938039 26.9257975 77.1870264 27.3430908 79.5778948"></polygon>
+                                    <rect id="Rectangle-5-Copy-9" fill="#DFE3EA" x="8.68686869" y="84.2626263" width="32.1210166" height="4.34343434" rx="2.17171717"></rect>
+                                    <rect id="Rectangle-5-Copy-14" fill="#DFE3EA" x="85.1313131" y="84.2626263" width="32.1210166" height="4.34343434" rx="2.17171717"></rect>
+                                    <rect id="Rectangle-5-Copy-17" fill="#051146" x="59.9291951" y="0" width="82.5252525" height="4.34343434" rx="2.17171717"></rect>
+                                    <rect id="Rectangle-5-Copy-16" fill="#DFE3EA" x="153.757576" y="84.2626263" width="32.1210166" height="4.34343434" rx="2.17171717"></rect>
+                                    <polygon id="Star-Copy-3" fill="#051146" points="15.6497705 78.4490799 13.4647944 79.5778948 13.8820877 77.1870264 12.1144049 75.4938039 14.5572824 75.1449809 15.6497705 72.969697 16.7422585 75.1449809 19.185136 75.4938039 17.4174532 77.1870264 17.8347465 79.5778948"></polygon>
+                                    <polygon id="Star-Copy-4" fill="#051146" points="6.14142615 78.4490799 3.95645008 79.5778948 4.37374338 77.1870264 2.60606061 75.4938039 5.04893812 75.1449809 6.14142615 72.969697 7.23391419 75.1449809 9.6767917 75.4938039 7.90910892 77.1870264 8.32640222 79.5778948"></polygon>
+                                    <g id="head-image-+stars-copy" transform="translate(77.728413, 72.969697)">
+                                        <g id="Stars" transform="translate(0.453405, 0.000000)">
+                                            <g id="Group-11">
+                                                <polygon id="Star-Copy" fill="#051146" points="32.0603985 5.47938291 29.8754224 6.60819786 30.2927157 4.21732942 28.5250329 2.52410698 30.9679104 2.17528397 32.0603985 0 33.1528865 2.17528397 35.595764 2.52410698 33.8280813 4.21732942 34.2453746 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-5" fill="#DFE3EA" points="41.5687428 5.47938291 39.3837667 6.60819786 39.80106 4.21732942 38.0333773 2.52410698 40.4762548 2.17528397 41.5687428 0 42.6612308 2.17528397 45.1041083 2.52410698 43.3364256 4.21732942 43.7537189 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-2" fill="#051146" points="22.5520542 5.47938291 20.3670781 6.60819786 20.7843714 4.21732942 19.0166886 2.52410698 21.4595661 2.17528397 22.5520542 0 23.6445422 2.17528397 26.0874197 2.52410698 24.3197369 4.21732942 24.7370302 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-3" fill="#051146" points="13.0437099 5.47938291 10.8587338 6.60819786 11.2760271 4.21732942 9.50834431 2.52410698 11.9512218 2.17528397 13.0437099 0 14.1361979 2.17528397 16.5790754 2.52410698 14.8113926 4.21732942 15.2286859 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-4" fill="#051146" points="3.53536554 5.47938291 1.35038948 6.60819786 1.76768277 4.21732942 2.77555756e-17 2.52410698 2.44287751 2.17528397 3.53536554 0 4.62785358 2.17528397 7.07073109 2.52410698 5.30304832 4.21732942 5.72034161 6.60819786"></polygon>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g id="head-image-+stars-copy-2" transform="translate(148.092049, 72.969697)">
+                                        <g id="Stars" transform="translate(0.453405, 0.000000)">
+                                            <g id="Group-11">
+                                                <polygon id="Star-Copy" fill="#051146" points="32.0603985 5.47938291 29.8754224 6.60819786 30.2927157 4.21732942 28.5250329 2.52410698 30.9679104 2.17528397 32.0603985 0 33.1528865 2.17528397 35.595764 2.52410698 33.8280813 4.21732942 34.2453746 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-5" fill="#DFE3EA" points="41.5687428 5.47938291 39.3837667 6.60819786 39.80106 4.21732942 38.0333773 2.52410698 40.4762548 2.17528397 41.5687428 0 42.6612308 2.17528397 45.1041083 2.52410698 43.3364256 4.21732942 43.7537189 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-2" fill="#051146" points="22.5520542 5.47938291 20.3670781 6.60819786 20.7843714 4.21732942 19.0166886 2.52410698 21.4595661 2.17528397 22.5520542 0 23.6445422 2.17528397 26.0874197 2.52410698 24.3197369 4.21732942 24.7370302 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-3" fill="#051146" points="13.0437099 5.47938291 10.8587338 6.60819786 11.2760271 4.21732942 9.50834431 2.52410698 11.9512218 2.17528397 13.0437099 0 14.1361979 2.17528397 16.5790754 2.52410698 14.8113926 4.21732942 15.2286859 6.60819786"></polygon>
+                                                <polygon id="Star-Copy-4" fill="#051146" points="3.53536554 5.47938291 1.35038948 6.60819786 1.76768277 4.21732942 2.77555756e-17 2.52410698 2.44287751 2.17528397 3.53536554 0 4.62785358 2.17528397 7.07073109 2.52410698 5.30304832 4.21732942 5.72034161 6.60819786"></polygon>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g id="Group" transform="translate(0.415281, 15.557659)">
+                                        <g id="Item-3" transform="translate(143.333333, 0.000000)">
+                                            <g id="Pic" transform="translate(0.781818, 0.000000)">
+                                                <mask id="mask-4" fill="white">
+                                                    <use xlink:href="#path-3"></use>
+                                                </mask>
+                                                <g id="Mask">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-3"></use>
+                                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g id="Item-2" transform="translate(73.838384, 0.000000)">
+                                            <g id="Pic">
+                                                <mask id="mask-7" fill="white">
+                                                    <use xlink:href="#path-6"></use>
+                                                </mask>
+                                                <g id="Mask">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-6"></use>
+                                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g id="Item-1">
+                                            <g id="Pic">
+                                                <mask id="mask-10" fill="white">
+                                                    <use xlink:href="#path-9"></use>
+                                                </mask>
+                                                <g id="Mask">
+                                                    <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-9"></use>
+                                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Screen-Shot-2018-05-09-at-14.27.31" mask="url(#mask-2)">
+                    <g transform="translate(0.000000, -6.949495)">
+                        <rect id="Rectangle-3" fill="#D8D8D8" opacity="0.326283482" x="117.272727" y="19.1111111" width="125.090909" height="75.5757576"></rect>
+                        <rect id="Rectangle" fill="#DCDAFF" x="0" y="0" width="270.161616" height="41.6969697"></rect>
+                    </g>
+                </g>
+                <g id="head-image-+stars" mask="url(#mask-2)">
+                    <g transform="translate(27.330979, 129.996051)" id="Stars">
+                        <g transform="translate(0.787043, 0.000000)">
+                            <g id="Group-11">
+                                <polygon id="Star-Copy" fill="#051146" points="55.6520125 9.58892008 51.8592238 11.5643463 52.583582 7.38032648 49.5151515 4.41718721 53.7556181 3.80674695 55.6520125 0 57.5484068 3.80674695 61.7888734 4.41718721 58.7204429 7.38032648 59.4448011 11.5643463"></polygon>
+                                <polygon id="Star-Copy-5" fill="#DFE3EA" points="72.157063 9.58892008 68.3642743 11.5643463 69.0886325 7.38032648 66.020202 4.41718721 70.2606686 3.80674695 72.157063 0 74.0534573 3.80674695 78.2939239 4.41718721 75.2254934 7.38032648 75.9498516 11.5643463"></polygon>
+                                <polygon id="Star-Copy-2" fill="#051146" points="39.146962 9.58892008 35.3541733 11.5643463 36.0785315 7.38032648 33.010101 4.41718721 37.2505676 3.80674695 39.146962 0 41.0433563 3.80674695 45.2838229 4.41718721 42.2153924 7.38032648 42.9397506 11.5643463"></polygon>
+                                <polygon id="Star-Copy-3" fill="#051146" points="22.6419115 9.58892008 18.8491228 11.5643463 19.573481 7.38032648 16.5050505 4.41718721 20.7455171 3.80674695 22.6419115 0 24.5383058 3.80674695 28.7787724 4.41718721 25.7103419 7.38032648 26.4347001 11.5643463"></polygon>
+                                <polygon id="Star-Copy-4" fill="#051146" points="6.13686095 9.58892008 2.3440723 11.5643463 3.06843047 7.38032648 5.55111512e-17 4.41718721 4.24046662 3.80674695 6.13686095 0 8.03325527 3.80674695 12.2737219 4.41718721 9.20529142 7.38032648 9.92964959 11.5643463"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <path d="M27.7979798,105.111111 L234.979798,105.111111" id="Line" stroke="#EDEDED" stroke-width="0.868686869" stroke-linecap="square"></path>
+        <g id="Group-8" transform="translate(27.797980, 59.939394)">
+            <rect id="Rectangle-5-Copy-10" fill="#DFE3EA" x="0" y="10.4242424" width="56.4646465" height="4.34343434" rx="2.17171717"></rect>
+            <rect id="Rectangle-5-Copy-11" fill="#DFE3EA" x="0" y="20.8484848" width="71.778355" height="4.34343434" rx="2.17171717"></rect>
+            <rect id="Rectangle-5-Copy-12" fill="#DFE3EA" x="0" y="59.0707071" width="30.4040404" height="4.34343434" rx="2.17171717"></rect>
+            <rect id="Rectangle-5-Copy-9" fill="#051146" x="0" y="0" width="38.5336432" height="4.34343434" rx="2.17171717"></rect>
+        </g>
+        <rect id="Rectangle-17" stroke="#E2E2E2" stroke-width="0.868686869" fill="#FFFFFF" x="28.2323232" y="169.828283" width="202.40404" height="112.060606" rx="4.34343434"></rect>
+        <g id="Group-8" transform="translate(68.626263, 294.484848)" fill="#2A62FB">
+            <rect id="Rectangle-2" x="0" y="0" width="120.747475" height="23.3284586" rx="2.59205096"></rect>
+        </g>
+        <rect id="Rectangle-5-Copy-15" fill="#DFE3EA" x="38.2222222" y="191.979798" width="110.323232" height="4.34343434" rx="2.17171717"></rect>
+        <rect id="Rectangle-5-Copy-15" fill="#DFE3EA" x="38.2222222" y="203.272727" width="145.939394" height="4.34343434" rx="2.17171717"></rect>
+        <rect id="Rectangle-16" fill="#DEDFEB" style="mix-blend-mode: color;" x="0" y="0" width="258" height="442.161616"></rect>
+        <rect id="Rectangle-16" fill="#DEDFEB" style="mix-blend-mode: lighten;" x="0" y="0" width="258" height="442.161616"></rect>
+    </g>
+</svg>
