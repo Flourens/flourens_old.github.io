@@ -1,0 +1,56 @@
+.mylist1a { 	
+ 	width:80%;
+ 	
+}
+.mylist1a span{	
+	margin-left:1em;
+  padding-bottom: 0.6rem;
+  
+  padding: 0em 1em 1.1em 2.05rem;
+  /* reset styles (optional): */
+  list-style: none;
+  margin: 0; 
+  color:#000000;	
+}
+
+.mylist1a span a{
+	color:#000000;
+}
+
+.mylist1a span a:hover{
+	color:#0d56a2;
+}
+
+.font_text a{
+	1margin-top:-2.6em;
+}
+
+a{
+	color:blue;
+	1margin-top:-1em;
+}
+
+
+a:hover{
+	text-decoration:  underline;
+	color:#0d33d6;
+}
+
+h1{
+	margin-bottom: 0 !important;
+}
+
+.inline-list li {
+	vertical-align: middle !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.inline-list li a{
+	vertical-align: middle !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.linkdownload{
+	color:#79a8c0;
+}

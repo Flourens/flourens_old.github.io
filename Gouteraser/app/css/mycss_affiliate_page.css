@@ -1,0 +1,21 @@
+.color_red2{
+  color:#b50000;
+}
+.color_black{
+  color:#000000;
+}
+.size2em{
+  font-size:2.2rem;
+  line-height: 1.6em;
+}
+.size12em{
+  font-size:1.6em;
+  line-height: 1.6em;
+}
+.font_nobile_bold{
+  font-family: nobile_bold,alternategothic2,arial;
+}
+@font-face {
+  font-family: 'nobile_bold';
+  src: url('../fonts/nobile_bold.ttf'); /* IE9 Compat Modes */
+} 
