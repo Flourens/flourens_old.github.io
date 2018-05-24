@@ -51,8 +51,18 @@ $gutter: $grid-gutter-width;
 
 /*=========================== MAIN ================================*/
 
+*, *:before, *:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
 p{
 	width: 100%;
+}
+
+h1, h2, h3, h4{
+	font-family: $title-font !important;
 }
 
 ::selection {
@@ -60,7 +70,7 @@ p{
 	color: $white;
 }
 
-.container{
+.main-wrap{
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -68,6 +78,7 @@ p{
 
 body{
 	margin: 0;
+	padding: 0;
 	position: relative;
 }
 p{
@@ -108,6 +119,7 @@ h1, .title-text{
 	background-repeat: no-repeat;
 	position: relative;
 	overflow: hidden;
+	padding-top: 24px;
 }
 .s-platform{
 	background-color: #fff;
@@ -240,7 +252,8 @@ h1, .title-text{
 		box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.15);
 	}
 	&__btn{
-		font-weight: bold;
+		font-family: $title-font;
+		font-weight: 600;
 		color: $btn;
 		text-decoration: none;
 		padding-top: 28px;
@@ -292,9 +305,9 @@ h1, .title-text{
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	height: 40%;
+	top: 0;
 	left: 0;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(5, 17, 70, 1));
+	background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 15%, #051146 75%);
 	z-index: 1;
 }
 
@@ -308,7 +321,7 @@ h1, .title-text{
 		bottom: 0;
 		width: 100%;
 		background-color: $main-text;
-		opacity: 0.58;
+		opacity: 0.5;
 		transition: opacity 0.3s ease;
 	}
 }
@@ -331,14 +344,16 @@ h1, .title-text{
 		margin-bottom: 24px;
 		min-height: 27px;
 		z-index: 10;
+		position: relative;
 	}
 	&__slide{
 		position: relative;
 		padding: 45px 50px;
-		background-position: top left;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		box-sizing: border-box;
+		background-color: $main-text;
 		&-1{
 			background-image:	url(../img/slide1.jpg);
 		}
@@ -434,8 +449,8 @@ h1, .title-text{
 .mockups{
 	position: absolute;
 	width: 60%;
-	left: 750px;
-	top: 0;
+	left: 760px;
+	top: -80px;
 	bottom: 0;
 	z-index: 1;
 	&__item{
@@ -572,9 +587,9 @@ h1, .title-text{
 	display: block;
 	width: 200px;
 	margin: 0 auto;
-	font-family: $main-font;
+	font-family: $title-font;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.69;
   color: #1576ec;
 	text-decoration: none;
