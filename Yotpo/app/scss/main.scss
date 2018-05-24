@@ -272,7 +272,7 @@ h1, .title-text{
 			bottom: -1px;
 			
 		}
-		&:hover{
+		&:hover, &:focus, &:active{
 			color: $btn;
 			text-decoration: underline;
 		}
