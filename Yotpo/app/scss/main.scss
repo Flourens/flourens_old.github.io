@@ -307,15 +307,20 @@ h1, .title-text{
 	right: 0;
 	top: calc(50% - 37px);
 	z-index: 10;
+	
+	pointer-events: none;
+	
 }
 .video-nav-btn{
 	cursor: pointer;
 	&.prev{
+		pointer-events: all;
 		display: block;
 		width: 55px;
 		transform: rotate(0deg);
 	}
 	&.next{
+		pointer-events: all;
 		display: block;
 		width: 55px;
 		height: 55px;
