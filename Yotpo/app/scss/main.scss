@@ -647,7 +647,8 @@ h1, .title-text{
   color: #1576ec;
 	text-decoration: none;
 	text-align: center;
-	&:hover{
+	&:hover, &:active, &:focus{
+		color: #1576ec;
 		text-decoration: underline;
 	}
 }
