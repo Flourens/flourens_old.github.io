@@ -51,10 +51,16 @@ $gutter: $grid-gutter-width;
 
 /*=========================== MAIN ================================*/
 
+
+
 *, *:before, *:after {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+}
+
+a{
+	outline: none;
 }
 
 p{
@@ -428,7 +434,7 @@ h1, .title-text{
 		color: #ffffff;
 		text-decoration: none;
 		z-index: 10;
-		&:hover{
+		&:hover, &:active, &:focus{
 			color: #fff;
 			text-decoration: underline;
 		}
@@ -476,6 +482,9 @@ h1, .title-text{
 		max-width: 72px;
 		margin-right: auto;
 		margin-left: auto;
+		&:hover, &:active, &:focus{
+			outline: none;
+		}
 		img{
 			width: 72px;
 			height: 72px;
@@ -767,6 +776,7 @@ h1, .title-text{
 	
 	.video_intro_btn{
 		margin-bottom: -12px;
+		
 	}
 	
 	.vslider{
