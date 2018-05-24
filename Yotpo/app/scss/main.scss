@@ -80,7 +80,7 @@ h1,h2,h3,h4{
 /* Text */
 h1, .title-text{
 	font-family: $title-font;
-	color: $main-text-2;
+	color: $main-text;
 	font-weight: 700;
 	line-height: 1.1;
 }
@@ -401,7 +401,7 @@ h1, .title-text{
 }
 .mockups-wrap{
 	position: absolute;
-	top: -7px;
+	top: 0px;
 	left: 0;
 	right: 0px;
 	width: 100%;
@@ -411,7 +411,7 @@ h1, .title-text{
 .mockups{
 	position: absolute;
 	width: 60%;
-	left: 770px;
+	left: 750px;
 	top: 0;
 	bottom: 0;
 	z-index: 1;
@@ -526,6 +526,7 @@ h1, .title-text{
 		padding-bottom: 19px;
 		padding-top: 3px;
 		line-height: 30px;
+		color: $main-text-2;
 	}
 	&__text{
 		line-height: 25px;
@@ -566,8 +567,10 @@ h1, .title-text{
 	.futures{
 		margin-bottom: 95px;
 	}
+	.mockups{
+		left: 800px;
+	}
 }
-
 @media only screen and (max-width : 1040px) {
 	
 	.s-hero{
@@ -622,6 +625,12 @@ h1, .title-text{
 		&-m{display: block !important;}
 	}
 	
+	.mockups{
+		top: -105px;
+		left: 790px;
+		transform: scale(0.78);
+	}
+	
 }
 
 // >1021px
@@ -667,6 +676,12 @@ h1, .title-text{
 
 // ≥992px
 @media only screen and (max-width : 992px) {
+	
+	.mockups{
+		top: -115px;
+		left: 699px;
+		transform: scale(0.715);
+	}
 	
 	.s-hero{
 		padding-top: 142px;
@@ -994,20 +1009,17 @@ h1, .title-text{
 	}
 	
 	.mockups{
-		transform: scale(0.7);
-		left: 0;
-	}
-	.mockups-wrap{
-		height: 750px;
-		top: 630px;
-	}
-	.mockups{
 		position: relative;
 		top: 0;
-		left: -100px;
+		left: -80px;
 		right: 0;
 		width: 100%;
 		height: 300px;
+		transform: scale(0.68);
+	}
+	.mockups-wrap{
+		height: 750px;
+		top: 650px;
 	}
 	.mockups{
 		&__item{
@@ -1037,7 +1049,8 @@ h1, .title-text{
 				display: none;
 			}
 			&-6{
-				display: none;
+				top: -40px;
+				right: -220px;
 			}
 			&-7{
 				height: auto;
@@ -1048,7 +1061,7 @@ h1, .title-text{
 
 		}
 	}
-}
+} 
 
 // ≥680px
 @media only screen and (max-width : 680px){}
