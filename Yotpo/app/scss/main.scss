@@ -290,7 +290,6 @@ h1, .title-text{
 
 .video-nav-wrap{
 	position: absolute;
-	cursor: pointer;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -310,6 +309,7 @@ h1, .title-text{
 	z-index: 10;
 }
 .video-nav-btn{
+	cursor: pointer;
 	&.prev{
 		display: block;
 		width: 55px;
@@ -429,7 +429,7 @@ h1, .title-text{
 .slick-active{
 	.vslider__content{
 		opacity: 1;
-		transition: opacity 2s ease;
+		transition: opacity 1.3s ease;
 	}
 }
 
