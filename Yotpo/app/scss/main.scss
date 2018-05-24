@@ -298,6 +298,28 @@ h1, .title-text{
 	z-index: 1;
 }
 
+.vslider__slide{
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: $main-text;
+		opacity: 0.58;
+		transition: opacity 0.3s ease;
+	}
+}
+.slick-active{
+	.vslider__slide{
+		&:after{
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+	}
+}
 
 .vslider{
 	&__content{
@@ -1047,17 +1069,17 @@ h1, .title-text{
 				transform: rotate(-25deg);
 			}
 			&-5{
-				display: none;
+				top: 450px;
+				right: -285px;
 			}
 			&-6{
 				top: -40px;
 				right: -220px;
 			}
 			&-7{
+				display: none;
 				height: auto;
-				top: 450px;
-				right: -285px;
-				transform: rotate(-25deg);
+				
 			}
 
 		}
