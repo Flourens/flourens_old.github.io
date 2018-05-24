@@ -428,6 +428,10 @@ h1, .title-text{
 		color: #ffffff;
 		text-decoration: none;
 		z-index: 10;
+		&:hover{
+			color: #fff;
+			text-decoration: underline;
+		}
 	}
 }
 
