@@ -1,0 +1,1 @@
+<?phprequire_once "session.php";require_once "password.php";if(valid_creds()) {	require_once "show_setup.php";} else {	require_once "password_form.php";}?>

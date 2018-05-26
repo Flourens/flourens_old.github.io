@@ -1,0 +1,42 @@
+body {
+	background-color: black;
+	background-image: url(images/bg2.jpg);
+	background-repeat: repeat;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+div#wrap {
+  background-image: url(images/bgheader.jpg);
+	background-repeat: repeat-x;
+	width: 100%;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+div#header {
+width:770px;
+height:211px;
+background-image: url(images/header.jpg);
+margin: 0px auto;
+padding: 0px 0px 0px 0px;
+}
+div#main {
+  background-color: white;
+	background-image: url(images/bg.jpg);
+	width: 690px;
+	margin: 0px auto;
+  padding: 15px 40px 5px 40px;
+}
+div#footer {
+	width: 770px;
+	height: 153px;
+	background-image: url(images/footer.jpg);
+	margin: 0px auto;
+	clear: both;
+	text-align: center;
+	font-size: 12px;
+}
+div.clear
+{
+	clear:both;
+}

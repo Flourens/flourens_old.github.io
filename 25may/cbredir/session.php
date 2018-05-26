@@ -1,0 +1,1 @@
+<?phpsession_cache_expire( 20 );session_start(); // NEVER FORGET TO START THE SESSION!!!$inactive = 60;if(isset($_SESSION['start']) ) {	$session_life = time() - $_SESSION['start'];	if($session_life > $inactive){		unset($_SESSION['password']);	}}$_SESSION['start'] = time();

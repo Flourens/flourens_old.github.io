@@ -1,0 +1,30 @@
+a:5:{i:0;a:1:{s:4:"cbid";s:0:"";}i:1;a:1:{s:4:"cbid";s:0:"";}i:2;a:1:{s:4:"cbid";s:0:"";}i:4;a:6:{i:0;s:11:"pseudo-save";i:1;s:0:"";i:2;s:3:"yes";i:3;s:2:"no";i:4;s:2:"no";i:5;s:43:"http://sciaticasos.com/pdfrebrand/index.php";}i:6;a:15:{i:0;s:7:"Verdana";i:1;s:7:"#000000";i:2;s:7:"#FFFFFF";i:3;s:7:"#b2b2b2";i:4;s:146:"<h1 style="text-align: center; color:#990000">Rebranding "s.pdf"</h1><h2 style="text-align: center">Enter Your IDs For The Following Websites</h2>";i:5;s:1301:"<p style="font-size: 16px; font-weight: bold;">The PDF been successfully rebranded. <a href="#DOWNLOAD#">Click here to download</a> your rebranded copy.</p>
+                            <p>Also, we are now hosting your report on our servers for you. You can send people directly to the following link to send them <strong>YOUR</strong> rebranded copy of the report filled with <strong>YOUR ids</strong>.</p>
+                            <p><input size="80" type="text" value="#DOWNLOAD#" /></p>
+                            <p>You may also update your report if any of your referral ids change by <a href="#UPDATE#">clicking here</a> or visiting the url below. Bookmark this page or save it some other way so you can make changes if necessary.</p>
+                            <p><input size="80" type="text" value="#UPDATE#" /></p>
+                            <p>Finally, share your rebranded PDF with the world by using the social media tools below.</p>
+                            <table style="margin-left: auto; margin-right: auto;" border="0">
+                            <tbody>
+                            <tr>
+                            <td style="text-align: center;">#SOCIALMEDIA#</td>
+                            </tr>
+                            </tbody>
+                            </table>";i:6;s:52:"Check out the awesome secrets revealed in s! {{url}}";i:7;s:1:"s";i:8;s:22:"Enter Your Description";i:9;s:11:"Rebrand It!";i:10;s:0:"";i:11;s:24:"Your Rebranded Copy of s";i:12;s:522:"Please save this email or print it out for your records.
+
+Your PDF been successfully rebranded. Click below to download 
+your rebranded copy.
+
+=> #DOWNLOAD#
+
+Also, we are now hosting your report on our servers for you. 
+You can send people directly to the above link to send them 
+YOUR rebranded copy of the report filled with YOUR ids.
+
+You may also update your report if any of your referral ids
+change by visiting the url below.
+
+=> #UPDATE# 
+
+Thanks! Get that report out there and get YOUR links clicked on!
+-Your Name";i:13;s:0:"";i:14;s:0:"";}}

@@ -1,0 +1,38 @@
+.btmnav {font-family: arial, helvetica, sans-serif; color: #ccc; font-size: 10px; text-decoration: none }
+.btmnav a:link {font-family: arial,helvetica,sans-serif; font-size: 10px; color: #ccc; text-decoration: none }
+.btmnav a:visited {font-family: arial,helvetica,sans-serif; font-size: 10px; color: #ccc; text-decoration: none }
+.btmnav a:hover {font-family: arial,helvetica,sans-serif; font-size: 10px; color: #fff; text-decoration: none }
+
+.footer  { color: gray ; font-size: 10px; font-family: arial, helvetica, sans-serif; text-decoration: none }
+.footer a:link  { color: gray ; font-size: 10px; font-family: arial, helvetica, sans-serif; text-decoration: none }
+.footer a:visited  { color: gray ; font-size: 10px; font-family: arial, helvetica, sans-serif; text-decoration: none }
+.footer a:hover  { color: blue ; font-size: 10px; font-family: arial, helvetica, sans-serif; text-decoration: none }
+
+
+P   { color: #000; font-size: 13px; font-family: verdana; text-decoration: none }
+
+.body    { color: #ffffff; font-size: 13px; font-family: verdana; text-decoration: none }
+.bodyb    { color: #000000; font-size: 13px; font-family: verdana; text-decoration: none }
+
+.topnav { color: #000; font-size: 12px; font-family: verdana; text-decoration: none }
+.topnav a:link { color: #000; font-size: 12px; font-family: verdana; text-decoration: none }
+.topnav a:visited { color: #000; font-size: 12px; font-family: verdana; text-decoration: none }
+.topnav a:hover { color: blue; font-size: 12px; font-family: verdana; text-decoration: none }
+
+.subhead   { color: #000; font-size: 16px; font-family: verdana; text-decoration: none }
+
+.pophead   { color: #000; font-size: 20px; font-family: verdana; text-decoration: none }
+
+.red   { color: red; font-size: 12px; font-family: verdana; text-decoration: none }
+
+h1  { color: #000 ; font-size: 24px; font-family: arial, helvetica, sans-serif; text-decoration: none }
+h2  { color: gray ; font-size: 10px; font-family: arial, helvetica, sans-serif; text-decoration: none }
+
+
+.highlight { background-color: yellow }
+
+#login {
+  margin:50px auto;
+  width:980px;
+
+}

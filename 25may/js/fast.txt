@@ -1,0 +1,27 @@
+          <div class="row">                    
+              <center><img src='img/separator.jpg'></center>
+              <center><h1 class='font_medium2_title'>A whole new approach</h1></center>   
+              <center><h1 class='font_medium2_title'><b class='color_dark_blue'>from Nepalese teachings</b></h1></center>              
+              <center><img src='img/separator.jpg'></center>
+          </div>
+
+
+          <div class="row">
+            <h1 class='font_text'> 
+            <br/>         
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
+            </h1>
+          </div>  
+
+          <div class="row">                    
+              <center><h1 class='font_medium_title'>It was a <b class='color_dark_blue'>2,000-year-old remedy</b> that her ancestors</h1></center>   
+              <center><h1 class='font_medium_title'>used to bring calm and cool to an </h1></center>              
+              <center><h1 class='font_medium_title'><b class='color_dark_blue'>an overly energetic body</b></h1></center>     
+          </div>               
+
+           <div class="row">                    
+               <center><img src='img/page9_2.jpg'></center>
+           </div>
+ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 917 S. Lusk Street, Suite 200, Boise Idaho, 83706, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.          

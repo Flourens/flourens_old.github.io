@@ -1,0 +1,1 @@
+<?phprequire_once "session.php";unset($_SESSION['password']);header('Location: setup.php') ;?>
