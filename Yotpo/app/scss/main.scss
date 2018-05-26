@@ -67,6 +67,11 @@ p{
 	width: 100%;
 }
 
+img{
+	height: auto;
+	max-width:  none;
+}
+
 h1, h2, h3, h4{
 	font-family: $title-font !important;
 }
@@ -244,6 +249,7 @@ h1, .title-text{
 	}
 	&__title{
 		font-size: 18px;
+		font-weight: 600;
 		text-transform: uppercase;
 		text-align: center;
 	}
@@ -263,7 +269,7 @@ h1, .title-text{
 		font-weight: 600;
 		color: $btn;
 		text-decoration: none;
-		padding-top: 28px;
+		margin-top: 28px;
 		position: relative;
 		&:after{
 			content: '>';
@@ -313,12 +319,14 @@ h1, .title-text{
 	right: 0;
 	top: calc(50% - 37px);
 	z-index: 10;
-	
-	pointer-events: none;
-	
+	pointer-events: none;	
 }
 .video-nav-btn{
 	cursor: pointer;
+	opacity: 0.5;
+	&:hover{
+		opacity: 1;
+	}
 	&.prev{
 		pointer-events: all;
 		display: block;
@@ -361,14 +369,18 @@ h1, .title-text{
 		transition: opacity 0.3s ease;
 	}
 }
-.slick-active{
-	.vslider__slide{
+.slick-slider{
+	margin-bottom: 0;
+}
+.slick-center{
+	&.vslider__slide{
 		&:after{
 			opacity: 0;
 			transition: opacity 0.3s ease;
 		}
 	}
 }
+
 
 .vslider{
 	&__content{
@@ -441,7 +453,7 @@ h1, .title-text{
 	}
 }
 
-.slick-active{
+.slick-center{
 	.vslider__content{
 		opacity: 1;
 		transition: opacity 1.3s ease;
@@ -638,7 +650,7 @@ h1, .title-text{
 
 .see-all{
 	display: block;
-	width: 200px;
+	width: 83px;
 	margin: 0 auto;
 	font-family: $title-font;
   font-size: 16px;
@@ -647,6 +659,13 @@ h1, .title-text{
   color: #1576ec;
 	text-decoration: none;
 	text-align: center;
+	position: relative;
+	&:after{
+		content: '>';
+		position: absolute;
+		right: 0;
+		bottom: 0px;
+	}
 	&:hover, &:active, &:focus{
 		color: #1576ec;
 		text-decoration: underline;
@@ -799,6 +818,7 @@ h1, .title-text{
 	}
 	
 	.video-nav-btn{
+		opacity: 1;
 		&.prev{
 			right: 100px;
     	bottom: 40px;
@@ -858,7 +878,7 @@ h1, .title-text{
 			padding-left: 21px;
 		}
 		&__btn{
-			padding-top: 20px;
+			margin-top: 20px;
 		}
 	}
 	
@@ -931,7 +951,7 @@ h1, .title-text{
 	.s-platform{
 		background-size: cover;
 		background-position: center;
-		padding-top: 130px;
+		padding-top: 205px;
 		padding-bottom: 30px;
 	}
 	
@@ -1087,12 +1107,14 @@ h1, .title-text{
 		}
 		&__title{
 			font-size: 30px;
+			margin-right: auto;
+			margin-left: auto;
 		}
 	}
 	
 	
 	.s-hero{
-		padding-bottom: 510px;
+		padding-bottom: 460px;
 	}
 	
 	.mockups-wrap{
@@ -1101,6 +1123,9 @@ h1, .title-text{
 	}
 
 	.boxes{
+		&__item{
+			max-width: 230px;
+		}
 		.title-text.boxes__title{
 			font-size: 15px;
 		}
@@ -1114,6 +1139,7 @@ h1, .title-text{
 	}
 	
 	.video-nav-btn{
+		
 		&.next{
 			left: 50px;
 			right: 0;
