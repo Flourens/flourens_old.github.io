@@ -1,837 +1,986 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='107602736-158',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
+
+<head>
+	<!-- Google Analytics Content Experiment code -->
+	<script>
+		function utmx_section() {}
+
+		function utmx() {}(function() {
+			var
+				k = '107602736-158',
+				d = document,
+				l = d.location,
+				c = d.cookie;
+			if (l.search.indexOf('utm_expid=' + k) > 0) return;
+
+			function f(n) {
+				if (c) {
+					var i = c.indexOf(n + '=');
+					if (i > -1) {
+						var j = c.
+						indexOf(';', i);
+						return escape(c.substring(i + n.length + 1, j < 0 ? c.length : j))
+					}
+				}
+			}
+			var x = f('__utmx'),
+				xx = f('__utmxx'),
+				h = l.hash;
+			d.write(
+				'<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
+					'://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
+				'&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().valueOf() + (h ? '&utmxhash=' + escape(h.substr(1)) : '') +
+				'" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')
+		})();
+	</script>
+	<script>
+		utmx('url', 'A/B');
+	</script>
+	<!-- End of Google Analytics Content Experiment code -->
 
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sciatica SOS&trade; - OFFICIAL WEBSITE</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
-    <link rel="stylesheet" href="css/mycss.css" />
-     <meta name="keywords" content="sciatica, back pain, sciatica sos, sciatica cure, sciatica treatment">
-     <meta name="description" content="Discover a natural system that will immediately provide relief from sciatica pain and completely cure your sciatica in 7 days or less – GUARANTEED!">
-<LINK href="img/favicon.ico" rel="SHORTCUT ICON">
-  <style type="text/css">
-   a {
-    color: #0000FF;
-}
-  a:link {
-	color: #0000FF;
-}
-a:hover {
-	color: #0000FF;
-}
-.highlightYellow{ background-color:#ffff40}
-  .footersmall {
-	font-size: 70%;
-	color: #666;
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sciatica SOS&trade; - OFFICIAL WEBSITE</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<script src="js/vendor/modernizr.js"></script>
 	
-}
-  </style>
+	
+	<!-- Critical CSS-->
+	
+	<style>
+		
+		/*-- mycss.css --*/
+		body{margin-top:2em;background-image:url(../img/bgbig2.jpg)!important;background-repeat:no-repeat!important;background-position:center;background-attachment:fixed!important;-webkit-background-size:cover!important;-moz-background-size:cover!important;-o-background-size:cover!important;background-size:cover!important}html{font-size:16px}.round_1{-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;border:3px solid #c3c3c3;background-color:#fff;padding:2.3em;padding-left:4.8rem;padding-right:4.8rem}.font_alternateg2{font-family:alternategothic2,arial;font-weight:700}.size24em{font-size:5.2em;line-height:.88em}.size32pt{font-size:2.3em;line-height:.88em;font-weight:700}.size33pt{font-size:1.1em;line-height:.88em}.color_blue{color:#0d56a2}.color_dark_blue{color:#001f31}.font_arial{font-family:arial}.font_text{font-family:helvetica neue,arial;font-size:.97rem;line-height:1.3;color:#000;letter-spacing:0;text-rendering:optimizeLegibility}@font-face{font-family:alternategothic2;src:url('../fonts/Alternate Gothic No2 BT_0.ttf')}@media only screen and (max-width:40.0625em){html{font-size:8px}}@media only screen and (max-width:40em){html{font-size:8px}}@media only screen and (max-width:30em){html{font-size:8px}.round_1{-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;border:3px solid #c3c3c3;background-color:#fff;padding:2em;padding-left:1.4em;padding-right:2em}}
+		/*-- foundation.css --*/
+		html,body{height:100%}html{box-sizing:border-box}*,*:before,*:after{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}html,body{font-size:100%}body{background:#fff;color:#222;font-family:helvetica neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;line-height:1.5;margin:0;padding:0;position:relative}img{max-width:100%;height:auto}img{-ms-interpolation-mode:bicubic}img{display:inline-block;vertical-align:middle}.row{margin:0 auto;max-width:62.5rem;width:100%}.row:before,.row:after{content:" ";display:table}.row:after{clear:both}.row .row{margin:0 -.9375rem;max-width:none;width:auto}.row .row:before,.row .row:after{content:" ";display:table}.row .row:after{clear:both}.columns{padding-left:.9375rem;padding-right:.9375rem;width:100%;float:left}@media only screen{.columns{position:relative;padding-left:.9375rem;padding-right:.9375rem;float:left}}@media only screen and (min-width:40.0625em){.columns{position:relative;padding-left:.9375rem;padding-right:.9375rem;float:left}}@media only screen and (min-width:64.0625em){.columns{position:relative;padding-left:.9375rem;padding-right:.9375rem;float:left}.large-12{width:100%}}::-webkit-input-placeholder{color:#ccc}:-moz-placeholder{color:#ccc}::-moz-placeholder{color:#ccc}:-ms-input-placeholder{color:#ccc}div,h1{margin:0;padding:0}h1{color:#222;font-family:helvetica neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;line-height:1.4;margin-bottom:.5rem;margin-top:.2rem;text-rendering:optimizeLegibility}h1{font-size:2.125rem}@media only screen and (min-width:40.0625em){h1{line-height:1.4}h1{font-size:2.75rem}}
+	
+	</style>
+	
+	<!-- EndCritical CSS-->
+	
+	<link rel="stylesheet" href="css/mycss.css" />
+	<meta name="keywords" content="sciatica, back pain, sciatica sos, sciatica cure, sciatica treatment">
+	<meta name="description" content="Discover a natural system that will immediately provide relief from sciatica pain and completely cure your sciatica in 7 days or less – GUARANTEED!">
+	<link href="img/favicon.ico" rel="SHORTCUT ICON">
+	<style type="text/css">
+		a {
+			color: #0000FF;
+		}
 
-<!-- ClickBank Trust Badge -->
-<script src='//cbtb.clickbank.net/?vendor=sciatica1&position=bottom_right&theme=white'></script>
+		a:link {
+			color: #0000FF;
+		}
 
+		a:hover {
+			color: #0000FF;
+		}
 
+		.highlightYellow {
+			background-color: #ffff40
+		}
 
-  </head>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		.footersmall {
+			font-size: 70%;
+			color: #666;
 
-  ga('create', 'UA-23738906-55', 'auto');
-  ga('send', 'pageview');
+		}
+	</style>
 
+	<!-- ClickBank Trust Badge -->
+	<script src='//cbtb.clickbank.net/?vendor=sciatica1&position=bottom_right&theme=white'></script>
+	
+
+</head>
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-23738906-55', 'auto');
+	ga('send', 'pageview');
 </script>
 
-<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4078105"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=4078105&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<script>
+	(function(w, d, t, r, u) {
+		var f, n, i;
+		w[u] = w[u] || [], f = function() {
+			var o = {
+				ti: "4078105"
+			};
+			o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+		}, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function() {
+			var s = this.readyState;
+			s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+		}, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+	})(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+</script><noscript><img src="//bat.bing.com/action/0?ti=4078105&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
 
-  <body>
-    
-    
-      <div class="row">
-        <div class="large-12 columns round_1">
-          <!--page 1-->
-          <div class="row">
-
-            <center><h1 class='font_alternateg2 color_blue size24em '>A 2000-Year-Old Nepalese</h1></center>
-            <center><h1 class='font_alternateg2 color_blue size24em '>Trick to A Sciatica-Free Life </h1></center>
-
-
-            <center>
-            <h1 style='padding-top:1em' class='font_arial color_dark_blue size32pt '>Cure <font class='size33pt'>Sciatica PERMANENTLY</font> in</h1></center>
-            
-          </div>
-          <div class="row">
-              <center><img src='img/7daysb.png'></center>
-          </div>
-
-          <div class="row">
-            <h1 class='font_text'>
-            <br/>
-            I’ve been there…
-            <br/><br/>
-            The feeling of pinpricks in my heels, the shockwaves firing into my nerves, from feet to butt and everything in between…
-            <br/><br/>
-            The debilitating pains of sciatica controlled my life. It just loved to knock me off my feet, and force me to sit down at the most opportune times it could find.
-            <br/><br/>
-            </h1>
-          </div>
-
-          <div class="row">
-              <center><img src='img/page1_1.png'></center><br/><br/><br/>
-          </div>
+<body>
 
 
-          <!--page 2-->
-          <div class="row">
-              <center><h1 class='font_medium_title'>Do you or someone you know ever experience sharp shooting</h1></center>
-              <center><h1 class='font_medium_title'>pains <b class='color_dark_blue'>from the lower back on down to the feet?</b> </h1></center>
-          </div>                    
-          <div class="row">
-            <h1 class='font_text'>
-            <br/>
-            Nearly every family in the US has at least one family member affected by this dreadful illness. 
-            <br/><br/>
-            Sciatica is known by some as "needles for the whole family" due to its unfortunate widespread nature.
-            <br/><br/>
-            I was diagnosed three years ago at 41, and ever since have depended on my lovely wife and young son to take me around. My sciatica was so severe that my legs would lock up in fits of excruciating pain. You can imagine the problems this could cause while driving.
-            <br/><br/>
-            </h1>
-          </div>
-          <div class="row">
-              <center><h1 class='font_medium_title'>Even worse than the sharp, shooting pain itself was </h1></center>
-              <center><h1 class='font_medium_title'>the fact that I was placing a burden on my family.</h1></center>
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>For crying out loud, I was 41 years young!</b> </h1></center>              
-          </div>  
+	<div class="row">
+		<div class="large-12 columns round_1">
+			<!--page 1-->
+			<div class="row">
+
+				<center>
+					<h1 class='font_alternateg2 color_blue size24em '>A 2000-Year-Old Nepalese</h1>
+				</center>
+				<center>
+					<h1 class='font_alternateg2 color_blue size24em '>Trick to A Sciatica-Free Life </h1>
+				</center>
 
 
+				<center>
+					<h1 style='padding-top:1em' class='font_arial color_dark_blue size32pt '>Cure
+						<font class='size33pt'>Sciatica PERMANENTLY</font> in</h1>
+				</center>
 
-          <!--page 3-->                  
-          <div class="row">
-            <h1 class='font_text'>
-            <br/><br/>
-            …I <b>WANTED</b> to go outside and play catch with my boy without wondering if another fit of sharp pains would shoot up my legs and knock me on my back.
-            <br/><br/>
-            ...I <b>WANTED</b> to help my wife unload the groceries, and take care of the heavy lifting, as a man should for his partner.
-            <br/><br/>
-            Instead, I sat by and watched my wife Joanne do the man's work for me. We both knew that I was too high risk of setting off my over-sensitized nerves…
-            <br/><br/>
-            …dropping everything and causing a mess while I lay helplessly and painfully on the floor.
-            <br/><br/>
-            It was just dreadful all around. Sciatica is the most emasculating disease you can imagine.
-            <br/><br/>
-            </h1>
-          </div>
-          <div class="row">
-              <center><img src='img/page3_1.jpg'></center><br/>
-          </div>
+			</div>
+			<div class="row">
+				<center><img src='img/7daysb.png'></center>
+			</div>
+
+			<div class="row">
+				<h1 class='font_text'>
+					<br/> I’ve been there…
+					<br/><br/> The feeling of pinpricks in my heels, the shockwaves firing into my nerves, from feet to butt and everything in between…
+					<br/><br/> The debilitating pains of sciatica controlled my life. It just loved to knock me off my feet, and force me to sit down at the most opportune times it could find.
+					<br/><br/>
+				</h1>
+			</div>
+
+			<div class="row">
+				<center><img src='img/page1_1.png'></center><br/><br/><br/>
+			</div>
 
 
-          <!--page 4-->
-          <div class="row">
-            <h1 class='font_text'>          
-            Thankfully, as with most problems in life, when one starts looking for a solution, answers CAN be found…            
-            <br/><br/><br/>
-            </h1>
-          </div>
-          <div class="row">
-              <center><div class='box_dark_blue'><a style='color:#e4fd15'>THE FLAWED WESTERN APPROACH</a> TO PAIN
-              <br/>MANAGEMENT<div/>
-              </span></center><br/><br/>
-          </div>
-          <div class="row">
-            <h1 class='font_text'>          
-            Of course like any American in the US, I went straight to the doctor for my health issue. Right away the good doc prescribed some pain medications and told me to get in touch with a chiropractor for adjustments.
-            <br/><br/>
-            I was using a cocktail of analgesics, muscle relaxants and non-steroidal anti-inflammatories…they gave me some minor temporary relief and lots of stomach cramps and diarrhea…great!
-             <br/><br/>
-            At the chiropractor, often the pains flared up right during the session, and more often than not, I’d walk out worse, not better. But I figured it was all worth it, in order to be able to experience the simple joys of life with my family again.            
-            <br/><br/>
-            </h1>
-          </div>
-          <div class="row">
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>2 years in, </b>my thoughts on the matter changed </h1></center>              
-          </div> 
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            I started to give up on the medications and the chiropractor’s tortures which were giving me no improvements. These therapy sessions were long on promises and frankly didn't fix my underlying sharp lower body pains.. 
-            <br/><br/>
-            </h1>
-          </div>          
-
-          <div class="row">                    
-              <center><img src='img/separator.jpg'></center>
-              <center><h1 class='font_medium2_title'>A whole new approach</h1></center>   
-              <center><h1 class='font_medium2_title'><b class='color_dark_blue'>from Nepalese teachings</b></h1></center>              
-              <center><img src='img/separator.jpg'></center>
-          </div>
+			<!--page 2-->
+			<div class="row">
+				<center>
+					<h1 class='font_medium_title'>Do you or someone you know ever experience sharp shooting</h1>
+				</center>
+				<center>
+					<h1 class='font_medium_title'>pains <b class='color_dark_blue'>from the lower back on down to the feet?</b> </h1>
+				</center>
+			</div>
+			<div class="row">
+				<h1 class='font_text'>
+					<br/> Nearly every family in the US has at least one family member affected by this dreadful illness.
+					<br/><br/> Sciatica is known by some as "needles for the whole family" due to its unfortunate widespread nature.
+					<br/><br/> I was diagnosed three years ago at 41, and ever since have depended on my lovely wife and young son to take me around. My sciatica was so severe that my legs would lock up in fits of excruciating pain. You can imagine the problems this could cause while driving.
+					<br/><br/>
+				</h1>
+			</div>
+			<div class="row">
+				<center>
+					<h1 class='font_medium_title'>Even worse than the sharp, shooting pain itself was </h1>
+				</center>
+				<center>
+					<h1 class='font_medium_title'>the fact that I was placing a burden on my family.</h1>
+				</center>
+				<center>
+					<h1 class='font_medium_title'><b class='color_dark_blue'>For crying out loud, I was 41 years young!</b> </h1>
+				</center>
+			</div>
 
 
 
+			<!--page 3-->
+			<div class="row">
+				<h1 class='font_text'>
+					<br/><br/> …I <b>WANTED</b> to go outside and play catch with my boy without wondering if another fit of sharp pains would shoot up my legs and knock me on my back.
+					<br/><br/> ...I <b>WANTED</b> to help my wife unload the groceries, and take care of the heavy lifting, as a man should for his partner.
+					<br/><br/> Instead, I sat by and watched my wife Joanne do the man's work for me. We both knew that I was too high risk of setting off my over-sensitized nerves…
+					<br/><br/> …dropping everything and causing a mess while I lay helplessly and painfully on the floor.
+					<br/><br/> It was just dreadful all around. Sciatica is the most emasculating disease you can imagine.
+					<br/><br/>
+				</h1>
+			</div>
+			<div class="row">
+				<center><img src='img/page3_1.jpg'></center><br/>
+			</div>
 
 
+			<!--page 4-->
+			<div class="row">
+				<h1 class='font_text'>
+					Thankfully, as with most problems in life, when one starts looking for a solution, answers CAN be found…
+					<br/><br/><br/>
+				</h1>
+			</div>
+			<div class="row">
+				<center>
+					<div class='box_dark_blue'><a style='color:#e4fd15'>THE FLAWED WESTERN APPROACH</a> TO PAIN
+						<br/>MANAGEMENT
+						<div/>
+						</span>
+				</center><br/><br/>
+				</div>
+				<div class="row">
+					<h1 class='font_text'>
+						Of course like any American in the US, I went straight to the doctor for my health issue. Right away the good doc prescribed some pain medications and told me to get in touch with a chiropractor for adjustments.
+						<br/><br/> I was using a cocktail of analgesics, muscle relaxants and non-steroidal anti-inflammatories…they gave me some minor temporary relief and lots of stomach cramps and diarrhea…great!
+						<br/><br/> At the chiropractor, often the pains flared up right during the session, and more often than not, I’d walk out worse, not better. But I figured it was all worth it, in order to be able to experience the simple joys of life with my family again.
+						<br/><br/>
+					</h1>
+				</div>
+				<div class="row">
+					<center>
+						<h1 class='font_medium_title'><b class='color_dark_blue'>2 years in, </b>my thoughts on the matter changed </h1>
+					</center>
+				</div>
+				<div class="row">
+					<h1 class='font_text'>
+						<br/> I started to give up on the medications and the chiropractor’s tortures which were giving me no improvements. These therapy sessions were long on promises and frankly didn't fix my underlying sharp lower body pains..
+						<br/><br/>
+					</h1>
+				</div>
 
-
-
-
-          <!--page 5-->
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            Lucky for me, my wife is close to a lovely Nepalese elderly woman who happens to have been a healer in her days. One day, my wife brought home her friend Xie to come see me. 
-            <br/><br/>
-            Xie had an interesting surprise for me tucked under her arm, a brown package which she opened to reveal a dark fluid glass wrapped under a large dark green leaf. Right away, I knew we were having something special for tea time!
-            <br/><br/>
-            </h1>
-          </div>  
-          <div class="row">                    
-              <center><img src='img/page5_1.jpg'></center>
-          </div>
-
-
-          <!--page 6-->
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            It was indeed a concoction of some type. With a warm, soothing taste and an absolutely tranquilizing feel as it rolled down the back of my throat, I felt  a sense of calm and relaxation run through my body from the first sip. 
-            <br/><br/>             
-            <b>Five minutes later and already my legs lost their horrible stiffness</b> from the hours of fruitless chiropractic ‘adjustments’. Breathtakingly calm, if that makes any sense.  
-            <br/><br/>
-            </h1>
-          </div>            
-          <div class="row">                    
-              <center><h1 class='font_medium_title'>It was the fastest path to deep,</h1></center>   
-              <center><h1 class='font_medium_title'>flowing tranquility that <b class='color_dark_blue'>I’d ever experienced in my life</b></h1></center>              
-          </div>
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            No longer did I fear the possibility of another shooting pain. Everything was calm for that very moment. Time stood still. The stars had aligned, and for that brief moment of bliss my sciatica was not even a figment of reality... 
-            <br/><br/>
-            Suddenly I woke up after a light shake of the shoulders. Xie looked down at me smiling, and explained what I just taken. 
-            <br/><br/>
-            </h1>
-          </div>             
-
-          <!--page 7-->
-          <div class="row">                    
-              <center>
-                <h1 class='font_medium_title'>It was a <b class='color_dark_blue'>2,000-Year-Old remedy</b> that her ancestors</h1></center>   
-              <center><h1 class='font_medium_title'>used to bring calm and cool to an </h1></center>              
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>an overly energetic body</b></h1></center>     
-          </div>           
-
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            As she explained to me, it was my overly eager nervous system causing pains throughout my lower extremities. And the calming drink she gave me helped reverse those symptoms through its powerful relaxing agents.
-            <br/><br/>
-            When I told Xie about the adjustments and medications I'd been using for the last two years, her normally calm, gentle demeanor couldn't help but hide a smirk.             
-            <br/><br/>
-            </h1>
-          </div>    
-          <div class="row" >
-              <center>
-              <div class='bg_trans1'>
-              <center><h1 class='font_medium_title'>"Glen, those therapies only <b class='color_dark_blue'>add more negative energies</b> to </h1></center>   
-              <center><h1 class='font_medium_title'>an already tightened part of the body." </h1></center>                                          
-              </div>
-              </center>
-          </div>                    
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            Xie told me that she had cured many Westerners who had visited her village; and practically all of them had been at the point where they were very fed with trying and failing the clinical Western approach to healthcare.
-            <br/><br/><br/>
-            When they would finally come to her and experienced the secrets of Nepal, they were not only floored by the mental and spiritual benefits of the approach… but also the price.
-            <br/><br/>
-            </h1>
-          </div>             
+				<div class="row">
+					<center><img src='img/separator.jpg'></center>
+					<center>
+						<h1 class='font_medium2_title'>A whole new approach</h1>
+					</center>
+					<center>
+						<h1 class='font_medium2_title'><b class='color_dark_blue'>from Nepalese teachings</b></h1>
+					</center>
+					<center><img src='img/separator.jpg'></center>
+				</div>
 
 
 
 
-          <!--page 8-->
-          <div class="row">
-              <center>
-              <div class='box_dark_blue' style='font-size:1.25rem'>
-              IT’S TIMES LIKE THESE WHEN ONE HAS TO WONDER IF BIG <br/>
-              MEDICINE AND BIG PHARMA ARE STEERING WESTERN MEDICINE <br/>
-              <a style='font-size:2rem;color:#e4fd15'>IN THE WRONG DIRECTION…</a>
-              <div/>
-              </span></center><br/>
-          </div>
-          <div class="row">                    
-              <center><img src='img/page8_1.jpg'></center>
-          </div>
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>         
-            What Xie did to me in the next 15 minutes was nothing short of miraculous. Her approach was dead simple, yet the immediate results were jaw dropping. It was as if she had literally reached into my painful nerves and fixed them, much like an electrician replacing faulty wires..
-            <br/><br/>
-            Comparing those 15 minutes to the two years of Western treatments I had been on, it was clear which sciatica treatment worked, and which one was nothing but empty promises.
-            <br/><br/>
-            Xie told me all I had to do was to repeat what she had done for the next few days and <strong>the pain would be gone completely by the end of the week.</strong> It was an impressive claim, but from what I had already experienced in just 15 minutes I was convinced. <br/><br/>
-            </h1>
-          </div>           
 
 
 
-          <!--page 9-->
-          <div class="row">                    
-              <center><img src='img/separator.jpg'></center>
-              <center><h1 class='font_medium2_title'>From 2 years of failure </h1></center>   
-              <center><h1 class='font_medium2_title'><b class='color_dark_blue'>to <u>five days</u> of recovery</b></h1></center>              
-              <center><img src='img/separator.jpg'></center>
-          </div>
-           <div class="row">
-            <h1 class='font_text'> 
-            <br/> 
-            I did as she said, and I started to see results, <b>FAST.</b>        
-            <br/><br/>
-            Over the next few days, the pain and stiffness seemed to “evaporate” out of my body…
-            <br/><br/>
-            I went from fearful of getting out of my bed, to walking up and down the stairs.
-            <br/><br/>
-            One day I surprised my son by grabbing him from behind with a bat and catcher's mitt.
-            <br/><br/>
-            </h1>
-          </div>                      
 
 
-           <div class="row">                    
-               <center><img src='img/page9_2.jpg'></center>
-           </div>
- 
-           <div class="row">
-            <h1 class='font_text'> 
-            <br/> 
-            The proud grin on his face told me everything I needed to hear.
-            <br/><br/> 
-            By day five, I knew the time had come for the ultimate test. 
-            <br/><br/>
-            I told my family I'd be heading off to the store to handle the grocery shopping – no escorts or helpers needed. 
-            <br/><br/>
-            And as I'm writing this, I think you know that the trip all alone went just fine. My wife stood by the fridge with an ear to ear smile as I unloaded the groceries. I was the man of the house once again.
-            <br/><br/>
-            </h1>
-          </div>  
- 
+				<!--page 5-->
+				<div class="row">
+					<h1 class='font_text'>
+						<br/> Lucky for me, my wife is close to a lovely Nepalese elderly woman who happens to have been a healer in her days. One day, my wife brought home her friend Xie to come see me.
+						<br/><br/> Xie had an interesting surprise for me tucked under her arm, a brown package which she opened to reveal a dark fluid glass wrapped under a large dark green leaf. Right away, I knew we were having something special for tea time!
+						<br/><br/>
+					</h1>
+				</div>
+				<div class="row">
+					<center><img src='img/page5_1.jpg'></center>
+				</div>
+
+
+				<!--page 6-->
+				<div class="row">
+					<h1 class='font_text'>
+						<br/> It was indeed a concoction of some type. With a warm, soothing taste and an absolutely tranquilizing feel as it rolled down the back of my throat, I felt a sense of calm and relaxation run through my body from the first sip.
+						<br/><br/>
+						<b>Five minutes later and already my legs lost their horrible stiffness</b> from the hours of fruitless chiropractic ‘adjustments’. Breathtakingly calm, if that makes any sense.
+						<br/><br/>
+					</h1>
+				</div>
+				<div class="row">
+					<center>
+						<h1 class='font_medium_title'>It was the fastest path to deep,</h1>
+					</center>
+					<center>
+						<h1 class='font_medium_title'>flowing tranquility that <b class='color_dark_blue'>I’d ever experienced in my life</b></h1>
+					</center>
+				</div>
+				<div class="row">
+					<h1 class='font_text'>
+						<br/> No longer did I fear the possibility of another shooting pain. Everything was calm for that very moment. Time stood still. The stars had aligned, and for that brief moment of bliss my sciatica was not even a figment of reality...
+						<br/><br/> Suddenly I woke up after a light shake of the shoulders. Xie looked down at me smiling, and explained what I just taken.
+						<br/><br/>
+					</h1>
+				</div>
+
+				<!--page 7-->
+				<div class="row">
+					<center>
+						<h1 class='font_medium_title'>It was a <b class='color_dark_blue'>2,000-Year-Old remedy</b> that her ancestors</h1>
+					</center>
+					<center>
+						<h1 class='font_medium_title'>used to bring calm and cool to an </h1>
+					</center>
+					<center>
+						<h1 class='font_medium_title'><b class='color_dark_blue'>an overly energetic body</b></h1>
+					</center>
+				</div>
+
+				<div class="row">
+					<h1 class='font_text'>
+						<br/> As she explained to me, it was my overly eager nervous system causing pains throughout my lower extremities. And the calming drink she gave me helped reverse those symptoms through its powerful relaxing agents.
+						<br/><br/> When I told Xie about the adjustments and medications I'd been using for the last two years, her normally calm, gentle demeanor couldn't help but hide a smirk.
+						<br/><br/>
+					</h1>
+				</div>
+				<div class="row">
+					<center>
+						<div class='bg_trans1'>
+							<center>
+								<h1 class='font_medium_title'>"Glen, those therapies only <b class='color_dark_blue'>add more negative energies</b> to </h1>
+							</center>
+							<center>
+								<h1 class='font_medium_title'>an already tightened part of the body." </h1>
+							</center>
+						</div>
+					</center>
+				</div>
+				<div class="row">
+					<h1 class='font_text'>
+						<br/> Xie told me that she had cured many Westerners who had visited her village; and practically all of them had been at the point where they were very fed with trying and failing the clinical Western approach to healthcare.
+						<br/><br/><br/> When they would finally come to her and experienced the secrets of Nepal, they were not only floored by the mental and spiritual benefits of the approach… but also the price.
+						<br/><br/>
+					</h1>
+				</div>
 
 
 
-          
 
-          <!--page 10 11-->
-          <div class="row">                    
-              <center><h1 class='font_medium2_title'><b class='color_dark_blue'>I’m now free of sciatica </b></h1></center>   
-              <br/>
-              <center><h1 class='font_medium3_title'>I'm free of holding my entire family hostage </h1></center>              
-              <center><h1 class='font_medium3_title'>with debilitating pain</h1></center>              
-              
-          </div>     
-          <div class="row">                    
-               <br/><br/>
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>Forget synthetic drugs and Western therapies</b></h1></center>                 
-              <center><h1 class='font_medium_title'>Xie showed me a better path to address the pains,</h1></center>
-              <center><h1 class='font_medium_title'>and slowly let them wither away on their own,</h1></center>
-              <center><h1 class='font_medium_title'>like a dying weed</h1></center><br/>                          
-          </div>   
-           <div class="row">
-            <h1 class='font_text'> 
-            <br/>
-            Hopefully by now, you know that there is the path to solving your own sciatica issues. Even as my own story unfolded, I have to tell you that I was half in disbelief as my pains left my body. 
-            <br/><br/>
-            I asked Xie if she’d be happy for me to write all her secrets down to pass them on to others, and she was more than happy to help.
-            <br/><br/>
-            Our hope is that these teachings will eventually help millions of Americans to put a stop to our endless drug culture, and address the underlying issues for  sciatica right at home.         
-            <br/><br/>
-            </h1>
-          </div>  
+				<!--page 8-->
+				<div class="row">
+					<center>
+						<div class='box_dark_blue' style='font-size:1.25rem'>
+							IT’S TIMES LIKE THESE WHEN ONE HAS TO WONDER IF BIG <br/> MEDICINE AND BIG PHARMA ARE STEERING WESTERN MEDICINE <br/>
+							<a style='font-size:2rem;color:#e4fd15'>IN THE WRONG DIRECTION…</a>
+							<div/>
+							</span>
+					</center><br/>
+					</div>
+					<div class="row">
+						<center><img src='img/page8_1.jpg'></center>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/> What Xie did to me in the next 15 minutes was nothing short of miraculous. Her approach was dead simple, yet the immediate results were jaw dropping. It was as if she had literally reached into my painful nerves and fixed them, much like an electrician replacing faulty wires..
+							<br/><br/> Comparing those 15 minutes to the two years of Western treatments I had been on, it was clear which sciatica treatment worked, and which one was nothing but empty promises.
+							<br/><br/> Xie told me all I had to do was to repeat what she had done for the next few days and <strong>the pain would be gone completely by the end of the week.</strong> It was an impressive claim, but from what I had already experienced in just 15 minutes I was convinced. <br/><br/>
+						</h1>
+					</div>
 
 
 
-          <!--page 12-->
-          <div class="row">                    
-               <br/>
-              <center><h1 class='font_medium_title'><b class='color_black'><u>Introducing:</u></b></h1></center>                               
-          </div>             
-          
-           <div class="row">                    
-               <center><img src='img/Sciatica-Sos.jpg'></center>
-           </div>
-          <div class="row">                    
-              <div style='position:relative;margin-top:-2.5rem'>
-              <center><h1 class='font_medium2_title'><b class='color_dark_blue'>Sciatica SOS™</b></h1></center>                 
-              <center><h1 class='font_medium3_title'>your guide to eliminating the pain </h1></center>              
-              <center><h1 class='font_medium3_title'>in 7 days or less – <u>GUARANTEED</u>!</h1></center>                          
-              </div>
-          </div> 
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>
-            In this revolutionary step-by-step guide on how to beat your sciatica pains once and for all, you’ll discover a precise approach to experience long-lasting sciatica relief and freedom. 
-            <br/><br/> 
-            Here's what you can expect to find in the Sciatica SOS™ manual:
-            <br/> <br/>
-            </h1>
-          </div>  
-          <div class="row">
-              <ul class="left mylist1">                   
-                    <li><h1 class='font_text'><b>The true nature of sciatica.</b> Why it's so common, and what these pains are trying to communicate to your body. </h1></li>
-                    <li>
-                <h1 class='font_text'><b>A drug-free home solution that relieves pain all naturally.</b> Add the right remedy into your daily diet along with some other choice herbs, and you will find a sense of calm and tranquility that goes beyond your sciatica related issues.</h1></li>
-                    <li><h1 class='font_text'><b>Xie’s secrets that dial back the clock on your body's ills.</b> A Nepalese system to rid your joints, muscles, tendons and nerves of tense energies that builds up every time you experience a shooting jolt of pain from your sciatica. Unlike conventional therapies that seek only to strengthen muscles, we seek to actually heal and re-balance the affected area.</h1></li>
-              </ul>
-            <br/><br/>            
-          </div>  
+					<!--page 9-->
+					<div class="row">
+						<center><img src='img/separator.jpg'></center>
+						<center>
+							<h1 class='font_medium2_title'>From 2 years of failure </h1>
+						</center>
+						<center>
+							<h1 class='font_medium2_title'><b class='color_dark_blue'>to <u>five days</u> of recovery</b></h1>
+						</center>
+						<center><img src='img/separator.jpg'></center>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/> I did as she said, and I started to see results, <b>FAST.</b>
+							<br/><br/> Over the next few days, the pain and stiffness seemed to “evaporate” out of my body…
+							<br/><br/> I went from fearful of getting out of my bed, to walking up and down the stairs.
+							<br/><br/> One day I surprised my son by grabbing him from behind with a bat and catcher's mitt.
+							<br/><br/>
+						</h1>
+					</div>
 
 
-          <!--page 13-->
-           <div class="row">                    
-               <center><img src='img/page13_1.png'></center>
-           </div>
+					<div class="row">
+						<center><img src='img/page9_2.jpg'></center>
+					</div>
 
-          <div class="row"> 
-              <br/><br/>                   
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>Sciatica SOS™ </b>customers reflect on their</h1></center>                           
-              <center>
-            <h1 class='font_medium_title'><b class='color_dark_blue'>Sciatica-Free turnaround experiences</b></h1></center>     
-          </div>   
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>“Thank you so much for this Glen! After 3 months struggling to get a good night’s sleep due to the pain, I was searching online to see if there was something out there that could help as pain killers and NSAIDs just weren’t cutting it. When I ran across your site my first thought was it sounded too good to be true, but gave it a try anyway seeing that you had a money back guarantee in place. I could hardly believe it; <b>literally the next day the pain was gone</b> and I was able to get a proper night’s sleep. You’re a life saver.”</h1></center>                 
-                <div class=' box_testi_user'>
-                  Jane Eddington Minnesota, <a style='color:#1e88f6;cursor:text'>USA</a>
-                </div>              
-              </div>              
-              </center>
-
-          </div> 
-
-          <!--page 14-->
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>I am a post lumbar discectomy patient and my sciatica was probably caused by some scar tissue. Your system provided me with <b>incredibly effective relief and with little effort.</b> Thank you so much for this Sir!</h1></center>                 
-                <div class=' box_testi_user'>
-                  Dilawar Riaz, <a style='color:#1e88f6;cursor:text'>Karachi, Pakistan</a>
-                </div>              
-              </div>              
-              </center>
-          </div> 
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>I’ve been battling sciatica for close to a decade, after a minor car accident, and I had tried everything the doc threw at me…pills, injections, special mattresses… Your guide was extremely eye opening and <b>within one week of the regimen you gave me I can barely feel any discomfort.</b> You have no idea how much of a relief it is to be finally getting rid of a pain I’ve had to bear for so many years, thank you.</h1></center>                 
-                <div class=' box_testi_user'>
-                  Gerry Sherington, <a style='color:#1e88f6;cursor:text'>London, UK</a>
-                </div>              
-              </div>              
-              </center>
-          </div> 
-
-          <!--page 15-->
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>Yes it works, as soon as I started using the ********** I could feel <b>an immediate reduction of the pain.</b> I’ll implement the rest of your recommendations and fingers crossed I’ll be free of sciatica once and for all.</h1></center>                 
-                <div class=' box_testi_user'>
-                  John Jones, <a style='color:#1e88f6;cursor:text'>Sydney, Australia</a>
-                </div>              
-              </div>              
-              </center>
-          </div> 
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>I can’t thank you enough Glenn. I was a sciatica sufferer for years and had wasted thousands of dollars on all kinds of therapies and medications, from epidural injections to chiropractic treatments. I’d get temporary relief but after a few days the pain would be back. It had gotten to the point where tying my own shoe laces had become a pain-staking 10 minute task. A friend of mine sent me a link to Sciatica SOS on facebook and barely <b>5 days later the pain was gone completely and I have my mobility back.</b> One month later I am still completely pain-free. This should be a must to anyone with sciatica.</h1></center>                 
-                <div class=' box_testi_user'>
-                    <div class='pic_testi_user1'></div>
-                    Michael Pierce, <a style='color:#1e88f6;cursor:text'>Dublin, Ireland</a>
-                </div>              
-              </div>              
-              </center>
-          </div>           
+					<div class="row">
+						<h1 class='font_text'>
+							<br/> The proud grin on his face told me everything I needed to hear.
+							<br/><br/> By day five, I knew the time had come for the ultimate test.
+							<br/><br/> I told my family I'd be heading off to the store to handle the grocery shopping – no escorts or helpers needed.
+							<br/><br/> And as I'm writing this, I think you know that the trip all alone went just fine. My wife stood by the fridge with an ear to ear smile as I unloaded the groceries. I was the man of the house once again.
+							<br/><br/>
+						</h1>
+					</div>
 
 
-          <!--page 16-->
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>My sciatica started during my second pregnancy and because of that I did not want to use any medications and wanted to avoid any therapies that could potentially hurt my baby. I found out about your system while searching for natural methods to get rid of the sciatic pain and just wanted to drop you a quick email to let you know that <b>your system has worked wonderfully for me.</b> The inflammation and pain were gone in just a few days and I have the peace of mind of knowing that I did not use any medications. Thanks</h1></center>                 
-                <div class=' box_testi_user'>
-                    <div class='pic_testi_user2'></div>
-                    Fiona Robertson, <a style='color:#1e88f6;cursor:text'>New York, USA</a>
-                </div>              
-              </div>              
-              </center>
-          </div>  
-          <div class="row">
-              <br/><br/>                    
-              <center><h1 class='font_medium_title'>ORDER TODAY and you'll also receive</h1></center>                 
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>the following 6 BONUSES ($172 Value) <u>FREE ! </u></b></h1></center>     
-              <br/>
-          </div>   
-
-          <!--bonus book-->
 
 
-          <div class="row div_bonus_book">              
-              <center>
-              <div class="row" style='text-align:left'>
-                  <div class="small-3 columns pic_book"><img src="img/book1.png"></div>
-                      <div class="small-9 columns">
-                          <div class="row ">
-                             <h3 class='font_medium_title'><font class='color_dark_blue'>Bonus #1: Lessons From Miracle Doctors</font></h3>
-                             <h4 class='font_text_small' style='padding-top:1rem'>This e-book is filled with over 180+ pages of powerful information and specific step-by-step strategies you can use right now and everyday to get and stay healthy... it's one of the most comprehensive yet easy to read and understand books on the subject of natural health.</h4>
-                             <h4 class='font_book_price'><font class="bg_red">VALUE $37</font><font class="bg_black">YOURS FREE</font></h4>
-                          </div>
-                      </div>                  
-              </div>
-              <div class="row" style='text-align:left;padding-top:2.7rem'>
-                  <div class="small-3 columns pic_book"><img src="img/book2.png"></div>
-                      <div class="small-9 columns">
-                          <div class="row desc_book">
-                             <h3 class='font_medium_title'><font class='color_dark_blue'>BONUS #2 - Sleeping Solace</font></h3>
-                             <h4 class='font_text_small' style='padding-top:1rem'>Getting proper sleep is crucial for good health and work performance. If you're struggling to get the sleep you need, for whatever reason, then very soon you will no doubt notice a direct impact on the quality of your life. 
-                              <br/><br/>
-                              If this dangerous cycle describes your current situation, then "Sleeping Solace" may be just the answer that you need. Learn how what you eat and how you work during the day can affect your sleep patterns. Also you'll learn what to do right before you go to sleep and how to set the right environment so you can enjoy a good night's rest.</h4>
-                             <h4 class='font_book_price'><font class="bg_red">VALUE $27</font><font class="bg_black">YOURS FREE</font></h4>
-                          </div>
-                      </div>                  
-              </div>
-              <div class="row" style='text-align:left;padding-top:2.7rem'>
-                  <div class="small-3 columns pic_book"><img src="img/book3.png"></div>
-                      <div class="small-9 columns">
-                          <div class="row desc_book">
-                             <h3 class='font_medium_title'><font class='color_dark_blue'>BONUS #3 - 10 Ways to Fight Off Cancer</font></h3>
-                             <h4 class='font_text_small' style='padding-top:1rem'>Learning About 10 Ways Fight Off Cancer Can Have Amazing Benefits For Your Life! The Best Tips On How To Keep This Killer At Bay. </h4>
-                             <h4 class='font_book_price'><font class="bg_red">VALUE $17</font><font class="bg_black">YOURS FREE</font></h4>
-                          </div>
-                      </div>                  
-              </div>              
-              <div class="row" style='text-align:left;padding-top:2.7rem'>
-                  <div class="small-3 columns pic_book"><img src="img/book4.png"></div>
-                      <div class="small-9 columns">
-                          <div class="row desc_book">
-                             <h3 class='font_medium_title'><font class='color_dark_blue'>BONUS #4 - Stress Soothers</font></h3>
-                             <h4 class='font_text_small' style='padding-top:1rem'>With this ultimate guide to achieving peace and calmness, you'll be equipped with the most powerful tools and strategies to helping you reduce stress. You will also be exposed to plenty of highly effective methods for identifying triggers and preventing them. 
-                              <br/><br/>
-                              You'll also get tons of extra information on your conditions and how you can deal with them in a variety of ways to achieve peace and calmness in stress using natural methods.</h4>
-                             <h4 class='font_book_price'><font class="bg_red">VALUE $27</font><font class="bg_black">YOURS FREE</font></h4>
-                          </div>
-                      </div>                  
-              </div>              
-              <div class="row" style='text-align:left;padding-top:2.7rem'>
-                  <div class="small-3 columns pic_book"><img src="img/book5.png"></div>
-                      <div class="small-9 columns">
-                          <div class="row desc_book">
-                             <h3 class='font_medium_title'><font class='color_dark_blue'>BONUS#5 - How To Lose 10 Pounds Naturally</font></h3>
-                             <h4 class='font_text_small' style='padding-top:1rem'>How To Lose 10 Pounds Naturally" is a must have report that outlines 'everyday ways' to maintain a healthier lifestyle for people on the go. It is designed to be quick and efficient. </h4>
-                             <h4 class='font_book_price'><font class="bg_red">VALUE $27</font><font class="bg_black">YOURS FREE</font></h4>
-                          </div>
-                      </div>                  
-              </div>
-              </center>
-              
-               <div class="row" style='text-align:left;padding-top:2.7rem'>
-                  <div class="small-3 columns pic_book"><img src="img/card 200 px PNG.png"></div>
-                      <div class="small-9 columns">
-                          <div class="row desc_book">
-                            <h3 class='font_medium_title'><font class='color_red'>BONUS #6 - Free Lifetime Updates</font></h3>
-                             <h4 class='font_text_small' style='padding-top:1rem'>This program is the ONLY proven home method to eliminating sciatica rapidly and permanently. Yet I am still constantly researching and perfecting it. If at any time in the future, I release a new version of Sciatica SOS™, you get it for FREE! And you don't have to do anything from your part - I will simply email you that latest version, so you can keep at the forefront of anti-sciatica research</h4>
-                             <h4 class='font_book_price'><font class="bg_red">VALUE $37</font><font class="bg_black">YOURS FREE</font></h4>
-                          </div>
-                      </div>                  
-              </div>
-              </center>
-
-              <div class="row" style='text-align:left;padding-top:2.7rem'>
-                <div class="small-12 columns"></div>                  
-              </div>
 
 
-          </div>
+					<!--page 10 11-->
+					<div class="row">
+						<center>
+							<h1 class='font_medium2_title'><b class='color_dark_blue'>I’m now free of sciatica </b></h1>
+						</center>
+						<br/>
+						<center>
+							<h1 class='font_medium3_title'>I'm free of holding my entire family hostage </h1>
+						</center>
+						<center>
+							<h1 class='font_medium3_title'>with debilitating pain</h1>
+						</center>
+
+					</div>
+					<div class="row">
+						<br/><br/>
+						<center>
+							<h1 class='font_medium_title'><b class='color_dark_blue'>Forget synthetic drugs and Western therapies</b></h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'>Xie showed me a better path to address the pains,</h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'>and slowly let them wither away on their own,</h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'>like a dying weed</h1>
+						</center><br/>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/> Hopefully by now, you know that there is the path to solving your own sciatica issues. Even as my own story unfolded, I have to tell you that I was half in disbelief as my pains left my body.
+							<br/><br/> I asked Xie if she’d be happy for me to write all her secrets down to pass them on to others, and she was more than happy to help.
+							<br/><br/> Our hope is that these teachings will eventually help millions of Americans to put a stop to our endless drug culture, and address the underlying issues for sciatica right at home.
+							<br/><br/>
+						</h1>
+					</div>
 
 
-          <!--page 20-->
-          <div class="row">
-              <br/><br/>                    
-              <center><h1 class='font_medium_title'>Fix your sciatica for good for a fraction of the </h1></center>                 
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>price of a doctor's visit</b></h1></center>     
-          </div>            
 
-          <!--page 21-->
-          <div class="row">
-            <h1 class='font_text'> 
-            <strong><br/>
-            Sciatica SOS™</strong> is the only guide to show you exactly how to cure your sciatica naturally and permanently. 
-            You may be asking how much such a life-changing system is going to cost you? First, let me ask you - how much are you willing to pay to get rid of your sciatica and constant pain FOREVER? <br/><br/>
-            Now, keep in mind that just a visit to your specialist costs $150 to $200+. If you opt for chiropractic adjustments, these will easily cost you hundreds of dollars over a course of treatment…
-            <br/><br/>
-            But <strong>Sciatica SOS™</strong> will cost you <strong>NOWHERE</strong> near that! You see, I want to give you this life-changing ebook for just $37! <br/><br/>
-            This a fraction of the cost of a single doctor's visit -- and let's not even talk about the cost of the pills and therapy visits you're likely to incur. 
-            <br/><br/>
-            Remember, you are not only getting the Sciatica SOS™ e-book and 5 bonus ebooks, but you are also getting free lifetime updates - <strong>all for just $37 </strong><br/><br/>
-            But don't thank me just yet. I will be putting the price up to $69.99 soon, but first I want to make sure that the people who really need this system have a chance to get it at this ridiculously low price. So don't wait one minute to order at this bargain price! 
-            <br/><br/>
-            Once you place your order on Clickbanks's secure server, you will get instant access to this best selling guide, even if it's 3 in the morning. Sciatica SOS™ is in digital format (PDF) which means that there is no need to wait for it to arrive. You will be able to learn the secrets of curing your sciatica, in just minutes from now.            </h1>
-            <p>&nbsp;</p>
-            <h1 align="center" class='font_text'><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+					<!--page 12-->
+					<div class="row">
+						<br/>
+						<center>
+							<h1 class='font_medium_title'><b class='color_black'><u>Introducing:</u></b></h1>
+						</center>
+					</div>
+
+					<div class="row">
+						<center><img src='img/Sciatica-Sos.jpg'></center>
+					</div>
+					<div class="row">
+						<div style='position:relative;margin-top:-2.5rem'>
+							<center>
+								<h1 class='font_medium2_title'><b class='color_dark_blue'>Sciatica SOS™</b></h1>
+							</center>
+							<center>
+								<h1 class='font_medium3_title'>your guide to eliminating the pain </h1>
+							</center>
+							<center>
+								<h1 class='font_medium3_title'>in 7 days or less – <u>GUARANTEED</u>!</h1>
+							</center>
+						</div>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/> In this revolutionary step-by-step guide on how to beat your sciatica pains once and for all, you’ll discover a precise approach to experience long-lasting sciatica relief and freedom.
+							<br/><br/> Here's what you can expect to find in the Sciatica SOS™ manual:
+							<br/> <br/>
+						</h1>
+					</div>
+					<div class="row">
+						<ul class="left mylist1">
+							<li>
+								<h1 class='font_text'><b>The true nature of sciatica.</b> Why it's so common, and what these pains are trying to communicate to your body. </h1>
+							</li>
+							<li>
+								<h1 class='font_text'><b>A drug-free home solution that relieves pain all naturally.</b> Add the right remedy into your daily diet along with some other choice herbs, and you will find a sense of calm and tranquility that goes beyond your sciatica related issues.</h1>
+							</li>
+							<li>
+								<h1 class='font_text'><b>Xie’s secrets that dial back the clock on your body's ills.</b> A Nepalese system to rid your joints, muscles, tendons and nerves of tense energies that builds up every time you experience a shooting jolt of pain from your sciatica. Unlike conventional therapies that seek only to strengthen muscles, we seek to actually heal and re-balance the affected area.</h1>
+							</li>
+						</ul>
+						<br/><br/>
+					</div>
+
+
+					<!--page 13-->
+					<div class="row">
+						<center><img src='img/page13_1.png'></center>
+					</div>
+
+					<div class="row">
+						<br/><br/>
+						<center>
+							<h1 class='font_medium_title'><b class='color_dark_blue'>Sciatica SOS™ </b>customers reflect on their</h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'><b class='color_dark_blue'>Sciatica-Free turnaround experiences</b></h1>
+						</center>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>“Thank you so much for this Glen! After 3 months struggling to get a good night’s sleep due to the pain, I was searching online to see if there was something out there that could help as pain killers and NSAIDs just weren’t cutting it. When I ran across your site my first thought was it sounded too good to be true, but gave it a try anyway seeing that you had a money back guarantee in place. I could hardly believe it; <b>literally the next day the pain was gone</b> and I was able to get a proper night’s sleep. You’re a life saver.”</h1>
+								</center>
+								<div class=' box_testi_user'>
+									Jane Eddington Minnesota, <a style='color:#1e88f6;cursor:text'>USA</a>
+								</div>
+							</div>
+						</center>
+
+					</div>
+
+					<!--page 14-->
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>I am a post lumbar discectomy patient and my sciatica was probably caused by some scar tissue. Your system provided me with <b>incredibly effective relief and with little effort.</b> Thank you so much for this Sir!</h1>
+								</center>
+								<div class=' box_testi_user'>
+									Dilawar Riaz, <a style='color:#1e88f6;cursor:text'>Karachi, Pakistan</a>
+								</div>
+							</div>
+						</center>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>I’ve been battling sciatica for close to a decade, after a minor car accident, and I had tried everything the doc threw at me…pills, injections, special mattresses… Your guide was extremely eye opening and <b>within one week of the regimen you gave me I can barely feel any discomfort.</b> You have no idea how much of a relief it is to be finally getting rid of a pain I’ve had to bear for so many years, thank you.</h1>
+								</center>
+								<div class=' box_testi_user'>
+									Gerry Sherington, <a style='color:#1e88f6;cursor:text'>London, UK</a>
+								</div>
+							</div>
+						</center>
+					</div>
+
+					<!--page 15-->
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>Yes it works, as soon as I started using the ********** I could feel <b>an immediate reduction of the pain.</b> I’ll implement the rest of your recommendations and fingers crossed I’ll be free of sciatica once and for all.</h1>
+								</center>
+								<div class=' box_testi_user'>
+									John Jones, <a style='color:#1e88f6;cursor:text'>Sydney, Australia</a>
+								</div>
+							</div>
+						</center>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>I can’t thank you enough Glenn. I was a sciatica sufferer for years and had wasted thousands of dollars on all kinds of therapies and medications, from epidural injections to chiropractic treatments. I’d get temporary relief but after a few days the pain would be back. It had gotten to the point where tying my own shoe laces had become a pain-staking 10 minute task. A friend of mine sent me a link to Sciatica SOS on facebook and barely <b>5 days later the pain was gone completely and I have my mobility back.</b> One month later I am still completely pain-free. This should be a must to anyone with sciatica.</h1>
+								</center>
+								<div class=' box_testi_user'>
+									<div class='pic_testi_user1'></div>
+									Michael Pierce, <a style='color:#1e88f6;cursor:text'>Dublin, Ireland</a>
+								</div>
+							</div>
+						</center>
+					</div>
+
+
+					<!--page 16-->
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>My sciatica started during my second pregnancy and because of that I did not want to use any medications and wanted to avoid any therapies that could potentially hurt my baby. I found out about your system while searching for natural methods to get rid of the sciatic pain and just wanted to drop you a quick email to let you know that <b>your system has worked wonderfully for me.</b> The inflammation and pain were gone in just a few days and I have the peace of mind of knowing that I did not use any medications. Thanks</h1>
+								</center>
+								<div class=' box_testi_user'>
+									<div class='pic_testi_user2'></div>
+									Fiona Robertson, <a style='color:#1e88f6;cursor:text'>New York, USA</a>
+								</div>
+							</div>
+						</center>
+					</div>
+					<div class="row">
+						<br/><br/>
+						<center>
+							<h1 class='font_medium_title'>ORDER TODAY and you'll also receive</h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'><b class='color_dark_blue'>the following 6 BONUSES ($172 Value) <u>FREE ! </u></b></h1>
+						</center>
+						<br/>
+					</div>
+
+					<!--bonus book-->
+
+
+					<div class="row div_bonus_book">
+						<center>
+							<div class="row" style='text-align:left'>
+								<div class="small-3 columns pic_book"><img src="img/book1.png"></div>
+								<div class="small-9 columns">
+									<div class="row ">
+										<h3 class='font_medium_title'>
+											<font class='color_dark_blue'>Bonus #1: Lessons From Miracle Doctors</font>
+										</h3>
+										<h4 class='font_text_small' style='padding-top:1rem'>This e-book is filled with over 180+ pages of powerful information and specific step-by-step strategies you can use right now and everyday to get and stay healthy... it's one of the most comprehensive yet easy to read and understand books on the subject of natural health.</h4>
+										<h4 class='font_book_price'>
+											<font class="bg_red">VALUE $37</font>
+											<font class="bg_black">YOURS FREE</font>
+										</h4>
+									</div>
+								</div>
+							</div>
+							<div class="row" style='text-align:left;padding-top:2.7rem'>
+								<div class="small-3 columns pic_book"><img src="img/book2.png"></div>
+								<div class="small-9 columns">
+									<div class="row desc_book">
+										<h3 class='font_medium_title'>
+											<font class='color_dark_blue'>BONUS #2 - Sleeping Solace</font>
+										</h3>
+										<h4 class='font_text_small' style='padding-top:1rem'>Getting proper sleep is crucial for good health and work performance. If you're struggling to get the sleep you need, for whatever reason, then very soon you will no doubt notice a direct impact on the quality of your life.
+											<br/><br/> If this dangerous cycle describes your current situation, then "Sleeping Solace" may be just the answer that you need. Learn how what you eat and how you work during the day can affect your sleep patterns. Also you'll learn what to do right before you go to sleep and how to set the right environment so you can enjoy a good night's rest.</h4>
+										<h4 class='font_book_price'>
+											<font class="bg_red">VALUE $27</font>
+											<font class="bg_black">YOURS FREE</font>
+										</h4>
+									</div>
+								</div>
+							</div>
+							<div class="row" style='text-align:left;padding-top:2.7rem'>
+								<div class="small-3 columns pic_book"><img src="img/book3.png"></div>
+								<div class="small-9 columns">
+									<div class="row desc_book">
+										<h3 class='font_medium_title'>
+											<font class='color_dark_blue'>BONUS #3 - 10 Ways to Fight Off Cancer</font>
+										</h3>
+										<h4 class='font_text_small' style='padding-top:1rem'>Learning About 10 Ways Fight Off Cancer Can Have Amazing Benefits For Your Life! The Best Tips On How To Keep This Killer At Bay. </h4>
+										<h4 class='font_book_price'>
+											<font class="bg_red">VALUE $17</font>
+											<font class="bg_black">YOURS FREE</font>
+										</h4>
+									</div>
+								</div>
+							</div>
+							<div class="row" style='text-align:left;padding-top:2.7rem'>
+								<div class="small-3 columns pic_book"><img src="img/book4.png"></div>
+								<div class="small-9 columns">
+									<div class="row desc_book">
+										<h3 class='font_medium_title'>
+											<font class='color_dark_blue'>BONUS #4 - Stress Soothers</font>
+										</h3>
+										<h4 class='font_text_small' style='padding-top:1rem'>With this ultimate guide to achieving peace and calmness, you'll be equipped with the most powerful tools and strategies to helping you reduce stress. You will also be exposed to plenty of highly effective methods for identifying triggers and preventing them.
+											<br/><br/> You'll also get tons of extra information on your conditions and how you can deal with them in a variety of ways to achieve peace and calmness in stress using natural methods.</h4>
+										<h4 class='font_book_price'>
+											<font class="bg_red">VALUE $27</font>
+											<font class="bg_black">YOURS FREE</font>
+										</h4>
+									</div>
+								</div>
+							</div>
+							<div class="row" style='text-align:left;padding-top:2.7rem'>
+								<div class="small-3 columns pic_book"><img src="img/book5.png"></div>
+								<div class="small-9 columns">
+									<div class="row desc_book">
+										<h3 class='font_medium_title'>
+											<font class='color_dark_blue'>BONUS#5 - How To Lose 10 Pounds Naturally</font>
+										</h3>
+										<h4 class='font_text_small' style='padding-top:1rem'>How To Lose 10 Pounds Naturally" is a must have report that outlines 'everyday ways' to maintain a healthier lifestyle for people on the go. It is designed to be quick and efficient. </h4>
+										<h4 class='font_book_price'>
+											<font class="bg_red">VALUE $27</font>
+											<font class="bg_black">YOURS FREE</font>
+										</h4>
+									</div>
+								</div>
+							</div>
+						</center>
+
+						<div class="row" style='text-align:left;padding-top:2.7rem'>
+							<div class="small-3 columns pic_book"><img src="img/card 200 px PNG.png"></div>
+							<div class="small-9 columns">
+								<div class="row desc_book">
+									<h3 class='font_medium_title'>
+										<font class='color_red'>BONUS #6 - Free Lifetime Updates</font>
+									</h3>
+									<h4 class='font_text_small' style='padding-top:1rem'>This program is the ONLY proven home method to eliminating sciatica rapidly and permanently. Yet I am still constantly researching and perfecting it. If at any time in the future, I release a new version of Sciatica SOS™, you get it for FREE! And you don't have to do anything from your part - I will simply email you that latest version, so you can keep at the forefront of anti-sciatica research</h4>
+									<h4 class='font_book_price'>
+										<font class="bg_red">VALUE $37</font>
+										<font class="bg_black">YOURS FREE</font>
+									</h4>
+								</div>
+							</div>
+						</div>
+						</center>
+
+						<div class="row" style='text-align:left;padding-top:2.7rem'>
+							<div class="small-12 columns"></div>
+						</div>
+
+
+					</div>
+
+
+					<!--page 20-->
+					<div class="row">
+						<br/><br/>
+						<center>
+							<h1 class='font_medium_title'>Fix your sciatica for good for a fraction of the </h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'><b class='color_dark_blue'>price of a doctor's visit</b></h1>
+						</center>
+					</div>
+
+					<!--page 21-->
+					<div class="row">
+						<h1 class='font_text'>
+							<strong><br/>
+            Sciatica SOS™</strong> is the only guide to show you exactly how to cure your sciatica naturally and permanently. You may be asking how much such a life-changing system is going to cost you? First, let me ask you - how much are you willing to pay to get rid of your sciatica and constant pain FOREVER? <br/><br/> Now, keep in mind that just a visit to your specialist costs $150 to $200+. If you opt for chiropractic adjustments, these will easily cost you hundreds of dollars over a course of treatment…
+							<br/><br/> But <strong>Sciatica SOS™</strong> will cost you <strong>NOWHERE</strong> near that! You see, I want to give you this life-changing ebook for just $37! <br/><br/> This a fraction of the cost of a single doctor's visit -- and let's not even talk about the cost of the pills and therapy visits you're likely to incur.
+							<br/><br/> Remember, you are not only getting the Sciatica SOS™ e-book and 5 bonus ebooks, but you are also getting free lifetime updates - <strong>all for just $37 </strong><br/><br/> But don't thank me just yet. I will be putting the price up to $69.99 soon, but first I want to make sure that the people who really need this system have a chance to get it at this ridiculously low price. So don't wait one minute to order at this bargain price!
+							<br/><br/> Once you place your order on Clickbanks's secure server, you will get instant access to this best selling guide, even if it's 3 in the morning. Sciatica SOS™ is in digital format (PDF) which means that there is no need to wait for it to arrive. You will be able to learn the secrets of curing your sciatica, in just minutes from now. </h1>
+						<p>&nbsp;</p>
+						<h1 align="center" class='font_text'><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 "><img src="img/sciatica sos smaller.jpg"  alt="Sciatica SOS"></a></h1>
-            <h1 align="center" class='font_text'><span class="color_dark_blue"><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+						<h1 align="center" class='font_text'><span class="color_dark_blue"><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 "><u><strong>CLICK HERE TO ORDER</strong></u></a></span></h1>
-            <h1 align="center" class='font_text'><strong><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+						<h1 align="center" class='font_text'><strong><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 "><s><u>ONLY $69.99</u></s><u> <span class="highlightYellow">(Limited Time Offer -- Now Only $37!)</span></u></a><u><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 "><br/>
             </a></u></strong></h1>
-            <h1 align="center" class='font_text'>
-            </h1>
-          </div>
+						<h1 align="center" class='font_text'>
+						</h1>
+					</div>
 
-          <!--page 22-->
-           <div class="row">                    
-               <center>
-                  <div class="box_cart1b">
-                      
-                      <div class="btn_cart">
-                         <a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
-"><img src="img/btn_addcart2 - small.jpg"></a>                      
-                      </div>
-                  </div>
-             </center>
-           </div>          
-          <div class="row">
-          
-              <center><h1 class='font_medium_title'>Say goodbye to your sciatica in 7 days flat </h1></center>                 
-              <center><h1 class='font_medium_title'><b class='highlightYellow'><u>or your full money back!</u></b></h1></center>     
-          </div>              
-          <div class="row">
-            <h1 class='font_text'><br/> <br>
-            <b>I am so confident about this system that I personally guarantee that you'll see powerful results in seven days – or your money back.</b> Yes, I am providing a <span class="highlightYellow">60-day, 100% full NO-QUESTIONS-ASKED money back guarantee!</span> Put all the risk on me - if your sciatica is not completely gone for good, then simply let me know, and I'll send you a prompt, no questions asked, 100% refund. Refunds are processed by a third party and are paypal-verified, so you can be assured that all refund requests are 100% honoured.</h1>
-            <p>&nbsp;</p>
-           <center>
-             <p><img src='img/guarantee-paypal-verified.jpg'></p>
-             <p>&nbsp;</p>
-           </center>
-            
-          </div>
+					<!--page 22-->
+					<div class="row">
+						<center>
+							<div class="box_cart1b">
 
-          <!--page 23-->
-          <div class="row">
-              <br/><br/>             
-              <center><h1 class='font_medium_title'>Final note from the author of <b class='color_dark_blue'>Sciatica SOS™…</b></h1></center>                               
-          </div>              
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>
-            I have a confession: I never intended to write a book on anything, let alone sciatica. 
-            <br/><br/>
-            But my first-hand experience of knowing how crippling of a problem this can be led me to a simple truth: 
-            <br/><br/>
-            </h1>
-          </div>
-          <div class="row">
-              <br/>           
-              <center><h1 class='font_medium_title'>I couldn't sit around knowing that my issue was cured, </h1></center>
-              <center><h1 class='font_medium_title'><b class='color_dark_blue'>while many others continued to suffer</b></h1></center>
-          </div>              
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/><br/>
-            That's why I wrote this book. 
-            <br/><br/>
-            That's why I went into great detail to explain the right approach to take to actually make a difference. 
-            <br/><br/>
-            That's why I offer it for the low price I do. 
-            <br/><br/>
-            Because I want you to have a happy and healthy life that you can share with your family. I'd like you to be sciatica free. 
-            <br/><br/> 
-            From my family to yours, I wish you a warm and speedy recovery,
-            <br/><br/>
-            </h1>
-          </div>
+								<div class="btn_cart">
+									<a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+"><img src="img/btn_addcart2 - small.jpg"></a>
+								</div>
+							</div>
+						</center>
+					</div>
+					<div class="row">
 
-           <div class="row">           
-               <br/><br/>         
-               <img src='img/sign.jpg'>
-           </div>
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/>
-            <b>Glen Johnson,</b>
-            <br/><br/>
-            Former sciatica sufferer, 
-            <br/><br/>
-            Coach and guide on living a sciatica-free life
- 
-            <br/><br/>
-            </h1>
-          </div> 
+						<center>
+							<h1 class='font_medium_title'>Say goodbye to your sciatica in 7 days flat </h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'><b class='highlightYellow'><u>or your full money back!</u></b></h1>
+						</center>
+					</div>
+					<div class="row">
+						<h1 class='font_text'><br/> <br>
+							<b>I am so confident about this system that I personally guarantee that you'll see powerful results in seven days – or your money back.</b> Yes, I am providing a <span class="highlightYellow">60-day, 100% full NO-QUESTIONS-ASKED money back guarantee!</span> Put all the risk on me - if your sciatica is not completely gone for good, then simply let me know, and I'll send you a prompt, no questions asked, 100% refund. Refunds are processed by a third party and are paypal-verified, so you can be assured that all refund requests are 100% honoured.</h1>
+						<p>&nbsp;</p>
+						<center>
+							<p><img src='img/guarantee-paypal-verified.jpg'></p>
+							<p>&nbsp;</p>
+						</center>
+
+					</div>
+
+					<!--page 23-->
+					<div class="row">
+						<br/><br/>
+						<center>
+							<h1 class='font_medium_title'>Final note from the author of <b class='color_dark_blue'>Sciatica SOS™…</b></h1>
+						</center>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/> I have a confession: I never intended to write a book on anything, let alone sciatica.
+							<br/><br/> But my first-hand experience of knowing how crippling of a problem this can be led me to a simple truth:
+							<br/><br/>
+						</h1>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+							<h1 class='font_medium_title'>I couldn't sit around knowing that my issue was cured, </h1>
+						</center>
+						<center>
+							<h1 class='font_medium_title'><b class='color_dark_blue'>while many others continued to suffer</b></h1>
+						</center>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/><br/> That's why I wrote this book.
+							<br/><br/> That's why I went into great detail to explain the right approach to take to actually make a difference.
+							<br/><br/> That's why I offer it for the low price I do.
+							<br/><br/> Because I want you to have a happy and healthy life that you can share with your family. I'd like you to be sciatica free.
+							<br/><br/> From my family to yours, I wish you a warm and speedy recovery,
+							<br/><br/>
+						</h1>
+					</div>
+
+					<div class="row">
+						<br/><br/>
+						<img src='img/sign.jpg'>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/>
+							<b>Glen Johnson,</b>
+							<br/><br/> Former sciatica sufferer,
+							<br/><br/> Coach and guide on living a sciatica-free life
+
+							<br/><br/>
+						</h1>
+					</div>
 
 
-          <!--page 24-->
-          <div class="row">
-              <br/><br/>                    
-              <center><h1 class='font_medium_title'>Even more customers give their feedback on <b class='color_dark_blue'>Sciatica SOS™:</b></h1></center>              
-          </div>
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>Wow your system works like magic! My sciatica started when I lifted 300lbs on the Deadlift for 3 reps about a year ago. The doctor said I had an L4-L5 bulging disc which apparently was ok after 4 months but the pain in my glute down to my ankle was unbearable and I obviously had to stop the gym completely. I tried muscle imbalance therapy, enzymes, creams, catafast, advil, ibuprofen and chiropractic adjustment but nothing seems to work. I downloaded your book last week and immediately got started and I <b>could feel improvement from the very first day.</b> I have now NO pain at all and I plan to re-start gym next week (slowly of course). Thanks buddy!</h1>
-              </center>
-                <div class=' box_testi_user'>
-                    <div class='pic_testi_user3'></div>
-                    Ayden Noble, <a style='color:#1e88f6;cursor:text'>New York, USA</a>
-                </div>              
-              </div>              
-              </center>
-          </div>  
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>I had a very prolonged episode of sciatica and bought your book as a last resort as I had tried literally everything. I must say that 3 days after starting your treatment I am very impressed as the pain is gone from my leg and I can now only feel it in the right buttock. I will continue the treatment and hope to have it gone completely soon. <b>I will be recommend your guide to my colleagues (nurses)</b> who also suffer from chronic sciatica.
-              </h1></center>                 
-                <div class=' box_testi_user'>                    
-                    Mariah Silva, <a style='color:#1e88f6;cursor:text'>Madrid, Spain</a>
-                </div>              
-              </div>              
-              </center>
-          </div>  
-          
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center>
-                <h1 class='font_testi'>Your system is a God-send Mr. Johnson! I bought this for my 78 year old mother, who had been suffering from sciatica on-and-off for over 6 years. Each time she'd see the doc, he d give her a course of anti-inflammatories (usually Celebrex or Catafast). This would make her feel better for a few weeks, but then the pain would be back... <br>
-                  <br>I was worried about the side effects of these medications, and that's when I found your system. It was extremely easy to follow and the instructions were laid out in a very simple manner. My mum had no problem following it at all, and <br>
-                <strong>barely a week later she had no pain!!!</strong></b> She has now been pain-free for 5 months already, God bless you and your family!
-              </h1></center>                 
-                <div class=' box_testi_user'>                    
-                    Rebecca Cooper, <a style='color:#1e88f6;cursor:text'>Dubai, UAE</a>
-                </div>              
-              </div>              
-              </center>
-          </div>
-          
-          <div class="row" >
-              <br/>
-              <center>
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>I had a VERY BAD case of sciatica and in fact underwent two operations (one on my back and a hip replacement) but nothing helped the pain. Sitting down was actually the worse for me as the pain was unbearable, while when I stood up it was a bit better. It was getting very tiring and frustrating, and at 42 I was feeling like I was 80 years old! <br><br>I read about Sciatica SOS on a forum and purchased based on the person’s high recommendation of it. I must say that they were absolutely right as <strong>just one week later the pain is practically gone</strong>. THANK YOU THANK YOU THANK YOU! </h1></center>                 
-                <div class=' box_testi_user'>                    
-                    James Walden, <a style='color:#1e88f6;cursor:text'>Ontario, Canada</a>
-                </div>              
-              </div>              
-              </center>
-          </div>  
-          <div class="row" >
-              <br/>
-              <center>
-              
-              <div class=' box_testi '>
-              <center><h1 class='font_testi'>I had been suffering from sciatica for over 20 years but because I can’t afford insurance I could not go to the doctor or chiropractor. I was particularly bad last month and my husband found about your book while searching for help online. After using the Sciatica SOS system <b>for just a week I was able to walk without any pain</b> and now it is gone completely. God bless you!
-              </h1></center>                 
-                <div class=' box_testi_user'>                    
-                    Jennifer Hall,  <a style='color:#1e88f6;cursor:text'>Texas, USA</a>
-                </div>              
-              </div>              
+					<!--page 24-->
+					<div class="row">
+						<br/><br/>
+						<center>
+							<h1 class='font_medium_title'>Even more customers give their feedback on <b class='color_dark_blue'>Sciatica SOS™:</b></h1>
+						</center>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>Wow your system works like magic! My sciatica started when I lifted 300lbs on the Deadlift for 3 reps about a year ago. The doctor said I had an L4-L5 bulging disc which apparently was ok after 4 months but the pain in my glute down to my ankle was unbearable and I obviously had to stop the gym completely. I tried muscle imbalance therapy, enzymes, creams, catafast, advil, ibuprofen and chiropractic adjustment but nothing seems to work. I downloaded your book last week and immediately got started and I <b>could feel improvement from the very first day.</b> I have now NO pain at all and I plan to re-start gym next week (slowly of course). Thanks buddy!</h1>
+								</center>
+								<div class=' box_testi_user'>
+									<div class='pic_testi_user3'></div>
+									Ayden Noble, <a style='color:#1e88f6;cursor:text'>New York, USA</a>
+								</div>
+							</div>
+						</center>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>I had a very prolonged episode of sciatica and bought your book as a last resort as I had tried literally everything. I must say that 3 days after starting your treatment I am very impressed as the pain is gone from my leg and I can now only feel it in the right buttock. I will continue the treatment and hope to have it gone completely soon. <b>I will be recommend your guide to my colleagues (nurses)</b> who also suffer from chronic sciatica.
+									</h1>
+								</center>
+								<div class=' box_testi_user'>
+									Mariah Silva, <a style='color:#1e88f6;cursor:text'>Madrid, Spain</a>
+								</div>
+							</div>
+						</center>
+					</div>
 
-              </center>
-          </div>
-          <div class="row">
-            <h1 class='font_text'> 
-            <br/><br/>
-            P.S. If you have any questions you'd like answered before you order, feel free to contact me at any time. I understand that you may have some skepticism and questions regarding my system, so please do get in touch and I'll be happy to discuss Sciatica SOS™ with you.  
-            <br/><br/>
-            <span class="highlightYellow">P.P.S. Remember, that this offer is backed with a <strong>no-questions-asked, full 60 days money back guarantee</strong>…you have nothing to lose except your debilitating sciatica! </span><br/><br/>
-            </h1>
-            <h1 align="center" class='font_text'><span class="color_dark_blue"><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>Your system is a God-send Mr. Johnson! I bought this for my 78 year old mother, who had been suffering from sciatica on-and-off for over 6 years. Each time she'd see the doc, he d give her a course of anti-inflammatories (usually Celebrex or Catafast). This would make her feel better for a few weeks, but then the pain would be back... <br>
+										<br>I was worried about the side effects of these medications, and that's when I found your system. It was extremely easy to follow and the instructions were laid out in a very simple manner. My mum had no problem following it at all, and <br>
+										<strong>barely a week later she had no pain!!!</strong></b> She has now been pain-free for 5 months already, God bless you and your family!
+									</h1>
+								</center>
+								<div class=' box_testi_user'>
+									Rebecca Cooper, <a style='color:#1e88f6;cursor:text'>Dubai, UAE</a>
+								</div>
+							</div>
+						</center>
+					</div>
+
+					<div class="row">
+						<br/>
+						<center>
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>I had a VERY BAD case of sciatica and in fact underwent two operations (one on my back and a hip replacement) but nothing helped the pain. Sitting down was actually the worse for me as the pain was unbearable, while when I stood up it was a bit better. It was getting very tiring and frustrating, and at 42 I was feeling like I was 80 years old! <br><br>I read about Sciatica SOS on a forum and purchased based on the person’s high recommendation of it. I must say that they were absolutely right as <strong>just one week later the pain is practically gone</strong>. THANK YOU THANK YOU THANK YOU! </h1>
+								</center>
+								<div class=' box_testi_user'>
+									James Walden, <a style='color:#1e88f6;cursor:text'>Ontario, Canada</a>
+								</div>
+							</div>
+						</center>
+					</div>
+					<div class="row">
+						<br/>
+						<center>
+
+							<div class=' box_testi '>
+								<center>
+									<h1 class='font_testi'>I had been suffering from sciatica for over 20 years but because I can’t afford insurance I could not go to the doctor or chiropractor. I was particularly bad last month and my husband found about your book while searching for help online. After using the Sciatica SOS system <b>for just a week I was able to walk without any pain</b> and now it is gone completely. God bless you!
+									</h1>
+								</center>
+								<div class=' box_testi_user'>
+									Jennifer Hall, <a style='color:#1e88f6;cursor:text'>Texas, USA</a>
+								</div>
+							</div>
+
+						</center>
+					</div>
+					<div class="row">
+						<h1 class='font_text'>
+							<br/><br/> P.S. If you have any questions you'd like answered before you order, feel free to contact me at any time. I understand that you may have some skepticism and questions regarding my system, so please do get in touch and I'll be happy to discuss Sciatica SOS™ with you.
+							<br/><br/>
+							<span class="highlightYellow">P.P.S. Remember, that this offer is backed with a <strong>no-questions-asked, full 60 days money back guarantee</strong>…you have nothing to lose except your debilitating sciatica! </span><br/><br/>
+						</h1>
+						<h1 align="center" class='font_text'><span class="color_dark_blue"><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 "><u><strong>CLICK HERE TO ORDER</strong></u></a></span></h1>
-            <h1 align="center" class='font_text'><strong><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+						<h1 align="center" class='font_text'><strong><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 "><s><u>ONLY $69.99</u></s><u> <span class="highlightYellow">(Limited Time Offer -- Now Only $37!)</span></u></a></strong><br/>
-              <br/><div class="btn_cart">
-                         <a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
-"><img src="img/btn_addcart2 - small.jpg"></a>                      
-                      </div>
-            </h1>
-</div>           
+							<br/>
+							<div class="btn_cart">
+								<a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+"><img src="img/btn_addcart2 - small.jpg"></a>
+							</div>
+						</h1>
+					</div>
 
-        </div>
-      </div>
-    
+				</div>
+			</div>
 
 
-       
-            <footer class="row">
-              <br/><br/>
-              <div class="large-12 columns">
-                <div class="row box_footer">
-                  <div class="row">
-                    <div class="small-2 columns"></div>
-                    <div class="small-10  columns">
-                      <ul class="inline-list right">
-                        <li><a href="http://www.sciaticasos.com">Copyright ©</a></li>
-                        <li>|</li>
-                        <li><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
+
+
+			<footer class="row">
+				<br/><br/>
+				<div class="large-12 columns">
+					<div class="row box_footer">
+						<div class="row">
+							<div class="small-2 columns"></div>
+							<div class="small-10  columns">
+								<ul class="inline-list right">
+									<li><a href="http://www.sciaticasos.com">Copyright ©</a></li>
+									<li>|</li>
+									<li><a href="http://1.sciatica1.pay.clickbank.net/?cbskin=17460&cbfid=31255&vtid=t
 ">Get Started</a></li>
-                        <li>|</li>
-                        <li><a href="terms.html">Terms</a></li>
-                        <li>|</li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li>|</li>
-                        <li><a href="affiliates.html">Affiliates</a></li>
-                        <li>|</li>
-                        <li><a href="mailto:support@sciaticasos.com">Contact Us</a></li>
-                      </ul>
-                    </div>
-                    <div class="small-2 columns"></div>
-                  </div>
-                  <div class="text-center">
-                    <p class="footersmall">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 917 S. Lusk Street, Suite 200, Boise Idaho, 83706, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products. The website's content and the product for sale is based upon the author's opinion and is provided solely on an "AS IS" and "AS AVAILABLE" basis. You should do your own research and confirm the information with other sources when searching for information regarding health issues and always review the information carefully with your professional health care provider before using any of the protocols presented on this website and/or in the product sold here. Neither ClickBank nor the author are engaged in rendering medical or similar professional services or advice via this website or in the product, and the information provided is not intended to replace medical advice offered by a physician or other licensed healthcare provider. You should not construe ClickBank's sale of this product as an endorsement by ClickBank of the views expressed herein, or any warranty or guarantee of any strategy, recommendation, treatment, action, or application of advice made by the author of the product.</p>
-                  </div>
-                </div>
-              </div>
-            </footer>       
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    
-   
+									<li>|</li>
+									<li><a href="terms.html">Terms</a></li>
+									<li>|</li>
+									<li><a href="privacy.html">Privacy Policy</a></li>
+									<li>|</li>
+									<li><a href="affiliates.html">Affiliates</a></li>
+									<li>|</li>
+									<li><a href="mailto:support@sciaticasos.com">Contact Us</a></li>
+								</ul>
+							</div>
+							<div class="small-2 columns"></div>
+						</div>
+						<div class="text-center">
+							<p class="footersmall">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 917 S. Lusk Street, Suite 200, Boise Idaho, 83706, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products. The website's content and the product for sale is based upon the author's opinion and is provided solely on an "AS IS" and "AS AVAILABLE" basis. You should do your own research and confirm the information with other sources when searching for information regarding health issues and always review the information carefully with your professional health care provider before using any of the protocols presented on this website and/or in the product sold here. Neither ClickBank nor the author are engaged in rendering medical or similar professional services or advice via this website or in the product, and the information provided is not intended to replace medical advice offered by a physician or other licensed healthcare provider. You should not construe ClickBank's sale of this product as an endorsement by ClickBank of the views expressed herein, or any warranty or guarantee of any strategy, recommendation, treatment, action, or application of advice made by the author of the product.</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<script src="js/vendor/jquery.js"></script>
+			<script src="js/foundation.min.js"></script>
+			<script>
+				$(document).foundation();
+			</script>
 
 
 
-  </body>
+
+
+</body>
+
 </html>
