@@ -1179,6 +1179,7 @@ h1, .title-text{
 		top: 650px;
 	}
 	.mockups{
+		left: -60px;
 		&__item{
 			position: absolute;
 			box-shadow: 0 0 14px 0 rgba(23, 100, 168, 0.12);
@@ -1203,6 +1204,7 @@ h1, .title-text{
 				transform: rotate(-25deg);
 			}
 			&-5{
+				display: none;
 				top: 490px;
 				right: -180px;
 			}
@@ -1220,12 +1222,10 @@ h1, .title-text{
 	}
 } 
 
-// ≥680px
-@media only screen and (max-width : 680px){}
 // ≥320px
 @media only screen and (max-width : 360px){
 	.mockups{
-		left: 150px;
+		left: 110px;
 	}
 }
 // Retina images
