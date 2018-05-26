@@ -156,16 +156,18 @@ h1, .title-text{
 .headline{
 	position: relative;
 	max-width: 540px;
-	padding-top: 95px;
+	padding-top: 90px;
 	z-index: 10;
 	&__top-title{
 		font-size: 26px;
-		font-weight: 400;	}
+		font-weight: 400;	
+		line-height: 37px;
+	}
 	&__title{
 		max-width: 335px;
 		font-size: 45px;
 		margin-bottom: 16px;
-		margin-top: 6px;
+		margin-top: 0px;
 	}
 	&__sub-title{
 		line-height: 1.5;
@@ -652,9 +654,9 @@ h1, .title-text{
 	display: block;
 	width: 83px;
 	margin: 0 auto;
-	font-family: $title-font;
+	font-family: $main-font;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.69;
   color: #1576ec;
 	text-decoration: none;
