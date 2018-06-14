@@ -1,0 +1,301 @@
+/* This button was generated using CSSButtonGenerator.com */
+.ctaButton {
+	box-shadow:inset 0 1px 0 0 #fce2c1;
+	background: linear-gradient( to bottom, #ffc477 5%, #fb9e25 100% );
+	background-color:#ffc477;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	border-bottom-right-radius:7px;
+	border-bottom-left-radius:7px;
+	text-indent:0;
+	/*border:1px solid #eeb44f; IE11 - renders lines on hover*/
+	display:inline-block;
+	color:#ffffff;
+	font-family: Arial, Verdana, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	height:22px;
+	line-height:22px;
+	width:174px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0 #cc9f52;
+}
+.ctaButton a {
+	width: 174px;
+	text-decoration: none;
+}
+a.ctaButton:hover {
+	text-decoration: none;
+}
+.ctaButton:hover {
+	background: linear-gradient(to bottom, #fb9e25 5%, #ffc477 100% );
+	background-color:#fb9e25;
+	text-decoration: none;
+}
+.ctaButton:active {
+	 position:relative;
+	 top:1px;
+ }
+/* This button was generated using CSSButtonGenerator.com */
+
+
+#lightbox{
+	visibility:hidden;
+	position:absolute;
+	background:#808080;
+	border:2px solid #3c3c3c;
+	color:white;
+	z-index:100;
+	width: 200px;
+	height:100px;
+	padding:20px;
+}
+
+.dimmer{
+	background: #000;
+	position: absolute;
+	opacity: .25;
+	top: 0;
+	z-index:99;
+}
+
+
+/*************************************/
+
+#contentX {
+	width: 800px;
+	padding: 50px;
+	margin: 0 auto;
+	display: block;
+	font-size: 1.2em;
+}
+
+#contentX h2 {
+	line-height: 1.5em;
+}
+
+
+/* Add curved borders to various elements */
+
+#contactForm, .statusMessage, #contactForm input[type="submit"], #contactForm input[type="button"] {
+	border-radius: 10px;
+}
+
+
+/* Style for the contact form and status messages */
+
+#contactForm, .statusMessage {
+	color: #666;
+	background-color: #ebedf2;
+	border: 1px solid #aaa;
+	box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+}
+
+
+/* The form dimensions */
+
+#contactForm {
+	width: 33em;
+	height: 36em;
+	padding: 0 1.5em 1.5em 1.5em;
+	margin: 0 auto;
+	z-index  : 90;
+}
+
+
+/* Position the form in the middle of the window (if JavaScript is enabled) */
+
+#contactForm.positioned {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+/* Dimensions and position of the status messages */
+
+.statusMessage {
+	display: none;
+	margin: auto;
+	width: 30em;
+	height: 3em;
+	padding: 1.5em;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index  : 90;
+}
+
+.statusMessage p {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* The header at the top of the form */
+
+#contactForm h2 {
+	font-size: 2em;
+	font-style: italic;
+	letter-spacing: .05em;
+	margin: 0 0 1em -.75em;
+	padding: 1em;
+	width: 16em;
+	color: #aeb6aa;
+	background: #dfe0e5 url('/images/stamp.jpg') no-repeat 13em -3em; /* http://morguefile.com/archive/display/606433 */
+	border-bottom: 1px solid #aaa;
+	/*-moz-border-radius: 10px 10px 0 0;*/
+	/*-webkit-border-radius: 10px 10px 0 0;*/
+	border-radius: 10px 10px 0 0;
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+
+#contactForm ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#contactForm ul li {
+	margin: .9em 0 0 0;
+	padding: 0;
+}
+
+#contactForm input, #contactForm label {
+	line-height: 1em;
+}
+
+
+/* The field labels */
+
+#contactForm label {
+	display: block;
+	float: left;
+	clear: left;
+	text-align: right;
+	width: 15%;
+	padding: .4em 0 0 0;
+	margin: .15em .5em 0 0;
+	font-weight: bold;
+}
+
+
+/* The fields */
+
+#contactForm input, #contactForm textarea {
+	display: block;
+	margin: 0;
+	padding: .4em;
+	width: 75%;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 1em;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+	background: #fff;
+}
+
+#contactForm textarea {
+	height: 13em;
+	line-height: 1.5em;
+	resize: none;
+}
+
+
+/* Place a border around focused fields, and hide the inner shadow */
+
+#contactForm *:focus {
+	border: 1px solid #66f;
+	outline: none;
+	box-shadow: none;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+
+#contactForm input:valid, #contactForm textarea:valid {
+	background: #dfd;
+}
+
+
+/* The Send and Cancel buttons */
+
+#contactForm input[type="submit"], #contactForm input[type="button"] {
+	float: right;
+	margin: 2em 1em 0 1em;
+	width: 10em;
+	padding: .5em;
+	border: 1px solid #666;
+	border-radius: 10px;
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	color: #fff;
+	background: #0a0;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: bold;
+	opacity: .7;
+	transition: opacity .5s;
+
+	background: linear-gradient( to bottom, #ffc477 5%, #fb9e25 100% );
+	background-color:#ffc477;
+}
+
+#contactForm input[type="submit"]:hover,
+#contactForm input[type="submit"]:active,
+#contactForm input[type="button"]:hover,
+#contactForm input[type="button"]:active {
+	cursor: pointer;
+	opacity: 1;
+}
+
+#contactForm input[type="submit"]:active, #contactForm input[type="button"]:active {
+	color: #333;
+	background: #eee;
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+#contactForm input[type="button"] {
+	background: #b3b3b3;
+}
+
+
+/* Header/footer boxes */
+
+.wideBox {
+	clear: both;
+	text-align: center;
+	margin: 70px;
+	padding: 10px;
+	background: #ebedf2;
+	border: 1px solid #333;
+}
+
+.wideBox h1 {
+	font-weight: bold;
+	margin: 20px;
+	color: #666;
+	font-size: 1.5em;
+}
+
+#overlay-back {
+	position   : absolute;
+	top        : 0;
+	left       : 0;
+	width      : 100%;
+	height     : 200%;
+	background : #000;
+	opacity    : 0.6;
+	z-index    : 90;
+	display    : none;
+}
