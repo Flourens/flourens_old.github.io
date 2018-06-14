@@ -24,9 +24,8 @@ font-size: 14px;
 
 a {
 	text-decoration: none;
-	color: #04a1d4;
+	color: #04a1d4; 
 }
-
 a:hover {
 	text-decoration: none;
 
@@ -158,7 +157,7 @@ ul {
 	width: 100%;
 	max-width: 670px;
 	margin-left: auto;
-	margin-right: 5%;
+	margin-right: 10%;
 }
 
 /*------   call to action  blue and img -------*/
@@ -971,7 +970,7 @@ ul {
 	opacity: 0.65;
 }
 
-/*----- Footer ----*/
+/*----- Footer ----*/ 
 
 footer {
 	margin-top: 0px;
@@ -1046,9 +1045,7 @@ p.BBBText a { font-size:12px;}
 	margin-top: 10px;
 }
  ----------*/
-
-
-
+ 
 @media screen and (max-width: 1300px) and (min-width: 994px) {
 	.system-wrap .system-img.shift-img {
 		margin-left: -130px;
