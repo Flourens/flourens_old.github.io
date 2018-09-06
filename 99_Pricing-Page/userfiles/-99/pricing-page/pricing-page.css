@@ -207,7 +207,7 @@ ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	max-width: 910px;
+	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
 	flex-wrap: wrap;	
@@ -283,7 +283,7 @@ ul {
 	margin-right: auto;
 	flex-wrap: wrap;
 	margin-top: 40px;
-	max-width: 910px;
+	max-width: 900px;
 }
 .half-width{
 	min-width: 48%;
