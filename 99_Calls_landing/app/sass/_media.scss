@@ -2,8 +2,7 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px){
-	
+@media only screen and (max-width : 1110px){	
 }
 	
 	/**/
@@ -12,26 +11,20 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 920px){
 	.header{
-	&-content{
-		max-width: 1210px;
-		margin-left: auto;
-		margin-right: auto;
-	}	
-	&-row{
-		flex-direction: column;
+		&-row{
+			flex-direction: column;
 			&-illustration{
 				width: 100%;
-				margin-top: 65px;
+				margin-top: 5px;
 				position: relative;
 				order: 1;
 			}
 			&-form{
 				width: 100%;
-				background-color: #000;
 				margin-top: 30px;
 				order: 0;
-			}
-		
+
+			}		
 			&-img{
 				width: 100%;
 				margin-bottom: 0px;
@@ -112,7 +105,7 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 720px){
-	
+
 	.pop-up{
 	&-content{
 		max-width: 360px;
@@ -140,61 +133,17 @@
 }
 
 .rating{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-top: 145px;	
+		margin-top: 50px;
+		flex-direction: column;
 	&-star{
-		width: 50%;
-		text-align: center;
-		margin-top: 40px;
-	}
-	&-img{
-		max-width: 250px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	&-title{
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 800;
-		font-size: 34px;
-		text-transform: uppercase;
-		color: #000;
-		margin-top: 20px;
-		margin-bottom: 0;
-	}
-	&-subtitle{
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 400;
-		font-size: 24px;
-		text-transform: uppercase;
-		color: #000;
-		margin: 0;
+		width: 100%;
+		margin-bottom: 40px;
 	}
 	&-advantage{
-		width: 50%;
-		padding-left: 30px;
-		&-list{
-			font-family: 'Open Sans', sans-serif;
-			font-size: 18px;
-			font-weight: 400;
-			padding-left: 40px;
-			text-align: left;
-		}
-		&-option{
-			list-style-type: none;
-			position: relative;
-			padding: 7px 0px;
-		&:after{
-			content: '';
-			width: 17px;
-			height: 17px;
-			position: absolute;
-			top: 12px;
-			left: -30px;
-			background-image: url(..//img/fcde2b8f-checkmark.png);
-			}
-		}
+		width: 90%;
+		margin-left: 10px;
+		margin-right: auto;
+		padding-left: 0;
 	}
 }
 	
@@ -229,6 +178,25 @@
 
 /* Extra Small Devices, Phones */
 	@media only screen and (max-width : 440px){
+		
+	.header{
+		&-row{
+			&-form{
+					margin-top: 50px;
+					margin-bottom: 90px;
+				&__inpute{
+						display: block;
+						width: 100%;
+						margin-bottom: 20px;
+					}
+				&__btn{
+					margin-top: 0px;
+					width: 100%;
+				}
+			}
+		}
+	}	
+		
 	.header{
 		&-title{
 			font-size: 24px;
@@ -237,6 +205,9 @@
 			font-size: 32px;
 		}
 	}		
+	
+
+
 	.pop-up{
 		&-content{
 			max-width: 270px;

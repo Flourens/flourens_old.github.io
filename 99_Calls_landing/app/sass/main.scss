@@ -70,9 +70,41 @@ img{
 			}
 			&-form{
 				width: 50%;
-				background-color: #000;
-				margin-top: 50px;
-				opacity: 0;
+				margin-top: 80px;
+				margin-bottom: 150px;
+				
+				&__inpute{
+					box-sizing: border-box;
+					display: inline-block;
+					background-color: #fff;
+					color: #757575;
+					width: calc(50% - 7.5px);
+					
+					font-family: 'Open Sans', sans-serif;
+					font-size: 16px;
+					border-radius: 30px;
+					padding: 15px 15px;
+					border: none;
+					&:first-child{
+						margin-right: 10px;
+					}
+				}
+				&__btn{
+					width: 100%;
+					font-family: 'Open Sans', sans-serif;
+					background: linear-gradient(#fcdb58, #fcd058);
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 18px;	
+					padding: 15px 30px;
+					border-radius: 40px;
+					color: #000;	
+					border: none;
+					margin-top: 40px;
+					&:hover{
+						background: linear-gradient(#efc843,#efbb43);
+					}
+				}
 			}
 		
 			&-img{
