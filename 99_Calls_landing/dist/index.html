@@ -19,7 +19,7 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 	<style type="text/css">
-		@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+	@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 @font-face {
   font-family: 'Droid Serif';
@@ -270,7 +270,215 @@ img {
     top: 10px;
     right: 10px; }
     .pop-up-x:hover {
-      background-color: rgba(198, 77, 11, 0.2); 
+      background-color: rgba(198, 77, 11, 0.2); }
+
+.rating {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 145px; }
+  .rating-star {
+    width: 50%;
+    text-align: center;
+    margin-top: 40px; }
+  .rating-img {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto; }
+  .rating-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 0; }
+  .rating-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0; }
+  .rating-advantage {
+    width: 50%;
+    padding-left: 30px; }
+    .rating-advantage-list {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      padding-left: 40px;
+      text-align: left; }
+    .rating-advantage-option {
+      list-style-type: none;
+      position: relative;
+      padding: 7px 0px; }
+      .rating-advantage-option:after {
+        content: '';
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 12px;
+        left: -30px;
+        background-image: url(..//img/fcde2b8f-checkmark.png); }
+
+
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+/**/
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 920px) {
+  .header-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .header-row-illustration {
+      width: 100%;
+      margin-top: 5px;
+      position: relative;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
+    .header-row-form {
+      width: 100%;
+      margin-top: 30px;
+      -webkit-box-ordinal-group: 1;
+      -webkit-order: 0;
+          -ms-flex-order: 0;
+              order: 0; }
+    .header-row-img {
+      width: 100%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      position: relative;
+      top: 0; }
+  .pop-up-content {
+    max-width: 600px;
+    padding: 50px 15px;
+    padding-bottom: 15px; }
+  .pop-up-title {
+    font-size: 40px; }
+    .pop-up-title_span {
+      font-size: 32px; }
+  .rating {
+    margin-top: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .rating-star {
+      width: 100%;
+      margin-bottom: 40px; }
+    .rating-advantage {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: auto; }
+		}
+
+/**/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 720px) {
+  .pop-up-content {
+    max-width: 360px;
+    padding: 40px 15px;
+    padding-bottom: 15px; }
+  .pop-up-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .pop-up-picture {
+    width: 100%;
+    padding-top: 20px; }
+  .pop-up-text {
+    width: 100%; }
+  .pop-up-title {
+    font-size: 35px; }
+    .pop-up-title_span {
+      font-size: 26px; }
+  .rating {
+    margin-top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .rating-star {
+      width: 100%;
+      margin-bottom: 40px; }
+    .rating-advantage {
+      width: 90%;
+      margin-left: 10px;
+      margin-right: auto;
+      padding-left: 0; }
+		}
+
+/**/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 440px) {
+  .header {
+    background-image: url(../img/196b2e91-top-header-small.jpg); }
+    .header-row-form {
+      margin-top: 50px;
+      margin-bottom: 90px; }
+      .header-row-form__inpute {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px; }
+      .header-row-form__btn {
+        margin-top: 0px;
+        width: 100%; }
+  .header-title {
+    font-size: 24px; }
+  .header-subtitle {
+    font-size: 26px; }
+  .pop-up-content {
+    max-width: 270px;
+    padding: 30px 15px;
+    padding-bottom: 15px;
+    padding-top: 0;
+    margin-top: 5%; }
+  .pop-up-title {
+    font-size: 30px;
+    line-height: 1.2; }
+    .pop-up-title_span {
+      font-size: 23px;
+      line-height: 1; }
+  .pop-up-picture {
+    padding-top: 0; }
+  .pop-up-close {
+    margin-top: 20px; }
+  .rating-img {
+    max-width: 200px; }
+  .rating-title {
+    font-size: 25px; }
+  .rating-subtitle {
+    font-size: 20px; }
+  .rating-advantage {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0; }
 		}
 	</style>
 </head>
