@@ -1,11 +1,5 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>tobelegal.github.io</title><script>// window.onload = function() {
-        //   var preloaderPane = document.getElementById("preloader-pane");
-        //   preloaderPane.classList.add("preloadHide");
-        //   setTimeout(function() {
-        //     preloaderPane.parentElement.removeChild(preloaderPane);
-        //     preloaderPane = null;
-        //   }, 300);
-        // };</script><style>.preloader-pane {
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/tobelegal/favicon.ico><title>tobelegal.github.io</title><style>.preloader-pane {
+            pointer-events: none;
             width: 100vw;
             height: 100vh;
             position: fixed;
@@ -23,8 +17,8 @@
           right: 0;
           top: 0;
           bottom: 0;
-          width: 100%;
-          height: 100%;
+          width: 100vw;
+          height: 100vh;
           background-color: #1A2730;
           background: radial-gradient(680.00px at 50% 50%, #2A3843 0%, #1A2730 100%);
           opacity: 1;
@@ -33,7 +27,7 @@
         .preloader-pane
         .preloader-wrap{
           position: fixed;
-          width: 100%;
+          width: 100vw;
           height: 100vh;
           display: block;
           /* flex-direction: column;
@@ -50,6 +44,17 @@
             max-width: 600px;
             height: auto;
         }
+        .pre_dot--mobile {
+            position: absolute;
+            width: 80%;
+            left: 50%;
+            padding-bottom: 50px;
+            transform: translateX(-50%) translateY(-50%);
+            top: 50%;
+            max-width: 220px;
+            height: auto;
+            display: none;
+        }
         @media screen and (max-width: 1365px) {
             .pre_dot {
                 max-width: 277px;
@@ -65,6 +70,25 @@
                 max-width: 367px;
             }
         }
+        @media screen and (max-width: 1024px) {
+            .pre_dot {
+                display: none;
+            }
+            .pre_dot--mobile{
+                display: block;
+            }
+        }
+        @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) 
+            and (orientation : landscape) {
+                .pre_dot{
+                    display: block;
+                }
+                .pre_dot--mobile{
+                    display: none;
+                }
+            }
         @media screen and (max-width: 767px) {
             .pre_dot {
                 margin-bottom: 30%;
@@ -80,4 +104,4 @@
         .preloadHide {
             opacity: 0 !important;
             transition: opacity 0.3s ease;
-        }</style><link href=/css/app.css rel=preload as=style><link href=/css/chunk-vendors.css rel=preload as=style><link href=/js/app.js rel=preload as=script><link href=/js/chunk-vendors.js rel=preload as=script><link href=/css/chunk-vendors.css rel=stylesheet><link href=/css/app.css rel=stylesheet></head><body><noscript><strong>We're sorry but tobelegal.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div id=preloader-pane-1 class=preloader-pane><div class=preloader-baground></div><div class=preloader-wrap><img class=pre_dot src=./preloader.svg alt="tobe legal"></div></div><script src=/js/chunk-vendors.js></script><script src=/js/app.js></script></body></html>
+        }</style><link href=/tobelegal/css/app.css rel=preload as=style><link href=/tobelegal/css/chunk-vendors.css rel=preload as=style><link href=/tobelegal/js/app.js rel=preload as=script><link href=/tobelegal/js/chunk-vendors.js rel=preload as=script><link href=/tobelegal/css/chunk-vendors.css rel=stylesheet><link href=/tobelegal/css/app.css rel=stylesheet></head><body><noscript><strong>We're sorry but tobelegal.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div id=preloader-pane-1 class=preloader-pane><div class=preloader-baground></div><div class=preloader-wrap><img class=pre_dot src=./preloader.svg alt="tobe legal"> <img class=pre_dot--mobile src=./preloader-mobile.svg alt="tobe legal"></div></div><script src=/tobelegal/js/chunk-vendors.js></script><script src=/tobelegal/js/app.js></script></body></html>
