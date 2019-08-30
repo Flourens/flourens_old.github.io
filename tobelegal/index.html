@@ -34,7 +34,21 @@
           justify-content: space-around;
           align-items: middle; */
         }
-        .pre_dot {
+        .hummer{
+            position: absolute;
+            width: 58px;
+            height: 54px;
+            bottom: 33%;
+            right: 0;
+            left: 0;
+            margin-left: 49.6%;
+            margin-right: 50.4%;
+
+        }
+        .pre_dot--loader{
+            opacity: 0;
+        }
+        .pre_dot, .pre_dot--loader {
             position: absolute;
             width: 50%;
             left: 50%;
@@ -57,33 +71,40 @@
             display: none;
         }
         @media screen and (max-width: 1365px) {
-            .pre_dot {
+            .pre_dot,.pre_dot--loader {
                 max-width: 277px;
             }
         }
         @media screen and (max-width: 1600px) {
-            .pre_dot {
+            .pre_dot,.pre_dot--loader {
                 max-width: 540px;
             }
         }
         @media screen and (max-width: 1440px) {
-            .pre_dot {
+            .pre_dot,.pre_dot--loader {
                 max-width: 367px;
             }
         }
         @media screen and (max-width: 1024px) {
-            .pre_dot {
+            .pre_dot,.pre_dot--loader {
                 display: none;
             }
             .pre_dot--mobile{
                 display: block;
+            }
+            .hummer{
+                width: 78px;
+                height: 74px;
+                margin-right: 52%;
+                margin-left: 48%;
+                bottom: 28%;
             }
         }
         @media only screen 
             and (min-device-width : 768px) 
             and (max-device-width : 1024px) 
             and (orientation : landscape) {
-                .pre_dot{
+                .pre_dot,.pre_dot--loader{
                     display: block;
                 }
                 .pre_dot--mobile{
@@ -91,8 +112,20 @@
                 }
             }
         @media screen and (max-width: 767px) {
-            .pre_dot {
+            .pre_dot,.pre_dot--loader {
                 margin-bottom: 30%;
+            }
+            .hummer{
+                width: 58px;
+                height: 54px;
+                margin-right: 55%;
+                margin-left: 45%;
+                bottom: 22%;
+            }
+        }
+        @media screen and (max-width: 350px) {
+            .hummer{
+                bottom: 12%;
             }
         }
         .preloadMe {
@@ -105,4 +138,4 @@
         .preloadHide {
             opacity: 0 !important;
             transition: opacity 0.3s ease;
-        }</style><link href=/tobelegal/css/app.css rel=preload as=style><link href=/tobelegal/css/chunk-vendors.css rel=preload as=style><link href=/tobelegal/js/app.js rel=preload as=script><link href=/tobelegal/js/chunk-vendors.js rel=preload as=script><link href=/tobelegal/css/chunk-vendors.css rel=stylesheet><link href=/tobelegal/css/app.css rel=stylesheet></head><body><noscript><strong>We're sorry but tobelegal.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div id=preloader-pane-1 class=preloader-pane><div class=preloader-baground></div><div class=preloader-wrap><img class=pre_dot src=./preloader.svg alt="tobe legal"> <img class=pre_dot--mobile src=./preloader-mobile.svg alt="tobe legal"></div></div><script src=/tobelegal/js/chunk-vendors.js></script><script src=/tobelegal/js/app.js></script></body></html>
+        }</style><link href=/tobelegal/css/app.css rel=preload as=style><link href=/tobelegal/css/chunk-vendors.css rel=preload as=style><link href=/tobelegal/js/app.js rel=preload as=script><link href=/tobelegal/js/chunk-vendors.js rel=preload as=script><link href=/tobelegal/css/chunk-vendors.css rel=stylesheet><link href=/tobelegal/css/app.css rel=stylesheet></head><body><noscript><strong>We're sorry but tobelegal.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div id=preloader-pane-1 class=preloader-pane><div class=preloader-baground></div><div class=preloader-wrap><img class=pre_dot src=./preloader.svg alt="tobe legal"> <img class=pre_dot--mobile src=./preloader-mobile.svg alt="tobe legal"> <img class=hummer src=./hummer-loader.svg alt="tobe legal"></div></div><script src=/tobelegal/js/chunk-vendors.js></script><script src=/tobelegal/js/app.js></script></body></html>
